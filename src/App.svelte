@@ -2,10 +2,12 @@
   import NoSpice from "./spices/NoSpice";
   import Pepper from "./spices/Pepper";
   import Salt from "./spices/Salt";
-
-  import SpiceDisplay from "./spices/SpiceDisplay.svelte";
   import Test1 from "./spices/Test1";
   import Test2 from "./spices/Test2";
+
+  import SpiceDisplay from "./spices/SpiceDisplay.svelte";
+
+  let allSpices = [new Salt(), new Pepper(), new Test1(), new Test2()];
 
   let selectedSpices = [];
   let baseSpice1 = new NoSpice();
@@ -21,34 +23,68 @@
 
   function makeSpiceSuggestion() {
     spiceSuggestions = [];
+
+    // Push current selected spice components into array
+
+    let targetSpiceComponents = [];
     selectedSpices.forEach((spice) => {
-      if (spice.name === new Salt().name) {
-        pushNewSpiceIfNotExisting(spiceSuggestions, new Test1());
-      }
-
-      if (spice.name === new Pepper().name) {
-        pushNewSpiceIfNotExisting(spiceSuggestions, new Test2());
-      }
-    });
-    console.log(spiceSuggestions);
-  }
-
-  function pushNewSpiceIfNotExisting(spices, spice) {
-    let isExisting = false;
-    spices.forEach((item) => {
-      if (item.name === spice.name) {
-        isExisting = true;
-      }
+      targetSpiceComponents.push(...spice.spiceComponents);
     });
 
-    if (!isExisting) {
-      spices.push(spice);
-    }
+    // calculate for all spices how many components match with the existing ones
+
+    let matchingSpiceComponents = [];
+    allSpices.forEach((spice) => {
+      let matches = 0;
+      spice.spiceComponents.forEach((canidateComponent) => {
+        targetSpiceComponents.forEach((targetComponents) => {
+          if (canidateComponent === targetComponents) {
+            matches += 1;
+          }
+        });
+      });
+      matchingSpiceComponents.push({ spice: spice, matches: matches });
+    });
+
+    // sort spices by matches
+
+    matchingSpiceComponents.sort(function (a, b) {
+      return b.matches - a.matches;
+    });
+
+    // remove the two selected spices from the sorted spice array
+
+    matchingSpiceComponents = matchingSpiceComponents.filter(function (
+      value,
+      index,
+      arr
+    ) {
+      if (value.spice.name === selectedSpices[0].name) {
+        return false;
+      }
+      if (value.spice.name === selectedSpices[1].name) {
+        return false;
+      }
+
+      return true;
+    });
+
+    // move first 5 suggestions to suggestions array
+
+    spiceSuggestions = matchingSpiceComponents.slice(0, 5).map((x) => x.spice);
   }
 </script>
 
-<SpiceDisplay bind:selectedSpice={baseSpice1} onChange={newSpiceSelection} />
-<SpiceDisplay bind:selectedSpice={baseSpice2} onChange={newSpiceSelection} />
+<SpiceDisplay
+  bind:selectedSpice={baseSpice1}
+  spices={allSpices}
+  onChange={newSpiceSelection}
+/>
+<SpiceDisplay
+  bind:selectedSpice={baseSpice2}
+  spices={allSpices}
+  onChange={newSpiceSelection}
+/>
 
 {#each spiceSuggestions as spice}
   <p>

@@ -1,7 +1,9 @@
+import type SpiceComponents from "./SpiceComponents";
+
 interface Spice {
   name: string;
-  goesWellWith: Spice[];
   description: string;
+  spiceComponents: SpiceComponents[];
 }
 
 export default Spice;

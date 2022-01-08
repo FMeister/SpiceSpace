@@ -1,10 +1,6 @@
 <script>
-  import Pepper from "./Pepper";
-  import Salt from "./Salt";
-
   export let selectedSpice;
-
-  let spices = [new Salt(), new Pepper()];
+  export let spices;
 
   export let onChange;
 </script>
