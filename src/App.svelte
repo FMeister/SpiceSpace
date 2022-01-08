@@ -1,5 +1,6 @@
 <script>
-  let name = "world 123";
+  import SpiceDisplay from "./spices/SpiceDisplay.svelte";
 </script>
 
-<h1>Hello {name}!</h1>
+<SpiceDisplay />
+<SpiceDisplay />
