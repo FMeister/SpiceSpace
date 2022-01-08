@@ -17,18 +17,17 @@
 
   let spiceSuggestions = [];
 
-  let selectedSuggestions = [new Salt()];
+  let selectedSuggestions = [];
 
   function newSpiceSelection() {
+    selectedSuggestions = [];
     selectedSpices[0] = baseSpice1;
     selectedSpices[1] = baseSpice2;
-    selectedSuggestions = [];
     makeSpiceSuggestion();
   }
 
   function addSuggestionToSelection(spice) {
-    selectedSuggestions.push(spice);
-    console.log(selectedSuggestions);
+    selectedSuggestions = selectedSuggestions.concat([spice]);
     makeSpiceSuggestion();
   }
 
@@ -113,13 +112,13 @@
   onChange={newSpiceSelection}
 />
 
-{#each spiceSuggestions as suggestion}
-  <SelectedSpiceSuggestions spice={suggestion} {removeFromSelection} />
+{#each selectedSuggestions as selection}
+  <SelectedSpiceSuggestions spice={selection} {removeFromSelection} />
 {/each}
 
-{#each spiceSuggestions as suggestions}
+{#each spiceSuggestions as suggestion}
   <SpiceSuggestion
-    spice={suggestions}
+    spice={suggestion}
     addToSelection={addSuggestionToSelection}
   />
 {/each}
