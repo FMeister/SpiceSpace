@@ -2,17 +2,17 @@
   import Pepper from "./Pepper";
   import Salt from "./Salt";
 
-  let selectedSpice = new Salt();
+  export let selectedSpice;
 
   let spices = [new Salt(), new Pepper()];
 
-  function changeSpice() {}
+  export let onChange;
 </script>
 
 <div>
   <h1>{selectedSpice.name}</h1>
   <p>{selectedSpice.description}</p>
-  <select bind:value={selectedSpice} on:change={changeSpice}>
+  <select bind:value={selectedSpice} on:change={onChange}>
     {#each spices as spice}
       <option value={spice}>
         {spice.name}
