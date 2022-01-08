@@ -6,6 +6,8 @@
   import Test2 from "./spices/Test2";
 
   import SpiceDisplay from "./spices/SpiceDisplay.svelte";
+  import SpiceSuggestion from "./spices/SpiceSuggestion.svelte";
+  import SelectedSpiceSuggestions from "./spices/SelectedSpiceSuggestions.svelte";
 
   let allSpices = [new Salt(), new Pepper(), new Test1(), new Test2()];
 
@@ -15,10 +17,30 @@
 
   let spiceSuggestions = [];
 
+  let selectedSuggestions = [new Salt()];
+
   function newSpiceSelection() {
     selectedSpices[0] = baseSpice1;
     selectedSpices[1] = baseSpice2;
+    selectedSuggestions = [];
     makeSpiceSuggestion();
+  }
+
+  function addSuggestionToSelection(spice) {
+    selectedSuggestions.push(spice);
+    console.log(selectedSuggestions);
+    makeSpiceSuggestion();
+  }
+
+  function removeFromSelection(spice) {
+    selectedSuggestions = removeFromArray(selectedSuggestions, spice);
+    makeSpiceSuggestion();
+  }
+
+  function removeFromArray(arr, value) {
+    return arr.filter(function (ele) {
+      return ele != value;
+    });
   }
 
   function makeSpiceSuggestion() {
@@ -59,11 +81,16 @@
       index,
       arr
     ) {
-      if (value.spice.name === selectedSpices[0].name) {
-        return false;
+      for (const selection of selectedSpices) {
+        if (value.spice.name === selection.name) {
+          return false;
+        }
       }
-      if (value.spice.name === selectedSpices[1].name) {
-        return false;
+
+      for (const selection of selectedSuggestions) {
+        if (value.spice.name === selection.name) {
+          return false;
+        }
       }
 
       return true;
@@ -86,8 +113,13 @@
   onChange={newSpiceSelection}
 />
 
-{#each spiceSuggestions as spice}
-  <p>
-    {spice.name}
-  </p>
+{#each spiceSuggestions as suggestion}
+  <SelectedSpiceSuggestions spice={suggestion} {removeFromSelection} />
+{/each}
+
+{#each spiceSuggestions as suggestions}
+  <SpiceSuggestion
+    spice={suggestions}
+    addToSelection={addSuggestionToSelection}
+  />
 {/each}
