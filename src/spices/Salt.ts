@@ -8,6 +8,7 @@ class Salt implements Spice {
     SpiceComponents.component1,
     SpiceComponents.component2,
   ];
+  color: number[] = [255, 255, 255];
 }
 
 export default Salt;

@@ -8,6 +8,7 @@ class Test2 implements Spice {
     SpiceComponents.component3,
     SpiceComponents.component4,
   ];
+  color: number[] = [90, 121, 148];
 }
 
 export default Test2;

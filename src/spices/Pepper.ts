@@ -9,6 +9,7 @@ class Pepper implements Spice {
     SpiceComponents.component3,
     SpiceComponents.component4,
   ];
+  color: number[] = [156, 121, 98];
 }
 
 export default Pepper;
