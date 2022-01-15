@@ -1,40 +1,14 @@
 <script>
   import SpiceContainer from "./SpiceContainer.svelte";
 
-  import NoSpice from "./spices/NoSpice";
-  import Pepper from "./spices/Pepper";
-  import Salt from "./spices/Salt";
-  import Test1 from "./spices/Test1";
-  import Test2 from "./spices/Test2";
-
   import SpiceDisplay from "./spices/SpiceDisplay.svelte";
   import SpiceSuggestion from "./spices/SpiceSuggestion.svelte";
   import SelectedSpiceSuggestions from "./spices/SelectedSpiceSuggestions.svelte";
 
-  let allSpices = [
-    new Salt(),
-    new Pepper(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-    new Test1(),
-    new Test2(),
-  ];
+  import NoSpice from "./spices/NoSpice";
+  import Zimt from "./spices/Zimt";
+
+  let allSpices = [new Zimt()];
 
   let selectedSpices = [];
   let baseSpice1 = new NoSpice();
@@ -128,14 +102,14 @@
 
 <div class="verticalGrid">
   <div class="horizontalGrid">
-    <SpiceContainer shape={Math.random()} color={baseSpice1.color}>
+    <SpiceContainer shape={Math.random()} spice={baseSpice1}>
       <SpiceDisplay
         bind:selectedSpice={baseSpice1}
         spices={allSpices}
         onChange={newSpiceSelection}
       />
     </SpiceContainer>
-    <SpiceContainer shape={Math.random()} color={baseSpice2.color}>
+    <SpiceContainer shape={Math.random()} spice={baseSpice2}>
       <SpiceDisplay
         bind:selectedSpice={baseSpice2}
         spices={allSpices}
@@ -147,7 +121,7 @@
   <div class="scrollableContainer">
     <div class="flex">
       {#each selectedSuggestions as selection}
-        <SpiceContainer shape={Math.random()} color={selection.color}>
+        <SpiceContainer shape={Math.random()} spice={selection}>
           <SelectedSpiceSuggestions spice={selection} {removeFromSelection} />
         </SpiceContainer>
       {/each}
@@ -157,7 +131,7 @@
   <div class="scrollableContainer">
     <div class="flex">
       {#each spiceSuggestions as suggestion}
-        <SpiceContainer shape={Math.random()} color={suggestion.color}>
+        <SpiceContainer shape={Math.random()} spice={suggestion}>
           <SpiceSuggestion
             spice={suggestion}
             addToSelection={addSuggestionToSelection}

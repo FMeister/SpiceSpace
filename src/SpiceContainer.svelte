@@ -1,6 +1,6 @@
 <script>
   export let shape;
-  export let color;
+  export let spice;
 
   let blobShapes = [
     "45% 55% 42% 58% / 63% 28% 72% 37%",
@@ -18,21 +18,38 @@
   let shapeCss = blobShapes[index];
 </script>
 
-<div
-  class="spiceContainer"
-  style="border-radius: {shapeCss}; background-color: rgb({color[0]}, {color[1]}, {color[2]});"
->
+<div class="spiceContainer">
+  <div
+    class="spiceBlob"
+    style="border-radius: {shapeCss}; background-color: {spice.color};"
+  >
+    <h1 style="font-weight: 400; padding-top:2.7rem; color:#444444;">
+      [{spice.nameSymbol}]
+    </h1>
+  </div>
   <slot />
 </div>
 
 <style>
   .spiceContainer {
-    background-color: rgb(252, 252, 252);
-    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.062);
-    padding: 3.5rem;
-    padding-right: 1rem;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    padding-top: 0rem;
     margin: 1rem;
+    margin-top: 3rem;
     max-width: 20rem;
     min-width: 10rem;
+    border-radius: 2rem;
+  }
+  .spiceBlob {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8rem;
+    width: 8rem;
+    top: -4rem;
+    text-align: center;
+    box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.03);
   }
 </style>

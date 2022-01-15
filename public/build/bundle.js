@@ -489,33 +489,64 @@ var app = (function () {
     const file$4 = "src/SpiceContainer.svelte";
 
     function create_fragment$4(ctx) {
-    	let div;
+    	let div1;
+    	let div0;
+    	let h1;
+    	let t0;
+    	let t1_value = /*spice*/ ctx[0].nameSymbol + "";
+    	let t1;
+    	let t2;
+    	let t3;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[4].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			h1 = element("h1");
+    			t0 = text("[");
+    			t1 = text(t1_value);
+    			t2 = text("]");
+    			t3 = space();
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "spiceContainer svelte-171nm2m");
-    			set_style(div, "border-radius", /*shapeCss*/ ctx[1]);
-    			set_style(div, "background-color", "rgb(" + /*color*/ ctx[0][0] + ", " + /*color*/ ctx[0][1] + ", " + /*color*/ ctx[0][2] + ")");
-    			add_location(div, file$4, 20, 0, 442);
+    			set_style(h1, "font-weight", "400");
+    			set_style(h1, "padding-top", "2.7rem");
+    			set_style(h1, "color", "#444444");
+    			add_location(h1, file$4, 25, 4, 580);
+    			attr_dev(div0, "class", "spiceBlob svelte-12sxn9n");
+    			set_style(div0, "border-radius", /*shapeCss*/ ctx[1]);
+    			set_style(div0, "background-color", /*spice*/ ctx[0].color);
+    			add_location(div0, file$4, 21, 2, 473);
+    			attr_dev(div1, "class", "spiceContainer svelte-12sxn9n");
+    			add_location(div1, file$4, 20, 0, 442);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, h1);
+    			append_dev(h1, t0);
+    			append_dev(h1, t1);
+    			append_dev(h1, t2);
+    			append_dev(div1, t3);
 
     			if (default_slot) {
-    				default_slot.m(div, null);
+    				default_slot.m(div1, null);
     			}
 
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
+    			if ((!current || dirty & /*spice*/ 1) && t1_value !== (t1_value = /*spice*/ ctx[0].nameSymbol + "")) set_data_dev(t1, t1_value);
+
+    			if (!current || dirty & /*spice*/ 1) {
+    				set_style(div0, "background-color", /*spice*/ ctx[0].color);
+    			}
+
     			if (default_slot) {
     				if (default_slot.p && (!current || dirty & /*$$scope*/ 8)) {
     					update_slot_base(
@@ -530,10 +561,6 @@ var app = (function () {
     					);
     				}
     			}
-
-    			if (!current || dirty & /*color*/ 1) {
-    				set_style(div, "background-color", "rgb(" + /*color*/ ctx[0][0] + ", " + /*color*/ ctx[0][1] + ", " + /*color*/ ctx[0][2] + ")");
-    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -545,7 +572,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     			if (default_slot) default_slot.d(detaching);
     		}
     	};
@@ -565,7 +592,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('SpiceContainer', slots, ['default']);
     	let { shape } = $$props;
-    	let { color } = $$props;
+    	let { spice } = $$props;
 
     	let blobShapes = [
     		"45% 55% 42% 58% / 63% 28% 72% 37%",
@@ -582,7 +609,7 @@ var app = (function () {
     	}
 
     	let shapeCss = blobShapes[index];
-    	const writable_props = ['shape', 'color'];
+    	const writable_props = ['shape', 'spice'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<SpiceContainer> was created with unknown prop '${key}'`);
@@ -590,13 +617,13 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('shape' in $$props) $$invalidate(2, shape = $$props.shape);
-    		if ('color' in $$props) $$invalidate(0, color = $$props.color);
+    		if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
     		if ('$$scope' in $$props) $$invalidate(3, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
     		shape,
-    		color,
+    		spice,
     		blobShapes,
     		index,
     		shapeCss
@@ -604,7 +631,7 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('shape' in $$props) $$invalidate(2, shape = $$props.shape);
-    		if ('color' in $$props) $$invalidate(0, color = $$props.color);
+    		if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
     		if ('blobShapes' in $$props) blobShapes = $$props.blobShapes;
     		if ('index' in $$props) index = $$props.index;
     		if ('shapeCss' in $$props) $$invalidate(1, shapeCss = $$props.shapeCss);
@@ -614,13 +641,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, shapeCss, shape, $$scope, slots];
+    	return [spice, shapeCss, shape, $$scope, slots];
     }
 
     class SpiceContainer extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { shape: 2, color: 0 });
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { shape: 2, spice: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -636,8 +663,8 @@ var app = (function () {
     			console.warn("<SpiceContainer> was created without expected prop 'shape'");
     		}
 
-    		if (/*color*/ ctx[0] === undefined && !('color' in props)) {
-    			console.warn("<SpiceContainer> was created without expected prop 'color'");
+    		if (/*spice*/ ctx[0] === undefined && !('spice' in props)) {
+    			console.warn("<SpiceContainer> was created without expected prop 'spice'");
     		}
     	}
 
@@ -649,77 +676,13 @@ var app = (function () {
     		throw new Error("<SpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get color() {
+    	get spice() {
     		throw new Error("<SpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set color(value) {
+    	set spice(value) {
     		throw new Error("<SpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
-    }
-
-    class NoSpice {
-        constructor() {
-            this.name = "Kein Gewürz ausgewählt";
-            this.description = "Wählen Sie ein Gewürz aus";
-            this.spiceComponents = [];
-            this.color = [255, 255, 255];
-        }
-    }
-
-    var SpiceComponents;
-    (function (SpiceComponents) {
-        SpiceComponents[SpiceComponents["component1"] = 0] = "component1";
-        SpiceComponents[SpiceComponents["component2"] = 1] = "component2";
-        SpiceComponents[SpiceComponents["component3"] = 2] = "component3";
-        SpiceComponents[SpiceComponents["component4"] = 3] = "component4";
-    })(SpiceComponents || (SpiceComponents = {}));
-    var SpiceComponents$1 = SpiceComponents;
-
-    class Pepper {
-        constructor() {
-            this.name = "Pfeffer";
-            this.description = "Pfeffer ist ein anderes Standardgewürz";
-            this.spiceComponents = [
-                SpiceComponents$1.component1,
-                SpiceComponents$1.component3,
-                SpiceComponents$1.component4,
-            ];
-            this.color = [156, 121, 98];
-        }
-    }
-
-    class Salt {
-        constructor() {
-            this.name = "Salz";
-            this.description = "Salz ist ein einfaches Gewürz.";
-            this.spiceComponents = [
-                SpiceComponents$1.component1,
-                SpiceComponents$1.component2,
-            ];
-            this.color = [255, 255, 255];
-        }
-    }
-
-    class Test1 {
-        constructor() {
-            this.name = "Test1";
-            this.description = "Test1";
-            this.spiceComponents = [SpiceComponents$1.component1];
-            this.color = [105, 148, 90];
-        }
-    }
-
-    class Test2 {
-        constructor() {
-            this.name = "Test2";
-            this.description = "Test2";
-            this.spiceComponents = [
-                SpiceComponents$1.component3,
-                SpiceComponents$1.component4,
-            ];
-            this.color = [90, 121, 148];
-        }
     }
 
     /* src/spices/SpiceDisplay.svelte generated by Svelte v3.44.3 */
@@ -747,7 +710,7 @@ var app = (function () {
     			t1 = space();
     			option.__value = option_value_value = /*spice*/ ctx[4];
     			option.value = option.__value;
-    			add_location(option, file$3, 11, 4, 245);
+    			add_location(option, file$3, 11, 4, 268);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -812,10 +775,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
+    			set_style(h1, "color", "#444444");
     			add_location(h1, file$3, 7, 0, 93);
-    			add_location(p, file$3, 8, 0, 123);
+    			add_location(p, file$3, 8, 0, 146);
     			if (/*selectedSpice*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[3].call(select));
-    			add_location(select, file$3, 9, 0, 158);
+    			add_location(select, file$3, 9, 0, 181);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1317,6 +1281,196 @@ var app = (function () {
     	}
     }
 
+    var AromaGroups;
+    (function (AromaGroups) {
+        AromaGroups["None"] = "";
+        AromaGroups["S\u00FC\u00DF_w\u00E4rmende_Phenole"] = "S\u00FC\u00DF_w\u00E4rmende Phenole";
+        AromaGroups["W\u00E4rmende_Terpene"] = "W\u00E4rmende Terpene";
+        AromaGroups["Duftende_Terpene"] = "Duftende Terpene";
+        AromaGroups["Erdige_Terpene"] = "Erdige_Terpene";
+        AromaGroups["Durchdringende_Terpene"] = "Durchdringende Terpene";
+        AromaGroups["Zitrust\u00F6nige_Terpene"] = "Zitrust\u00F6nige Terpene";
+        AromaGroups["S\u00FC\u00DFsaure_S\u00E4uren"] = "S\u00FC\u00DFsaure S\u00E4uren";
+        AromaGroups["Fruchtige_Aldehyde"] = "Fruchtige Aldehyde";
+        AromaGroups["R\u00F6stige_Pysazine"] = "R\u00F6stige Pysazine";
+        AromaGroups["Schwefelverbindungen"] = "Schwefelverbindungen";
+        AromaGroups["Stechende_Verbindungen"] = "Stechende Verbindungen";
+        AromaGroups["Einzigartige_Stoffe"] = "Einzigartige Stoffe";
+    })(AromaGroups || (AromaGroups = {}));
+    var AromaGroups$1 = AromaGroups;
+
+    var AromaGroupsColors;
+    (function (AromaGroupsColors) {
+        AromaGroupsColors["None"] = "#EADEDE";
+        AromaGroupsColors["S\u00FC\u00DF_w\u00E4rmende_Phenole"] = "#F6AE99";
+        AromaGroupsColors["W\u00E4rmende_Terpene"] = "#9D9D9D";
+        AromaGroupsColors["Duftende_Terpene"] = "#BFA2DB";
+        AromaGroupsColors["Erdige_Terpene"] = "#7F7C82";
+        AromaGroupsColors["Durchdringende_Terpene"] = "#87A7B3";
+        AromaGroupsColors["Zitrust\u00F6nige_Terpene"] = "#A2B29F";
+        AromaGroupsColors["S\u00FC\u00DFsaure_S\u00E4uren"] = "#EEC373";
+        AromaGroupsColors["Fruchtige_Aldehyde"] = "#A68DAD";
+        AromaGroupsColors["R\u00F6stige_Pysazine"] = "#876445";
+        AromaGroupsColors["Schwefelverbindungen"] = "#8E806A";
+        AromaGroupsColors["Stechende_Verbindungen"] = "#F29191";
+        AromaGroupsColors["Einzigartige_Stoffe"] = "#A2B29F";
+    })(AromaGroupsColors || (AromaGroupsColors = {}));
+    var AromaGroupsColors$1 = AromaGroupsColors;
+
+    class NoSpice {
+        constructor() {
+            this.name = "Kein Gewürz ausgewählt";
+            this.nameSymbol = "No";
+            this.description = "Wählen Sie ein Gewürz aus";
+            this.aromaCompounds = [];
+            this.aromaGroup = AromaGroups$1.None;
+            this.color = AromaGroupsColors$1.None;
+        }
+    }
+
+    var AromaCompounds;
+    (function (AromaCompounds) {
+        AromaCompounds["ACETOIN"] = "ACETOIN";
+        AromaCompounds["ACETYL_PYRROLIN"] = "2-ACETYL-PYRROLIN";
+        AromaCompounds["ANETHOL"] = "ANETHOL";
+        AromaCompounds["ANISALDEHYD"] = "ANISALDEHYD";
+        AromaCompounds["ANISALKOHOL"] = "ANISALKOHOL";
+        AromaCompounds["AZULEN"] = "AZULEN";
+        AromaCompounds["CADINENE"] = "CADINENE";
+        AromaCompounds["ALPHA_CADINOL"] = "ALPHA-CADINOL";
+        AromaCompounds["CAMPHEN"] = "CAMPHEN";
+        AromaCompounds["KAMPFER"] = "KAMPFER";
+        AromaCompounds["CAPSAICIN"] = "CAPSAICIN";
+        AromaCompounds["CAPSAICINOIDE"] = "CAPSAICINOIDE";
+        AromaCompounds["CAREN"] = "CAREN";
+        AromaCompounds["CARVACROL"] = "CARVACROL";
+        AromaCompounds["CARVEOL"] = "CARVEOL";
+        AromaCompounds["D_CARVON"] = "D-CARVON";
+        AromaCompounds["S_CARVON"] = "S-CARVON";
+        AromaCompounds["CARYOPHYLLENE"] = "CARYOPHYLLENE";
+        AromaCompounds["CEMBREN"] = "CEMBREN";
+        AromaCompounds["CINEOL"] = "CINEOL";
+        AromaCompounds["ZIMTALDEHYD"] = "ZIMTALDEHYD";
+        AromaCompounds["CITRAL"] = "CITRAL";
+        AromaCompounds["ZITRONENS\u00C4URE"] = "ZITRONENS\u00C4URE";
+        AromaCompounds["CITRONELLAL"] = "CITRONELLAL";
+        AromaCompounds["CITRONELLOL"] = "CITRONELLOL";
+        AromaCompounds["ALPHA_COPAEN"] = "ALPHA_COPAEN";
+        AromaCompounds["COUMARIN"] = "COUMARIN";
+        AromaCompounds["CUMINALDEHYD"] = "CUMINALDEHYD";
+        AromaCompounds["CURCUMIN"] = "CURCUMIN";
+        AromaCompounds["CYCLOCITRAL"] = "CYCLOCITRAL";
+        AromaCompounds["CYMOL"] = "CYMOL";
+        AromaCompounds["CUBEBIN"] = "CUBEBIN";
+        AromaCompounds["DIALLYDISULFID"] = "DIALLYDISULFID";
+        AromaCompounds["DIALLYLTRISULFID"] = "DIALLYLTRISULFID";
+        AromaCompounds["DIMETHOXYPHENOL"] = "DIMETHOXYPHENOL";
+        AromaCompounds["DIMETHYLPYRAZIN"] = "DIMETHYLPYRAZIN";
+        AromaCompounds["DIOXOLAN"] = "DIOXOLAN";
+        AromaCompounds["ELEMAN"] = "ELEMAN";
+        AromaCompounds["ELEMICIN"] = "ELEMICIN";
+        AromaCompounds["ESTERVERBINDUNGEN"] = "ESTERVERBINDUNGEN";
+        AromaCompounds["ESTRAGOL"] = "ESTRAGOL";
+        AromaCompounds["ESSIGESTER"] = "ESSIGESTER";
+        AromaCompounds["EUDESMOL"] = "EUDESMOL";
+        AromaCompounds["EUGENOL"] = "EUGENOL";
+        AromaCompounds["FARNESENE"] = "FARNESENE";
+        AromaCompounds["FENCHON"] = "FENCHON";
+        AromaCompounds["ALPHA_FENCHOL"] = "ALPHA_FENCHOL";
+        AromaCompounds["FERULAS\u00C4URE"] = "FERULAS\u00C4URE";
+        AromaCompounds["FURFURYLTHIOL"] = "FURFURYLTHIOL";
+        AromaCompounds["FURANEOL"] = "FURANEOL";
+        AromaCompounds["FURFURAL"] = "FURFURAL";
+        AromaCompounds["FURFURYLTHIOL_2"] = "2-FURFURYLTHIOL";
+        AromaCompounds["GALANGALACETAT"] = "GALANGALACETAT";
+        AromaCompounds["GERANIOL"] = "GERANIOL";
+        AromaCompounds["GERMACREN"] = "GERMACREN";
+        AromaCompounds["GINGEROL"] = "GINGEROL";
+        AromaCompounds["GYLKOSID_VERBINDUNGEN"] = "GYLKOSID-VERBINDUNGEN";
+        AromaCompounds["GLYCYRRHIZIN"] = "GLYCYRRHIZIN";
+        AromaCompounds["HEPTANON"] = "HEPTANON";
+        AromaCompounds["HEXANAL"] = "HEXANAL";
+        AromaCompounds["CAPRONS\u00C4URE"] = "CAPRONS\u00C4URE";
+        AromaCompounds["HUMULEN"] = "HUMULEN";
+        AromaCompounds["HUMULON"] = "HUMULON";
+        AromaCompounds["HYDROXYBENZALDEHYD"] = "4-HYDROXYBENZALDEHYD";
+        AromaCompounds["ISOTHIOCYANATE"] = "ISOTHIOCYANATE";
+        AromaCompounds["ISOVALERALDEHYD"] = "ISOVALERALDEHYD";
+        AromaCompounds["LANIERON"] = "LANIERON";
+        AromaCompounds["LIMONEN"] = "LIMONEN";
+        AromaCompounds["LINALOOL"] = "LINALOOL";
+        AromaCompounds["\u00C4PFELS\u00C4URE"] = "\u00C4PFELS\u00C4URE";
+        AromaCompounds["METHOXYCOUMARIN"] = "METHOXYCOUMARIN";
+        AromaCompounds["METHOXYETHYLCINNAMAT"] = "METHOXYETHYLCINNAMAT";
+        AromaCompounds["METHYLBUTANAL"] = "3-METHYLBUTANAL";
+        AromaCompounds["ZIMTS\u00C4UREMETHYLESTER"] = "ZIMTS\u00C4UREMETHYLESTER";
+        AromaCompounds["METHYLHEPTENON"] = "METHYLHEPTENON";
+        AromaCompounds["SALICYLS\u00C4UREMETHYLESTER"] = "SALICYLS\u00C4UREMETHYLESTER";
+        AromaCompounds["MYRCEN"] = "MYRCEN";
+        AromaCompounds["MYRISTICIN"] = "MYRISTICIN";
+        AromaCompounds["NEROL"] = "NEROL";
+        AromaCompounds["NONANAL"] = "NONANAL";
+        AromaCompounds["OCIMENE"] = "OCIMENE";
+        AromaCompounds["PARADOL"] = "PARADOL";
+        AromaCompounds["VALERIANS\u00C4URE"] = "VALERIANS\u00C4URE";
+        AromaCompounds["PENTANOL"] = "PENTANOL";
+        AromaCompounds["PENTYLFURAN"] = "2-PENTYLFURAN";
+        AromaCompounds["PHELLANDREN"] = "PHELLANDREN";
+        AromaCompounds["PHENOLVERBINDUNGEN"] = "PHENOLVERBINDUNGEN";
+        AromaCompounds["PHENYLACETALDEHYD"] = "PHENYLACETALDEHYD";
+        AromaCompounds["PHENYLACETALDEHYD_2"] = "2-PHENYLACETALDEHYD";
+        AromaCompounds["PHENYLETHANTHIOL"] = "1-PHENYLETHANTHIOL";
+        AromaCompounds["PICROCROCIN"] = "PICROCROCIN";
+        AromaCompounds["PINENE"] = "PINENE";
+        AromaCompounds["PIPERIN"] = "PIPERIN";
+        AromaCompounds["PIPERONAL"] = "PIPERONAL";
+        AromaCompounds["PYRAZINVERBINDUNGEN"] = "PYRAZINVERBINDUNGEN";
+        AromaCompounds["ROSEN_KETONE"] = "ROSEN_KETONE";
+        AromaCompounds["ROTUNDONE"] = "ROTUNDONE";
+        AromaCompounds["SABINEN"] = "SABINEN";
+        AromaCompounds["SAFRANAL"] = "SAFRANAL";
+        AromaCompounds["SAFROL"] = "SAFROL";
+        AromaCompounds["SANSHOOL"] = "SANSHOOL";
+        AromaCompounds["SEDANOLID"] = "SEDANOLID";
+        AromaCompounds["SELINENE"] = "SELINENE";
+        AromaCompounds["SESAMOL"] = "SESAMOL";
+        AromaCompounds["SHOGAOL"] = "SHOGAOL";
+        AromaCompounds["SOTOLON"] = "SOTOLON";
+        AromaCompounds["SULCATON"] = "SULCATON";
+        AromaCompounds["SULFIDVERBINDUNGEN"] = "SULFIDVERBINDUNGEN";
+        AromaCompounds["TANNINVERBINDUNGEN"] = "TANNINVERBINDUNGEN";
+        AromaCompounds["WEINS\u00C4URE"] = "WEINS\u00C4URE";
+        AromaCompounds["TERPINENE"] = "TERPINENE";
+        AromaCompounds["TERPINEOL"] = "TERPINEOL";
+        AromaCompounds["TERPINYLACETAT"] = "TERPINYLACETAT";
+        AromaCompounds["THYMOL"] = "THYMOL";
+        AromaCompounds["THYMOCHINON"] = "THYMOCHINON";
+        AromaCompounds["AR_TURMERON"] = "AR-TURMERON";
+        AromaCompounds["VANILLIN"] = "VANILLIN";
+        AromaCompounds["VINYLAMYLKETON"] = "VINYLAMYLKETON";
+        AromaCompounds["ZINGIBEREN"] = "ZINGIBEREN";
+    })(AromaCompounds || (AromaCompounds = {}));
+    var AromaCompounds$1 = AromaCompounds;
+
+    class Zimt {
+        constructor() {
+            this.name = "Zimt";
+            this.nameSymbol = "Zi";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.ZIMTALDEHYD,
+                AromaCompounds$1.ZIMTALDEHYD,
+                AromaCompounds$1.ZIMTALDEHYD,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+            this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+        }
+    }
+
     /* src/App.svelte generated by Svelte v3.44.3 */
     const file = "src/App.svelte";
 
@@ -1332,7 +1486,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (131:4) <SpiceContainer shape={Math.random()} color={baseSpice1.color}>
+    // (105:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
     function create_default_slot_3(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -1395,14 +1549,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(131:4) <SpiceContainer shape={Math.random()} color={baseSpice1.color}>",
+    		source: "(105:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (138:4) <SpiceContainer shape={Math.random()} color={baseSpice2.color}>
+    // (112:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
     function create_default_slot_2(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -1465,14 +1619,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(138:4) <SpiceContainer shape={Math.random()} color={baseSpice2.color}>",
+    		source: "(112:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:8) <SpiceContainer shape={Math.random()} color={selection.color}>
+    // (124:8) <SpiceContainer shape={Math.random()} spice={selection}>
     function create_default_slot_1(ctx) {
     	let selectedspicesuggestions;
     	let t;
@@ -1520,14 +1674,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(150:8) <SpiceContainer shape={Math.random()} color={selection.color}>",
+    		source: "(124:8) <SpiceContainer shape={Math.random()} spice={selection}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:6) {#each selectedSuggestions as selection}
+    // (123:6) {#each selectedSuggestions as selection}
     function create_each_block_1(ctx) {
     	let spicecontainer;
     	let current;
@@ -1535,7 +1689,7 @@ var app = (function () {
     	spicecontainer = new SpiceContainer({
     			props: {
     				shape: Math.random(),
-    				color: /*selection*/ ctx[15].color,
+    				spice: /*selection*/ ctx[15],
     				$$slots: { default: [create_default_slot_1] },
     				$$scope: { ctx }
     			},
@@ -1552,7 +1706,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const spicecontainer_changes = {};
-    			if (dirty & /*selectedSuggestions*/ 8) spicecontainer_changes.color = /*selection*/ ctx[15].color;
+    			if (dirty & /*selectedSuggestions*/ 8) spicecontainer_changes.spice = /*selection*/ ctx[15];
 
     			if (dirty & /*$$scope, selectedSuggestions*/ 262152) {
     				spicecontainer_changes.$$scope = { dirty, ctx };
@@ -1578,14 +1732,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(149:6) {#each selectedSuggestions as selection}",
+    		source: "(123:6) {#each selectedSuggestions as selection}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:8) <SpiceContainer shape={Math.random()} color={suggestion.color}>
+    // (134:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
     function create_default_slot(ctx) {
     	let spicesuggestion;
     	let t;
@@ -1633,14 +1787,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(160:8) <SpiceContainer shape={Math.random()} color={suggestion.color}>",
+    		source: "(134:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:6) {#each spiceSuggestions as suggestion}
+    // (133:6) {#each spiceSuggestions as suggestion}
     function create_each_block(ctx) {
     	let spicecontainer;
     	let current;
@@ -1648,7 +1802,7 @@ var app = (function () {
     	spicecontainer = new SpiceContainer({
     			props: {
     				shape: Math.random(),
-    				color: /*suggestion*/ ctx[12].color,
+    				spice: /*suggestion*/ ctx[12],
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -1665,7 +1819,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const spicecontainer_changes = {};
-    			if (dirty & /*spiceSuggestions*/ 4) spicecontainer_changes.color = /*suggestion*/ ctx[12].color;
+    			if (dirty & /*spiceSuggestions*/ 4) spicecontainer_changes.spice = /*suggestion*/ ctx[12];
 
     			if (dirty & /*$$scope, spiceSuggestions*/ 262148) {
     				spicecontainer_changes.$$scope = { dirty, ctx };
@@ -1691,7 +1845,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(159:6) {#each spiceSuggestions as suggestion}",
+    		source: "(133:6) {#each spiceSuggestions as suggestion}",
     		ctx
     	});
 
@@ -1715,7 +1869,7 @@ var app = (function () {
     	spicecontainer0 = new SpiceContainer({
     			props: {
     				shape: Math.random(),
-    				color: /*baseSpice1*/ ctx[0].color,
+    				spice: /*baseSpice1*/ ctx[0],
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -1725,7 +1879,7 @@ var app = (function () {
     	spicecontainer1 = new SpiceContainer({
     			props: {
     				shape: Math.random(),
-    				color: /*baseSpice2*/ ctx[1].color,
+    				spice: /*baseSpice2*/ ctx[1],
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -1780,17 +1934,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "horizontalGrid svelte-vboysw");
-    			add_location(div0, file, 129, 2, 3167);
+    			add_location(div0, file, 103, 2, 2684);
     			attr_dev(div1, "class", "flex svelte-vboysw");
-    			add_location(div1, file, 147, 4, 3692);
+    			add_location(div1, file, 121, 4, 3197);
     			attr_dev(div2, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div2, file, 146, 2, 3654);
+    			add_location(div2, file, 120, 2, 3159);
     			attr_dev(div3, "class", "flex svelte-vboysw");
-    			add_location(div3, file, 157, 4, 4009);
+    			add_location(div3, file, 131, 4, 3508);
     			attr_dev(div4, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div4, file, 156, 2, 3971);
+    			add_location(div4, file, 130, 2, 3470);
     			attr_dev(div5, "class", "verticalGrid svelte-vboysw");
-    			add_location(div5, file, 128, 0, 3138);
+    			add_location(div5, file, 102, 0, 2655);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1821,7 +1975,7 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const spicecontainer0_changes = {};
-    			if (dirty & /*baseSpice1*/ 1) spicecontainer0_changes.color = /*baseSpice1*/ ctx[0].color;
+    			if (dirty & /*baseSpice1*/ 1) spicecontainer0_changes.spice = /*baseSpice1*/ ctx[0];
 
     			if (dirty & /*$$scope, baseSpice1*/ 262145) {
     				spicecontainer0_changes.$$scope = { dirty, ctx };
@@ -1829,7 +1983,7 @@ var app = (function () {
 
     			spicecontainer0.$set(spicecontainer0_changes);
     			const spicecontainer1_changes = {};
-    			if (dirty & /*baseSpice2*/ 2) spicecontainer1_changes.color = /*baseSpice2*/ ctx[1].color;
+    			if (dirty & /*baseSpice2*/ 2) spicecontainer1_changes.spice = /*baseSpice2*/ ctx[1];
 
     			if (dirty & /*$$scope, baseSpice2*/ 262146) {
     				spicecontainer1_changes.$$scope = { dirty, ctx };
@@ -1954,32 +2108,7 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
-
-    	let allSpices = [
-    		new Salt(),
-    		new Pepper(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2(),
-    		new Test1(),
-    		new Test2()
-    	];
-
+    	let allSpices = [new Zimt()];
     	let selectedSpices = [];
     	let baseSpice1 = new NoSpice();
     	let baseSpice2 = new NoSpice();
@@ -2074,14 +2203,11 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		SpiceContainer,
-    		NoSpice,
-    		Pepper,
-    		Salt,
-    		Test1,
-    		Test2,
     		SpiceDisplay,
     		SpiceSuggestion,
     		SelectedSpiceSuggestions,
+    		NoSpice,
+    		Zimt,
     		allSpices,
     		selectedSpices,
     		baseSpice1,

@@ -5,7 +5,7 @@
   export let onChange;
 </script>
 
-<h1>{selectedSpice.name}</h1>
+<h1 style="color:#444444;">{selectedSpice.name}</h1>
 <p>{selectedSpice.description}</p>
 <select bind:value={selectedSpice} on:change={onChange}>
   {#each spices as spice}

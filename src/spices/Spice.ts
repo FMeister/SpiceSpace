@@ -1,10 +1,14 @@
-import type SpiceComponents from "./SpiceComponents";
+import type AromaCompounds from "./AromaCompounds";
+import type AromaGroups from "./AromaGroups";
+import type AromaGroupsColors from "./AromaGroupsColors";
 
 interface Spice {
   name: string;
+  nameSymbol: string;
   description: string;
-  spiceComponents: SpiceComponents[];
-  color: number[];
+  aromaCompounds: AromaCompounds[];
+  aromaGroup: AromaGroups;
+  color: AromaGroupsColors;
 }
 
 export default Spice;
