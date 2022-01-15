@@ -17,6 +17,19 @@
   import Mahlab from "./spices/Mahlab";
   import Vanille from "./spices/Vanille";
   import Muskatnuss from "./spices/Muskatnuss";
+  import Muskatbluete from "./spices/Muskatbluete";
+  import Kuemmel from "./spices/Kuemmel";
+  import Dill from "./spices/Dill";
+  import Annatto from "./spices/Annatto";
+  import Mastix from "./spices/Mastix";
+  import Wacholder from "./spices/Wacholder";
+  import Rose from "./spices/Rose";
+  import Koriander from "./spices/Koriander";
+  import Kreuzkuemmel from "./spices/Kreuzkuemmel";
+  import Schwarzkuemmel from "./spices/Schwarzkuemmel";
+  import Mohrenpfeffer from "./spices/Mohrenpfeffer";
+  import SchwarzerKardamom from "./spices/SchwarzerKardamom";
+  import GruenerKardamom from "./spices/GruenerKardamom";
 
   let allSpices = [
     new Zimt(),
@@ -30,6 +43,19 @@
     new Mahlab(),
     new Vanille(),
     new Muskatnuss(),
+    new Muskatbluete(),
+    new Kuemmel(),
+    new Dill(),
+    new Annatto(),
+    new Mastix(),
+    new Wacholder(),
+    new Rose(),
+    new Koriander(),
+    new Kreuzkuemmel(),
+    new Schwarzkuemmel(),
+    new Mohrenpfeffer(),
+    new SchwarzerKardamom(),
+    new GruenerKardamom(),
   ];
 
   let selectedSpices = [];

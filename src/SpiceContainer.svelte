@@ -3,11 +3,14 @@
   export let spice;
 
   let blobShapes = [
-    "45% 55% 42% 58% / 63% 28% 72% 37%",
-    "45% 55% 42% 58% / 63% 90% 10% 37%",
-    "30% 70% 57% 43% / 50% 70% 30% 50% ",
-    "30% 70% 21% 79% / 50% 70% 30% 50% ",
-    "36% 64% 21% 79% / 50% 25% 75% 50% ",
+    "47% 53% 42% 58% / 54% 34% 66% 46% ",
+    "30% 70% 42% 58% / 54% 34% 66% 46% ",
+    "30% 70% 58% 42% / 54% 43% 57% 46% ",
+    "60% 40% 58% 42% / 54% 43% 57% 46% ",
+    "60% 40% 58% 42% / 37% 43% 57% 63% ",
+    "60% 40% 58% 42% / 37% 62% 38% 63% ",
+    "60% 40% 58% 42% / 59% 62% 38% 41% ",
+    "58% 42% 39% 61% / 55% 62% 38% 45% ",
   ];
 
   let index = Math.round(shape * blobShapes.length);
@@ -21,7 +24,7 @@
 <div class="spiceContainer">
   <div
     class="spiceBlob"
-    style="border-radius: {shapeCss}; background: radial-gradient(ellipse at top left, {spice.color}70 0%,{spice.color}FF 60%); "
+    style="border-radius: {shapeCss}; background: radial-gradient(ellipse at top left, {spice.color}A0 0%,{spice.color}FF 50%); "
   >
     <h1 style="font-weight: 400; padding-top:2.7rem; color:#444444;">
       [{spice.nameSymbol}]

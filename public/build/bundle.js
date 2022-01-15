@@ -514,13 +514,13 @@ var app = (function () {
     			set_style(h1, "font-weight", "400");
     			set_style(h1, "padding-top", "2.7rem");
     			set_style(h1, "color", "#444444");
-    			add_location(h1, file$4, 25, 4, 638);
+    			add_location(h1, file$4, 28, 4, 766);
     			attr_dev(div0, "class", "spiceBlob svelte-17lvbv5");
     			set_style(div0, "border-radius", /*shapeCss*/ ctx[1]);
-    			set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "70 0%," + /*spice*/ ctx[0].color + "FF 60%)");
-    			add_location(div0, file$4, 21, 2, 473);
+    			set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
+    			add_location(div0, file$4, 24, 2, 601);
     			attr_dev(div1, "class", "spiceContainer svelte-17lvbv5");
-    			add_location(div1, file$4, 20, 0, 442);
+    			add_location(div1, file$4, 23, 0, 570);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -544,7 +544,7 @@ var app = (function () {
     			if ((!current || dirty & /*spice*/ 1) && t1_value !== (t1_value = /*spice*/ ctx[0].nameSymbol + "")) set_data_dev(t1, t1_value);
 
     			if (!current || dirty & /*spice*/ 1) {
-    				set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "70 0%," + /*spice*/ ctx[0].color + "FF 60%)");
+    				set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
     			}
 
     			if (default_slot) {
@@ -595,11 +595,14 @@ var app = (function () {
     	let { spice } = $$props;
 
     	let blobShapes = [
-    		"45% 55% 42% 58% / 63% 28% 72% 37%",
-    		"45% 55% 42% 58% / 63% 90% 10% 37%",
-    		"30% 70% 57% 43% / 50% 70% 30% 50% ",
-    		"30% 70% 21% 79% / 50% 70% 30% 50% ",
-    		"36% 64% 21% 79% / 50% 25% 75% 50% "
+    		"47% 53% 42% 58% / 54% 34% 66% 46% ",
+    		"30% 70% 42% 58% / 54% 34% 66% 46% ",
+    		"30% 70% 58% 42% / 54% 43% 57% 46% ",
+    		"60% 40% 58% 42% / 54% 43% 57% 46% ",
+    		"60% 40% 58% 42% / 37% 43% 57% 63% ",
+    		"60% 40% 58% 42% / 37% 62% 38% 63% ",
+    		"60% 40% 58% 42% / 59% 62% 38% 41% ",
+    		"58% 42% 39% 61% / 55% 62% 38% 45% "
     	];
 
     	let index = Math.round(shape * blobShapes.length);
@@ -742,7 +745,7 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	let h1;
+    	let h3;
     	let t0_value = /*selectedSpice*/ ctx[0].name + "";
     	let t0;
     	let t1;
@@ -763,7 +766,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			h1 = element("h1");
+    			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
     			p = element("p");
@@ -775,8 +778,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			set_style(h1, "color", "#444444");
-    			add_location(h1, file$3, 7, 0, 93);
+    			set_style(h3, "color", "#444444");
+    			add_location(h3, file$3, 7, 0, 93);
     			add_location(p, file$3, 8, 0, 146);
     			if (/*selectedSpice*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[3].call(select));
     			add_location(select, file$3, 9, 0, 181);
@@ -785,8 +788,8 @@ var app = (function () {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h1, anchor);
-    			append_dev(h1, t0);
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p, anchor);
     			append_dev(p, t2);
@@ -853,7 +856,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(h3);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p);
     			if (detaching) detach_dev(t3);
@@ -1129,7 +1132,7 @@ var app = (function () {
     const file$1 = "src/spices/SelectedSpiceSuggestions.svelte";
 
     function create_fragment$1(ctx) {
-    	let h1;
+    	let h3;
     	let t0_value = /*spice*/ ctx[0].name + "";
     	let t0;
     	let t1;
@@ -1143,14 +1146,14 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			h1 = element("h1");
+    			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
     			p = element("p");
     			t2 = text(t2_value);
     			t3 = space();
     			button = element("button");
-    			add_location(h1, file$1, 5, 0, 74);
+    			add_location(h3, file$1, 5, 0, 74);
     			add_location(p, file$1, 8, 0, 100);
     			add_location(button, file$1, 11, 0, 131);
     		},
@@ -1158,8 +1161,8 @@ var app = (function () {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h1, anchor);
-    			append_dev(h1, t0);
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p, anchor);
     			append_dev(p, t2);
@@ -1189,7 +1192,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h1);
+    			if (detaching) detach_dev(h3);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p);
     			if (detaching) detach_dev(t3);
@@ -1659,6 +1662,247 @@ var app = (function () {
         }
     }
 
+    class Muskatbluete {
+        constructor() {
+            this.name = "Muskatblüte";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.ELEMICIN,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.MYRISTICIN,
+                AromaCompounds$1.MYRISTICIN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SABINEN,
+                AromaCompounds$1.SAFROL,
+                AromaCompounds$1.TERPINENE,
+                AromaCompounds$1.TERPINEOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+            this.color = AromaGroupsColors$1.Wärmende_Terpene;
+        }
+    }
+
+    class Kuemmel {
+        constructor() {
+            this.name = "Kümmel";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARVEOL,
+                AromaCompounds$1.S_CARVON,
+                AromaCompounds$1.S_CARVON,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SABINEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+            this.color = AromaGroupsColors$1.Wärmende_Terpene;
+        }
+    }
+
+    class Dill {
+        constructor() {
+            this.name = "Dill";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARVEOL,
+                AromaCompounds$1.D_CARVON,
+                AromaCompounds$1.D_CARVON,
+                AromaCompounds$1.FENCHON,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PHELLANDREN,
+                AromaCompounds$1.TERPINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+            this.color = AromaGroupsColors$1.Wärmende_Terpene;
+        }
+    }
+
+    class Annatto {
+        constructor() {
+            this.name = "Annatto";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.ALPHA_COPAEN,
+                AromaCompounds$1.ELEMAN,
+                AromaCompounds$1.GERMACREN,
+                AromaCompounds$1.GERMACREN,
+            ];
+            this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+            this.color = AromaGroupsColors$1.Wärmende_Terpene;
+        }
+    }
+
+    class Mastix {
+        constructor() {
+            this.name = "Mastix";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CAMPHEN,
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.PINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+            this.color = AromaGroupsColors$1.Duftende_Terpene;
+        }
+    }
+
+    class Wacholder {
+        constructor() {
+            this.name = "Wacholder";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TERPINEOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+            this.color = AromaGroupsColors$1.Duftende_Terpene;
+        }
+    }
+
+    class Rose {
+        constructor() {
+            this.name = "Rose";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CITRONELLOL,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.NEROL,
+                AromaCompounds$1.ROSEN_KETONE,
+            ];
+            this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+            this.color = AromaGroupsColors$1.Duftende_Terpene;
+        }
+    }
+
+    class Koriander {
+        constructor() {
+            this.name = "Koriander";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CYMOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TERPINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+            this.color = AromaGroupsColors$1.Duftende_Terpene;
+        }
+    }
+
+    class Kreuzkuemmel {
+        constructor() {
+            this.name = "Kreuzkümmel";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CUMINALDEHYD,
+                AromaCompounds$1.CUMINALDEHYD,
+                AromaCompounds$1.CYMOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TERPINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Erdige_Terpene;
+            this.color = AromaGroupsColors$1.Erdige_Terpene;
+        }
+    }
+
+    class Schwarzkuemmel {
+        constructor() {
+            this.name = "Schwarzkümmel";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARVACROL,
+                AromaCompounds$1.D_CARVON,
+                AromaCompounds$1.CYMOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.THYMOCHINON,
+            ];
+            this.aromaGroup = AromaGroups$1.Erdige_Terpene;
+            this.color = AromaGroupsColors$1.Erdige_Terpene;
+        }
+    }
+
+    class Mohrenpfeffer {
+        constructor() {
+            this.name = "Mohrenpfeffer";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.FENCHON,
+                AromaCompounds$1.FENCHON,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.GERMACREN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.VANILLIN,
+            ];
+            this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+            this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
+    class SchwarzerKardamom {
+        constructor() {
+            this.name = "Schwarzer Kardamom";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.DIMETHOXYPHENOL,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SABINEN,
+                AromaCompounds$1.TERPINYLACETAT,
+            ];
+            this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+            this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
+    class GruenerKardamom {
+        constructor() {
+            this.name = "Grüner Kardamom";
+            this.nameSymbol = "-";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.ALPHA_FENCHOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+            this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
     /* src/App.svelte generated by Svelte v3.44.3 */
     const file = "src/App.svelte";
 
@@ -1674,7 +1918,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (127:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+    // (153:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
     function create_default_slot_3(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -1737,14 +1981,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(127:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
+    		source: "(153:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+    // (160:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
     function create_default_slot_2(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -1807,14 +2051,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(134:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
+    		source: "(160:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:8) <SpiceContainer shape={Math.random()} spice={selection}>
+    // (172:8) <SpiceContainer shape={Math.random()} spice={selection}>
     function create_default_slot_1(ctx) {
     	let selectedspicesuggestions;
     	let t;
@@ -1862,14 +2106,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(146:8) <SpiceContainer shape={Math.random()} spice={selection}>",
+    		source: "(172:8) <SpiceContainer shape={Math.random()} spice={selection}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:6) {#each selectedSuggestions as selection}
+    // (171:6) {#each selectedSuggestions as selection}
     function create_each_block_1(ctx) {
     	let spicecontainer;
     	let current;
@@ -1920,14 +2164,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(145:6) {#each selectedSuggestions as selection}",
+    		source: "(171:6) {#each selectedSuggestions as selection}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
+    // (182:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
     function create_default_slot(ctx) {
     	let spicesuggestion;
     	let t;
@@ -1975,14 +2219,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(156:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
+    		source: "(182:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:6) {#each spiceSuggestions as suggestion}
+    // (181:6) {#each spiceSuggestions as suggestion}
     function create_each_block(ctx) {
     	let spicecontainer;
     	let current;
@@ -2033,7 +2277,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(155:6) {#each spiceSuggestions as suggestion}",
+    		source: "(181:6) {#each spiceSuggestions as suggestion}",
     		ctx
     	});
 
@@ -2122,17 +2366,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "horizontalGrid svelte-vboysw");
-    			add_location(div0, file, 125, 2, 3318);
+    			add_location(div0, file, 151, 2, 4225);
     			attr_dev(div1, "class", "flex svelte-vboysw");
-    			add_location(div1, file, 143, 4, 3831);
+    			add_location(div1, file, 169, 4, 4738);
     			attr_dev(div2, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div2, file, 142, 2, 3793);
+    			add_location(div2, file, 168, 2, 4700);
     			attr_dev(div3, "class", "flex svelte-vboysw");
-    			add_location(div3, file, 153, 4, 4142);
+    			add_location(div3, file, 179, 4, 5049);
     			attr_dev(div4, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div4, file, 152, 2, 4104);
+    			add_location(div4, file, 178, 2, 5011);
     			attr_dev(div5, "class", "verticalGrid svelte-vboysw");
-    			add_location(div5, file, 124, 0, 3289);
+    			add_location(div5, file, 150, 0, 4196);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2308,7 +2552,20 @@ var app = (function () {
     		new Sueßholz(),
     		new Mahlab(),
     		new Vanille(),
-    		new Muskatnuss()
+    		new Muskatnuss(),
+    		new Muskatbluete(),
+    		new Kuemmel(),
+    		new Dill(),
+    		new Annatto(),
+    		new Mastix(),
+    		new Wacholder(),
+    		new Rose(),
+    		new Koriander(),
+    		new Kreuzkuemmel(),
+    		new Schwarzkuemmel(),
+    		new Mohrenpfeffer(),
+    		new SchwarzerKardamom(),
+    		new GruenerKardamom()
     	];
 
     	let selectedSpices = [];
@@ -2420,6 +2677,19 @@ var app = (function () {
     		Mahlab,
     		Vanille,
     		Muskatnuss,
+    		Muskatbluete,
+    		Kuemmel,
+    		Dill,
+    		Annatto,
+    		Mastix,
+    		Wacholder,
+    		Rose,
+    		Koriander,
+    		Kreuzkuemmel,
+    		Schwarzkuemmel,
+    		Mohrenpfeffer,
+    		SchwarzerKardamom,
+    		GruenerKardamom,
     		allSpices,
     		selectedSpices,
     		baseSpice1,

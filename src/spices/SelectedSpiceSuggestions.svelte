@@ -3,9 +3,9 @@
   export let removeFromSelection;
 </script>
 
-<h1>
+<h3>
   {spice.name}
-</h1>
+</h3>
 <p>
   {spice.description}
 </p>
