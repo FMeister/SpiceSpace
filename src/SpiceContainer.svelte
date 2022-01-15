@@ -21,7 +21,7 @@
 <div class="spiceContainer">
   <div
     class="spiceBlob"
-    style="border-radius: {shapeCss}; background-color: {spice.color};"
+    style="border-radius: {shapeCss}; background: radial-gradient(ellipse at top left, {spice.color}70 0%,{spice.color}FF 60%); "
   >
     <h1 style="font-weight: 400; padding-top:2.7rem; color:#444444;">
       [{spice.nameSymbol}]
@@ -32,7 +32,7 @@
 
 <style>
   .spiceContainer {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(251, 251, 251);
     box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
     padding: 3rem;
     padding-top: 0rem;

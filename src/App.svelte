@@ -7,8 +7,18 @@
 
   import NoSpice from "./spices/NoSpice";
   import Zimt from "./spices/Zimt";
+  import Cassia_Zimt from "./spices/Cassia_Zimt";
+  import Gewuerznelke from "./spices/Gewuerznelke";
+  import Piment from "./spices/Piment";
+  import Anis from "./spices/Anis";
 
-  let allSpices = [new Zimt()];
+  let allSpices = [
+    new Zimt(),
+    new Cassia_Zimt(),
+    new Gewuerznelke(),
+    new Piment(),
+    new Anis(),
+  ];
 
   let selectedSpices = [];
   let baseSpice1 = new NoSpice();
@@ -44,37 +54,37 @@
   function makeSpiceSuggestion() {
     spiceSuggestions = [];
 
-    // Push current selected spice components into array
+    // Push current selected spice Compounds into array
 
-    let targetSpiceComponents = [];
+    let targetAromaCompounds = [];
     selectedSpices.forEach((spice) => {
-      targetSpiceComponents.push(...spice.spiceComponents);
+      targetAromaCompounds.push(...spice.aromaCompounds);
     });
 
-    // calculate for all spices how many components match with the existing ones
+    // calculate for all spices how many Compounds match with the existing ones
 
-    let matchingSpiceComponents = [];
+    let matchingAromaCompounds = [];
     allSpices.forEach((spice) => {
       let matches = 0;
-      spice.spiceComponents.forEach((canidateComponent) => {
-        targetSpiceComponents.forEach((targetComponents) => {
-          if (canidateComponent === targetComponents) {
+      spice.aromaCompounds.forEach((canidateComponent) => {
+        targetAromaCompounds.forEach((targetCompounds) => {
+          if (canidateComponent === targetCompounds) {
             matches += 1;
           }
         });
       });
-      matchingSpiceComponents.push({ spice: spice, matches: matches });
+      matchingAromaCompounds.push({ spice: spice, matches: matches });
     });
 
     // sort spices by matches
 
-    matchingSpiceComponents.sort(function (a, b) {
+    matchingAromaCompounds.sort(function (a, b) {
       return b.matches - a.matches;
     });
 
     // remove the two selected spices from the sorted spice array
 
-    matchingSpiceComponents = matchingSpiceComponents.filter(function (
+    matchingAromaCompounds = matchingAromaCompounds.filter(function (
       value,
       index,
       arr
@@ -96,7 +106,7 @@
 
     // move first 7 suggestions to suggestions array
 
-    spiceSuggestions = matchingSpiceComponents.slice(0, 7).map((x) => x.spice);
+    spiceSuggestions = matchingAromaCompounds.slice(0, 7).map((x) => x.spice);
   }
 </script>
 
