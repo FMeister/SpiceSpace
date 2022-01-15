@@ -37,12 +37,12 @@
   .spiceContainer {
     background-color: rgb(251, 251, 251);
     box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
-    padding: 3rem;
+    padding: 2rem;
     padding-top: 0rem;
     margin: 1rem;
     margin-top: 3rem;
     max-width: 20rem;
-    min-width: 10rem;
+    min-width: 6rem;
     border-radius: 2rem;
   }
   .spiceBlob {

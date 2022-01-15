@@ -515,11 +515,11 @@ var app = (function () {
     			set_style(h1, "padding-top", "2.7rem");
     			set_style(h1, "color", "#444444");
     			add_location(h1, file$4, 28, 4, 766);
-    			attr_dev(div0, "class", "spiceBlob svelte-17lvbv5");
+    			attr_dev(div0, "class", "spiceBlob svelte-4mt961");
     			set_style(div0, "border-radius", /*shapeCss*/ ctx[1]);
     			set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
     			add_location(div0, file$4, 24, 2, 601);
-    			attr_dev(div1, "class", "spiceContainer svelte-17lvbv5");
+    			attr_dev(div1, "class", "spiceContainer svelte-4mt961");
     			add_location(div1, file$4, 23, 0, 570);
     		},
     		l: function claim(nodes) {
@@ -979,10 +979,6 @@ var app = (function () {
     	let t0_value = /*spice*/ ctx[0].name + "";
     	let t0;
     	let t1;
-    	let p;
-    	let t2_value = /*spice*/ ctx[0].description + "";
-    	let t2;
-    	let t3;
     	let button;
     	let mounted;
     	let dispose;
@@ -992,13 +988,9 @@ var app = (function () {
     			h3 = element("h3");
     			t0 = text(t0_value);
     			t1 = space();
-    			p = element("p");
-    			t2 = text(t2_value);
-    			t3 = space();
     			button = element("button");
     			add_location(h3, file$2, 5, 0, 69);
-    			add_location(p, file$2, 8, 0, 95);
-    			add_location(button, file$2, 11, 0, 126);
+    			add_location(button, file$2, 11, 0, 135);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1007,9 +999,6 @@ var app = (function () {
     			insert_dev(target, h3, anchor);
     			append_dev(h3, t0);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t2);
-    			insert_dev(target, t3, anchor);
     			insert_dev(target, button, anchor);
 
     			if (!mounted) {
@@ -1030,15 +1019,12 @@ var app = (function () {
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
     			if (dirty & /*spice*/ 1 && t0_value !== (t0_value = /*spice*/ ctx[0].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*spice*/ 1 && t2_value !== (t2_value = /*spice*/ ctx[0].description + "")) set_data_dev(t2, t2_value);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h3);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(p);
-    			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(button);
     			mounted = false;
     			dispose();

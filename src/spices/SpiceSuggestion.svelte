@@ -6,7 +6,7 @@
 <h3>
   {spice.name}
 </h3>
-<p>
+<!-- <p>
   {spice.description}
-</p>
+</p> -->
 <button on:click={addToSelection(spice)} />
