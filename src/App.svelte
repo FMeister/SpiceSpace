@@ -11,6 +11,12 @@
   import Gewuerznelke from "./spices/Gewuerznelke";
   import Piment from "./spices/Piment";
   import Anis from "./spices/Anis";
+  import Sternanis from "./spices/Sternanis";
+  import Fenchel from "./spices/Fenchel";
+  import Sueßholz from "./spices/Sueßholz";
+  import Mahlab from "./spices/Mahlab";
+  import Vanille from "./spices/Vanille";
+  import Muskatnuss from "./spices/Muskatnuss";
 
   let allSpices = [
     new Zimt(),
@@ -18,6 +24,12 @@
     new Gewuerznelke(),
     new Piment(),
     new Anis(),
+    new Sternanis(),
+    new Fenchel(),
+    new Sueßholz(),
+    new Mahlab(),
+    new Vanille(),
+    new Muskatnuss(),
   ];
 
   let selectedSpices = [];
