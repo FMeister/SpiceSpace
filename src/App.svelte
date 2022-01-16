@@ -62,60 +62,60 @@
   import Bockshornklee from "./spices/Bockshornklee";
 
   let allSpices = [
-    new Zimt(),
-    new Cassia_Zimt(),
-    new Gewuerznelke(),
-    new Piment(),
-    new Anis(),
-    new Sternanis(),
-    new Fenchel(),
-    new Sueßholz(),
-    new Mahlab(),
-    new Vanille(),
-    new Muskatnuss(),
-    new Muskatbluete(),
-    new Kuemmel(),
-    new Dill(),
-    new Annatto(),
-    new Mastix(),
-    new Wacholder(),
-    new Rose(),
-    new Koriander(),
-    new Kreuzkuemmel(),
-    new Schwarzkuemmel(),
-    new Mohrenpfeffer(),
-    new SchwarzerKardamom(),
-    new GruenerKardamom(),
-    new Lorbeer(),
-    new Galgant(),
-    new Loomi(),
-    new Zitronenmyrte(),
-    new Zitronengras(),
+    new Ajowan(),
+    new Akazie(),
     new Amchur(),
     new Anardana(),
-    new Sumach(),
-    new Tamarinde(),
-    new Johannisbrotschote(),
-    new Berberitze(),
-    new Kakao(),
-    new Paprika(),
-    new Akazie(),
-    new Sesam(),
-    new Knoblauch(),
+    new Anis(),
+    new Annatto(),
     new Asant(),
-    new Curryblaetter(),
-    new Senf(),
-    new Paradieskoerner(),
-    new Schwarzerpfeffer(),
-    new Szechuanpfeffer(),
-    new Ingwer(),
-    new Chili(),
-    new Safran(),
-    new Mohn(),
-    new Ajowan(),
-    new Selleriesamen(),
-    new Kurkuma(),
+    new Berberitze(),
     new Bockshornklee(),
+    new Cassia_Zimt(),
+    new Chili(),
+    new Curryblaetter(),
+    new Dill(),
+    new Fenchel(),
+    new Galgant(),
+    new Gewuerznelke(),
+    new GruenerKardamom(),
+    new Ingwer(),
+    new Johannisbrotschote(),
+    new Kakao(),
+    new Knoblauch(),
+    new Koriander(),
+    new Kreuzkuemmel(),
+    new Kuemmel(),
+    new Kurkuma(),
+    new Mahlab(),
+    new Mastix(),
+    new Mohn(),
+    new Loomi(),
+    new Lorbeer(),
+    new Mohrenpfeffer(),
+    new Muskatbluete(),
+    new Muskatnuss(),
+    new Paprika(),
+    new Paradieskoerner(),
+    new Piment(),
+    new Rose(),
+    new Safran(),
+    new SchwarzerKardamom(),
+    new Schwarzerpfeffer(),
+    new Schwarzkuemmel(),
+    new Selleriesamen(),
+    new Senf(),
+    new Sesam(),
+    new Sueßholz(),
+    new Sumach(),
+    new Sternanis(),
+    new Szechuanpfeffer(),
+    new Tamarinde(),
+    new Vanille(),
+    new Wacholder(),
+    new Zimt(),
+    new Zitronengras(),
+    new Zitronenmyrte(),
   ];
 
   let selectedSpices = [];
@@ -180,13 +180,19 @@
       return b.matches - a.matches;
     });
 
-    // remove the two selected spices from the sorted spice array
+    // remove the selected spices and spices with no enough match from the sorted spice array
 
     matchingAromaCompounds = matchingAromaCompounds.filter(function (
       value,
       index,
       arr
     ) {
+      let enoughMatches = 2;
+
+      if (value.matches < enoughMatches) {
+        return false;
+      }
+
       for (const selection of selectedSpices) {
         if (value.spice.name === selection.name) {
           return false;
