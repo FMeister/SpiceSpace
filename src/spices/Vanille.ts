@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Vanille implements Spice {
   name: string = "Vanille";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Va";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.ANISALDEHYD,

@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Muskatbluete implements Spice {
   name: string = "Muskatblüte";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Mb";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.ELEMICIN,

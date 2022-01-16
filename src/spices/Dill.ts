@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Dill implements Spice {
   name: string = "Dill";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Di";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CARVEOL,

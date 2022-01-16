@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Sueßholz implements Spice {
   name: string = "Süßholz";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Sü";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.ANETHOL,

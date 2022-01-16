@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Piment implements Spice {
   name: string = "Piment";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Pi";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CINEOL,

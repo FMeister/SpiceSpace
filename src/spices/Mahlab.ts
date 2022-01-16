@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Mahlab implements Spice {
   name: string = "Mahlab";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Ma";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.AZULEN,

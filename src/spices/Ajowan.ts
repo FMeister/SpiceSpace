@@ -3,20 +3,20 @@ import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
 
-class Koriander implements Spice {
-  name: string = "Koriander";
-  nameSymbol: string = "Ko";
+class Ajowan implements Spice {
+  name: string = "Ajowan";
+  nameSymbol: string = "Aj";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CYMOL,
-    AromaCompounds.LIMONEN,
-    AromaCompounds.LINALOOL,
-    AromaCompounds.LINALOOL,
+    AromaCompounds.MYRCEN,
     AromaCompounds.PINENE,
     AromaCompounds.TERPINENE,
+    AromaCompounds.THYMOL,
+    AromaCompounds.THYMOL,
   ];
-  aromaGroup: AromaGroups = AromaGroups.Duftende_Terpene;
-  color: AromaGroupsColors = AromaGroupsColors.Duftende_Terpene;
+  aromaGroup: AromaGroups = AromaGroups.Einzigartige_Stoffe;
+  color: AromaGroupsColors = AromaGroupsColors.Einzigartige_Stoffe;
 }
 
-export default Koriander;
+export default Ajowan;

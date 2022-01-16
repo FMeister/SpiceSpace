@@ -30,6 +30,36 @@
   import Mohrenpfeffer from "./spices/Mohrenpfeffer";
   import SchwarzerKardamom from "./spices/SchwarzerKardamom";
   import GruenerKardamom from "./spices/GruenerKardamom";
+  import Lorbeer from "./spices/Lorbeer";
+  import Galgant from "./spices/Galgant";
+  import Loomi from "./spices/Loomi";
+  import Zitronenmyrte from "./spices/Zitronenmyrte";
+  import Zitronengras from "./spices/Zitronengras";
+  import Amchur from "./spices/Amchur";
+  import Anardana from "./spices/Anardana";
+  import Sumach from "./spices/Sumach";
+  import Tamarinde from "./spices/Tamarinde";
+  import Johannisbrotschote from "./spices/Johannisbrotschote";
+  import Berberitze from "./spices/Berberitze";
+  import Kakao from "./spices/Kakao";
+  import Paprika from "./spices/Paprika";
+  import Akazie from "./spices/Akazie";
+  import Sesam from "./spices/Sesam";
+  import Knoblauch from "./spices/Knoblauch";
+  import Asant from "./spices/Asant";
+  import Curryblaetter from "./spices/Curryblaetter";
+  import Senf from "./spices/Senf";
+  import Paradieskoerner from "./spices/Paradieskoerner";
+  import Schwarzerpfeffer from "./spices/Schwarzerpfeffer";
+  import Szechuanpfeffer from "./spices/Szechuanpfeffer";
+  import Ingwer from "./spices/Ingwer";
+  import Chili from "./spices/Chili";
+  import Safran from "./spices/Safran";
+  import Mohn from "./spices/Mohn";
+  import Ajowan from "./spices/Ajowan";
+  import Selleriesamen from "./spices/Selleriesamen";
+  import Kurkuma from "./spices/Kurkuma";
+  import Bockshornklee from "./spices/Bockshornklee";
 
   let allSpices = [
     new Zimt(),
@@ -56,6 +86,36 @@
     new Mohrenpfeffer(),
     new SchwarzerKardamom(),
     new GruenerKardamom(),
+    new Lorbeer(),
+    new Galgant(),
+    new Loomi(),
+    new Zitronenmyrte(),
+    new Zitronengras(),
+    new Amchur(),
+    new Anardana(),
+    new Sumach(),
+    new Tamarinde(),
+    new Johannisbrotschote(),
+    new Berberitze(),
+    new Kakao(),
+    new Paprika(),
+    new Akazie(),
+    new Sesam(),
+    new Knoblauch(),
+    new Asant(),
+    new Curryblaetter(),
+    new Senf(),
+    new Paradieskoerner(),
+    new Schwarzerpfeffer(),
+    new Szechuanpfeffer(),
+    new Ingwer(),
+    new Chili(),
+    new Safran(),
+    new Mohn(),
+    new Ajowan(),
+    new Selleriesamen(),
+    new Kurkuma(),
+    new Bockshornklee(),
   ];
 
   let selectedSpices = [];
@@ -142,9 +202,9 @@
       return true;
     });
 
-    // move first 7 suggestions to suggestions array
+    // move first "n" suggestions to suggestions array
 
-    spiceSuggestions = matchingAromaCompounds.slice(0, 7).map((x) => x.spice);
+    spiceSuggestions = matchingAromaCompounds.slice(0, 20).map((x) => x.spice);
   }
 </script>
 

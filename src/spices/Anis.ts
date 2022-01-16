@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Anis implements Spice {
   name: string = "Anis";
-  nameSymbol: string = "-";
+  nameSymbol: string = "An";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.ANETHOL,

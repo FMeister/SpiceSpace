@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class GruenerKardamom implements Spice {
   name: string = "Grüner Kardamom";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Gka";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CINEOL,

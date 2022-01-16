@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Muskatnuss implements Spice {
   name: string = "Muskatnuss";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Mu";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CINEOL,

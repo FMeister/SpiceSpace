@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Annatto implements Spice {
   name: string = "Annatto";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Ao";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CARYOPHYLLENE,

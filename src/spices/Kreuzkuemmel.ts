@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Kreuzkuemmel implements Spice {
   name: string = "Kreuzkümmel";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Kk";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CUMINALDEHYD,

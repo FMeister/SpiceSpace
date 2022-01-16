@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Kuemmel implements Spice {
   name: string = "Kümmel";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Kü";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CARVEOL,

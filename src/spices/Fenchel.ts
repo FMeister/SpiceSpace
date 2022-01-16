@@ -4,8 +4,8 @@ import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
 
 class Fenchel implements Spice {
-  name: string = "Fenchel";
-  nameSymbol: string = "-";
+  name: string = "Fenchelsamen";
+  nameSymbol: string = "Fs";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.ANETHOL,

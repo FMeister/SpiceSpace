@@ -3,22 +3,22 @@ import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
 
-class Mohrenpfeffer implements Spice {
-  name: string = "Mohrenpfeffer";
-  nameSymbol: string = "Mp";
+class Lorbeer implements Spice {
+  name: string = "Lorbeer";
+  nameSymbol: string = "Lb";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CINEOL,
-    AromaCompounds.FENCHON,
-    AromaCompounds.FENCHON,
+    AromaCompounds.CINEOL,
+    AromaCompounds.EUGENOL,
     AromaCompounds.GERANIOL,
-    AromaCompounds.GERMACREN,
     AromaCompounds.LINALOOL,
+    AromaCompounds.PHELLANDREN,
     AromaCompounds.PINENE,
-    AromaCompounds.VANILLIN,
+    AromaCompounds.TERPINEOL,
   ];
   aromaGroup: AromaGroups = AromaGroups.Durchdringende_Terpene;
   color: AromaGroupsColors = AromaGroupsColors.Durchdringende_Terpene;
 }
 
-export default Mohrenpfeffer;
+export default Lorbeer;

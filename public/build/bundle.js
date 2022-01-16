@@ -1482,7 +1482,7 @@ var app = (function () {
     class Gewuerznelke {
         constructor() {
             this.name = "Gewürznelke";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Gn";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CARYOPHYLLENE,
@@ -1500,7 +1500,7 @@ var app = (function () {
     class Piment {
         constructor() {
             this.name = "Piment";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Pi";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CINEOL,
@@ -1519,7 +1519,7 @@ var app = (function () {
     class Anis {
         constructor() {
             this.name = "Anis";
-            this.nameSymbol = "-";
+            this.nameSymbol = "An";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ANETHOL,
@@ -1540,7 +1540,7 @@ var app = (function () {
     class Sternanis {
         constructor() {
             this.name = "Sternanis";
-            this.nameSymbol = "-";
+            this.nameSymbol = "St";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ANETHOL,
@@ -1557,8 +1557,8 @@ var app = (function () {
 
     class Fenchel {
         constructor() {
-            this.name = "Fenchel";
-            this.nameSymbol = "-";
+            this.name = "Fenchelsamen";
+            this.nameSymbol = "Fs";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ANETHOL,
@@ -1576,7 +1576,7 @@ var app = (function () {
     class Sueßholz {
         constructor() {
             this.name = "Süßholz";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Sü";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ANETHOL,
@@ -1596,7 +1596,7 @@ var app = (function () {
     class Mahlab {
         constructor() {
             this.name = "Mahlab";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Ma";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.AZULEN,
@@ -1614,7 +1614,7 @@ var app = (function () {
     class Vanille {
         constructor() {
             this.name = "Vanille";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Va";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ANISALDEHYD,
@@ -1631,7 +1631,7 @@ var app = (function () {
     class Muskatnuss {
         constructor() {
             this.name = "Muskatnuss";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Mu";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CINEOL,
@@ -1651,7 +1651,7 @@ var app = (function () {
     class Muskatbluete {
         constructor() {
             this.name = "Muskatblüte";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Mb";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.ELEMICIN,
@@ -1672,7 +1672,7 @@ var app = (function () {
     class Kuemmel {
         constructor() {
             this.name = "Kümmel";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Kü";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CARVEOL,
@@ -1690,7 +1690,7 @@ var app = (function () {
     class Dill {
         constructor() {
             this.name = "Dill";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Di";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CARVEOL,
@@ -1709,7 +1709,7 @@ var app = (function () {
     class Annatto {
         constructor() {
             this.name = "Annatto";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Ao";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CARYOPHYLLENE,
@@ -1726,7 +1726,7 @@ var app = (function () {
     class Mastix {
         constructor() {
             this.name = "Mastix";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Mx";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CAMPHEN,
@@ -1744,7 +1744,7 @@ var app = (function () {
     class Wacholder {
         constructor() {
             this.name = "Wacholder";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Wa";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.GERANIOL,
@@ -1762,7 +1762,7 @@ var app = (function () {
     class Rose {
         constructor() {
             this.name = "Rose";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Ro";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CITRONELLOL,
@@ -1781,7 +1781,7 @@ var app = (function () {
     class Koriander {
         constructor() {
             this.name = "Koriander";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Ko";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CYMOL,
@@ -1799,7 +1799,7 @@ var app = (function () {
     class Kreuzkuemmel {
         constructor() {
             this.name = "Kreuzkümmel";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Kk";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CUMINALDEHYD,
@@ -1817,7 +1817,7 @@ var app = (function () {
     class Schwarzkuemmel {
         constructor() {
             this.name = "Schwarzkümmel";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Sk";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CARVACROL,
@@ -1835,7 +1835,7 @@ var app = (function () {
     class Mohrenpfeffer {
         constructor() {
             this.name = "Mohrenpfeffer";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Mp";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CINEOL,
@@ -1855,7 +1855,7 @@ var app = (function () {
     class SchwarzerKardamom {
         constructor() {
             this.name = "Schwarzer Kardamom";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Ska";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CINEOL,
@@ -1875,7 +1875,7 @@ var app = (function () {
     class GruenerKardamom {
         constructor() {
             this.name = "Grüner Kardamom";
-            this.nameSymbol = "-";
+            this.nameSymbol = "Gka";
             this.description = "";
             this.aromaCompounds = [
                 AromaCompounds$1.CINEOL,
@@ -1886,6 +1886,580 @@ var app = (function () {
             ];
             this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
             this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
+    class Lorbeer {
+        constructor() {
+            this.name = "Lorbeer";
+            this.nameSymbol = "Lb";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.PHELLANDREN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TERPINEOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+            this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
+    class Galgant {
+        constructor() {
+            this.name = "Galgant";
+            this.nameSymbol = "Ga";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.KAMPFER,
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.ALPHA_FENCHOL,
+                AromaCompounds$1.GALANGALACETAT,
+                AromaCompounds$1.ZIMTSÄUREMETHYLESTER,
+            ];
+            this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+            this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+        }
+    }
+
+    class Loomi {
+        constructor() {
+            this.name = "Loomi";
+            this.nameSymbol = "Lo";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.FENCHON,
+                AromaCompounds$1.HUMULEN,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.METHOXYCOUMARIN,
+            ];
+            this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+            this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+        }
+    }
+
+    class Zitronenmyrte {
+        constructor() {
+            this.name = "Zitronenmyrte";
+            this.nameSymbol = "Zm";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.CITRONELLAL,
+                AromaCompounds$1.CYCLOCITRAL,
+                AromaCompounds$1.HEPTANON,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SULCATON,
+            ];
+            this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+            this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+        }
+    }
+
+    class Zitronengras {
+        constructor() {
+            this.name = "Zitronengras";
+            this.nameSymbol = "Zg";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.NEROL,
+            ];
+            this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+            this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+        }
+    }
+
+    class Amchur {
+        constructor() {
+            this.name = "Amchur";
+            this.nameSymbol = "Am";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CADINENE,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.CUBEBIN,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.OCIMENE,
+                AromaCompounds$1.OCIMENE,
+                AromaCompounds$1.SELINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+            this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+        }
+    }
+
+    class Anardana {
+        constructor() {
+            this.name = "Anardana";
+            this.nameSymbol = "Ad";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CAREN,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.TANNINVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+            this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+        }
+    }
+
+    class Sumach {
+        constructor() {
+            this.name = "Sumach";
+            this.nameSymbol = "Su";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.CEMBREN,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.NONANAL,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TANNINVERBINDUNGEN,
+                AromaCompounds$1.WEINSÄURE,
+            ];
+            this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+            this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+        }
+    }
+
+    class Tamarinde {
+        constructor() {
+            this.name = "Tamarinde";
+            this.nameSymbol = "Ta";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.FURFURAL,
+                AromaCompounds$1.FURFURAL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PHENYLACETALDEHYD_2,
+                AromaCompounds$1.PHENYLACETALDEHYD_2,
+                AromaCompounds$1.WEINSÄURE,
+            ];
+            this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+            this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+        }
+    }
+
+    class Johannisbrotschote {
+        constructor() {
+            this.name = "Johannisbrotschote";
+            this.nameSymbol = "Jo";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.ZIMTALDEHYD,
+                AromaCompounds$1.FARNESENE,
+                AromaCompounds$1.FURANEOL,
+                AromaCompounds$1.CAPRONSÄURE,
+                AromaCompounds$1.CAPRONSÄURE,
+                AromaCompounds$1.VALERIANSÄURE,
+                AromaCompounds$1.VALERIANSÄURE,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+            this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+        }
+    }
+
+    class Berberitze {
+        constructor() {
+            this.name = "Berberitze";
+            this.nameSymbol = "Be";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.ANISALDEHYD,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.NONANAL,
+                AromaCompounds$1.WEINSÄURE,
+            ];
+            this.aromaGroup = AromaGroups$1.Fruchtige_Aldehyde;
+            this.color = AromaGroupsColors$1.Fruchtige_Aldehyde;
+        }
+    }
+
+    class Kakao {
+        constructor() {
+            this.name = "Kakao";
+            this.nameSymbol = "Ka";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.DIMETHYLPYRAZIN,
+                AromaCompounds$1.ESTERVERBINDUNGEN,
+                AromaCompounds$1.FURANEOL,
+                AromaCompounds$1.ISOVALERALDEHYD,
+                AromaCompounds$1.ISOVALERALDEHYD,
+                AromaCompounds$1.PHENOLVERBINDUNGEN,
+                AromaCompounds$1.PHENYLACETALDEHYD,
+            ];
+            this.aromaGroup = AromaGroups$1.Fruchtige_Aldehyde;
+            this.color = AromaGroupsColors$1.Fruchtige_Aldehyde;
+        }
+    }
+
+    class Paprika {
+        constructor() {
+            this.name = "Paprika";
+            this.nameSymbol = "Pa";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.ACETOIN,
+                AromaCompounds$1.CAPSAICIN,
+                AromaCompounds$1.ZITRONENSÄURE,
+                AromaCompounds$1.ESSIGESTER,
+                AromaCompounds$1.ISOVALERALDEHYD,
+                AromaCompounds$1.ÄPFELSÄURE,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+            this.color = AromaGroupsColors$1.Röstige_Pysazine;
+        }
+    }
+
+    class Akazie {
+        constructor() {
+            this.name = "Akazie";
+            this.nameSymbol = "Ak";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.PHENOLVERBINDUNGEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+            this.color = AromaGroupsColors$1.Röstige_Pysazine;
+        }
+    }
+
+    class Sesam {
+        constructor() {
+            this.name = "Sesam";
+            this.nameSymbol = "Sm";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.FURFURYLTHIOL_2,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+                AromaCompounds$1.SESAMOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+            this.color = AromaGroupsColors$1.Röstige_Pysazine;
+        }
+    }
+
+    class Knoblauch {
+        constructor() {
+            this.name = "Knoblauch";
+            this.nameSymbol = "Kn";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CAREN,
+                AromaCompounds$1.DIALLYLTRISULFID,
+                AromaCompounds$1.DIALLYLTRISULFID,
+                AromaCompounds$1.DIALLYDISULFID,
+                AromaCompounds$1.DIALLYDISULFID,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.SABINEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+            this.color = AromaGroupsColors$1.Schwefelverbindungen;
+        }
+    }
+
+    class Asant {
+        constructor() {
+            this.name = "Asant";
+            this.nameSymbol = "As";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.EUDESMOL,
+                AromaCompounds$1.FERULASÄURE,
+                AromaCompounds$1.OCIMENE,
+                AromaCompounds$1.PHELLANDREN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SULFIDVERBINDUNGEN,
+                AromaCompounds$1.SULFIDVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+            this.color = AromaGroupsColors$1.Schwefelverbindungen;
+        }
+    }
+
+    class Curryblaetter {
+        constructor() {
+            this.name = "Curryblätter";
+            this.nameSymbol = "Cu";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PHENYLETHANTHIOL,
+                AromaCompounds$1.PHENYLETHANTHIOL,
+                AromaCompounds$1.PINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+            this.color = AromaGroupsColors$1.Schwefelverbindungen;
+        }
+    }
+
+    class Senf {
+        constructor() {
+            this.name = "Senf";
+            this.nameSymbol = "Se";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.ACETYL_PYRROLIN,
+                AromaCompounds$1.FURFURYLTHIOL,
+                AromaCompounds$1.ISOTHIOCYANATE,
+                AromaCompounds$1.ISOTHIOCYANATE,
+                AromaCompounds$1.ISOVALERALDEHYD,
+                AromaCompounds$1.METHYLBUTANAL,
+                AromaCompounds$1.PINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+            this.color = AromaGroupsColors$1.Schwefelverbindungen;
+        }
+    }
+
+    class Paradieskoerner {
+        constructor() {
+            this.name = "Paradieskörner";
+            this.nameSymbol = "Pk";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.GINGEROL,
+                AromaCompounds$1.HUMULON,
+                AromaCompounds$1.PARADOL,
+                AromaCompounds$1.PARADOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+            this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+        }
+    }
+
+    class Schwarzerpfeffer {
+        constructor() {
+            this.name = "Schwarzer Pfeffer";
+            this.nameSymbol = "Pf";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PHELLANDREN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.PIPERIN,
+                AromaCompounds$1.PIPERIN,
+                AromaCompounds$1.ROTUNDONE,
+            ];
+            this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+            this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+        }
+    }
+
+    class Szechuanpfeffer {
+        constructor() {
+            this.name = "Szechuan Pfeffer";
+            this.nameSymbol = "Sz";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.SANSHOOL,
+                AromaCompounds$1.SANSHOOL,
+                AromaCompounds$1.TERPINEOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+            this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+        }
+    }
+
+    class Ingwer {
+        constructor() {
+            this.name = "Ingwer";
+            this.nameSymbol = "In";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.CURCUMIN,
+                AromaCompounds$1.GERANIOL,
+                AromaCompounds$1.GINGEROL,
+                AromaCompounds$1.GINGEROL,
+                AromaCompounds$1.LINALOOL,
+                AromaCompounds$1.SHOGAOL,
+                AromaCompounds$1.SHOGAOL,
+                AromaCompounds$1.ZINGIBEREN,
+                AromaCompounds$1.ZINGIBEREN,
+            ];
+            this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+            this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+        }
+    }
+
+    class Chili {
+        constructor() {
+            this.name = "Chili";
+            this.nameSymbol = "Ch";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CAPSAICIN,
+                AromaCompounds$1.CAPSAICIN,
+                AromaCompounds$1.CAPSAICINOIDE,
+                AromaCompounds$1.ESTERVERBINDUNGEN,
+                AromaCompounds$1.FURFURAL,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+            ];
+            this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+            this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+        }
+    }
+
+    class Safran {
+        constructor() {
+            this.name = "Safran";
+            this.nameSymbol = "Sa";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.LANIERON,
+                AromaCompounds$1.PICROCROCIN,
+                AromaCompounds$1.PICROCROCIN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.SAFRANAL,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+        }
+    }
+
+    class Mohn {
+        constructor() {
+            this.name = "Mohn";
+            this.nameSymbol = "Mo";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.KAMPFER,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.GYLKOSID_VERBINDUNGEN,
+                AromaCompounds$1.HEXANAL,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.PENTYLFURAN,
+                AromaCompounds$1.PENTYLFURAN,
+                AromaCompounds$1.PHENOLVERBINDUNGEN,
+                AromaCompounds$1.PYRAZINVERBINDUNGEN,
+                AromaCompounds$1.VINYLAMYLKETON,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+        }
+    }
+
+    class Ajowan {
+        constructor() {
+            this.name = "Ajowan";
+            this.nameSymbol = "Aj";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CYMOL,
+                AromaCompounds$1.MYRCEN,
+                AromaCompounds$1.PINENE,
+                AromaCompounds$1.TERPINENE,
+                AromaCompounds$1.THYMOL,
+                AromaCompounds$1.THYMOL,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+        }
+    }
+
+    class Selleriesamen {
+        constructor() {
+            this.name = "Selleriesamen";
+            this.nameSymbol = "Si";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.HUMULEN,
+                AromaCompounds$1.LIMONEN,
+                AromaCompounds$1.SEDANOLID,
+                AromaCompounds$1.SEDANOLID,
+                AromaCompounds$1.SELINENE,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+        }
+    }
+
+    class Kurkuma {
+        constructor() {
+            this.name = "Kurkuma";
+            this.nameSymbol = "Ku";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CINEOL,
+                AromaCompounds$1.CITRAL,
+                AromaCompounds$1.AR_TURMERON,
+                AromaCompounds$1.AR_TURMERON,
+                AromaCompounds$1.ZINGIBEREN,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+        }
+    }
+
+    class Bockshornklee {
+        constructor() {
+            this.name = "Bockshornklee";
+            this.nameSymbol = "Bo";
+            this.description = "";
+            this.aromaCompounds = [
+                AromaCompounds$1.CARYOPHYLLENE,
+                AromaCompounds$1.EUGENOL,
+                AromaCompounds$1.SOTOLON,
+                AromaCompounds$1.VINYLAMYLKETON,
+            ];
+            this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+            this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
         }
     }
 
@@ -1904,7 +2478,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (153:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+    // (213:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
     function create_default_slot_3(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -1967,14 +2541,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(153:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
+    		source: "(213:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+    // (220:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
     function create_default_slot_2(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -2037,14 +2611,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(160:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
+    		source: "(220:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:8) <SpiceContainer shape={Math.random()} spice={selection}>
+    // (232:8) <SpiceContainer shape={Math.random()} spice={selection}>
     function create_default_slot_1(ctx) {
     	let selectedspicesuggestions;
     	let t;
@@ -2092,14 +2666,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(172:8) <SpiceContainer shape={Math.random()} spice={selection}>",
+    		source: "(232:8) <SpiceContainer shape={Math.random()} spice={selection}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:6) {#each selectedSuggestions as selection}
+    // (231:6) {#each selectedSuggestions as selection}
     function create_each_block_1(ctx) {
     	let spicecontainer;
     	let current;
@@ -2150,14 +2724,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(171:6) {#each selectedSuggestions as selection}",
+    		source: "(231:6) {#each selectedSuggestions as selection}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (182:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
+    // (242:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
     function create_default_slot(ctx) {
     	let spicesuggestion;
     	let t;
@@ -2205,14 +2779,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(182:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
+    		source: "(242:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (181:6) {#each spiceSuggestions as suggestion}
+    // (241:6) {#each spiceSuggestions as suggestion}
     function create_each_block(ctx) {
     	let spicecontainer;
     	let current;
@@ -2263,7 +2837,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(181:6) {#each spiceSuggestions as suggestion}",
+    		source: "(241:6) {#each spiceSuggestions as suggestion}",
     		ctx
     	});
 
@@ -2352,17 +2926,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "horizontalGrid svelte-vboysw");
-    			add_location(div0, file, 151, 2, 4225);
+    			add_location(div0, file, 211, 2, 6211);
     			attr_dev(div1, "class", "flex svelte-vboysw");
-    			add_location(div1, file, 169, 4, 4738);
+    			add_location(div1, file, 229, 4, 6724);
     			attr_dev(div2, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div2, file, 168, 2, 4700);
+    			add_location(div2, file, 228, 2, 6686);
     			attr_dev(div3, "class", "flex svelte-vboysw");
-    			add_location(div3, file, 179, 4, 5049);
+    			add_location(div3, file, 239, 4, 7035);
     			attr_dev(div4, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div4, file, 178, 2, 5011);
+    			add_location(div4, file, 238, 2, 6997);
     			attr_dev(div5, "class", "verticalGrid svelte-vboysw");
-    			add_location(div5, file, 150, 0, 4196);
+    			add_location(div5, file, 210, 0, 6182);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2551,7 +3125,37 @@ var app = (function () {
     		new Schwarzkuemmel(),
     		new Mohrenpfeffer(),
     		new SchwarzerKardamom(),
-    		new GruenerKardamom()
+    		new GruenerKardamom(),
+    		new Lorbeer(),
+    		new Galgant(),
+    		new Loomi(),
+    		new Zitronenmyrte(),
+    		new Zitronengras(),
+    		new Amchur(),
+    		new Anardana(),
+    		new Sumach(),
+    		new Tamarinde(),
+    		new Johannisbrotschote(),
+    		new Berberitze(),
+    		new Kakao(),
+    		new Paprika(),
+    		new Akazie(),
+    		new Sesam(),
+    		new Knoblauch(),
+    		new Asant(),
+    		new Curryblaetter(),
+    		new Senf(),
+    		new Paradieskoerner(),
+    		new Schwarzerpfeffer(),
+    		new Szechuanpfeffer(),
+    		new Ingwer(),
+    		new Chili(),
+    		new Safran(),
+    		new Mohn(),
+    		new Ajowan(),
+    		new Selleriesamen(),
+    		new Kurkuma(),
+    		new Bockshornklee()
     	];
 
     	let selectedSpices = [];
@@ -2626,8 +3230,8 @@ var app = (function () {
     			return true;
     		});
 
-    		// move first 7 suggestions to suggestions array
-    		$$invalidate(2, spiceSuggestions = matchingAromaCompounds.slice(0, 7).map(x => x.spice));
+    		// move first "n" suggestions to suggestions array
+    		$$invalidate(2, spiceSuggestions = matchingAromaCompounds.slice(0, 20).map(x => x.spice));
     	}
 
     	const writable_props = [];
@@ -2676,6 +3280,36 @@ var app = (function () {
     		Mohrenpfeffer,
     		SchwarzerKardamom,
     		GruenerKardamom,
+    		Lorbeer,
+    		Galgant,
+    		Loomi,
+    		Zitronenmyrte,
+    		Zitronengras,
+    		Amchur,
+    		Anardana,
+    		Sumach,
+    		Tamarinde,
+    		Johannisbrotschote,
+    		Berberitze,
+    		Kakao,
+    		Paprika,
+    		Akazie,
+    		Sesam,
+    		Knoblauch,
+    		Asant,
+    		Curryblaetter,
+    		Senf,
+    		Paradieskoerner,
+    		Schwarzerpfeffer,
+    		Szechuanpfeffer,
+    		Ingwer,
+    		Chili,
+    		Safran,
+    		Mohn,
+    		Ajowan,
+    		Selleriesamen,
+    		Kurkuma,
+    		Bockshornklee,
     		allSpices,
     		selectedSpices,
     		baseSpice1,

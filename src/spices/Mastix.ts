@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Mastix implements Spice {
   name: string = "Mastix";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Mx";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CAMPHEN,

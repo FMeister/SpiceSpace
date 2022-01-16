@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Wacholder implements Spice {
   name: string = "Wacholder";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Wa";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.GERANIOL,

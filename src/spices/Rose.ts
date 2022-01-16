@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Rose implements Spice {
   name: string = "Rose";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Ro";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CITRONELLOL,

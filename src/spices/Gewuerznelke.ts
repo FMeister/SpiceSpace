@@ -5,7 +5,7 @@ import AromaGroupsColors from "./AromaGroupsColors";
 
 class Gewuerznelke implements Spice {
   name: string = "Gewürznelke";
-  nameSymbol: string = "-";
+  nameSymbol: string = "Gn";
   description: string = "";
   aromaCompounds: AromaCompounds[] = [
     AromaCompounds.CARYOPHYLLENE,
