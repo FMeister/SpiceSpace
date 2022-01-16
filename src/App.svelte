@@ -150,6 +150,11 @@
   }
 
   function makeSpiceSuggestion() {
+    // Idea:
+    // Two primary Spices - a suggestion should always share "n" (2?) compounds of each primary spice space
+    // Selections - another suggestion should always maximise the amount of compunds not yet in the total spice space
+    // All compounds of a new selection get added to the total spice space
+
     spiceSuggestions = [];
 
     // Push current selected spice Compounds into array
