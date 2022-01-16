@@ -2478,7 +2478,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (213:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+    // (219:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
     function create_default_slot_3(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -2541,14 +2541,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(213:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
+    		source: "(219:4) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+    // (226:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
     function create_default_slot_2(ctx) {
     	let spicedisplay;
     	let updating_selectedSpice;
@@ -2611,14 +2611,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(220:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
+    		source: "(226:4) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:8) <SpiceContainer shape={Math.random()} spice={selection}>
+    // (238:8) <SpiceContainer shape={Math.random()} spice={selection}>
     function create_default_slot_1(ctx) {
     	let selectedspicesuggestions;
     	let t;
@@ -2666,14 +2666,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(232:8) <SpiceContainer shape={Math.random()} spice={selection}>",
+    		source: "(238:8) <SpiceContainer shape={Math.random()} spice={selection}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (231:6) {#each selectedSuggestions as selection}
+    // (237:6) {#each selectedSuggestions as selection}
     function create_each_block_1(ctx) {
     	let spicecontainer;
     	let current;
@@ -2724,14 +2724,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(231:6) {#each selectedSuggestions as selection}",
+    		source: "(237:6) {#each selectedSuggestions as selection}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (242:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
+    // (248:8) <SpiceContainer shape={Math.random()} spice={suggestion}>
     function create_default_slot(ctx) {
     	let spicesuggestion;
     	let t;
@@ -2779,14 +2779,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(242:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
+    		source: "(248:8) <SpiceContainer shape={Math.random()} spice={suggestion}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:6) {#each spiceSuggestions as suggestion}
+    // (247:6) {#each spiceSuggestions as suggestion}
     function create_each_block(ctx) {
     	let spicecontainer;
     	let current;
@@ -2837,7 +2837,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(241:6) {#each spiceSuggestions as suggestion}",
+    		source: "(247:6) {#each spiceSuggestions as suggestion}",
     		ctx
     	});
 
@@ -2926,17 +2926,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "horizontalGrid svelte-vboysw");
-    			add_location(div0, file, 211, 2, 6211);
+    			add_location(div0, file, 217, 2, 6343);
     			attr_dev(div1, "class", "flex svelte-vboysw");
-    			add_location(div1, file, 229, 4, 6724);
+    			add_location(div1, file, 235, 4, 6856);
     			attr_dev(div2, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div2, file, 228, 2, 6686);
+    			add_location(div2, file, 234, 2, 6818);
     			attr_dev(div3, "class", "flex svelte-vboysw");
-    			add_location(div3, file, 239, 4, 7035);
+    			add_location(div3, file, 245, 4, 7167);
     			attr_dev(div4, "class", "scrollableContainer svelte-vboysw");
-    			add_location(div4, file, 238, 2, 6997);
+    			add_location(div4, file, 244, 2, 7129);
     			attr_dev(div5, "class", "verticalGrid svelte-vboysw");
-    			add_location(div5, file, 210, 0, 6182);
+    			add_location(div5, file, 216, 0, 6314);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3102,60 +3102,60 @@ var app = (function () {
     	validate_slots('App', slots, []);
 
     	let allSpices = [
-    		new Zimt(),
-    		new Cassia_Zimt(),
-    		new Gewuerznelke(),
-    		new Piment(),
-    		new Anis(),
-    		new Sternanis(),
-    		new Fenchel(),
-    		new Sueßholz(),
-    		new Mahlab(),
-    		new Vanille(),
-    		new Muskatnuss(),
-    		new Muskatbluete(),
-    		new Kuemmel(),
-    		new Dill(),
-    		new Annatto(),
-    		new Mastix(),
-    		new Wacholder(),
-    		new Rose(),
-    		new Koriander(),
-    		new Kreuzkuemmel(),
-    		new Schwarzkuemmel(),
-    		new Mohrenpfeffer(),
-    		new SchwarzerKardamom(),
-    		new GruenerKardamom(),
-    		new Lorbeer(),
-    		new Galgant(),
-    		new Loomi(),
-    		new Zitronenmyrte(),
-    		new Zitronengras(),
+    		new Ajowan(),
+    		new Akazie(),
     		new Amchur(),
     		new Anardana(),
-    		new Sumach(),
-    		new Tamarinde(),
-    		new Johannisbrotschote(),
-    		new Berberitze(),
-    		new Kakao(),
-    		new Paprika(),
-    		new Akazie(),
-    		new Sesam(),
-    		new Knoblauch(),
+    		new Anis(),
+    		new Annatto(),
     		new Asant(),
-    		new Curryblaetter(),
-    		new Senf(),
-    		new Paradieskoerner(),
-    		new Schwarzerpfeffer(),
-    		new Szechuanpfeffer(),
-    		new Ingwer(),
+    		new Berberitze(),
+    		new Bockshornklee(),
+    		new Cassia_Zimt(),
     		new Chili(),
-    		new Safran(),
-    		new Mohn(),
-    		new Ajowan(),
-    		new Selleriesamen(),
+    		new Curryblaetter(),
+    		new Dill(),
+    		new Fenchel(),
+    		new Galgant(),
+    		new Gewuerznelke(),
+    		new GruenerKardamom(),
+    		new Ingwer(),
+    		new Johannisbrotschote(),
+    		new Kakao(),
+    		new Knoblauch(),
+    		new Koriander(),
+    		new Kreuzkuemmel(),
+    		new Kuemmel(),
     		new Kurkuma(),
-    		new Bockshornklee()
+    		new Mahlab(),
+    		new Mastix(),
+    		new Mohn(),
+    		new Loomi(),
+    		new Lorbeer(),
+    		new Mohrenpfeffer(),
+    		new Muskatbluete(),
+    		new Muskatnuss(),
+    		new Paprika(),
+    		new Paradieskoerner(),
+    		new Piment(),
+    		new Rose(),
+    		new Safran(),
+    		new SchwarzerKardamom(),
+    		new Schwarzerpfeffer(),
+    		new Schwarzkuemmel(),
+    		new Selleriesamen(),
+    		new Senf(),
+    		new Sesam(),
+    		new Sueßholz(),
+    		new Sumach(),
+    		new Sternanis(),
+    		new Szechuanpfeffer(),
+    		new Tamarinde(),
+    		new Vanille(),
+    		new Wacholder(),
+    		new Zimt(),
+    		new Zitronengras(),
+    		new Zitronenmyrte()
     	];
 
     	let selectedSpices = [];
@@ -3213,8 +3213,14 @@ var app = (function () {
     			return b.matches - a.matches;
     		});
 
-    		// remove the two selected spices from the sorted spice array
+    		// remove the selected spices and spices with no enough match from the sorted spice array
     		matchingAromaCompounds = matchingAromaCompounds.filter(function (value, index, arr) {
+    			let enoughMatches = 2;
+
+    			if (value.matches < enoughMatches) {
+    				return false;
+    			}
+
     			for (const selection of selectedSpices) {
     				if (value.spice.name === selection.name) {
     					return false;
