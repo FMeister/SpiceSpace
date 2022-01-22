@@ -2724,17 +2724,17 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "horizontalGrid svelte-vboysw");
+    			attr_dev(div0, "class", "horizontalGrid svelte-1e3pxnd");
     			add_location(div0, file, 240, 2, 7254);
-    			attr_dev(div1, "class", "flex svelte-vboysw");
+    			attr_dev(div1, "class", "flex svelte-1e3pxnd");
     			add_location(div1, file, 258, 4, 7769);
-    			attr_dev(div2, "class", "scrollableContainer svelte-vboysw");
+    			attr_dev(div2, "class", "scrollableContainer svelte-1e3pxnd");
     			add_location(div2, file, 257, 2, 7731);
-    			attr_dev(div3, "class", "flex svelte-vboysw");
+    			attr_dev(div3, "class", "flex svelte-1e3pxnd");
     			add_location(div3, file, 270, 4, 8050);
-    			attr_dev(div4, "class", "scrollableContainer svelte-vboysw");
+    			attr_dev(div4, "class", "scrollableContainer svelte-1e3pxnd");
     			add_location(div4, file, 269, 2, 8012);
-    			attr_dev(div5, "class", "verticalGrid svelte-vboysw");
+    			attr_dev(div5, "class", "verticalGrid svelte-1e3pxnd");
     			add_location(div5, file, 239, 0, 7225);
     		},
     		l: function claim(nodes) {
