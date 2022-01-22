@@ -1,6 +1,7 @@
 <script>
   export let shape;
   export let spice;
+  export let onClick;
 
   let blobShapes = [
     "47% 53% 42% 58% / 54% 34% 66% 46% ",
@@ -21,42 +22,50 @@
   let shapeCss = blobShapes[index];
 </script>
 
-<div class="spiceContainer">
+<button on:click={onClick(spice)}>
   <div
     class="spiceBlob"
     style="border-radius: {shapeCss}; background: radial-gradient(ellipse at top left, {spice.color}A0 0%,{spice.color}FF 50%); "
   >
-    <h1 style="font-weight: 400; padding-top:2.7rem; color:#444444;">
+    <h1 class="nameSymbol">
       [{spice.nameSymbol}]
     </h1>
   </div>
-  <h3 style="color:#444444;">{spice.name}</h3>
-  <p>{spice.description}</p>
-  <slot />
-</div>
+  <h3>
+    {spice.name}
+  </h3>
+</button>
 
 <style>
-  .spiceContainer {
-    background-color: rgb(251, 251, 251);
-    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1);
-    /* padding: 2rem;
-    padding-top: 0rem;
-    margin: 1rem;
-    margin-top: 3rem;
-    max-width: 20rem;
-    min-width: 6rem;*/
-    margin: 1rem;
-    padding: 1rem;
-    padding-top: 0rem;
-    border-radius: 2rem;
-  }
   .spiceBlob {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     height: 8rem;
     width: 8rem;
+    top: -1rem;
     text-align: center;
     box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.03);
+  }
+  .nameSymbol {
+    font-weight: 400;
+    padding-top: 2.7rem;
+    /* color: #444444; */
+    margin: 0rem;
+    margin-top: 2rem;
+  }
+  h3 {
+    font-weight: 400;
+    position: relative;
+    bottom: 0%;
+    margin: 0rem;
+  }
+  button {
+    all: unset;
+    color: #444444;
+    background-color: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
   }
 </style>

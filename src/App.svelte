@@ -1,9 +1,8 @@
 <script>
   import SpiceContainer from "./SpiceContainer.svelte";
+  import SmallSpiceContainer from "./SmallSpiceContainer.svelte";
 
-  import SpiceDisplay from "./spices/SpiceDisplay.svelte";
-  import SpiceSuggestion from "./spices/SpiceSuggestion.svelte";
-  import SelectedSpiceSuggestions from "./spices/SelectedSpiceSuggestions.svelte";
+  import SpiceDropdown from "./spices/SpiceDropdown.svelte";
 
   import NoSpice from "./spices/NoSpice";
   import Zimt from "./spices/Zimt";
@@ -159,77 +158,96 @@
 
     // Push current selected spice Compounds into array
 
-    let targetAromaCompounds = [];
-    selectedSpices.forEach((spice) => {
-      targetAromaCompounds.push(...spice.aromaCompounds);
+    let currentSelections = [];
+    selectedSuggestions.forEach((spice) => {
+      currentSelections.push({
+        spice: spice,
+        compounds: [...spice.aromaCompounds],
+      });
     });
 
-    // calculate for all spices how many Compounds match with the existing ones
-
-    let matchingAromaCompounds = [];
+    // Calculate macthes with the primary compounds
+    let matchesWithPrimarySpices = [];
     allSpices.forEach((spice) => {
-      let matches = 0;
-      spice.aromaCompounds.forEach((canidateComponent) => {
-        targetAromaCompounds.forEach((targetCompounds) => {
-          if (canidateComponent === targetCompounds) {
-            matches += 1;
+      let counter = 0;
+
+      spice.aromaCompounds.forEach((compound) => {
+        baseSpice1.aromaCompounds.forEach((baseCompond1) => {
+          if (compound === baseCompond1) {
+            counter++;
+          }
+        });
+
+        baseSpice2.aromaCompounds.forEach((baseCompond2) => {
+          if (compound === baseCompond2) {
+            counter++;
           }
         });
       });
-      matchingAromaCompounds.push({ spice: spice, matches: matches });
+
+      matchesWithPrimarySpices.push(counter);
     });
 
-    // sort spices by matches
+    // Calulate spice potential
+    let minPrimaryMatches = 2;
+    let spicePotentials = [];
+    for (let i = 0; i < allSpices.length; i++) {
+      let spice = allSpices[i];
+      let potential = spice.aromaCompounds.length - matchesWithPrimarySpices[i];
 
-    matchingAromaCompounds.sort(function (a, b) {
-      return b.matches - a.matches;
+      if (matchesWithPrimarySpices[i] < minPrimaryMatches) {
+        spicePotentials.push({ spice: spice, potential: -100 });
+        continue;
+      }
+
+      spice.aromaCompounds.forEach((compound) => {
+        currentSelections.forEach((selectedSpice) => {
+          selectedSpice.spice.aromaCompounds.forEach((selectedCompound) => {
+            if (compound === selectedCompound) {
+              potential--;
+            }
+          });
+        });
+      });
+
+      spicePotentials.push({ spice: spice, potential: potential });
+    }
+
+    // sort spices by potential
+    spicePotentials.sort(function (a, b) {
+      return b.potential - a.potential;
     });
 
-    // remove the selected spices and spices with no enough match from the sorted spice array
-
-    matchingAromaCompounds = matchingAromaCompounds.filter(function (
-      value,
-      index,
-      arr
-    ) {
-      let enoughMatches = 2;
-
-      if (value.matches < enoughMatches) {
-        return false;
+    // find first spice with -100 potential -> so first one to drop
+    let firstOneToDrop = 0;
+    for (let i = 0; i < spicePotentials.length; i++) {
+      if (spicePotentials[i].potential === -100) {
+        firstOneToDrop = i;
+        break;
       }
-
-      for (const selection of selectedSpices) {
-        if (value.spice.name === selection.name) {
-          return false;
-        }
-      }
-
-      for (const selection of selectedSuggestions) {
-        if (value.spice.name === selection.name) {
-          return false;
-        }
-      }
-
-      return true;
-    });
+    }
+    console.log(firstOneToDrop);
 
     // move first "n" suggestions to suggestions array
-
-    spiceSuggestions = matchingAromaCompounds.slice(0, 20).map((x) => x.spice);
+    console.log(spicePotentials);
+    spiceSuggestions = spicePotentials
+      .slice(0, firstOneToDrop)
+      .map((x) => x.spice);
+    console.log(spiceSuggestions);
   }
 </script>
 
 <div class="verticalGrid">
   <div class="horizontalGrid">
     <SpiceContainer shape={Math.random()} spice={baseSpice1}>
-      <SpiceDisplay
+      <SpiceDropdown
         bind:selectedSpice={baseSpice1}
         spices={allSpices}
         onChange={newSpiceSelection}
       />
     </SpiceContainer>
     <SpiceContainer shape={Math.random()} spice={baseSpice2}>
-      <SpiceDisplay
+      <SpiceDropdown
         bind:selectedSpice={baseSpice2}
         spices={allSpices}
         onChange={newSpiceSelection}
@@ -240,9 +258,11 @@
   <div class="scrollableContainer">
     <div class="flex">
       {#each selectedSuggestions as selection}
-        <SpiceContainer shape={Math.random()} spice={selection}>
-          <SelectedSpiceSuggestions spice={selection} {removeFromSelection} />
-        </SpiceContainer>
+        <SmallSpiceContainer
+          shape={Math.random()}
+          spice={selection}
+          onClick={removeFromSelection}
+        />
       {/each}
     </div>
   </div>
@@ -250,12 +270,11 @@
   <div class="scrollableContainer">
     <div class="flex">
       {#each spiceSuggestions as suggestion}
-        <SpiceContainer shape={Math.random()} spice={suggestion}>
-          <SpiceSuggestion
-            spice={suggestion}
-            addToSelection={addSuggestionToSelection}
-          />
-        </SpiceContainer>
+        <SmallSpiceContainer
+          shape={Math.random()}
+          spice={suggestion}
+          onClick={addSuggestionToSelection}
+        />
       {/each}
     </div>
   </div>
