@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11.643444mm"
+   height="11.643444mm"
+   viewBox="0 0 11.643444 11.643445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (26b7af14f2, 2022-01-19)"
+   sodipodi:docname="SpiceSpaceLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-midpoints="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:zoom="8"
+     inkscape:cx="13"
+     inkscape:cy="19.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1050"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1336"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1330"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1293"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.065002,-51.867359)">
+    <path
+       id="path1966-2"
+       style="fill:#7c3c3c;fill-opacity:1;stroke:none;stroke-width:0.114363px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:transform-center-x="0.077580454"
+       inkscape:transform-center-y="3.9408559"
+       d="m 50.873007,53.900655 c -0.402185,3.549083 -2.867212,5.917282 -5.354736,7.589201 1.243034,1.251336 3.214226,2.01837 5.356796,2.017964 2.108444,-3.97e-4 4.050008,-0.743584 5.294994,-1.960087 -2.334139,-1.752091 -4.860787,-4.055208 -5.297054,-7.647078 z" />
+    <path
+       id="path1966"
+       style="fill:#829752;fill-opacity:1;stroke:none;stroke-width:0.105183px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:transform-center-x="0.075802076"
+       inkscape:transform-center-y="3.41182"
+       d="m 50.873693,57.094258 c -1.396872,2.141485 -2.865877,3.272562 -5.139804,4.600753 1.248804,1.129388 3.118367,1.813192 5.141178,1.812809 1.993991,-3.7e-4 3.838057,-0.665741 5.085557,-1.766817 -2.139076,-1.401347 -3.569245,-2.408506 -5.086931,-4.646745 z" />
+    <g
+       id="g5740"
+       transform="matrix(1.7715946,0,0,1.7715946,-39.473036,-43.443337)"
+       style="fill:#3a4a78;fill-opacity:1">
+      <path
+         style="fill:#3a4a78;fill-opacity:1;stroke:none;stroke-width:0.176125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 51.00402,53.799494 v 0.702631 h -0.232516 z"
+         id="path5497" />
+      <path
+         style="fill:#3a4a78;fill-opacity:1;stroke:none;stroke-width:0.176125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 51.00402,53.799494 v 0.702631 h 0.232516 z"
+         id="path5497-2" />
+    </g>
+  </g>
+</svg>
