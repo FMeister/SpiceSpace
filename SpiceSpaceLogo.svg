@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="11.643444mm"
-   height="11.643444mm"
-   viewBox="0 0 11.643444 11.643445"
+   width="15.390442mm"
+   height="15.390442mm"
+   viewBox="0 0 15.390442 15.390443"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (26b7af14f2, 2022-01-19)"
    sodipodi:docname="SpiceSpaceLogo.svg"
+   inkscape:export-filename="/home/fmeister/Schreibtisch/GitkrakenRepos/SpiceSpace/public/favicon.png"
+   inkscape:export-xdpi="211.25"
+   inkscape:export-ydpi="211.25"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,15 +28,54 @@
      showgrid="false"
      inkscape:snap-midpoints="false"
      inkscape:snap-object-midpoints="true"
-     inkscape:zoom="8"
-     inkscape:cx="13"
-     inkscape:cy="19.75"
+     inkscape:zoom="4.0000002"
+     inkscape:cx="43.249998"
+     inkscape:cy="39.999998"
      inkscape:window-width="1920"
      inkscape:window-height="1050"
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="0.68739062,3.7775116"
+       orientation="1,0"
+       id="guide12003" />
+    <sodipodi:guide
+       position="1.1901916,8.1390167"
+       orientation="1,0"
+       id="guide12005" />
+    <sodipodi:guide
+       position="-0.80481541,14.703018"
+       orientation="0,-1"
+       id="guide12007" />
+    <sodipodi:guide
+       position="-0.5401184,14.195988"
+       orientation="0,-1"
+       id="guide12009" />
+    <sodipodi:guide
+       position="14.689847,21.499503"
+       orientation="1,0"
+       id="guide12011" />
+    <sodipodi:guide
+       position="14.18008,18.826883"
+       orientation="1,0"
+       id="guide12013" />
+    <sodipodi:guide
+       position="13.614152,0.7002874"
+       orientation="0,-1"
+       id="guide12015" />
+    <sodipodi:guide
+       position="-2.9380185,1.1927298"
+       orientation="0,-1"
+       id="guide12017" />
+    <sodipodi:guide
+       position="7.6949248,14.195989"
+       orientation="1,0"
+       id="guide28265" />
+  </sodipodi:namedview>
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -68,31 +110,68 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-45.065002,-51.867359)">
-    <path
-       id="path1966-2"
-       style="fill:#7c3c3c;fill-opacity:1;stroke:none;stroke-width:0.114363px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:transform-center-x="0.077580454"
-       inkscape:transform-center-y="3.9408559"
-       d="m 50.873007,53.900655 c -0.402185,3.549083 -2.867212,5.917282 -5.354736,7.589201 1.243034,1.251336 3.214226,2.01837 5.356796,2.017964 2.108444,-3.97e-4 4.050008,-0.743584 5.294994,-1.960087 -2.334139,-1.752091 -4.860787,-4.055208 -5.297054,-7.647078 z" />
-    <path
-       id="path1966"
-       style="fill:#829752;fill-opacity:1;stroke:none;stroke-width:0.105183px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:transform-center-x="0.075802076"
-       inkscape:transform-center-y="3.41182"
-       d="m 50.873693,57.094258 c -1.396872,2.141485 -2.865877,3.272562 -5.139804,4.600753 1.248804,1.129388 3.118367,1.813192 5.141178,1.812809 1.993991,-3.7e-4 3.838057,-0.665741 5.085557,-1.766817 -2.139076,-1.401347 -3.569245,-2.408506 -5.086931,-4.646745 z" />
-    <g
-       id="g5740"
-       transform="matrix(1.7715946,0,0,1.7715946,-39.473036,-43.443337)"
-       style="fill:#3a4a78;fill-opacity:1">
-      <path
-         style="fill:#3a4a78;fill-opacity:1;stroke:none;stroke-width:0.176125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 51.00402,53.799494 v 0.702631 h -0.232516 z"
-         id="path5497" />
-      <path
-         style="fill:#3a4a78;fill-opacity:1;stroke:none;stroke-width:0.176125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 51.00402,53.799494 v 0.702631 h 0.232516 z"
-         id="path5497-2" />
-    </g>
+     transform="translate(-62.373202,-45.177199)">
+    <rect
+       style="fill:#87a7b3;fill-opacity:1;stroke:#000000;stroke-width:0.700145;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect851"
+       width="14.690297"
+       height="14.690297"
+       x="62.723274"
+       y="45.527271" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.442322"
+       x="66.651054"
+       y="53.49538"
+       id="text1769"><tspan
+         sodipodi:role="line"
+         id="tspan1767"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:Rasa;-inkscape-font-specification:Rasa;stroke-width:0.442322"
+         x="66.651054"
+         y="53.49538">Sp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.76389px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.115783"
+       x="66.066971"
+       y="56.104473"
+       id="text1769-6"><tspan
+         sodipodi:role="line"
+         id="tspan1767-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:Rasa;-inkscape-font-specification:Rasa;stroke-width:0.115783"
+         x="66.066971"
+         y="56.104473">Spice Space</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.17151"
+       x="63.442078"
+       y="47.811493"
+       id="text1769-6-9"><tspan
+         sodipodi:role="line"
+         id="tspan1767-5-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Rasa;-inkscape-font-specification:Rasa;stroke-width:0.17151"
+         x="63.442078"
+         y="47.811493">119</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.17151"
+       x="74.486198"
+       y="47.812595"
+       id="text1769-6-9-7"><tspan
+         sodipodi:role="line"
+         id="tspan1767-5-3-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Rasa;-inkscape-font-specification:Rasa;stroke-width:0.17151"
+         x="74.486198"
+         y="47.812595">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.17151"
+       x="63.464508"
+       y="59.348961"
+       id="text1769-6-9-7-1"><tspan
+         sodipodi:role="line"
+         id="tspan1767-5-3-4-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:Rasa;-inkscape-font-specification:Rasa;stroke-width:0.17151"
+         x="63.464508"
+         y="59.348961">54</tspan></text>
   </g>
 </svg>
