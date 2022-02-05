@@ -1,8 +1,13 @@
 <script>
+  import Chart from "svelte-frappe-charts";
+  import AromaGroups from "./spices/AromaGroups";
+  import AromaGroupsColors from "./spices/AromaGroupsColors";
+
   import SpiceContainer from "./SpiceContainer.svelte";
   import SmallSpiceContainer from "./SmallSpiceContainer.svelte";
 
   import SpiceDropdown from "./spices/SpiceDropdown.svelte";
+  import AromaGroupLegend from "./AromaGroupLegend.svelte";
 
   import NoSpice from "./spices/NoSpice";
   import Zimt from "./spices/Zimt";
@@ -59,6 +64,7 @@
   import Selleriesamen from "./spices/Selleriesamen";
   import Kurkuma from "./spices/Kurkuma";
   import Bockshornklee from "./spices/Bockshornklee";
+  import { not_equal } from "svelte/internal";
 
   let allSpices = [
     new Ajowan(),
@@ -117,6 +123,15 @@
     new Zitronenmyrte(),
   ];
 
+  let visualizationData = {
+    labels: [],
+    datasets: [
+      {
+        values: [],
+      },
+    ],
+  };
+
   let selectedSpices = [];
   let baseSpice1 = new NoSpice();
   let baseSpice2 = new NoSpice();
@@ -130,16 +145,19 @@
     selectedSpices[0] = baseSpice1;
     selectedSpices[1] = baseSpice2;
     makeSpiceSuggestion();
+    visualizationData = updateVisualization();
   }
 
   function addSuggestionToSelection(spice) {
     selectedSuggestions = selectedSuggestions.concat([spice]);
     makeSpiceSuggestion();
+    visualizationData = updateVisualization();
   }
 
   function removeFromSelection(spice) {
     selectedSuggestions = removeFromArray(selectedSuggestions, spice);
     makeSpiceSuggestion();
+    visualizationData = updateVisualization();
   }
 
   function removeFromArray(arr, value) {
@@ -226,33 +244,135 @@
         break;
       }
     }
-    console.log(firstOneToDrop);
+    // console.log(firstOneToDrop);
 
     // move first "n" suggestions to suggestions array
-    console.log(spicePotentials);
+    // console.log(spicePotentials);
     spiceSuggestions = spicePotentials
       .slice(0, firstOneToDrop)
       .map((x) => x.spice);
-    console.log(spiceSuggestions);
+    // console.log(spiceSuggestions);
+  }
+
+  function updateVisualization() {
+    let spices = [...selectedSpices, ...selectedSuggestions];
+
+    let aromaGroupValues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    spices.forEach((spice) => {
+      if (spice.aromaGroup === AromaGroups.Süß_wärmende_Phenole) {
+        aromaGroupValues[0] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Wärmende_Terpene) {
+        aromaGroupValues[1] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Duftende_Terpene) {
+        aromaGroupValues[2] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Erdige_Terpene) {
+        aromaGroupValues[3] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Durchdringende_Terpene) {
+        aromaGroupValues[4] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Zitrustönige_Terpene) {
+        aromaGroupValues[5] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Süßsaure_Säuren) {
+        aromaGroupValues[6] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Fruchtige_Aldehyde) {
+        aromaGroupValues[7] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Röstige_Pysazine) {
+        aromaGroupValues[8] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Schwefelverbindungen) {
+        aromaGroupValues[9] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Stechende_Verbindungen) {
+        aromaGroupValues[10] += 1;
+      }
+      if (spice.aromaGroup === AromaGroups.Einzigartige_Stoffe) {
+        aromaGroupValues[11] += 1;
+      }
+    });
+
+    let data = {
+      labels: [
+        AromaGroups.Süß_wärmende_Phenole,
+        AromaGroups.Wärmende_Terpene,
+        AromaGroups.Duftende_Terpene,
+        AromaGroups.Erdige_Terpene,
+        AromaGroups.Durchdringende_Terpene,
+        AromaGroups.Zitrustönige_Terpene,
+        AromaGroups.Süßsaure_Säuren,
+        AromaGroups.Fruchtige_Aldehyde,
+        AromaGroups.Röstige_Pysazine,
+        AromaGroups.Schwefelverbindungen,
+        AromaGroups.Stechende_Verbindungen,
+        AromaGroups.Einzigartige_Stoffe,
+      ],
+      datasets: [
+        {
+          values: aromaGroupValues,
+        },
+      ],
+    };
+
+    return data;
   }
 </script>
 
 <div class="verticalGrid">
-  <div class="horizontalGrid">
-    <SpiceContainer shape={Math.random()} spice={baseSpice1}>
-      <SpiceDropdown
-        bind:selectedSpice={baseSpice1}
-        spices={allSpices}
-        onChange={newSpiceSelection}
-      />
-    </SpiceContainer>
-    <SpiceContainer shape={Math.random()} spice={baseSpice2}>
-      <SpiceDropdown
-        bind:selectedSpice={baseSpice2}
-        spices={allSpices}
-        onChange={newSpiceSelection}
-      />
-    </SpiceContainer>
+  <div class="scrollableContainer">
+    <div class="flex">
+      <AromaGroupLegend />
+      <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+        <SpiceDropdown
+          bind:selectedSpice={baseSpice1}
+          spices={allSpices}
+          onChange={newSpiceSelection}
+        />
+      </SpiceContainer>
+      <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+        <SpiceDropdown
+          bind:selectedSpice={baseSpice2}
+          spices={allSpices}
+          onChange={newSpiceSelection}
+        />
+      </SpiceContainer>
+      <div class="chartBox">
+        <Chart
+          data={visualizationData}
+          colors={[
+            AromaGroupsColors.Süß_wärmende_Phenole,
+            AromaGroupsColors.Wärmende_Terpene,
+            AromaGroupsColors.Duftende_Terpene,
+            AromaGroupsColors.Erdige_Terpene,
+            AromaGroupsColors.Durchdringende_Terpene,
+            AromaGroupsColors.Zitrustönige_Terpene,
+            AromaGroupsColors.Süßsaure_Säuren,
+            AromaGroupsColors.Fruchtige_Aldehyde,
+            AromaGroupsColors.Röstige_Pysazine,
+            AromaGroupsColors.Schwefelverbindungen,
+            AromaGroupsColors.Stechende_Verbindungen,
+            AromaGroupsColors.Einzigartige_Stoffe,
+          ]}
+          type={"donut"}
+          maxSlices="20"
+          height={280}
+          animate={true}
+          truncateLegends={false}
+          valuesOverPoints={true}
+          axisOptions={{
+            xAxisMode: "tick",
+            yAxisMode: "tick",
+            xIsSeries: false,
+          }}
+        />
+      </div>
+    </div>
   </div>
 
   <div class="scrollableContainer">
@@ -308,5 +428,12 @@
     grid-auto-flow: column dense;
     grid-auto-columns: 1fr;
     gap: 1rem;
+  }
+
+  .chartBox {
+    width: 100%;
+    height: 100%;
+    /* min-width: 15em; */
+    min-height: 15em;
   }
 </style>

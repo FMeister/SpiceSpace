@@ -1,6 +1,6 @@
 enum AromaGroups {
   None = "",
-  Süß_wärmende_Phenole = "Süß_wärmende Phenole",
+  Süß_wärmende_Phenole = "Süß wärmende Phenole",
   Wärmende_Terpene = "Wärmende Terpene",
   Duftende_Terpene = "Duftende Terpene",
   Erdige_Terpene = "Erdige_Terpene",
