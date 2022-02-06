@@ -31,6 +31,9 @@
       [{spice.nameSymbol}]
     </h1>
   </div>
+  <p>
+    {spice.description}
+  </p>
   <h3>
     {spice.name}
   </h3>
@@ -57,7 +60,14 @@
   h3 {
     font-weight: 400;
     position: relative;
-    bottom: 0%;
+    bottom: 3%;
+    margin: 0rem;
+  }
+  p {
+    font-weight: 400;
+    font-size: small;
+    position: relative;
+    bottom: 5%;
     margin: 0rem;
   }
   button {

@@ -31,7 +31,7 @@
     </h1>
   </div>
   <h3 style="color:#444444;">{spice.name}</h3>
-  <p>{spice.description}</p>
+  <!-- <p>{spice.description}</p> -->
   <slot />
 </div>
 

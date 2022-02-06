@@ -184,26 +184,38 @@
       });
     });
 
-    // Calculate macthes with the primary compounds
+    // Calculate matches with the primary and selected spice compounds
     let matchesWithPrimarySpices = [];
     allSpices.forEach((spice) => {
-      let counter = 0;
+      let baseCounter = 0;
+      let selectedCounter = 0;
 
       spice.aromaCompounds.forEach((compound) => {
-        baseSpice1.aromaCompounds.forEach((baseCompond1) => {
-          if (compound === baseCompond1) {
-            counter++;
+        baseSpice1.aromaCompounds.forEach((baseCompound1) => {
+          if (compound === baseCompound1) {
+            baseCounter++;
           }
         });
 
-        baseSpice2.aromaCompounds.forEach((baseCompond2) => {
-          if (compound === baseCompond2) {
-            counter++;
+        baseSpice2.aromaCompounds.forEach((baseCompound2) => {
+          if (compound === baseCompound2) {
+            baseCounter++;
           }
+        });
+
+        currentSelections.forEach((selectedSpice) => {
+          selectedSpice.compounds.forEach((selectedCompound) => {
+            if (compound === selectedCompound) {
+              selectedCounter++;
+            }
+          });
         });
       });
 
-      matchesWithPrimarySpices.push(counter);
+      matchesWithPrimarySpices.push({
+        baseMatches: baseCounter,
+        selectedMatches: selectedCounter,
+      });
     });
 
     // Calulate spice potential
@@ -211,9 +223,11 @@
     let spicePotentials = [];
     for (let i = 0; i < allSpices.length; i++) {
       let spice = allSpices[i];
-      let potential = spice.aromaCompounds.length - matchesWithPrimarySpices[i];
+      let potential =
+        spice.aromaCompounds.length - matchesWithPrimarySpices[i].baseMatches;
+      console.log(matchesWithPrimarySpices[i]);
 
-      if (matchesWithPrimarySpices[i] < minPrimaryMatches) {
+      if (matchesWithPrimarySpices[i].baseMatches < minPrimaryMatches) {
         spicePotentials.push({ spice: spice, potential: -100 });
         continue;
       }
@@ -228,7 +242,13 @@
         });
       });
 
-      spicePotentials.push({ spice: spice, potential: potential });
+      spicePotentials.push({
+        spice: spice,
+        potential: potential,
+        matches:
+          matchesWithPrimarySpices[i].selectedMatches +
+          matchesWithPrimarySpices[i].baseMatches,
+      });
     }
 
     // sort spices by potential
@@ -244,14 +264,17 @@
         break;
       }
     }
-    // console.log(firstOneToDrop);
 
     // move first "n" suggestions to suggestions array
-    // console.log(spicePotentials);
-    spiceSuggestions = spicePotentials
-      .slice(0, firstOneToDrop)
-      .map((x) => x.spice);
-    // console.log(spiceSuggestions);
+    spiceSuggestions = spicePotentials.slice(0, firstOneToDrop);
+
+    for (let i = 0; i < spiceSuggestions.length; i++) {
+      spiceSuggestions[i] = spicePotentials[i].spice;
+      let potential = spicePotentials[i].potential;
+      let matches = spicePotentials[i].matches;
+      spiceSuggestions[i].description =
+        "" + potential + " Ergänzend | " + matches + " Verstärkend";
+    }
   }
 
   function updateVisualization() {
@@ -433,7 +456,7 @@
   .chartBox {
     width: 100%;
     height: 100%;
-    /* min-width: 15em; */
-    min-height: 15em;
+    min-width: 20em;
+    /* min-height: 15em; */
   }
 </style>
