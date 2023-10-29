@@ -2,6 +2,8 @@ import type Spice from "./Spice";
 import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
+import SpiceGroup from "./SpiceGroup";
+import PairingTag from "./PairingTag";
 
 class Kakao implements Spice {
   name: string = "Kakao";
@@ -18,6 +20,29 @@ class Kakao implements Spice {
   ];
   aromaGroup: AromaGroups = AromaGroups.Fruchtige_Aldehyde;
   color: AromaGroupsColors = AromaGroupsColors.Fruchtige_Aldehyde;
+  spice_group:SpiceGroup = SpiceGroup.Zitrisch;
+  goes_well_with:PairingTag[]=[
+    PairingTag.Rote_Beete,
+    PairingTag.Blumenkohl,
+    PairingTag.Sahne,
+    PairingTag.Speck,
+    PairingTag.Fleisch,
+    PairingTag.Tomaten,
+    PairingTag.Avocado,
+    PairingTag.Kokosnuss,
+    PairingTag.Bananen,
+    PairingTag.Zitrusfrüchte,
+    PairingTag.Steinfrüchte,
+    PairingTag.Beeren,
+    PairingTag.Nüsse,
+    PairingTag.Kaffee,
+    PairingTag.Chili,
+    PairingTag.Pilze,
+    PairingTag.Rose,
+    PairingTag.Erdbeeren,
+    PairingTag.Ziegenkäse,
+    PairingTag.Kirschen,
+  ]
 }
 
 export default Kakao;

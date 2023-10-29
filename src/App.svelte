@@ -64,7 +64,6 @@
   import Selleriesamen from "./spices/Selleriesamen";
   import Kurkuma from "./spices/Kurkuma";
   import Bockshornklee from "./spices/Bockshornklee";
-  import { not_equal } from "svelte/internal";
 
   let allSpices = [
     new Ajowan(),
@@ -160,6 +159,17 @@
     visualizationData = updateVisualization();
   }
 
+  function isSpiceInSelection(spice) {
+    selectedSuggestions.forEach((selected_spices) => {
+      if (selected_spices.name === spice.name) {
+        return true;
+      }
+    });
+    if (baseSpice1.name === spice.name || baseSpice2.name === spice.name) {
+      return true;
+    }
+  }
+
   function removeFromArray(arr, value) {
     return arr.filter(function (ele) {
       return ele != value;
@@ -218,7 +228,7 @@
       });
     });
 
-    // Calulate spice potential
+    // Calculate spice potential
     let minPrimaryMatches = 2;
     let spicePotentials = [];
     for (let i = 0; i < allSpices.length; i++) {
@@ -227,7 +237,7 @@
         spice.aromaCompounds.length - matchesWithPrimarySpices[i].baseMatches;
       console.log(matchesWithPrimarySpices[i]);
 
-      if (matchesWithPrimarySpices[i].baseMatches < minPrimaryMatches) {
+      if (matchesWithPrimarySpices[i].baseMatches < minPrimaryMatches || isSpiceInSelection(spice)) {
         spicePotentials.push({ spice: spice, potential: -100 });
         continue;
       }
@@ -350,7 +360,9 @@
 <div class="verticalGrid">
   <div class="scrollableContainer">
     <div class="flex">
-      <AromaGroupLegend />
+      <div class="hideOnMobile">
+        <AromaGroupLegend />
+      </div>
       <SpiceContainer shape={Math.random()} spice={baseSpice1}>
         <SpiceDropdown
           bind:selectedSpice={baseSpice1}
@@ -365,40 +377,43 @@
           onChange={newSpiceSelection}
         />
       </SpiceContainer>
-      <div class="chartBox">
-        <Chart
-          data={visualizationData}
-          colors={[
-            AromaGroupsColors.Süß_wärmende_Phenole,
-            AromaGroupsColors.Wärmende_Terpene,
-            AromaGroupsColors.Duftende_Terpene,
-            AromaGroupsColors.Erdige_Terpene,
-            AromaGroupsColors.Durchdringende_Terpene,
-            AromaGroupsColors.Zitrustönige_Terpene,
-            AromaGroupsColors.Süßsaure_Säuren,
-            AromaGroupsColors.Fruchtige_Aldehyde,
-            AromaGroupsColors.Röstige_Pysazine,
-            AromaGroupsColors.Schwefelverbindungen,
-            AromaGroupsColors.Stechende_Verbindungen,
-            AromaGroupsColors.Einzigartige_Stoffe,
-          ]}
-          type={"donut"}
-          maxSlices="20"
-          height={280}
-          animate={true}
-          truncateLegends={false}
-          valuesOverPoints={true}
-          axisOptions={{
-            xAxisMode: "tick",
-            yAxisMode: "tick",
-            xIsSeries: false,
-          }}
-        />
+      <div class="hideOnMobile">
+        <div class="chartBox">
+          <Chart
+            data={visualizationData}
+            colors={[
+              AromaGroupsColors.Süß_wärmende_Phenole,
+              AromaGroupsColors.Wärmende_Terpene,
+              AromaGroupsColors.Duftende_Terpene,
+              AromaGroupsColors.Erdige_Terpene,
+              AromaGroupsColors.Durchdringende_Terpene,
+              AromaGroupsColors.Zitrustönige_Terpene,
+              AromaGroupsColors.Süßsaure_Säuren,
+              AromaGroupsColors.Fruchtige_Aldehyde,
+              AromaGroupsColors.Röstige_Pysazine,
+              AromaGroupsColors.Schwefelverbindungen,
+              AromaGroupsColors.Stechende_Verbindungen,
+              AromaGroupsColors.Einzigartige_Stoffe,
+            ]}
+            type={"donut"}
+            maxSlices="20"
+            height={260}
+            animate={true}
+            truncateLegends={false}
+            valuesOverPoints={true}
+            axisOptions={{
+              xAxisMode: "tick",
+              yAxisMode: "tick",
+              xIsSeries: false,
+            }}
+          />
+        </div>
       </div>
     </div>
   </div>
 
   <div class="scrollableContainer">
+    <div class="largerText">Deine Gewürzmischung:</div>
     <div class="flex">
       {#each selectedSuggestions as selection}
         <SmallSpiceContainer
@@ -411,6 +426,7 @@
   </div>
 
   <div class="scrollableContainer">
+    <div class="largerText">Versuch doch mal...</div>
     <div class="flex">
       {#each spiceSuggestions as suggestion}
         <SmallSpiceContainer
@@ -458,5 +474,16 @@
     height: 100%;
     min-width: 20em;
     /* min-height: 15em; */
+  }
+  .largerText {
+    font-size: larger;
+  }
+
+  @media (max-width: 1000px) {
+    .hideOnMobile {
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
+    }
   }
 </style>

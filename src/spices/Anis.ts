@@ -2,6 +2,8 @@ import type Spice from "./Spice";
 import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
+import SpiceGroup from "./SpiceGroup";
+import PairingTag from "./PairingTag";
 
 class Anis implements Spice {
   name: string = "Anis";
@@ -20,6 +22,37 @@ class Anis implements Spice {
   ];
   aromaGroup: AromaGroups = AromaGroups.Süß_wärmende_Phenole;
   color: AromaGroupsColors = AromaGroupsColors.Süß_wärmende_Phenole;
+  spice_group:SpiceGroup = SpiceGroup.Süß;
+  goes_well_with:PairingTag[]=[
+    PairingTag.Wurzelgemüse,
+    PairingTag.Kartoffeln,
+    PairingTag.Lauch,
+    PairingTag.Fenchel,
+    PairingTag.Basilikum,
+    PairingTag.Ingwer,
+    PairingTag.Sahne,
+    PairingTag.Rind,
+    PairingTag.Schwein,
+    PairingTag.Hühnchen,
+    PairingTag.Ochsenschwanz,
+    PairingTag.Fisch,
+    PairingTag.Schalentiere,
+    PairingTag.Steinfrüchte,
+    PairingTag.Tropische_Früchte,
+    PairingTag.Zitrusfrüchte,
+    PairingTag.Äpfel,
+    PairingTag.Rhabarbar,
+    PairingTag.Feigen,
+    PairingTag.Mandeln,
+    PairingTag.Schokolade,
+    PairingTag.Karotten,
+    PairingTag.Orange,
+    PairingTag.Estragon,
+    PairingTag.Tintenfisch,
+    PairingTag.Speck,
+    PairingTag.Grüne_Bohnen,
+    PairingTag.Gurke,
+  ]
 }
 
 export default Anis;

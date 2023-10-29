@@ -44,15 +44,15 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
     top: -1rem;
     text-align: center;
     box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.03);
   }
   .nameSymbol {
     font-weight: 400;
-    padding-top: 2.7rem;
+    padding-top: 1.9rem;
     /* color: #444444; */
     margin: 0rem;
     margin-top: 2rem;

@@ -2,6 +2,8 @@ import type Spice from "./Spice";
 import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
+import type PairingTag from "./PairingTag";
+import SpiceGroup from "./SpiceGroup";
 
 class Berberitze implements Spice {
   name: string = "Berberitze";
@@ -19,6 +21,8 @@ class Berberitze implements Spice {
   ];
   aromaGroup: AromaGroups = AromaGroups.Fruchtige_Aldehyde;
   color: AromaGroupsColors = AromaGroupsColors.Fruchtige_Aldehyde;
+  spice_group:SpiceGroup = SpiceGroup.Zitrisch;
+  goes_well_with:PairingTag[]=[];
 }
 
 export default Berberitze;

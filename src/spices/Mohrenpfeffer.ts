@@ -2,6 +2,8 @@ import type Spice from "./Spice";
 import AromaCompounds from "./AromaCompounds";
 import AromaGroups from "./AromaGroups";
 import AromaGroupsColors from "./AromaGroupsColors";
+import type PairingTag from "./PairingTag";
+import SpiceGroup from "./SpiceGroup";
 
 class Mohrenpfeffer implements Spice {
   name: string = "Mohrenpfeffer";
@@ -19,6 +21,8 @@ class Mohrenpfeffer implements Spice {
   ];
   aromaGroup: AromaGroups = AromaGroups.Durchdringende_Terpene;
   color: AromaGroupsColors = AromaGroupsColors.Durchdringende_Terpene;
+  spice_group:SpiceGroup = SpiceGroup.Pikant;
+  goes_well_with:PairingTag[]=[];
 }
 
 export default Mohrenpfeffer;
