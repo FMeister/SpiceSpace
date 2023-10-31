@@ -1,6 +1,6 @@
 <script>
-  import AromaGroups from "./spices/AromaGroups";
-  import AromaGroupsColors from "./spices/AromaGroupsColors";
+  import AromaGroups from "../spices/AromaGroups";
+  import AromaGroupsColors from "../spices/AromaGroupsColors";
 </script>
 
 <div class="verticalGrid">

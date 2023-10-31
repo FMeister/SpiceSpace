@@ -3,11 +3,11 @@
   import AromaGroups from "./../spices/AromaGroups";
   import AromaGroupsColors from "./../spices/AromaGroupsColors";
 
-  import SpiceContainer from "./../SpiceContainer.svelte";
-  import SmallSpiceContainer from "./../SmallSpiceContainer.svelte";
+  import SpiceContainer from "../components/SpiceContainer.svelte";
+  import SmallSpiceContainer from "../components/SmallSpiceContainer.svelte";
 
-  import SpiceDropdown from "./../spices/SpiceDropdown.svelte";
-  import AromaGroupLegend from "./../AromaGroupLegend.svelte";
+  import SpiceDropdown from "../components/SpiceDropdown.svelte";
+  import AromaGroupLegend from "../components/AromaGroupLegend.svelte";
 
   import NoSpice from "./../spices/NoSpice";
   import Zimt from "./../spices/Zimt";

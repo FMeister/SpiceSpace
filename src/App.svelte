@@ -3,7 +3,8 @@
   import SpiceMyPlatePage from "./Pages/SpiceMyPlatePage.svelte";
   import AromaGroupsColors from "./spices/AromaGroupsColors";
 
-  let pageToShow = "Blends";
+  // let pageToShow = "Blends";
+  let pageToShow = "SpiceMyPlate";
 
   function showBlends() {
     pageToShow = "Blends";
