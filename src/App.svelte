@@ -1,6 +1,7 @@
 <script>
   import SpiceBlendsPage from "./Pages/SpiceBlendsPage.svelte";
   import SpiceMyPlatePage from "./Pages/SpiceMyPlatePage.svelte";
+  import AromaGroupsColors from "./spices/AromaGroupsColors";
 
   let pageToShow = "Blends";
 
@@ -25,8 +26,8 @@
     </div>
 
     <div class=".horizontal-grid">
-      <button class="button" on:click={showBlends}>Blends</button>
-      <button class="button" on:click={showSpiceMyPlate}>Spice Up</button>
+      <button class="button" style="background-color: {AromaGroupsColors.Einzigartige_Stoffe};" on:click={showBlends}>Blends</button>
+      <button class="button"  style="background-color: {AromaGroupsColors.Durchdringende_Terpene};" on:click={showSpiceMyPlate}>Spice Up</button>
     </div>
   </div>
 </div>
@@ -54,13 +55,12 @@
   }
   .container {
     padding: 1rem;
-    /* margin: 1rem; */
+    margin: 0.3rem;
     box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
   }
   .button {
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
     box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
@@ -72,7 +72,6 @@
     font-size: larger;
   }
   .button:hover{
-    background-color: rgb(253, 253, 253);
     transform: scale(0.97);
     box-shadow: 3px 3px 6px 4px rgba(0, 0, 0, 0.08) inset;
   }

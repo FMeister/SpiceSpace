@@ -4821,7 +4821,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (366:8) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+    // (369:6) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
     function create_default_slot_1(ctx) {
     	let spicedropdown;
     	let updating_selectedSpice;
@@ -4884,14 +4884,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(366:8) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
+    		source: "(369:6) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (373:8) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+    // (376:6) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
     function create_default_slot(ctx) {
     	let spicedropdown;
     	let updating_selectedSpice;
@@ -4954,14 +4954,44 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(373:8) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
+    		source: "(376:6) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (418:8) {#each selectedSuggestions as selection}
+    // (419:4) {#if selectedSuggestions.length !== 0}
+    function create_if_block_1$1(ctx) {
+    	let div;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Deine Gewürzmischung:";
+    			attr_dev(div, "class", "largerText svelte-1tnpv24");
+    			add_location(div, file$2, 419, 6, 13023);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(419:4) {#if selectedSuggestions.length !== 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (423:6) {#each selectedSuggestions as selection}
     function create_each_block_1(ctx) {
     	let smallspicecontainer;
     	let current;
@@ -5006,14 +5036,44 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(418:8) {#each selectedSuggestions as selection}",
+    		source: "(423:6) {#each selectedSuggestions as selection}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (431:8) {#each spiceSuggestions as suggestion}
+    // (434:4) {#if spiceSuggestions.length !== 0}
+    function create_if_block$1(ctx) {
+    	let div;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Versuch doch mal...";
+    			attr_dev(div, "class", "largerText svelte-1tnpv24");
+    			add_location(div, file$2, 434, 6, 13412);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(434:4) {#if spiceSuggestions.length !== 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (438:6) {#each spiceSuggestions as suggestion}
     function create_each_block(ctx) {
     	let smallspicecontainer;
     	let current;
@@ -5058,7 +5118,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(431:8) {#each spiceSuggestions as suggestion}",
+    		source: "(438:6) {#each spiceSuggestions as suggestion}",
     		ctx
     	});
 
@@ -5066,7 +5126,7 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let div11;
+    	let div9;
     	let div4;
     	let div3;
     	let div0;
@@ -5080,15 +5140,13 @@ var app = (function () {
     	let div1;
     	let chart;
     	let t3;
-    	let div7;
+    	let div6;
+    	let t4;
     	let div5;
     	let t5;
-    	let div6;
-    	let t6;
-    	let div10;
     	let div8;
-    	let t8;
-    	let div9;
+    	let t6;
+    	let div7;
     	let current;
     	aromagrouplegend = new AromaGroupLegend({ $$inline: true });
 
@@ -5144,6 +5202,7 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	let if_block0 = /*selectedSuggestions*/ ctx[4].length !== 0 && create_if_block_1$1(ctx);
     	let each_value_1 = /*selectedSuggestions*/ ctx[4];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
@@ -5156,6 +5215,7 @@ var app = (function () {
     		each_blocks_1[i] = null;
     	});
 
+    	let if_block1 = /*spiceSuggestions*/ ctx[3].length !== 0 && create_if_block$1(ctx);
     	let each_value = /*spiceSuggestions*/ ctx[3];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -5170,7 +5230,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div11 = element("div");
+    			div9 = element("div");
     			div4 = element("div");
     			div3 = element("div");
     			div0 = element("div");
@@ -5184,58 +5244,52 @@ var app = (function () {
     			div1 = element("div");
     			create_component(chart.$$.fragment);
     			t3 = space();
-    			div7 = element("div");
-    			div5 = element("div");
-    			div5.textContent = "Deine Gewürzmischung:";
-    			t5 = space();
     			div6 = element("div");
+    			if (if_block0) if_block0.c();
+    			t4 = space();
+    			div5 = element("div");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t6 = space();
-    			div10 = element("div");
+    			t5 = space();
     			div8 = element("div");
-    			div8.textContent = "Versuch doch mal...";
-    			t8 = space();
-    			div9 = element("div");
+    			if (if_block1) if_block1.c();
+    			t6 = space();
+    			div7 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "hideOnMobile svelte-n32qlo");
-    			add_location(div0, file$2, 362, 8, 11872);
-    			attr_dev(div1, "class", "chartBox svelte-n32qlo");
-    			add_location(div1, file$2, 380, 10, 12482);
-    			attr_dev(div2, "class", "hideOnMobile svelte-n32qlo");
-    			add_location(div2, file$2, 379, 8, 12445);
-    			attr_dev(div3, "class", "flex svelte-n32qlo");
-    			add_location(div3, file$2, 361, 6, 11845);
-    			attr_dev(div4, "class", "scrollableContainer svelte-n32qlo");
-    			add_location(div4, file$2, 360, 4, 11805);
-    			attr_dev(div5, "class", "largerText svelte-n32qlo");
-    			add_location(div5, file$2, 415, 6, 13710);
-    			attr_dev(div6, "class", "flex svelte-n32qlo");
-    			add_location(div6, file$2, 416, 6, 13768);
-    			attr_dev(div7, "class", "scrollableContainer svelte-n32qlo");
-    			add_location(div7, file$2, 414, 4, 13670);
-    			attr_dev(div8, "class", "largerText svelte-n32qlo");
-    			add_location(div8, file$2, 428, 6, 14071);
-    			attr_dev(div9, "class", "flex svelte-n32qlo");
-    			add_location(div9, file$2, 429, 6, 14127);
-    			attr_dev(div10, "class", "scrollableContainer svelte-n32qlo");
-    			add_location(div10, file$2, 427, 4, 14031);
-    			attr_dev(div11, "class", "verticalGrid svelte-n32qlo");
-    			add_location(div11, file$2, 359, 2, 11774);
+    			attr_dev(div0, "class", "hideOnMobile svelte-1tnpv24");
+    			add_location(div0, file$2, 365, 6, 11244);
+    			attr_dev(div1, "class", "chartBox svelte-1tnpv24");
+    			add_location(div1, file$2, 383, 8, 11818);
+    			attr_dev(div2, "class", "hideOnMobile svelte-1tnpv24");
+    			add_location(div2, file$2, 382, 6, 11783);
+    			attr_dev(div3, "class", "flex svelte-1tnpv24");
+    			add_location(div3, file$2, 364, 4, 11219);
+    			attr_dev(div4, "class", "scrollableContainer svelte-1tnpv24");
+    			add_location(div4, file$2, 363, 2, 11181);
+    			attr_dev(div5, "class", "flex svelte-1tnpv24");
+    			add_location(div5, file$2, 421, 4, 13089);
+    			attr_dev(div6, "class", "scrollableContainer svelte-1tnpv24");
+    			add_location(div6, file$2, 417, 2, 12940);
+    			attr_dev(div7, "class", "flex svelte-1tnpv24");
+    			add_location(div7, file$2, 436, 4, 13476);
+    			attr_dev(div8, "class", "scrollableContainer svelte-1tnpv24");
+    			add_location(div8, file$2, 432, 2, 13332);
+    			attr_dev(div9, "class", "verticalGrid svelte-1tnpv24");
+    			add_location(div9, file$2, 362, 0, 11152);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div11, anchor);
-    			append_dev(div11, div4);
+    			insert_dev(target, div9, anchor);
+    			append_dev(div9, div4);
     			append_dev(div4, div3);
     			append_dev(div3, div0);
     			mount_component(aromagrouplegend, div0, null);
@@ -5247,27 +5301,27 @@ var app = (function () {
     			append_dev(div3, div2);
     			append_dev(div2, div1);
     			mount_component(chart, div1, null);
-    			append_dev(div11, t3);
-    			append_dev(div11, div7);
-    			append_dev(div7, div5);
-    			append_dev(div7, t5);
-    			append_dev(div7, div6);
+    			append_dev(div9, t3);
+    			append_dev(div9, div6);
+    			if (if_block0) if_block0.m(div6, null);
+    			append_dev(div6, t4);
+    			append_dev(div6, div5);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				if (each_blocks_1[i]) {
-    					each_blocks_1[i].m(div6, null);
+    					each_blocks_1[i].m(div5, null);
     				}
     			}
 
-    			append_dev(div11, t6);
-    			append_dev(div11, div10);
-    			append_dev(div10, div8);
-    			append_dev(div10, t8);
-    			append_dev(div10, div9);
+    			append_dev(div9, t5);
+    			append_dev(div9, div8);
+    			if (if_block1) if_block1.m(div8, null);
+    			append_dev(div8, t6);
+    			append_dev(div8, div7);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				if (each_blocks[i]) {
-    					each_blocks[i].m(div9, null);
+    					each_blocks[i].m(div7, null);
     				}
     			}
 
@@ -5294,6 +5348,17 @@ var app = (function () {
     			if (dirty & /*visualizationData*/ 1) chart_changes.data = /*visualizationData*/ ctx[0];
     			chart.$set(chart_changes);
 
+    			if (/*selectedSuggestions*/ ctx[4].length !== 0) {
+    				if (if_block0) ; else {
+    					if_block0 = create_if_block_1$1(ctx);
+    					if_block0.c();
+    					if_block0.m(div6, t4);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
     			if (dirty & /*Math, selectedSuggestions, removeFromSelection*/ 272) {
     				each_value_1 = /*selectedSuggestions*/ ctx[4];
     				validate_each_argument(each_value_1);
@@ -5309,7 +5374,7 @@ var app = (function () {
     						each_blocks_1[i] = create_each_block_1(child_ctx);
     						each_blocks_1[i].c();
     						transition_in(each_blocks_1[i], 1);
-    						each_blocks_1[i].m(div6, null);
+    						each_blocks_1[i].m(div5, null);
     					}
     				}
 
@@ -5320,6 +5385,17 @@ var app = (function () {
     				}
 
     				check_outros();
+    			}
+
+    			if (/*spiceSuggestions*/ ctx[3].length !== 0) {
+    				if (if_block1) ; else {
+    					if_block1 = create_if_block$1(ctx);
+    					if_block1.c();
+    					if_block1.m(div8, t6);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
     			}
 
     			if (dirty & /*Math, spiceSuggestions, addSuggestionToSelection*/ 136) {
@@ -5337,7 +5413,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div9, null);
+    						each_blocks[i].m(div7, null);
     					}
     				}
 
@@ -5387,12 +5463,14 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div11);
+    			if (detaching) detach_dev(div9);
     			destroy_component(aromagrouplegend);
     			destroy_component(spicecontainer0);
     			destroy_component(spicecontainer1);
     			destroy_component(chart);
+    			if (if_block0) if_block0.d();
     			destroy_each(each_blocks_1, detaching);
+    			if (if_block1) if_block1.d();
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -5841,26 +5919,46 @@ var app = (function () {
     const file$1 = "src/Pages/SpiceMyPlatePage.svelte";
 
     function create_fragment$1(ctx) {
-    	let div;
+    	let div3;
+    	let div0;
+    	let t1;
+    	let div1;
+    	let t3;
+    	let div2;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Test";
-    			attr_dev(div, "class", "");
-    			add_location(div, file$1, 126, 2, 4374);
+    			div3 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "Suche";
+    			t1 = space();
+    			div1 = element("div");
+    			div1.textContent = "Auswahl";
+    			t3 = space();
+    			div2 = element("div");
+    			div2.textContent = "Vorschläge";
+    			add_location(div0, file$1, 127, 4, 4406);
+    			add_location(div1, file$1, 130, 4, 4439);
+    			add_location(div2, file$1, 133, 4, 4474);
+    			attr_dev(div3, "class", "vertical-grid svelte-gzaxkr");
+    			add_location(div3, file$1, 126, 2, 4374);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div0);
+    			append_dev(div3, t1);
+    			append_dev(div3, div1);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div3);
     		}
     	};
 
@@ -6036,7 +6134,7 @@ var app = (function () {
     /* src/App.svelte generated by Svelte v3.59.2 */
     const file = "src/App.svelte";
 
-    // (22:6) {:else}
+    // (23:6) {:else}
     function create_else_block(ctx) {
     	let spiceblendspage;
     	let current;
@@ -6068,14 +6166,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(22:6) {:else}",
+    		source: "(23:6) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:46) 
+    // (21:46) 
     function create_if_block_1(ctx) {
     	let spicemyplatepage;
     	let current;
@@ -6107,14 +6205,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(20:46) ",
+    		source: "(21:46) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:6) {#if pageToShow === "Blends"}
+    // (19:6) {#if pageToShow === "Blends"}
     function create_if_block(ctx) {
     	let spiceblendspage;
     	let current;
@@ -6146,7 +6244,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(18:6) {#if pageToShow === \\\"Blends\\\"}",
+    		source: "(19:6) {#if pageToShow === \\\"Blends\\\"}",
     		ctx
     	});
 
@@ -6162,8 +6260,10 @@ var app = (function () {
     	let t0;
     	let div1;
     	let button0;
+    	let t1;
     	let t2;
     	let button1;
+    	let t3;
     	let current;
     	let mounted;
     	let dispose;
@@ -6188,22 +6288,24 @@ var app = (function () {
     			t0 = space();
     			div1 = element("div");
     			button0 = element("button");
-    			button0.textContent = "Blends";
+    			t1 = text("Blends");
     			t2 = space();
     			button1 = element("button");
-    			button1.textContent = "Spice Up";
-    			attr_dev(div0, "class", "container svelte-1bga817");
-    			add_location(div0, file, 16, 4, 366);
-    			attr_dev(button0, "class", "button svelte-1bga817");
-    			add_location(button0, file, 27, 6, 637);
-    			attr_dev(button1, "class", "button svelte-1bga817");
-    			add_location(button1, file, 28, 6, 704);
+    			t3 = text("Spice Up");
+    			attr_dev(div0, "class", "container svelte-nlgd7x");
+    			add_location(div0, file, 17, 4, 428);
+    			attr_dev(button0, "class", "button svelte-nlgd7x");
+    			set_style(button0, "background-color", AromaGroupsColors$1.Einzigartige_Stoffe);
+    			add_location(button0, file, 28, 6, 699);
+    			attr_dev(button1, "class", "button svelte-nlgd7x");
+    			set_style(button1, "background-color", AromaGroupsColors$1.Durchdringende_Terpene);
+    			add_location(button1, file, 29, 6, 833);
     			attr_dev(div1, "class", ".horizontal-grid");
-    			add_location(div1, file, 26, 4, 600);
-    			attr_dev(div2, "class", "vertical-grid svelte-1bga817");
-    			add_location(div2, file, 15, 2, 334);
-    			attr_dev(div3, "class", "page-sized svelte-1bga817");
-    			add_location(div3, file, 14, 0, 307);
+    			add_location(div1, file, 27, 4, 662);
+    			attr_dev(div2, "class", "vertical-grid svelte-nlgd7x");
+    			add_location(div2, file, 16, 2, 396);
+    			attr_dev(div3, "class", "page-sized svelte-nlgd7x");
+    			add_location(div3, file, 15, 0, 369);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6216,8 +6318,10 @@ var app = (function () {
     			append_dev(div2, t0);
     			append_dev(div2, div1);
     			append_dev(div1, button0);
+    			append_dev(button0, t1);
     			append_dev(div1, t2);
     			append_dev(div1, button1);
+    			append_dev(button1, t3);
     			current = true;
 
     			if (!mounted) {
@@ -6302,6 +6406,7 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		SpiceBlendsPage,
     		SpiceMyPlatePage,
+    		AromaGroupsColors: AromaGroupsColors$1,
     		pageToShow,
     		showBlends,
     		showSpiceMyPlate

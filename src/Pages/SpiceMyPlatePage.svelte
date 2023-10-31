@@ -124,9 +124,24 @@
 
   </script>
 
-  <div class="">
-Test
+  <div class="vertical-grid">
+    <div>
+      Suche
+    </div>
+    <div>
+      Auswahl
+    </div>
+    <div>
+      Vorschläge
+    </div>
   </div>
 
   <style>
+  .vertical-grid {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-rows: 1fr 1fr auto;
+    gap: 0.5rem 0.5rem;
+    align-items: center;
+  }
   </style>
