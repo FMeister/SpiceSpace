@@ -269,11 +269,6 @@
     width: calc(100vw - 3rem);
   }
 
-  .tag-grid {
-    display: flex;
-    flex-direction: row;
-  }
-
   .flex {
     display: grid;
     grid-auto-flow: column dense;

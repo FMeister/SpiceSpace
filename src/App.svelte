@@ -26,9 +26,9 @@
       {/if}
     </div>
 
-    <div class=".horizontal-grid">
+    <div class="horizontal-grid">
       <button class="button" style="background-color: {AromaGroupsColors.Einzigartige_Stoffe};" on:click={showBlends}>Blends</button>
-      <button class="button"  style="background-color: {AromaGroupsColors.Durchdringende_Terpene};" on:click={showSpiceMyPlate}>Spice Up</button>
+      <button class="button" style="background-color: {AromaGroupsColors.Durchdringende_Terpene};" on:click={showSpiceMyPlate}>Spice Up</button>
     </div>
   </div>
 </div>

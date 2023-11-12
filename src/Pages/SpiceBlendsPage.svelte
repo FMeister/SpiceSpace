@@ -455,14 +455,6 @@
     align-items: center;
   }
 
-  .horizontalGrid {
-    display: grid;
-    grid-auto-flow: column dense;
-    grid-auto-columns: 1fr 1fr;
-    gap: 1rem 1rem;
-    justify-self: center;
-  }
-
   .scrollableContainer {
     overflow-x: scroll;
     justify-items: start;
