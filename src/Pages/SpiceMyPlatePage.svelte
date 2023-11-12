@@ -1,6 +1,7 @@
 <script>
   import IngredientsTag from "../components/IngredientsTag.svelte";
   import PairingTag from "../spices/PairingTag";
+  import PairingTagSynonyms from "../spices/PairingTagSynonyms";
 
   import NoSpice from "./../spices/NoSpice";
   import Zimt from "./../spices/Zimt";
@@ -150,12 +151,29 @@
     filterSpicesByCookingIngredients();
   }
 
+  function isTextPartOfTag(text, tagString) {
+    if (tagString.toLowerCase().includes(text.toLowerCase())) {
+      return true;
+    }
+
+    let synonyms = pairingTagSynonyms.synonyms[tagString];
+    if (!synonyms) {
+      return false;
+    }
+
+    for (let i = 0; i < synonyms.length; i++) {
+      if (synonyms[i].toLowerCase().includes(text.toLowerCase())) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   function getSearchedIngredients(listenerData) {
     let currentEnteredText = listenerData["srcElement"]["value"];
     searchedIngredients = allPairingTags.filter(function (item) {
-      return PairingTag[item]
-        .toLowerCase()
-        .includes(currentEnteredText.toLowerCase());
+      return isTextPartOfTag(currentEnteredText, PairingTag[item]);
     });
     searchedIngredients = searchedIngredients.sort();
     if (currentEnteredText == "") {
@@ -193,8 +211,10 @@
     });
   }
 
+  // setup global data structures
   let allPairingTags = Object.keys(PairingTag);
   allPairingTags = removeTagFromList(PairingTag.None, allPairingTags);
+  let pairingTagSynonyms = new PairingTagSynonyms();
 
   // Setup base lists
   let filteredSpices = allSpices;
