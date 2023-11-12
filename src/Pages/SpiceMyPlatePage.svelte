@@ -57,6 +57,7 @@
   import Selleriesamen from "./../spices/Selleriesamen";
   import Kurkuma from "./../spices/Kurkuma";
   import Bockshornklee from "./../spices/Bockshornklee";
+  import SpiceBlendsPage from "./SpiceBlendsPage.svelte";
 
   let allSpices = [
     new Ajowan(),
@@ -126,24 +127,70 @@
   }
 
   function removeTagFromIngredientsList(name) {
+    // remove Tag
     cookingIngredients = removeTagFromList(name, cookingIngredients);
+
+    // add back to total list
+    allPairingTags.push(name);
+
+    filterSpicesByCookingIngredients();
   }
 
   function addTagToIngredientsList(name) {
+    // add tag
     cookingIngredients.push(name);
-    console.log(name, cookingIngredients);
+
+    // remove from total list
+    allPairingTags = removeTagFromList(name, allPairingTags);
+    searchedIngredients = removeTagFromList(name, searchedIngredients);
+
+    // To force a rerendering
     cookingIngredients = cookingIngredients;
+
+    filterSpicesByCookingIngredients();
   }
 
   function getSearchedIngredients(listenerData) {
     let currentEnteredText = listenerData["srcElement"]["value"];
     searchedIngredients = allPairingTags.filter(function (item) {
-      return PairingTag[item].includes(currentEnteredText);
+      return PairingTag[item]
+        .toLowerCase()
+        .includes(currentEnteredText.toLowerCase());
     });
-    searchedIngredients = listedItems;
+    searchedIngredients = searchedIngredients.sort();
     if (currentEnteredText == "") {
       searchedIngredients = [];
     }
+  }
+
+  function isNameInList(name, list) {
+    for (let i = 0; i < list.length; i++) {
+      if (name == list[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function filterSpicesByCookingIngredients() {
+    filteredSpices = allSpices.filter(function (spice) {
+      let goodSpicePair;
+      let filterPercentage = 0.2;
+      let numOfIngredients = cookingIngredients.length;
+      let matchesCounter = 0;
+
+      for (let i = 0; i < spice.goes_well_with.length; i++) {
+        goodSpicePair = spice.goes_well_with[i];
+        if (isNameInList(goodSpicePair, cookingIngredients)) {
+          matchesCounter += 1;
+        }
+      }
+
+      if (matchesCounter / numOfIngredients > filterPercentage) {
+        return true;
+      }
+      return false;
+    });
   }
 
   let allPairingTags = Object.keys(PairingTag);
@@ -152,7 +199,7 @@
   // Setup base lists
   let filteredSpices = allSpices;
   let cookingIngredients = [];
-  let searchedIngredients = [];
+  let searchedIngredients = allPairingTags;
 </script>
 
 <div class="vertical-grid">
