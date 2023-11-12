@@ -175,7 +175,7 @@
   function filterSpicesByCookingIngredients() {
     filteredSpices = allSpices.filter(function (spice) {
       let goodSpicePair;
-      let filterPercentage = 0.2;
+      let filterPercentage = 0.3;
       let numOfIngredients = cookingIngredients.length;
       let matchesCounter = 0;
 
