@@ -1,2 +1,7855 @@
-var app=function(){"use strict";function e(){}function t(e){return e()}function n(){return Object.create(null)}function i(e){e.forEach(t)}function r(e){return"function"==typeof e}function s(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}function a(e,t,n,i){return e[1]&&i?function(e,t){for(const n in t)e[n]=t[n];return e}(n.ctx.slice(),e[1](i(t))):n.ctx}function o(e,t){e.appendChild(t)}function l(e,t,n){e.insertBefore(t,n||null)}function c(e){e.parentNode&&e.parentNode.removeChild(e)}function h(e,t){for(let n=0;n<e.length;n+=1)e[n]&&e[n].d(t)}function u(e){return document.createElement(e)}function d(e){return document.createTextNode(e)}function f(){return d(" ")}function p(e,t,n,i){return e.addEventListener(t,n,i),()=>e.removeEventListener(t,n,i)}function m(e,t,n){null==n?e.removeAttribute(t):e.getAttribute(t)!==n&&e.setAttribute(t,n)}function g(e,t){t=""+t,e.data!==t&&(e.data=t)}function v(e,t,n,i){null==n?e.style.removeProperty(t):e.style.setProperty(t,n,i?"important":"")}function y(e,t,n){for(let n=0;n<e.options.length;n+=1){const i=e.options[n];if(i.__value===t)return void(i.selected=!0)}n&&void 0===t||(e.selectedIndex=-1)}let E;function b(e){E=e}function N(){if(!E)throw new Error("Function called outside component initialization");return E}function L(e,t){const n=e.$$.callbacks[t.type];n&&n.slice().forEach((e=>e.call(this,t)))}const S=[],A=[];let k=[];const w=[],O=Promise.resolve();let _=!1;function R(e){k.push(e)}function C(e){w.push(e)}const P=new Set;let T=0;function I(){if(0!==T)return;const e=E;do{try{for(;T<S.length;){const e=S[T];T++,b(e),x(e.$$)}}catch(e){throw S.length=0,T=0,e}for(b(null),S.length=0,T=0;A.length;)A.pop()();for(let e=0;e<k.length;e+=1){const t=k[e];P.has(t)||(P.add(t),t())}k.length=0}while(S.length);for(;w.length;)w.pop()();_=!1,P.clear(),b(e)}function x(e){if(null!==e.fragment){e.update(),i(e.before_update);const t=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,t),e.after_update.forEach(R)}}const M=new Set;let D;function H(){D={r:0,c:[],p:D}}function G(){D.r||i(D.c),D=D.p}function F(e,t){e&&e.i&&(M.delete(e),e.i(t))}function K(e,t,n,i){if(e&&e.o){if(M.has(e))return;M.add(e),D.c.push((()=>{M.delete(e),i&&(n&&e.d(1),i())})),e.o(t)}else i&&i()}function B(e,t,n){const i=e.$$.props[t];void 0!==i&&(e.$$.bound[i]=n,n(e.$$.ctx[i]))}function z(e){e&&e.c()}function Y(e,n,s,a){const{fragment:o,after_update:l}=e.$$;o&&o.m(n,s),a||R((()=>{const n=e.$$.on_mount.map(t).filter(r);e.$$.on_destroy?e.$$.on_destroy.push(...n):i(n),e.$$.on_mount=[]})),l.forEach(R)}function U(e,t){const n=e.$$;null!==n.fragment&&(!function(e){const t=[],n=[];k.forEach((i=>-1===e.indexOf(i)?t.push(i):n.push(i))),n.forEach((e=>e())),k=t}(n.after_update),i(n.on_destroy),n.fragment&&n.fragment.d(t),n.on_destroy=n.fragment=null,n.ctx=[])}function $(e,t){-1===e.$$.dirty[0]&&(S.push(e),_||(_=!0,O.then(I)),e.$$.dirty.fill(0)),e.$$.dirty[t/31|0]|=1<<t%31}function Z(t,r,s,a,o,l,h,u=[-1]){const d=E;b(t);const f=t.$$={fragment:null,ctx:[],props:l,update:e,not_equal:o,bound:n(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(r.context||(d?d.$$.context:[])),callbacks:n(),dirty:u,skip_bound:!1,root:r.target||d.$$.root};h&&h(f.root);let p=!1;if(f.ctx=s?s(t,r.props||{},((e,n,...i)=>{const r=i.length?i[0]:n;return f.ctx&&o(f.ctx[e],f.ctx[e]=r)&&(!f.skip_bound&&f.bound[e]&&f.bound[e](r),p&&$(t,e)),n})):[],f.update(),p=!0,i(f.before_update),f.fragment=!!a&&a(f.ctx),r.target){if(r.hydrate){const e=function(e){return Array.from(e.childNodes)}(r.target);f.fragment&&f.fragment.l(e),e.forEach(c)}else f.fragment&&f.fragment.c();r.intro&&F(t.$$.fragment),Y(t,r.target,r.anchor,r.customElement),I()}b(d)}class W{$destroy(){U(this,1),this.$destroy=e}$on(t,n){if(!r(n))return e;const i=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return i.push(n),()=>{const e=i.indexOf(n);-1!==e&&i.splice(e,1)}}$set(e){var t;this.$$set&&(t=e,0!==Object.keys(t).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}var V,j,q=(V=function(e,t){function n(e,t){return"string"==typeof e?(t||document).querySelector(e):e||null}function i(e){var t=e.getBoundingClientRect();return{top:t.top+(document.documentElement.scrollTop||document.body.scrollTop),left:t.left+(document.documentElement.scrollLeft||document.body.scrollLeft)}}function r(e){return e.titleHeight+e.margins.top+e.paddings.top}function s(e){return e.margins.left+e.paddings.left}function a(e){return e.margins.top+e.margins.bottom+e.paddings.top+e.paddings.bottom+e.titleHeight+e.legendHeight}function o(e){return e.margins.left+e.margins.right+e.paddings.left+e.paddings.right}function l(e){return parseFloat(e.toFixed(2))}function c(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]&&arguments[3];n||(n=i?e[0]:e[e.length-1]);var r=new Array(Math.abs(t)).fill(n);return i?r.concat(e):e.concat(r)}function h(e,t){return(e+"").length*t}function u(e,t){return{x:Math.sin(e*oe)*t,y:Math.cos(e*oe)*t}}function d(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return!(Number.isNaN(e)||void 0===e||!Number.isFinite(e)||t&&e<0)}function f(e){var t=void 0,n=void 0,i=void 0;if(e instanceof Date)return new Date(e.getTime());if("object"!==(void 0===e?"undefined":he(e))||null===e)return e;for(i in t=Array.isArray(e)?[]:{},e)n=e[i],t[i]=f(n);return t}function p(e,t){var n=void 0,i=void 0;return e<=t?(n=t-e,i=e):(n=e-t,i=t),[n,i]}function m(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:t.length-e.length;return n>0?e=c(e,n):t=c(t,n),[e,t]}function g(e,t){if(e)return e.length>t?e.slice(0,t-3)+"...":e}function v(e,t){for(var n=[],i=0;i<e.length;i++)n.push([e[i],t[i]]);var r=function(e,t,n,i){var r=function(e,t){var n=t[0]-e[0],i=t[1]-e[1];return{length:Math.sqrt(Math.pow(n,2)+Math.pow(i,2)),angle:Math.atan2(i,n)}}(t||e,n||e),s=r.angle+(i?Math.PI:0),a=.2*r.length;return[e[0]+Math.cos(s)*a,e[1]+Math.sin(s)*a]};return function(e,t){return e.reduce((function(e,t,n,i){return 0===n?t[0]+","+t[1]:e+" "+function(e,t,n){var i=r(n[t-1],n[t-2],e),s=r(e,n[t-1],n[t+1],!0);return"C "+i[0]+","+i[1]+" "+s[0]+","+s[1]+" "+e[0]+","+e[1]}(t,n,i)}),"")}(n)}function y(e){return e>255?255:e<0?0:e}function E(e,t){var n=de(e),i=!1;"#"==n[0]&&(n=n.slice(1),i=!0);var r=parseInt(n,16),s=y((r>>16)+t),a=y((r>>8&255)+t);return(i?"#":"")+(y((255&r)+t)|a<<8|s<<16).toString(16)}function b(e,t){return"string"==typeof e?(t||document).querySelector(e):e||null}function N(e,t){var n=document.createElementNS("http://www.w3.org/2000/svg",e);for(var i in t){var r=t[i];if("inside"===i)b(r).appendChild(n);else if("around"===i){var s=b(r);s.parentNode.insertBefore(n,s),n.appendChild(s)}else"styles"===i?"object"===(void 0===r?"undefined":pe(r))&&Object.keys(r).map((function(e){n.style[e]=r[e]})):("className"===i&&(i="class"),"innerHTML"===i?n.textContent=r:n.setAttribute(i,r))}return n}function L(e,t,n,i){return N("stop",{inside:e,style:"stop-color: "+n,offset:t,"stop-opacity":i})}function S(e){var t=arguments.length>2&&void 0!==arguments[2]?arguments[2]:void 0,n={className:e,transform:arguments.length>1&&void 0!==arguments[1]?arguments[1]:""};return t&&(n.inside=t),N("g",n)}function A(e){return N("path",{className:arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",d:e,styles:{stroke:arguments.length>2&&void 0!==arguments[2]?arguments[2]:"none",fill:arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none","stroke-width":arguments.length>4&&void 0!==arguments[4]?arguments[4]:2}})}function k(e,t){var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i="path-fill-gradient-"+t+"-"+(n?"lighter":"default"),r=function(e,t){return N("linearGradient",{inside:e,id:t,x1:0,x2:0,y1:0,y2:1})}(e,i),s=[1,.6,.2];return n&&(s=[.4,.2,0]),L(r,"0%",t,s[0]),L(r,"50%",t,s[1]),L(r,"100%",t,s[2]),i}function w(e,t,n,i,r){var s=arguments.length>6&&void 0!==arguments[6]?arguments[6]:{},a={className:e,x:t,y:n,width:i,height:i,rx:r,fill:arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none"};return Object.keys(s).map((function(e){a[e]=s[e]})),N("rect",a)}function O(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=r.fontSize||ye;return N("text",{className:e,x:t,y:n,dy:(void 0!==r.dy?r.dy:s/2)+"px","font-size":s+"px",fill:r.fill||be,"text-anchor":r.textAnchor||"start",innerHTML:i})}function _(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};r.stroke||(r.stroke=Ee),r.lineType||(r.lineType=""),r.shortenNumbers&&(t=function(e){var t=void 0;if("number"==typeof e)t=e;else if("string"==typeof e&&(t=Number(e),Number.isNaN(t)))return e;var n=Math.floor(Math.log10(Math.abs(t)));if(n<=2)return t;var i=Math.floor(n/3),r=Math.pow(10,n-3*i)*+(t/Math.pow(10,n)).toFixed(1);return Math.round(100*r)/100+" "+["","K","M","B","T"][i]}(t));var s=N("line",{className:"line-horizontal "+r.className+("dashed"===r.lineType?"dashed":""),x1:n,x2:i,y1:0,y2:0,styles:{stroke:r.stroke}}),a=N("text",{x:n<i?n-ge:n+ge,y:0,dy:ye/2-2+"px","font-size":ye+"px","text-anchor":n<i?"end":"start",innerHTML:t+""}),o=N("g",{transform:"translate(0, "+e+")","stroke-opacity":1});return 0!==a&&"0"!==a||(o.style.stroke="rgba(27, 31, 35, 0.6)"),o.appendChild(s),o.appendChild(a),o}function R(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};d(e)||(e=0),i.pos||(i.pos="bottom"),i.offset||(i.offset=0),i.mode||(i.mode="span"),i.stroke||(i.stroke=Ee),i.className||(i.className="");var r=n+me,s="span"===i.mode?-1*me:n;return"tick"===i.mode&&"top"===i.pos&&(r=-1*me,s=0),function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};r.stroke||(r.stroke=Ee);var s=N("line",{className:"line-vertical "+r.className,x1:0,x2:0,y1:n,y2:i,styles:{stroke:r.stroke}}),a=N("text",{x:0,y:n>i?n+ge:n-ge-ye,dy:ye+"px","font-size":ye+"px","text-anchor":"middle",innerHTML:t+""}),o=N("g",{transform:"translate("+e+", 0)"});return o.appendChild(s),o.appendChild(a),o}(e,t,r,s,{stroke:i.stroke,className:i.className,lineType:i.lineType})}function C(e,t,n,i){var r="string"==typeof t?t:t.join(", ");return[e,{transform:n.join(", ")},i,_e,"translate",{transform:r}]}function P(e,t,n){return C(e,[0,n],[0,t],we)}function T(e,t){return[e,{d:t},Ae,_e]}function I(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"linear",r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:void 0,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:{},a=e.cloneNode(!0),o=e.cloneNode(!0);for(var l in t){var c=void 0;c="transform"===l?document.createElementNS("http://www.w3.org/2000/svg","animateTransform"):document.createElementNS("http://www.w3.org/2000/svg","animate");var h=s[l]||e.getAttribute(l),u=t[l],d={attributeName:l,from:h,to:u,begin:"0s",dur:n/1e3+"s",values:h+";"+u,keySplines:Ce[i],keyTimes:"0;1",calcMode:"spline",fill:"freeze"};for(var f in r&&(d.type=r),d)c.setAttribute(f,d[f]);a.appendChild(c),r?o.setAttribute(l,"translate("+u+")"):o.setAttribute(l,u)}return[a,o]}function x(e,t){e.style.transform=t,e.style.webkitTransform=t,e.style.msTransform=t,e.style.mozTransform=t,e.style.oTransform=t}function M(e,t){var n=[],i=[];t.map((function(e){var t,r,s=e[0],a=s.parentNode;e[0]=s;var o=I.apply(void 0,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(e)),l=Re(o,2);t=l[0],r=l[1],n.push(r),i.push([t,a]),a&&a.replaceChild(t,s)}));var r=e.cloneNode(!0);return i.map((function(e,i){e[1]&&(e[1].replaceChild(n[i],e[0]),t[i][0]=n[i])})),r}function D(e){var t=new Date(e);return t.setMinutes(t.getMinutes()-t.getTimezoneOffset()),t}function H(e){var t=e.getDate(),n=e.getMonth()+1;return[e.getFullYear(),(n>9?"":"0")+n,(t>9?"":"0")+t].join("-")}function G(e){return new Date(e.getTime())}function F(e,t){var n=Y(e);return Math.ceil(function(e,t){var n=Fe*Ge;return(D(t)-D(e))/n}(n,t)/He)}function K(e,t){return e.getMonth()===t.getMonth()&&e.getFullYear()===t.getFullYear()}function B(e){var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=Ke[e];return t?n.slice(0,3):n}function z(e,t){return new Date(t,e+1,0)}function Y(e){var t=G(e),n=t.getDay();return 0!==n&&U(t,-1*n),t}function U(e,t){e.setDate(e.getDate()+t)}function $(e,t,n){var i=Object.keys($e).filter((function(t){return e.includes(t)})),r=$e[i[0]];return Object.assign(r,{constants:t,getData:n}),new Ue(r)}function Z(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}function W(e){if(0===e)return[0,0];if(isNaN(e))return{mantissa:-6755399441055744,exponent:972};var t=e>0?1:-1;if(!isFinite(e))return{mantissa:4503599627370496*t,exponent:972};e=Math.abs(e);var n=Math.floor(Math.log10(e));return[t*(e/Math.pow(10,n)),n]}function V(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,n=W(e),i=Je(n,2),r=i[0],s=i[1],a=t?t/Math.pow(10,s):0,o=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,n=Math.ceil(e),i=Math.floor(t),r=n-i,s=r,a=1;r>5&&(r%2!=0&&(r=++n-i),s=r/2,a=2),r<=2&&(a=r/(s=4)),0===r&&(s=5,a=1);for(var o=[],l=0;l<=s;l++)o.push(i+a*l);return o}(r=r.toFixed(6),a);return o.map((function(e){return e*Math.pow(10,s)}))}function j(e){return e[1]-e[0]}function q(e,t){return l(t.zeroLine-e*t.scaleMultiplier)}function X(e,t){return t.filter((function(t){return t<e})).length}function J(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2],i=e/t.length;i<=0&&(i=1);var r=i/re,s=void 0;if(n){var a=Math.max.apply(Math,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(t.map((function(e){return e.length}))));s=Math.ceil(a/r)}return t.map((function(e,t){return(e+="").length>r&&(n?t%s!=0&&(e=""):e=r-3>0?e.slice(0,r-3)+" ...":e.slice(0,r)+".."),e}))}function Q(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){void 0===t&&(t={});var n=t.insertAt;if(e&&"undefined"!=typeof document){var i=document.head||document.getElementsByTagName("head")[0],r=document.createElement("style");r.type="text/css","top"===n&&i.firstChild?i.insertBefore(r,i.firstChild):i.appendChild(r),r.styleSheet?r.styleSheet.cssText=e:r.appendChild(document.createTextNode(e))}}('.chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ol,.graph-svg-tip ul{padding-left:0;display:-webkit-box;display:-ms-flexbox;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;-webkit-box-flex:1;-ms-flex:1;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:" ";border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}');var ee="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};n.create=function(e,t){var i=document.createElement(e);for(var r in t){var s=t[r];if("inside"===r)n(s).appendChild(i);else if("around"===r){var a=n(s);a.parentNode.insertBefore(i,a),i.appendChild(a)}else"styles"===r?"object"===(void 0===s?"undefined":ee(s))&&Object.keys(s).map((function(e){i.style[e]=s[e]})):r in i?i[r]=s:i.setAttribute(r,s)}return i};var te={margins:{top:10,bottom:10,left:20,right:20},paddings:{top:20,bottom:40,left:30,right:10},baseHeight:240,titleHeight:20,legendHeight:30,titleFontSize:12},ne=2,ie=10,re=7,se=["light-blue","blue","violet","red","orange","yellow","green","light-green","purple","magenta","light-grey","dark-grey"],ae={bar:se,line:se,pie:se,percentage:se,heatmap:["#ebedf0","#c6e48b","#7bc96f","#239a3b","#196127"],donut:se},oe=Math.PI/180,le=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),ce=function(){function e(t){var n=t.parent,i=void 0===n?null:n,r=t.colors,s=void 0===r?[]:r;(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")})(this,e),this.parent=i,this.colors=s,this.titleName="",this.titleValue="",this.listValues=[],this.titleValueFirst=0,this.x=0,this.y=0,this.top=0,this.left=0,this.setup()}return le(e,[{key:"setup",value:function(){this.makeTooltip()}},{key:"refresh",value:function(){this.fill(),this.calcPosition()}},{key:"makeTooltip",value:function(){var e=this;this.container=n.create("div",{inside:this.parent,className:"graph-svg-tip comparison",innerHTML:'<span class="title"></span>\n\t\t\t\t<ul class="data-point-list"></ul>\n\t\t\t\t<div class="svg-pointer"></div>'}),this.hideTip(),this.title=this.container.querySelector(".title"),this.dataPointList=this.container.querySelector(".data-point-list"),this.parent.addEventListener("mouseleave",(function(){e.hideTip()}))}},{key:"fill",value:function(){var e,t=this;this.index&&this.container.setAttribute("data-point-index",this.index),e=this.titleValueFirst?"<strong>"+this.titleValue+"</strong>"+this.titleName:this.titleName+"<strong>"+this.titleValue+"</strong>",this.title.innerHTML=e,this.dataPointList.innerHTML="",this.listValues.map((function(e,i){var r=t.colors[i]||"black",s=0===e.formatted||e.formatted?e.formatted:e.value,a=n.create("li",{styles:{"border-top":"3px solid "+r},innerHTML:'<strong style="display: block;">'+(0===s||s?s:"")+"</strong>\n\t\t\t\t\t"+(e.title?e.title:"")});t.dataPointList.appendChild(a)}))}},{key:"calcPosition",value:function(){var e=this.container.offsetWidth;this.top=this.y-this.container.offsetHeight-5,this.left=this.x-e/2;var t=this.parent.offsetWidth-e,n=this.container.querySelector(".svg-pointer");if(this.left<0)n.style.left="calc(50% - "+-1*this.left+"px)",this.left=0;else if(this.left>t){var i="calc(50% + "+(this.left-t)+"px)";n.style.left=i,this.left=t}else n.style.left="50%"}},{key:"setValues",value:function(e,t){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:[],r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1;this.titleName=n.name,this.titleValue=n.value,this.listValues=i,this.x=e,this.y=t,this.titleValueFirst=n.valueFirst||0,this.index=r,this.refresh()}},{key:"hideTip",value:function(){this.container.style.top="0px",this.container.style.left="0px",this.container.style.opacity="0"}},{key:"showTip",value:function(){this.container.style.top=this.top+"px",this.container.style.left=this.left+"px",this.container.style.opacity="1"}}]),e}(),he="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},ue={"light-blue":"#7cd6fd",blue:"#5e64ff",violet:"#743ee2",red:"#ff5858",orange:"#ffa00a",yellow:"#feef72",green:"#28a745","light-green":"#98d85b",purple:"#b554ff",magenta:"#ffa3ef",black:"#36114C",grey:"#bdd3e6","light-grey":"#f0f4f7","dark-grey":"#b8c2cc"},de=function(e){return/rgb[a]{0,1}\([\d, ]+\)/gim.test(e)?/\D+(\d*)\D+(\d*)\D+(\d*)/gim.exec(e).map((function(e,t){return 0!==t?Number(e).toString(16):"#"})).reduce((function(e,t){return""+e+t})):ue[e]||e},fe=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],i=!0,r=!1,s=void 0;try{for(var a,o=e[Symbol.iterator]();!(i=(a=o.next()).done)&&(n.push(a.value),!t||n.length!==t);i=!0);}catch(e){r=!0,s=e}finally{try{!i&&o.return&&o.return()}finally{if(r)throw s}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")},pe="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},me=6,ge=4,ve=15,ye=10,Ee="#dadada",be="#555b51",Ne={bar:function(e){var t=void 0;"rect"!==e.nodeName&&(t=e.getAttribute("transform"),e=e.childNodes[0]);var n=e.cloneNode();return n.style.fill="#000000",n.style.opacity="0.4",t&&n.setAttribute("transform",t),n},dot:function(e){var t=void 0;"circle"!==e.nodeName&&(t=e.getAttribute("transform"),e=e.childNodes[0]);var n=e.cloneNode(),i=e.getAttribute("r"),r=e.getAttribute("fill");return n.setAttribute("r",parseInt(i)+4),n.setAttribute("fill",r),n.style.opacity="0.6",t&&n.setAttribute("transform",t),n},heat_square:function(e){var t=void 0;"circle"!==e.nodeName&&(t=e.getAttribute("transform"),e=e.childNodes[0]);var n=e.cloneNode(),i=e.getAttribute("r"),r=e.getAttribute("fill");return n.setAttribute("r",parseInt(i)+4),n.setAttribute("fill",r),n.style.opacity="0.6",t&&n.setAttribute("transform",t),n}},Le={bar:function(e,t){var n=void 0;"rect"!==e.nodeName&&(n=e.getAttribute("transform"),e=e.childNodes[0]);var i=["x","y","width","height"];Object.values(e.attributes).filter((function(e){return i.includes(e.name)&&e.specified})).map((function(e){t.setAttribute(e.name,e.nodeValue)})),n&&t.setAttribute("transform",n)},dot:function(e,t){var n=void 0;"circle"!==e.nodeName&&(n=e.getAttribute("transform"),e=e.childNodes[0]);var i=["cx","cy"];Object.values(e.attributes).filter((function(e){return i.includes(e.name)&&e.specified})).map((function(e){t.setAttribute(e.name,e.nodeValue)})),n&&t.setAttribute("transform",n)},heat_square:function(e,t){var n=void 0;"circle"!==e.nodeName&&(n=e.getAttribute("transform"),e=e.childNodes[0]);var i=["cx","cy"];Object.values(e.attributes).filter((function(e){return i.includes(e.name)&&e.specified})).map((function(e){t.setAttribute(e.name,e.nodeValue)})),n&&t.setAttribute("transform",n)}},Se=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],i=!0,r=!1,s=void 0;try{for(var a,o=e[Symbol.iterator]();!(i=(a=o.next()).done)&&(n.push(a.value),!t||n.length!==t);i=!0);}catch(e){r=!0,s=e}finally{try{!i&&o.return&&o.return()}finally{if(r)throw s}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")},Ae=350,ke=350,we=Ae,Oe=250,_e="easein",Re=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],i=!0,r=!1,s=void 0;try{for(var a,o=e[Symbol.iterator]();!(i=(a=o.next()).done)&&(n.push(a.value),!t||n.length!==t);i=!0);}catch(e){r=!0,s=e}finally{try{!i&&o.return&&o.return()}finally{if(r)throw s}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")},Ce={ease:"0.25 0.1 0.25 1",linear:"0 0 1 1",easein:"0.1 0.8 0.2 1",easeout:"0 0 0.58 1",easeinout:"0.42 0 0.58 1"},Pe=".chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ul{padding-left:0;display:flex}.graph-svg-tip ol{padding-left:0;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:' ';border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}",Te=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),Ie=function(){function e(t,n){if(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),n=f(n),this.parent="string"==typeof t?document.querySelector(t):t,!(this.parent instanceof HTMLElement))throw new Error("No `parent` element to render on was provided.");this.rawChartArgs=n,this.title=n.title||"",this.type=n.type||"",this.realData=this.prepareData(n.data),this.data=this.prepareFirstData(this.realData),this.colors=this.validateColors(n.colors,this.type),this.config={showTooltip:1,showLegend:1,isNavigable:n.isNavigable||0,animate:void 0!==n.animate?n.animate:1,truncateLegends:n.truncateLegends||1},this.measures=JSON.parse(JSON.stringify(te));var i=this.measures;this.setMeasures(n),this.title.length||(i.titleHeight=0),this.config.showLegend||(i.legendHeight=0),this.argHeight=n.height||i.baseHeight,this.state={},this.options={},this.initTimeout=700,this.config.isNavigable&&(this.overlays=[]),this.configure(n)}return Te(e,[{key:"prepareData",value:function(e){return e}},{key:"prepareFirstData",value:function(e){return e}},{key:"validateColors",value:function(e,t){var n=[];return(e=(e||[]).concat(ae[t])).forEach((function(e){var t=de(e);!function(e){return/(^\s*)(#)((?:[A-Fa-f0-9]{3}){1,2})$/i.test(e)||/(^\s*)(rgb|hsl)(a?)[(]\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*(?:,\s*([\d.]+)\s*)?[)]$/i.test(e)}(t)?console.warn('"'+e+'" is not a valid color.'):n.push(t)})),n}},{key:"setMeasures",value:function(){}},{key:"configure",value:function(){var e=this,t=this.argHeight;this.baseHeight=t,this.height=t-a(this.measures),this.boundDrawFn=function(){return e.draw(!0)},ResizeObserver&&(this.resizeObserver=new ResizeObserver(this.boundDrawFn),this.resizeObserver.observe(this.parent)),window.addEventListener("resize",this.boundDrawFn),window.addEventListener("orientationchange",this.boundDrawFn)}},{key:"destroy",value:function(){this.resizeObserver&&this.resizeObserver.disconnect(),window.removeEventListener("resize",this.boundDrawFn),window.removeEventListener("orientationchange",this.boundDrawFn)}},{key:"setup",value:function(){this.makeContainer(),this.updateWidth(),this.makeTooltip(),this.draw(!1,!0)}},{key:"makeContainer",value:function(){this.parent.innerHTML="";var e={inside:this.parent,className:"chart-container"};this.independentWidth&&(e.styles={width:this.independentWidth+"px"}),this.container=n.create("div",e)}},{key:"makeTooltip",value:function(){this.tip=new ce({parent:this.container,colors:this.colors}),this.bindTooltip()}},{key:"bindTooltip",value:function(){}},{key:"draw",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]&&arguments[0],n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];t&&function(e){return null===e.offsetParent}(this.parent)||(this.updateWidth(),this.calc(t),this.makeChartArea(),this.setupComponents(),this.components.forEach((function(t){return t.setup(e.drawArea)})),this.render(this.components,!1),n&&(this.data=this.realData,setTimeout((function(){e.update(e.data)}),this.initTimeout)),this.renderLegend(),this.setupNavigation(n))}},{key:"calc",value:function(){}},{key:"updateWidth",value:function(){this.baseWidth=function(e){var t=window.getComputedStyle(e),n=parseFloat(t.paddingLeft)+parseFloat(t.paddingRight);return e.clientWidth-n}(this.parent),this.width=this.baseWidth-o(this.measures)}},{key:"makeChartArea",value:function(){this.svg&&this.container.removeChild(this.svg);var e=this.measures;this.svg=function(e,t,n,i){return N("svg",{className:t,inside:e,width:n,height:i})}(this.container,"frappe-chart chart",this.baseWidth,this.baseHeight),this.svgDefs=function(e){return N("defs",{inside:e})}(this.svg),this.title.length&&(this.titleEL=O("title",e.margins.left,e.margins.top,this.title,{fontSize:e.titleFontSize,fill:"#666666",dy:e.titleFontSize}));var t=r(e);this.drawArea=S(this.type+"-chart chart-draw-area","translate("+s(e)+", "+t+")"),this.config.showLegend&&(t+=this.height+e.paddings.bottom,this.legendArea=S("chart-legend","translate("+s(e)+", "+t+")")),this.title.length&&this.svg.appendChild(this.titleEL),this.svg.appendChild(this.drawArea),this.config.showLegend&&this.svg.appendChild(this.legendArea),this.updateTipOffset(s(e),r(e))}},{key:"updateTipOffset",value:function(e,t){this.tip.offset={x:e,y:t}}},{key:"setupComponents",value:function(){this.components=new Map}},{key:"update",value:function(e){e||console.error("No data to update."),this.data=this.prepareData(e),this.calc(),this.render(this.components,this.config.animate),this.renderLegend()}},{key:"render",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.components,n=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];this.config.isNavigable&&this.overlays.map((function(e){return e.parentNode.removeChild(e)}));var i=[];t.forEach((function(e){i=i.concat(e.update(n))})),i.length>0?(function(e,t,n){if(0!==n.length){var i=M(t,n);t.parentNode==e&&(e.removeChild(t),e.appendChild(i)),setTimeout((function(){i.parentNode==e&&(e.removeChild(i),e.appendChild(t))}),Oe)}}(this.container,this.svg,i),setTimeout((function(){t.forEach((function(e){return e.make()})),e.updateNav()}),400)):(t.forEach((function(e){return e.make()})),this.updateNav())}},{key:"updateNav",value:function(){this.config.isNavigable&&(this.makeOverlay(),this.bindUnits())}},{key:"renderLegend",value:function(){}},{key:"setupNavigation",value:function(){var e=this,t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.config.isNavigable&&t&&(this.bindOverlay(),this.keyActions={13:this.onEnterKey.bind(this),37:this.onLeftArrow.bind(this),38:this.onUpArrow.bind(this),39:this.onRightArrow.bind(this),40:this.onDownArrow.bind(this)},document.addEventListener("keydown",(function(t){(function(e){var t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)})(e.container)&&(t=t||window.event,e.keyActions[t.keyCode]&&e.keyActions[t.keyCode]())})))}},{key:"makeOverlay",value:function(){}},{key:"updateOverlay",value:function(){}},{key:"bindOverlay",value:function(){}},{key:"bindUnits",value:function(){}},{key:"onLeftArrow",value:function(){}},{key:"onRightArrow",value:function(){}},{key:"onUpArrow",value:function(){}},{key:"onDownArrow",value:function(){}},{key:"onEnterKey",value:function(){}},{key:"addDataPoint",value:function(){}},{key:"removeDataPoint",value:function(){}},{key:"getDataPoint",value:function(){}},{key:"setCurrentDataPoint",value:function(){}},{key:"updateDataset",value:function(){}},{key:"export",value:function(){var e=function(e){var t=e.cloneNode(!0);t.classList.add("chart-container"),t.setAttribute("xmlns","http://www.w3.org/2000/svg"),t.setAttribute("xmlns:xlink","http://www.w3.org/1999/xlink");var i=n.create("style",{innerHTML:Pe});t.insertBefore(i,t.firstChild);var r=n.create("div");return r.appendChild(t),r.innerHTML}(this.svg);!function(e,t){var n=document.createElement("a");n.style="display: none";var i=new Blob(t,{type:"image/svg+xml; charset=utf-8"}),r=window.URL.createObjectURL(i);n.href=r,n.download=e,document.body.appendChild(n),n.click(),setTimeout((function(){document.body.removeChild(n),window.URL.revokeObjectURL(r)}),300)}(this.title||"Chart",[e])}}]),e}(),xe=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),Me=function e(t,n,i){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,i)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(i):void 0},De=function(e){function t(e,n){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n))}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),xe(t,[{key:"configure",value:function(e){Me(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"configure",this).call(this,e),this.config.formatTooltipY=(e.tooltipOptions||{}).formatTooltipY,this.config.maxSlices=e.maxSlices||20,this.config.maxLegendPoints=e.maxLegendPoints||20}},{key:"calc",value:function(){var e=this,t=this.state,n=this.config.maxSlices;t.sliceTotals=[];var i=this.data.labels.map((function(t,n){var i=0;return e.data.datasets.map((function(e){i+=e.values[n]})),[i,t]})).filter((function(e){return e[0]>=0})),r=i;if(i.length>n){i.sort((function(e,t){return t[0]-e[0]})),r=i.slice(0,n-1);var s=0;i.slice(n-1).map((function(e){s+=e[0]})),r.push([s,"Rest"]),this.colors[n-1]="grey"}t.labels=[],r.map((function(e){t.sliceTotals.push(function(e){return Number(Math.round(e+"e4")+"e-4")}(e[0])),t.labels.push(e[1])})),t.grandTotal=t.sliceTotals.reduce((function(e,t){return e+t}),0),this.center={x:this.width/2,y:this.height/2}}},{key:"renderLegend",value:function(){var e=this,t=this.state;this.legendArea.textContent="",this.legendTotals=t.sliceTotals.slice(0,this.config.maxLegendPoints);var n=0,i=0;this.legendTotals.map((function(r,s){var a=150,l=Math.floor((e.width-o(e.measures))/a);e.legendTotals.length<l&&(a=e.width/e.legendTotals.length),n>l&&(n=0,i+=20);var c=a*n+5,h=e.config.truncateLegends?g(t.labels[s],a/10):t.labels[s],u=e.config.formatTooltipY?e.config.formatTooltipY(r):r,d=function(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",r=arguments[4];r=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?g(r,ve):r;var s={className:"legend-dot",cx:0,cy:0,r:n,fill:i},a=N("text",{className:"legend-dataset-text",x:0,y:0,dx:ye+"px",dy:ye/3+"px","font-size":1.2*ye+"px","text-anchor":"start",fill:be,innerHTML:r}),o=N("g",{transform:"translate("+e+", "+t+")"});return o.appendChild(N("circle",s)),o.appendChild(a),o}(c,i,5,e.colors[s],h+": "+u,!1);e.legendArea.appendChild(d),n++}))}}]),t}(Ie),He=7,Ge=1e3,Fe=86400,Ke=["January","February","March","April","May","June","July","August","September","October","November","December"],Be=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],ze=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],i=!0,r=!1,s=void 0;try{for(var a,o=e[Symbol.iterator]();!(i=(a=o.next()).done)&&(n.push(a.value),!t||n.length!==t);i=!0);}catch(e){r=!0,s=e}finally{try{!i&&o.return&&o.return()}finally{if(r)throw s}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")},Ye=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),Ue=function(){function e(t){var n=t.layerClass,i=void 0===n?"":n,r=t.layerTransform,s=void 0===r?"":r,a=t.constants,o=t.getData,l=t.makeElements,c=t.animateElements;(function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")})(this,e),this.layerTransform=s,this.constants=a,this.makeElements=l,this.getData=o,this.animateElements=c,this.store=[],this.labels=[],this.layerClass=i,this.layerClass="function"==typeof this.layerClass?this.layerClass():this.layerClass,this.refresh()}return Ye(e,[{key:"refresh",value:function(e){this.data=e||this.getData()}},{key:"setup",value:function(e){this.layer=S(this.layerClass,this.layerTransform,e)}},{key:"make",value:function(){this.render(this.data),this.oldData=this.data}},{key:"render",value:function(e){var t=this;this.store=this.makeElements(e),this.layer.textContent="",this.store.forEach((function(e){t.layer.appendChild(e)})),this.labels.forEach((function(e){t.layer.appendChild(e)}))}},{key:"update",value:function(){var e=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];this.refresh();var t=[];return e&&(t=this.animateElements(this.data)||[]),t}}]),e}(),$e={donutSlices:{layerClass:"donut-slices",makeElements:function(e){return e.sliceStrings.map((function(t,n){var i=A(t,"donut-path",e.colors[n],"none",e.strokeWidth);return i.style.transition="transform .3s;",i}))},animateElements:function(e){return this.store.map((function(t,n){return T(t,e.sliceStrings[n])}))}},pieSlices:{layerClass:"pie-slices",makeElements:function(e){return e.sliceStrings.map((function(t,n){var i=A(t,"pie-path","none",e.colors[n]);return i.style.transition="transform .3s;",i}))},animateElements:function(e){return this.store.map((function(t,n){return T(t,e.sliceStrings[n])}))}},percentageBars:{layerClass:"percentage-bars",makeElements:function(e){var t=this;return e.xPositions.map((function(n,i){return function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:ne,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none";return N("rect",{className:"percentage-bar",x:e,y:t,width:n,height:i,fill:s,styles:{stroke:E(s,-25),"stroke-dasharray":"0, "+(i+n)+", "+n+", "+i,"stroke-width":r}})}(n,0,e.widths[i],t.constants.barHeight,t.constants.barDepth,e.colors[i])}))},animateElements:function(e){if(e)return[]}},yAxis:{layerClass:"y axis",makeElements:function(e){var t=this;return e.positions.map((function(n,i){return function(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};d(e)||(e=0),i.pos||(i.pos="left"),i.offset||(i.offset=0),i.mode||(i.mode="span"),i.stroke||(i.stroke=Ee),i.className||(i.className="");var r=-1*me,s="span"===i.mode?n+me:0;return"tick"===i.mode&&"right"===i.pos&&(r=n+me,s=n),_(e,t,r+=i.offset,s+=i.offset,{stroke:i.stroke,className:i.className,lineType:i.lineType,shortenNumbers:i.shortenNumbers})}(n,e.labels[i],t.constants.width,{mode:t.constants.mode,pos:t.constants.pos,shortenNumbers:t.constants.shortenNumbers})}))},animateElements:function(e){var t=e.positions,n=e.labels,i=this.oldData.positions,r=this.oldData.labels,s=m(i,t),a=ze(s,2);i=a[0],t=a[1];var o=m(r,n),l=ze(o,2);return r=l[0],n=l[1],this.render({positions:i,labels:n}),this.store.map((function(e,n){return P(e,t[n],i[n])}))}},xAxis:{layerClass:"x axis",makeElements:function(e){var t=this;return e.positions.map((function(n,i){return R(n,e.calcLabels[i],t.constants.height,{mode:t.constants.mode,pos:t.constants.pos})}))},animateElements:function(e){var t=e.positions,n=e.calcLabels,i=this.oldData.positions,r=this.oldData.calcLabels,s=m(i,t),a=ze(s,2);i=a[0],t=a[1];var o=m(r,n),l=ze(o,2);return r=l[0],n=l[1],this.render({positions:i,calcLabels:n}),this.store.map((function(e,n){return function(e,t,n){return C(e,[n,0],[t,0],we)}(e,t[n],i[n])}))}},yMarkers:{layerClass:"y-markers",makeElements:function(e){var t=this;return e.map((function(e){return function(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};i.labelPos||(i.labelPos="right");var r=N("text",{className:"chart-label",x:"left"===i.labelPos?ge:n-h(t,5)-ge,y:0,dy:ye/-2+"px","font-size":ye+"px","text-anchor":"start",innerHTML:t+""}),s=_(e,"",0,n,{stroke:i.stroke||Ee,className:i.className||"",lineType:i.lineType});return s.appendChild(r),s}(e.position,e.label,t.constants.width,{labelPos:e.options.labelPos,mode:"span",lineType:"dashed"})}))},animateElements:function(e){var t=m(this.oldData,e),n=ze(t,2);this.oldData=n[0];var i=(e=n[1]).map((function(e){return e.position})),r=e.map((function(e){return e.label})),s=e.map((function(e){return e.options})),a=this.oldData.map((function(e){return e.position}));return this.render(a.map((function(e,t){return{position:a[t],label:r[t],options:s[t]}}))),this.store.map((function(e,t){return P(e,i[t],a[t])}))}},yRegions:{layerClass:"y-regions",makeElements:function(e){var t=this;return e.map((function(e){return function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=e-t,a=N("rect",{className:"bar mini",styles:{fill:"rgba(228, 234, 239, 0.49)",stroke:Ee,"stroke-dasharray":n+", "+s},x:0,y:0,width:n,height:s});r.labelPos||(r.labelPos="right");var o=N("text",{className:"chart-label",x:"left"===r.labelPos?ge:n-h(i+"",4.5)-ge,y:0,dy:ye/-2+"px","font-size":ye+"px","text-anchor":"start",innerHTML:i+""}),l=N("g",{transform:"translate(0, "+t+")"});return l.appendChild(a),l.appendChild(o),l}(e.startPos,e.endPos,t.constants.width,e.label,{labelPos:e.options.labelPos})}))},animateElements:function(e){var t=m(this.oldData,e),n=ze(t,2);this.oldData=n[0];var i=(e=n[1]).map((function(e){return e.endPos})),r=e.map((function(e){return e.label})),s=e.map((function(e){return e.startPos})),a=e.map((function(e){return e.options})),o=this.oldData.map((function(e){return e.endPos})),l=this.oldData.map((function(e){return e.startPos}));this.render(o.map((function(e,t){return{startPos:l[t],endPos:o[t],label:r[t],options:a[t]}})));var c=[];return this.store.map((function(e,t){c=c.concat(function(e,t,n,i){var r=t-n,s=e.childNodes[0];return[[s,{height:r,"stroke-dasharray":s.getAttribute("width")+", "+r},we,_e],C(e,[0,i],[0,n],we)]}(e,s[t],i[t],o[t]))})),c}},heatDomain:{layerClass:function(){return"heat-domain domain-"+this.constants.index},makeElements:function(e){var t=this,n=this.constants,i=n.index,r=n.colWidth,s=n.rowHeight,a=n.squareSize,o=n.radius,l=n.xTranslate,c=0;return this.serializedSubDomains=[],e.cols.map((function(e,n){1===n&&t.labels.push(O("domain-name",l,-12,B(i,!0).toUpperCase(),{fontSize:9})),e.map((function(e,n){if(e.fill){var i={"data-date":e.yyyyMmDd,"data-value":e.dataValue,"data-day":n},r=w("day",l,c,a,o,e.fill,i);t.serializedSubDomains.push(r)}c+=s})),c=0,l+=r})),this.serializedSubDomains},animateElements:function(e){if(e)return[]}},barGraph:{layerClass:function(){return"dataset-units dataset-bars dataset-"+this.constants.index},makeElements:function(e){var t=this.constants;return this.unitType="bar",this.units=e.yPositions.map((function(n,i){return function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,a=arguments.length>6&&void 0!==arguments[6]?arguments[6]:0,o=arguments.length>7&&void 0!==arguments[7]?arguments[7]:{},l=p(t,o.zeroLine),c=fe(l,2),h=c[0],u=c[1];u-=a,0===h&&(h=o.minHeight,u-=o.minHeight),d(e)||(e=0),d(u)||(u=0),d(h,!0)||(h=0),d(n,!0)||(n=0);var f=N("rect",{className:"bar mini",style:"fill: "+i,"data-point-index":s,x:e,y:u,width:n,height:h});if((r+="")||r.length){f.setAttribute("y",0),f.setAttribute("x",0);var m=N("text",{className:"data-point-value",x:n/2,y:0,dy:ye/2*-1+"px","font-size":ye+"px","text-anchor":"middle",innerHTML:r}),g=N("g",{"data-point-index":s,transform:"translate("+e+", "+u+")"});return g.appendChild(f),g.appendChild(m),g}return f}(e.xPositions[i],n,e.barWidth,t.color,e.labels[i],i,e.offsets[i],{zeroLine:e.zeroLine,barsWidth:e.barsWidth,minHeight:t.minHeight})})),this.units},animateElements:function(e){var t=e.xPositions,n=e.yPositions,i=e.offsets,r=e.labels,s=this.oldData.xPositions,a=this.oldData.yPositions,o=this.oldData.offsets,l=this.oldData.labels,c=m(s,t),h=ze(c,2);s=h[0],t=h[1];var u=m(a,n),d=ze(u,2);a=d[0],n=d[1];var f=m(o,i),g=ze(f,2);o=g[0],i=g[1];var v=m(l,r),y=ze(v,2);l=y[0],r=y[1],this.render({xPositions:s,yPositions:a,offsets:o,labels:r,zeroLine:this.oldData.zeroLine,barsWidth:this.oldData.barsWidth,barWidth:this.oldData.barWidth});var E=[];return this.store.map((function(r,s){E=E.concat(function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,s=p(n,(arguments.length>5&&void 0!==arguments[5]?arguments[5]:{}).zeroLine),a=Se(s,2),o=a[0],l=a[1];return l-=r,"rect"!==e.nodeName?[[e.childNodes[0],{width:i,height:o},Ae,_e],C(e,e.getAttribute("transform").split("(")[1].slice(0,-1),[t,l],we)]:[[e,{width:i,height:o,x:t,y:l},Ae,_e]]}(r,t[s],n[s],e.barWidth,i[s],{zeroLine:e.zeroLine}))})),E}},lineGraph:{layerClass:function(){return"dataset-units dataset-line dataset-"+this.constants.index},makeElements:function(e){var t=this.constants;return this.unitType="dot",this.paths={},t.hideLine||(this.paths=function(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},s=t.map((function(t,n){return e[n]+","+t})).join("L");i.spline&&(s=v(e,t));var a=A("M"+s,"line-graph-path",n);if(i.heatline){var o=k(r.svgDefs,n);a.style.stroke="url(#"+o+")"}var l={path:a};if(i.regionFill){var c=k(r.svgDefs,n,!0),h="M"+e[0]+","+r.zeroLine+"L"+s+"L"+e.slice(-1)[0]+","+r.zeroLine;l.region=A(h,"region-fill","none","url(#"+c+")")}return l}(e.xPositions,e.yPositions,t.color,{heatline:t.heatline,regionFill:t.regionFill,spline:t.spline},{svgDefs:t.svgDefs,zeroLine:e.zeroLine})),this.units=[],t.hideDots||(this.units=e.yPositions.map((function(n,i){return function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,a=N("circle",{style:"fill: "+i,"data-point-index":s,cx:e,cy:t,r:n});if((r+="")||r.length){a.setAttribute("cy",0),a.setAttribute("cx",0);var o=N("text",{className:"data-point-value",x:0,y:0,dy:ye/2*-1-n+"px","font-size":ye+"px","text-anchor":"middle",innerHTML:r}),l=N("g",{"data-point-index":s,transform:"translate("+e+", "+t+")"});return l.appendChild(a),l.appendChild(o),l}return a}(e.xPositions[i],n,e.radius,t.color,t.valuesOverPoints?e.values[i]:"",i)}))),Object.values(this.paths).concat(this.units)},animateElements:function(e){var t=e.xPositions,n=e.yPositions,i=e.values,r=this.oldData.xPositions,s=this.oldData.yPositions,a=this.oldData.values,o=m(r,t),l=ze(o,2);r=l[0],t=l[1];var c=m(s,n),h=ze(c,2);s=h[0],n=h[1];var u=m(a,i),d=ze(u,2);a=d[0],i=d[1],this.render({xPositions:r,yPositions:s,values:i,zeroLine:this.oldData.zeroLine,radius:this.oldData.radius});var f=[];return Object.keys(this.paths).length&&(f=f.concat(function(e,t,n,i,r){var s=[],a=n.map((function(e,n){return t[n]+","+e})).join("L");r&&(a=v(t,n));var o=[e.path,{d:"M"+a},ke,_e];if(s.push(o),e.region){var l=t[0]+","+i+"L",c="L"+t.slice(-1)[0]+", "+i,h=[e.region,{d:"M"+l+a+c},ke,_e];s.push(h)}return s}(this.paths,t,n,e.zeroLine,this.constants.spline))),this.units.length&&this.units.map((function(e,i){f=f.concat(function(e,t,n){return"circle"!==e.nodeName?[C(e,e.getAttribute("transform").split("(")[1].slice(0,-1),[t,n],we)]:[[e,{cx:t,cy:n},Ae,_e]]}(e,t[i],n[i]))})),f}}},Ze=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),We=function e(t,n,i){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,i)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(i):void 0},Ve=function(e){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var i=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n));return i.type="percentage",i.setup(),i}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),Ze(t,[{key:"setMeasures",value:function(e){var t=this.measures;this.barOptions=e.barOptions||{};var n=this.barOptions;n.height=n.height||20,n.depth=n.depth||ne,t.paddings.right=30,t.legendHeight=60,t.baseHeight=8*(n.height+.5*n.depth)}},{key:"setupComponents",value:function(){var e=this.state,t=[["percentageBars",{barHeight:this.barOptions.height,barDepth:this.barOptions.depth},function(){return{xPositions:e.xPositions,widths:e.widths,colors:this.colors}}.bind(this)]];this.components=new Map(t.map((function(e){var t=$.apply(void 0,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(e));return[e[0],t]})))}},{key:"calc",value:function(){var e=this;We(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"calc",this).call(this);var n=this.state;n.xPositions=[],n.widths=[];var i=0;n.sliceTotals.map((function(t){var r=e.width*t/n.grandTotal;n.widths.push(r),n.xPositions.push(i),i+=r}))}},{key:"makeDataByIndex",value:function(){}},{key:"bindTooltip",value:function(){var e=this,t=this.state;this.container.addEventListener("mousemove",(function(n){var r=e.components.get("percentageBars").store,s=n.target;if(r.includes(s)){var a=r.indexOf(s),o=i(e.container),l=i(s),c=l.left-o.left+parseInt(s.getAttribute("width"))/2,h=l.top-o.top,u=(e.formattedLabels&&e.formattedLabels.length>0?e.formattedLabels[a]:e.state.labels[a])+": ",d=t.sliceTotals[a]/t.grandTotal;e.tip.setValues(c,h,{name:u,value:(100*d).toFixed(1)+"%"}),e.tip.showTip()}}))}}]),t}(De),je=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),qe=function e(t,n,i){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,i)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(i):void 0},Xe=function(e){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var i=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n));return i.type="pie",i.initTimeout=0,i.init=1,i.setup(),i}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),je(t,[{key:"configure",value:function(e){qe(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"configure",this).call(this,e),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=e.hoverRadio||.1,this.config.startAngle=e.startAngle||0,this.clockWise=e.clockWise||!1}},{key:"calc",value:function(){var e=this;qe(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"calc",this).call(this);var n=this.state;this.radius=this.height>this.width?this.center.x:this.center.y;var i=this.radius,r=this.clockWise,s=n.slicesProperties||[];n.sliceStrings=[],n.slicesProperties=[];var a=180-this.config.startAngle;n.sliceTotals.map((function(t,o){var l=a,c=t/n.grandTotal*360,h=c>180?1:0,d=r?-c:c,f=a+=d,p=u(l,i),m=u(f,i),g=e.init&&s[o],v=void 0,y=void 0;e.init?(v=g?g.startPosition:p,y=g?g.endPosition:p):(v=p,y=m);var E=360===c?function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,a=n.x+e.x,o=n.y+e.y,l=n.x+t.x,c=2*n.y,h=n.y+t.y;return"M"+n.x+" "+n.y+"\n\t\tL"+a+" "+o+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+l+" "+c+" z\n\t\tL"+a+" "+c+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+l+" "+h+" z"}(v,y,e.center,e.radius,r,h):function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,a=n.x+e.x,o=n.y+e.y,l=n.x+t.x,c=n.y+t.y;return"M"+n.x+" "+n.y+"\n\t\tL"+a+" "+o+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+l+" "+c+" z"}(v,y,e.center,e.radius,r,h);n.sliceStrings.push(E),n.slicesProperties.push({startPosition:p,endPosition:m,value:t,total:n.grandTotal,startAngle:l,endAngle:f,angle:d})})),this.init=0}},{key:"setupComponents",value:function(){var e=this.state,t=[["pieSlices",{},function(){return{sliceStrings:e.sliceStrings,colors:this.colors}}.bind(this)]];this.components=new Map(t.map((function(e){var t=$.apply(void 0,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(e));return[e[0],t]})))}},{key:"calTranslateByAngle",value:function(e){var t=this.radius,n=this.hoverRadio,i=u(e.startAngle+e.angle/2,t);return"translate3d("+i.x*n+"px,"+i.y*n+"px,0)"}},{key:"hoverSlice",value:function(e,t,n,r){if(e){var s=this.colors[t];if(n){x(e,this.calTranslateByAngle(this.state.slicesProperties[t])),e.style.fill=E(s,50);var a=i(this.svg),o=r.pageX-a.left+10,l=r.pageY-a.top-10,c=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[t]:this.state.labels[t])+": ",h=(100*this.state.sliceTotals[t]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,l,{name:c,value:h+"%"}),this.tip.showTip()}else x(e,"translate3d(0,0,0)"),this.tip.hideTip(),e.style.fill=s}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave)}},{key:"mouseMove",value:function(e){var t=e.target,n=this.components.get("pieSlices").store,i=this.curActiveSliceIndex,r=this.curActiveSlice;if(n.includes(t)){var s=n.indexOf(t);this.hoverSlice(r,i,!1),this.curActiveSlice=t,this.curActiveSliceIndex=s,this.hoverSlice(t,s,!0,e)}else this.mouseLeave()}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1)}}]),t}(De),Je=function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],i=!0,r=!1,s=void 0;try{for(var a,o=e[Symbol.iterator]();!(i=(a=o.next()).done)&&(n.push(a.value),!t||n.length!==t);i=!0);}catch(e){r=!0,s=e}finally{try{!i&&o.return&&o.return()}finally{if(r)throw s}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")},Qe=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),et=12,tt=et,nt=function(e){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var i=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n));i.type="heatmap",i.countLabel=n.countLabel||"";var r=["Sunday","Monday"],s=r.includes(n.startSubDomain)?n.startSubDomain:"Sunday";return i.startSubDomainIndex=r.indexOf(s),i.setup(),i}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),Qe(t,[{key:"setMeasures",value:function(e){var t=this.measures;this.discreteDomains=0===e.discreteDomains?0:1,t.paddings.top=36,t.paddings.bottom=0,t.legendHeight=24,t.baseHeight=tt*He+a(t);var n=this.data,i=this.discreteDomains?12:0;this.independentWidth=(F(n.start,n.end)+i)*et+o(t)}},{key:"updateWidth",value:function(){var e=this.discreteDomains?12:0,t=this.state.noOfWeeks?this.state.noOfWeeks:52;this.baseWidth=(t+e)*et+o(this.measures)}},{key:"prepareData",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data;if(e.start&&e.end&&e.start>e.end)throw new Error("Start date cannot be greater than end date.");if(e.start||(e.start=new Date,e.start.setFullYear(e.start.getFullYear()-1)),e.end||(e.end=new Date),e.dataPoints=e.dataPoints||{},parseInt(Object.keys(e.dataPoints)[0])>1e5){var t={};Object.keys(e.dataPoints).forEach((function(n){var i=new Date(n*Ge);t[H(i)]=e.dataPoints[n]})),e.dataPoints=t}return e}},{key:"calc",value:function(){var e=this.state;e.start=G(this.data.start),e.end=G(this.data.end),e.firstWeekStart=G(e.start),e.noOfWeeks=F(e.start,e.end),e.distribution=function(e,t){for(var n=Math.max.apply(Math,Z(e)),i=1/(t-1),r=[],s=0;s<t;s++){var a=n*(i*s);r.push(a)}return r}(Object.values(this.data.dataPoints),5),e.domainConfigs=this.getDomains()}},{key:"setupComponents",value:function(){var e=this,t=this.state,n=this.discreteDomains?0:1,i=t.domainConfigs.map((function(i,r){return["heatDomain",{index:i.index,colWidth:et,rowHeight:tt,squareSize:ie,radius:e.rawChartArgs.radius||0,xTranslate:t.domainConfigs.filter((function(e,t){return t<r})).map((function(e){return e.cols.length-n})).reduce((function(e,t){return e+t}),0)*et},function(){return t.domainConfigs[r]}.bind(e)]}));this.components=new Map(i.map((function(e,t){var n=$.apply(void 0,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(e));return[e[0]+"-"+t,n]})));var r=0;Be.forEach((function(t,n){if([1,3,5].includes(n)){var i=O("subdomain-name",-6,r,t,{fontSize:ie,dy:8,textAnchor:"end"});e.drawArea.appendChild(i)}r+=tt}))}},{key:"update",value:function(e){e||console.error("No data to update."),this.data=this.prepareData(e),this.draw(),this.bindTooltip()}},{key:"bindTooltip",value:function(){var e=this;this.container.addEventListener("mousemove",(function(t){e.components.forEach((function(n){var i=n.store,r=t.target;if(i.includes(r)){var s=r.getAttribute("data-value"),a=r.getAttribute("data-date").split("-"),o=B(parseInt(a[1])-1,!0),l=e.container.getBoundingClientRect(),c=r.getBoundingClientRect(),h=parseInt(t.target.getAttribute("width")),u=c.left-l.left+h/2,d=c.top-l.top,f=s+" "+e.countLabel,p=" on "+o+" "+a[0]+", "+a[2];e.tip.setValues(u,d,{name:p,value:f,valueFirst:1},[]),e.tip.showTip()}}))}))}},{key:"renderLegend",value:function(){var e=this;this.legendArea.textContent="";var t=0,n=this.rawChartArgs.radius||0,i=O("subdomain-name",t,12,"Less",{fontSize:11,dy:9});t=30,this.legendArea.appendChild(i),this.colors.slice(0,5).map((function(i,r){var s=w("heatmap-legend-unit",t+15*r,12,ie,n,i);e.legendArea.appendChild(s)}));var r=O("subdomain-name",t+75+3,12,"More",{fontSize:11,dy:9});this.legendArea.appendChild(r)}},{key:"getDomains",value:function(){for(var e=this.state,t=[e.start.getMonth(),e.start.getFullYear()],n=t[0],i=t[1],r=[e.end.getMonth(),e.end.getFullYear()],s=r[0]-n+1+12*(r[1]-i),a=[],o=G(e.start),l=0;l<s;l++){var c=e.end;if(!K(o,e.end)){var h=[o.getMonth(),o.getFullYear()];c=z(h[0],h[1])}a.push(this.getDomainConfig(o,c)),U(c,1),o=c}return a}},{key:"getDomainConfig",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n=[e.getMonth(),e.getFullYear()],i=n[0],r=n[1],s=Y(e),a={index:i,cols:[]};U(t=G(t)||z(i,r),1);for(var o=F(s,t),l=[],c=void 0,h=0;h<o;h++)c=this.getCol(s,i),l.push(c),U(s=new Date(c[He-1].yyyyMmDd),1);return void 0!==c[He-1].dataValue&&(U(s,1),l.push(this.getCol(s,i,!0))),a.cols=l,a}},{key:"getCol",value:function(e,t){for(var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=this.state,r=G(e),s=[],a=0;a<He;a++,U(r,1)){var o={},l=r>=i.start&&r<=i.end;n||r.getMonth()!==t||!l?o.yyyyMmDd=H(r):o=this.getSubDomainConfig(r),s.push(o)}return s}},{key:"getSubDomainConfig",value:function(e){var t=H(e),n=this.data.dataPoints[t];return{yyyyMmDd:t,dataValue:n||0,fill:this.colors[X(n,this.state.distribution)]}}}]),t}(Ie),it=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),rt=function e(t,n,i){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,i)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(i):void 0},st=function(e){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var i=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n));return i.barOptions=n.barOptions||{},i.lineOptions=n.lineOptions||{},i.type=n.type||"line",i.init=1,i.setup(),i}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),it(t,[{key:"setMeasures",value:function(){this.data.datasets.length<=1&&(this.config.showLegend=0,this.measures.paddings.bottom=30)}},{key:"configure",value:function(e){rt(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"configure",this).call(this,e),e.axisOptions=e.axisOptions||{},e.tooltipOptions=e.tooltipOptions||{},this.config.xAxisMode=e.axisOptions.xAxisMode||"span",this.config.yAxisMode=e.axisOptions.yAxisMode||"span",this.config.xIsSeries=e.axisOptions.xIsSeries||0,this.config.shortenYAxisNumbers=e.axisOptions.shortenYAxisNumbers||0,this.config.formatTooltipX=e.tooltipOptions.formatTooltipX,this.config.formatTooltipY=e.tooltipOptions.formatTooltipY,this.config.valuesOverPoints=e.valuesOverPoints}},{key:"prepareData",value:function(){return function(e,t){e.labels=e.labels||[];var n=e.labels.length,i=e.datasets,r=new Array(n).fill(0);return i||(i=[{values:r}]),i.map((function(e){if(e.values){var i=e.values;i=(i=i.map((function(e){return isNaN(e)?0:e}))).length>n?i.slice(0,n):c(i,n-i.length,0),e.values=i}else e.values=r;e.chartType||(e.chartType=t)})),e.yRegions&&e.yRegions.map((function(e){if(e.end<e.start){var t=[e.end,e.start];e.start=t[0],e.end=t[1]}})),e}(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data,this.type)}},{key:"prepareFirstData",value:function(){return function(e){var t=e.labels.length,n=new Array(t).fill(0),i={labels:e.labels.slice(0,-1),datasets:e.datasets.map((function(e){return{name:"",values:n.slice(0,-1),chartType:e.chartType}}))};return e.yMarkers&&(i.yMarkers=[{value:0,label:""}]),e.yRegions&&(i.yRegions=[{start:0,end:0,label:""}]),i}(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data)}},{key:"calc",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.calcXPositions(),e||this.calcYAxisParameters(this.getAllYValues(),"line"===this.type),this.makeDataByIndex()}},{key:"calcXPositions",value:function(){var e=this.state,t=this.data.labels;e.datasetLength=t.length,e.unitWidth=this.width/e.datasetLength,e.xOffset=e.unitWidth/2,e.xAxis={labels:t,positions:t.map((function(t,n){return l(e.xOffset+n*e.unitWidth)}))}}},{key:"calcYAxisParameters",value:function(e){var t=function(e){function t(e,t){for(var n=V(e),i=n[1]-n[0],r=0,s=1;r<t;s++)r+=i,n.unshift(-1*r);return n}var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=Math.max.apply(Math,Z(e)),r=Math.min.apply(Math,Z(e)),s=[];if(i>=0&&r>=0)W(i)[1],s=n?V(i,r):V(i);else if(i>0&&r<0){var a=Math.abs(r);i>=a?(W(i)[1],s=t(i,a)):(W(a)[1],s=t(a,i).reverse().map((function(e){return-1*e})))}else if(i<=0&&r<=0){var o=Math.abs(r),l=Math.abs(i);W(o)[1],s=(s=n?V(o,l):V(o)).reverse().map((function(e){return-1*e}))}return s}(e,arguments.length>1&&void 0!==arguments[1]?arguments[1]:"false"),n=this.height/function(e){return e[e.length-1]-e[0]}(t),i=j(t)*n,r=this.height-function(e){var t=j(e);return e.indexOf(0)>=0?e.indexOf(0):e[0]>0?-1*e[0]/t:-1*e[e.length-1]/t+(e.length-1)}(t)*i;this.state.yAxis={labels:t,positions:t.map((function(e){return r-e*n})),scaleMultiplier:n,zeroLine:r},this.calcDatasetPoints(),this.calcYExtremes(),this.calcYRegions()}},{key:"calcDatasetPoints",value:function(){var e=this.state,t=function(t){return t.map((function(t){return q(t,e.yAxis)}))};e.datasets=this.data.datasets.map((function(e,n){var i=e.values,r=e.cumulativeYs||[];return{name:e.name&&e.name.replace(/<|>|&/g,(function(e){return"&"==e?"&amp;":"<"==e?"&lt;":"&gt;"})),index:n,chartType:e.chartType,values:i,yPositions:t(i),cumulativeYs:r,cumulativeYPos:t(r)}}))}},{key:"calcYExtremes",value:function(){var e=this.state;this.barOptions.stacked?e.yExtremes=e.datasets[e.datasets.length-1].cumulativeYPos:(e.yExtremes=new Array(e.datasetLength).fill(9999),e.datasets.map((function(t){t.yPositions.map((function(t,n){t<e.yExtremes[n]&&(e.yExtremes[n]=t)}))})))}},{key:"calcYRegions",value:function(){var e=this.state;this.data.yMarkers&&(this.state.yMarkers=this.data.yMarkers.map((function(t){return t.position=q(t.value,e.yAxis),t.options||(t.options={}),t}))),this.data.yRegions&&(this.state.yRegions=this.data.yRegions.map((function(t){return t.startPos=q(t.start,e.yAxis),t.endPos=q(t.end,e.yAxis),t.options||(t.options={}),t})))}},{key:"getAllYValues",value:function(){var e,t=this,n="values";if(this.barOptions.stacked){n="cumulativeYs";var i=new Array(this.state.datasetLength).fill(0);this.data.datasets.map((function(e,r){var s=t.data.datasets[r].values;e[n]=i=i.map((function(e,t){return e+s[t]}))}))}var r=this.data.datasets.map((function(e){return e[n]}));return this.data.yMarkers&&r.push(this.data.yMarkers.map((function(e){return e.value}))),this.data.yRegions&&this.data.yRegions.map((function(e){r.push([e.end,e.start])})),(e=[]).concat.apply(e,Q(r))}},{key:"setupComponents",value:function(){var e=this,t=[["yAxis",{mode:this.config.yAxisMode,width:this.width,shortenNumbers:this.config.shortenYAxisNumbers},function(){return this.state.yAxis}.bind(this)],["xAxis",{mode:this.config.xAxisMode,height:this.height},function(){var e=this.state;return e.xAxis.calcLabels=J(this.width,e.xAxis.labels,this.config.xIsSeries),e.xAxis}.bind(this)],["yRegions",{width:this.width,pos:"right"},function(){return this.state.yRegions}.bind(this)]],n=this.state.datasets.filter((function(e){return"bar"===e.chartType})),i=this.state.datasets.filter((function(e){return"line"===e.chartType})),r=n.map((function(t){var i=t.index;return["barGraph-"+t.index,{index:i,color:e.colors[i],stacked:e.barOptions.stacked,valuesOverPoints:e.config.valuesOverPoints,minHeight:0*e.height},function(){var e=this.state,t=e.datasets[i],r=this.barOptions.stacked,s=this.barOptions.spaceRatio||.5,a=e.unitWidth*(1-s),o=a/(r?1:n.length),l=e.xAxis.positions.map((function(e){return e-a/2}));r||(l=l.map((function(e){return e+o*i})));var c=new Array(e.datasetLength).fill("");this.config.valuesOverPoints&&(c=r&&t.index===e.datasets.length-1?t.cumulativeYs:t.values);var h=new Array(e.datasetLength).fill(0);return r&&(h=t.yPositions.map((function(e,n){return e-t.cumulativeYPos[n]}))),{xPositions:l,yPositions:t.yPositions,offsets:h,labels:c,zeroLine:e.yAxis.zeroLine,barsWidth:a,barWidth:o}}.bind(e)]})),s=i.map((function(t){var n=t.index;return["lineGraph-"+t.index,{index:n,color:e.colors[n],svgDefs:e.svgDefs,heatline:e.lineOptions.heatline,regionFill:e.lineOptions.regionFill,spline:e.lineOptions.spline,hideDots:e.lineOptions.hideDots,hideLine:e.lineOptions.hideLine,valuesOverPoints:e.config.valuesOverPoints},function(){var e=this.state,t=e.datasets[n],i=e.yAxis.positions[0]<e.yAxis.zeroLine?e.yAxis.positions[0]:e.yAxis.zeroLine;return{xPositions:e.xAxis.positions,yPositions:t.yPositions,values:t.values,zeroLine:i,radius:this.lineOptions.dotSize||4}}.bind(e)]})),a=[["yMarkers",{width:this.width,pos:"right"},function(){return this.state.yMarkers}.bind(this)]];t=t.concat(r,s,a);var o=["yMarkers","yRegions"];this.dataUnitComponents=[],this.components=new Map(t.filter((function(t){return!o.includes(t[0])||e.state[t[0]]})).map((function(t){var n=$.apply(void 0,Q(t));return(t[0].includes("lineGraph")||t[0].includes("barGraph"))&&e.dataUnitComponents.push(n),[t[0],n]})))}},{key:"makeDataByIndex",value:function(){var e=this;this.dataByIndex={};var t=this.state,n=this.config.formatTooltipX,i=this.config.formatTooltipY;t.xAxis.labels.map((function(r,s){var a=e.state.datasets.map((function(t,n){var r=t.values[s];return{title:t.name,value:r,yPos:t.yPositions[s],color:e.colors[n],formatted:i?i(r):r}}));e.dataByIndex[s]={label:r,formattedLabel:n?n(r):r,xPos:t.xAxis.positions[s],values:a,yExtreme:t.yExtremes[s]}}))}},{key:"bindTooltip",value:function(){var e=this;this.container.addEventListener("mousemove",(function(t){var n=e.measures,a=i(e.container),o=t.pageX-a.left-s(n),l=t.pageY-a.top;l<e.height+r(n)&&l>r(n)?e.mapTooltipXPosition(o):e.tip.hideTip()}))}},{key:"mapTooltipXPosition",value:function(e){var t=this.state;if(t.yExtremes){var n=function(e,t){var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=t.reduce((function(t,n){return Math.abs(n-e)<Math.abs(t-e)?n:t}),[]);return n?t.indexOf(i):i}(e,t.xAxis.positions,!0);if(n>=0){var i=this.dataByIndex[n];this.tip.setValues(i.xPos+this.tip.offset.x,i.yExtreme+this.tip.offset.y,{name:i.formattedLabel,value:""},i.values,n),this.tip.showTip()}}}},{key:"renderLegend",value:function(){var e=this,t=this.data;t.datasets.length>1&&(this.legendArea.textContent="",t.datasets.map((function(t,n){var i=function(e,t,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",r=arguments[4];r=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?g(r,ve):r;var s={className:"legend-bar",x:0,y:0,width:n,height:"2px",fill:i},a=N("text",{className:"legend-dataset-text",x:0,y:0,dy:2*ye+"px","font-size":1.2*ye+"px","text-anchor":"start",fill:be,innerHTML:r}),o=N("g",{transform:"translate("+e+", "+t+")"});return o.appendChild(N("rect",s)),o.appendChild(a),o}(100*n,"0",100,e.colors[n],t.name,e.config.truncateLegends);e.legendArea.appendChild(i)})))}},{key:"makeOverlay",value:function(){var e=this;this.init?this.init=0:(this.overlayGuides&&this.overlayGuides.forEach((function(e){var t=e.overlay;t.parentNode.removeChild(t)})),this.overlayGuides=this.dataUnitComponents.map((function(e){return{type:e.unitType,overlay:void 0,units:e.units}})),void 0===this.state.currentIndex&&(this.state.currentIndex=this.state.datasetLength-1),this.overlayGuides.map((function(t){var n=t.units[e.state.currentIndex];t.overlay=Ne[t.type](n),e.drawArea.appendChild(t.overlay)})))}},{key:"updateOverlayGuides",value:function(){this.overlayGuides&&this.overlayGuides.forEach((function(e){var t=e.overlay;t.parentNode.removeChild(t)}))}},{key:"bindOverlay",value:function(){var e=this;this.parent.addEventListener("data-select",(function(){e.updateOverlay()}))}},{key:"bindUnits",value:function(){var e=this;this.dataUnitComponents.map((function(t){t.units.map((function(t){t.addEventListener("click",(function(){var n=t.getAttribute("data-point-index");e.setCurrentDataPoint(n)}))}))})),this.tip.container.addEventListener("click",(function(){var t=e.tip.container.getAttribute("data-point-index");e.setCurrentDataPoint(t)}))}},{key:"updateOverlay",value:function(){var e=this;this.overlayGuides.map((function(t){var n=t.units[e.state.currentIndex];Le[t.type](n,t.overlay)}))}},{key:"onLeftArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex-1)}},{key:"onRightArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex+1)}},{key:"getDataPoint",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.currentIndex,t=this.state;return{index:e,label:t.xAxis.labels[e],values:t.datasets.map((function(t){return t.values[e]}))}}},{key:"setCurrentDataPoint",value:function(e){var t=this.state;(e=parseInt(e))<0&&(e=0),e>=t.xAxis.labels.length&&(e=t.xAxis.labels.length-1),e!==t.currentIndex&&(t.currentIndex=e,function(e,t,n){var i=document.createEvent("HTMLEvents");for(var r in i.initEvent(t,!0,!0),n)i[r]=n[r];e.dispatchEvent(i)}(this.parent,"data-select",this.getDataPoint()))}},{key:"addDataPoint",value:function(e,n){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:this.state.datasetLength;rt(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"addDataPoint",this).call(this,e,n,i),this.data.labels.splice(i,0,e),this.data.datasets.map((function(e,t){e.values.splice(i,0,n[t])})),this.update(this.data)}},{key:"removeDataPoint",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.datasetLength-1;this.data.labels.length<=1||(rt(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"removeDataPoint",this).call(this,e),this.data.labels.splice(e,1),this.data.datasets.map((function(t){t.values.splice(e,1)})),this.update(this.data))}},{key:"updateDataset",value:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;this.data.datasets[t].values=e,this.update(this.data)}},{key:"updateDatasets",value:function(e){this.data.datasets.map((function(t,n){e[n]&&(t.values=e[n])})),this.update(this.data)}}]),t}(Ie),at=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),ot=function e(t,n,i){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,i)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(i):void 0},lt=function(e){function t(e,n){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);var i=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e,n));return i.type="donut",i.initTimeout=0,i.init=1,i.setup(),i}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,e),at(t,[{key:"configure",value:function(e){ot(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"configure",this).call(this,e),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=e.hoverRadio||.1,this.config.startAngle=e.startAngle||0,this.clockWise=e.clockWise||!1,this.strokeWidth=e.strokeWidth||30}},{key:"calc",value:function(){var e=this;ot(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"calc",this).call(this);var n=this.state;this.radius=this.height>this.width?this.center.x-this.strokeWidth/2:this.center.y-this.strokeWidth/2;var i=this.radius,r=this.clockWise,s=n.slicesProperties||[];n.sliceStrings=[],n.slicesProperties=[];var a=180-this.config.startAngle;n.sliceTotals.map((function(t,o){var l=a,c=t/n.grandTotal*360,h=c>180?1:0,d=r?-c:c,f=a+=d,p=u(l,i),m=u(f,i),g=e.init&&s[o],v=void 0,y=void 0;e.init?(v=g?g.startPosition:p,y=g?g.endPosition:p):(v=p,y=m);var E=360===c?function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,a=n.x+e.x,o=n.y+e.y,l=n.x+t.x,c=2*i+o;return"M"+a+" "+o+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+l+" "+c+"\n\t\tM"+a+" "+c+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+l+" "+(n.y+e.y)}(v,y,e.center,e.radius,e.clockWise,h):function(e,t,n,i){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,s=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0;return"M"+(n.x+e.x)+" "+(n.y+e.y)+"\n\t\tA "+i+" "+i+" 0 "+s+" "+(r?1:0)+"\n\t\t"+(n.x+t.x)+" "+(n.y+t.y)}(v,y,e.center,e.radius,e.clockWise,h);n.sliceStrings.push(E),n.slicesProperties.push({startPosition:p,endPosition:m,value:t,total:n.grandTotal,startAngle:l,endAngle:f,angle:d})})),this.init=0}},{key:"setupComponents",value:function(){var e=this.state,t=[["donutSlices",{},function(){return{sliceStrings:e.sliceStrings,colors:this.colors,strokeWidth:this.strokeWidth}}.bind(this)]];this.components=new Map(t.map((function(e){var t=$.apply(void 0,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}(e));return[e[0],t]})))}},{key:"calTranslateByAngle",value:function(e){var t=this.radius,n=this.hoverRadio,i=u(e.startAngle+e.angle/2,t);return"translate3d("+i.x*n+"px,"+i.y*n+"px,0)"}},{key:"hoverSlice",value:function(e,t,n,r){if(e){var s=this.colors[t];if(n){x(e,this.calTranslateByAngle(this.state.slicesProperties[t])),e.style.stroke=E(s,50);var a=i(this.svg),o=r.pageX-a.left+10,l=r.pageY-a.top-10,c=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[t]:this.state.labels[t])+": ",h=(100*this.state.sliceTotals[t]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,l,{name:c,value:h+"%"}),this.tip.showTip()}else x(e,"translate3d(0,0,0)"),this.tip.hideTip(),e.style.stroke=s}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave)}},{key:"mouseMove",value:function(e){var t=e.target,n=this.components.get("donutSlices").store,i=this.curActiveSliceIndex,r=this.curActiveSlice;if(n.includes(t)){var s=n.indexOf(t);this.hoverSlice(r,i,!1),this.curActiveSlice=t,this.curActiveSliceIndex=s,this.hoverSlice(t,s,!0,e)}else this.mouseLeave()}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1)}}]),t}(De),ct={bar:st,line:st,percentage:Ve,heatmap:nt,pie:Xe,donut:lt};t.Chart=function e(t,n){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"line",t=arguments[1],n=arguments[2];return"axis-mixed"===e?(n.type="line",new st(t,n)):ct[e]?new ct[e](t,n):void console.error("Undefined chart type: "+e)}(n.type,t,n)},t.PercentageChart=Ve,t.PieChart=Xe,t.Heatmap=nt,t.AxisChart=st},V(j={exports:{}},j.exports),j.exports);function X(t){let n,i,r;return{c(){n=u("div")},m(e,s){l(e,n,s),t[18](n),i||(r=p(n,"data-select",t[17]),i=!0)},p:e,i:e,o:e,d(e){e&&c(n),t[18](null),i=!1,r()}}}function J(e,t,n){let i,{data:r={labels:[],datasets:[{values:[]}],yMarkers:{},yRegions:[]}}=t,{title:s=""}=t,{type:a="line"}=t,{height:o=300}=t,{animate:l=!0}=t,{axisOptions:c={}}=t,{barOptions:h={}}=t,{lineOptions:u={}}=t,{tooltipOptions:d={}}=t,{colors:f=[]}=t,{valuesOverPoints:p=0}=t,{isNavigable:m=!1}=t,{maxSlices:g=3}=t,v=null;function y(e){return function(...t){if(v)return e(...t)}}const E=y(((e,t,n)=>v.addDataPoint(e,t,n))),b=y((e=>v.removeDataPoint(e))),S=y((()=>v.export())),k=y((e=>v.update(e)));return function(e){N().$$.on_mount.push(e)}((()=>{v=new q.Chart(i,{data:r,title:s,type:a,height:o,animate:l,colors:f,axisOptions:c,barOptions:h,lineOptions:u,tooltipOptions:d,valuesOverPoints:p,isNavigable:m,maxSlices:g})})),function(e){N().$$.on_destroy.push(e)}((()=>{v=null})),e.$$set=e=>{"data"in e&&n(1,r=e.data),"title"in e&&n(2,s=e.title),"type"in e&&n(3,a=e.type),"height"in e&&n(4,o=e.height),"animate"in e&&n(5,l=e.animate),"axisOptions"in e&&n(6,c=e.axisOptions),"barOptions"in e&&n(7,h=e.barOptions),"lineOptions"in e&&n(8,u=e.lineOptions),"tooltipOptions"in e&&n(9,d=e.tooltipOptions),"colors"in e&&n(10,f=e.colors),"valuesOverPoints"in e&&n(11,p=e.valuesOverPoints),"isNavigable"in e&&n(12,m=e.isNavigable),"maxSlices"in e&&n(13,g=e.maxSlices)},e.$$.update=()=>{2&e.$$.dirty&&k(r)},[i,r,s,a,o,l,c,h,u,d,f,p,m,g,E,b,S,function(t){L.call(this,e,t)},function(e){A[e?"unshift":"push"]((()=>{i=e,n(0,i)}))}]}var Q,ee=class extends W{constructor(e){super(),Z(this,e,J,X,s,{data:1,title:2,type:3,height:4,animate:5,axisOptions:6,barOptions:7,lineOptions:8,tooltipOptions:9,colors:10,valuesOverPoints:11,isNavigable:12,maxSlices:13,addDataPoint:14,removeDataPoint:15,exportChart:16})}get addDataPoint(){return this.$$.ctx[14]}get removeDataPoint(){return this.$$.ctx[15]}get exportChart(){return this.$$.ctx[16]}};!function(e){e.None="",e["Süß_wärmende_Phenole"]="Süß wärmende Phenole",e["Wärmende_Terpene"]="Wärmende Terpene",e.Duftende_Terpene="Duftende Terpene",e.Erdige_Terpene="Erdige_Terpene",e.Durchdringende_Terpene="Durchdringende Terpene",e["Zitrustönige_Terpene"]="Zitrustönige Terpene",e["Süßsaure_Säuren"]="Süßsaure Säuren",e.Fruchtige_Aldehyde="Fruchtige Aldehyde",e["Röstige_Pysazine"]="Röstige Pysazine",e.Schwefelverbindungen="Schwefelverbindungen",e.Stechende_Verbindungen="Stechende Verbindungen",e.Einzigartige_Stoffe="Einzigartige Stoffe"}(Q||(Q={}));var te,ne=Q;!function(e){e.None="#EADEDE",e["Süß_wärmende_Phenole"]="#F6AE99",e["Wärmende_Terpene"]="#9D9D9D",e.Duftende_Terpene="#BFA2DB",e.Erdige_Terpene="#7F7C82",e.Durchdringende_Terpene="#87A7B3",e["Zitrustönige_Terpene"]="#A2B29F",e["Süßsaure_Säuren"]="#EEC373",e.Fruchtige_Aldehyde="#A68DAD",e["Röstige_Pysazine"]="#876445",e.Schwefelverbindungen="#8E806A",e.Stechende_Verbindungen="#F29191",e.Einzigartige_Stoffe="#A2B29F"}(te||(te={}));var ie,re=te;function se(e){let t,n,i,r,s,h,p,y,E,b,N,L=e[0].nameSymbol+"",S=e[0].name+"";const A=e[4].default,k=function(e,t,n,i){if(e){const r=a(e,t,n,i);return e[0](r)}}(A,e,e[3],null);return{c(){t=u("div"),n=u("div"),i=u("h1"),r=d("["),s=d(L),h=d("]"),p=f(),y=u("h3"),E=d(S),b=f(),k&&k.c(),v(i,"font-weight","400"),v(i,"padding-top","2.7rem"),v(i,"color","#444444"),m(n,"class","spiceBlob svelte-fcbxbh"),v(n,"border-radius",e[1]),v(n,"background","radial-gradient(ellipse at top left, "+e[0].color+"A0 0%,"+e[0].color+"FF 50%)"),v(y,"color","#444444"),m(t,"class","spiceContainer svelte-fcbxbh")},m(e,a){l(e,t,a),o(t,n),o(n,i),o(i,r),o(i,s),o(i,h),o(t,p),o(t,y),o(y,E),o(t,b),k&&k.m(t,null),N=!0},p(e,[t]){(!N||1&t)&&L!==(L=e[0].nameSymbol+"")&&g(s,L),(!N||1&t)&&v(n,"background","radial-gradient(ellipse at top left, "+e[0].color+"A0 0%,"+e[0].color+"FF 50%)"),(!N||1&t)&&S!==(S=e[0].name+"")&&g(E,S),k&&k.p&&(!N||8&t)&&function(e,t,n,i,r,s){if(r){const o=a(t,n,i,s);e.p(o,r)}}(k,A,e,e[3],N?function(e,t,n,i){if(e[2]&&i){const r=e[2](i(n));if(void 0===t.dirty)return r;if("object"==typeof r){const e=[],n=Math.max(t.dirty.length,r.length);for(let i=0;i<n;i+=1)e[i]=t.dirty[i]|r[i];return e}return t.dirty|r}return t.dirty}(A,e[3],t,null):function(e){if(e.ctx.length>32){const t=[],n=e.ctx.length/32;for(let e=0;e<n;e++)t[e]=-1;return t}return-1}(e[3]),null)},i(e){N||(F(k,e),N=!0)},o(e){K(k,e),N=!1},d(e){e&&c(t),k&&k.d(e)}}}function ae(e,t,n){let{$$slots:i={},$$scope:r}=t,{shape:s}=t,{spice:a}=t,o=["47% 53% 42% 58% / 54% 34% 66% 46% ","30% 70% 42% 58% / 54% 34% 66% 46% ","30% 70% 58% 42% / 54% 43% 57% 46% ","60% 40% 58% 42% / 54% 43% 57% 46% ","60% 40% 58% 42% / 37% 43% 57% 63% ","60% 40% 58% 42% / 37% 62% 38% 63% ","60% 40% 58% 42% / 59% 62% 38% 41% ","58% 42% 39% 61% / 55% 62% 38% 45% "],l=Math.round(s*o.length);l==o.length&&(l-=1);let c=o[l];return e.$$set=e=>{"shape"in e&&n(2,s=e.shape),"spice"in e&&n(0,a=e.spice),"$$scope"in e&&n(3,r=e.$$scope)},[a,c,s,r,i]}class oe extends W{constructor(e){super(),Z(this,e,ae,se,s,{shape:2,spice:0})}}function le(t){let n,i,s,a,h,y,E,b,N,L,S,A,k,w,O=t[0].nameSymbol+"",_=t[0].description+"",R=t[0].name+"";return{c(){n=u("button"),i=u("div"),s=u("h1"),a=d("["),h=d(O),y=d("]"),E=f(),b=u("p"),N=d(_),L=f(),S=u("h3"),A=d(R),m(s,"class","nameSymbol svelte-1c8dsma"),m(i,"class","spiceBlob svelte-1c8dsma"),v(i,"border-radius",t[2]),v(i,"background","radial-gradient(ellipse at top left, "+t[0].color+"A0 0%,"+t[0].color+"FF 50%)"),m(b,"class","svelte-1c8dsma"),m(S,"class","svelte-1c8dsma"),m(n,"class","svelte-1c8dsma")},m(e,c){l(e,n,c),o(n,i),o(i,s),o(s,a),o(s,h),o(s,y),o(n,E),o(n,b),o(b,N),o(n,L),o(n,S),o(S,A),k||(w=p(n,"click",(function(){r(t[1](t[0]))&&t[1](t[0]).apply(this,arguments)})),k=!0)},p(e,[n]){t=e,1&n&&O!==(O=t[0].nameSymbol+"")&&g(h,O),1&n&&v(i,"background","radial-gradient(ellipse at top left, "+t[0].color+"A0 0%,"+t[0].color+"FF 50%)"),1&n&&_!==(_=t[0].description+"")&&g(N,_),1&n&&R!==(R=t[0].name+"")&&g(A,R)},i:e,o:e,d(e){e&&c(n),k=!1,w()}}}function ce(e,t,n){let{shape:i}=t,{spice:r}=t,{onClick:s}=t,a=["47% 53% 42% 58% / 54% 34% 66% 46% ","30% 70% 42% 58% / 54% 34% 66% 46% ","30% 70% 58% 42% / 54% 43% 57% 46% ","60% 40% 58% 42% / 54% 43% 57% 46% ","60% 40% 58% 42% / 37% 43% 57% 63% ","60% 40% 58% 42% / 37% 62% 38% 63% ","60% 40% 58% 42% / 59% 62% 38% 41% ","58% 42% 39% 61% / 55% 62% 38% 45% "],o=Math.round(i*a.length);o==a.length&&(o-=1);let l=a[o];return e.$$set=e=>{"shape"in e&&n(3,i=e.shape),"spice"in e&&n(0,r=e.spice),"onClick"in e&&n(1,s=e.onClick)},[r,s,l,i]}class he extends W{constructor(e){super(),Z(this,e,ce,le,s,{shape:3,spice:0,onClick:1})}}function ue(e,t,n){const i=e.slice();return i[4]=t[n],i}function de(e){let t,n,i,r,s=e[4].name+"";return{c(){t=u("option"),n=d(s),i=f(),t.__value=r=e[4],t.value=t.__value},m(e,r){l(e,t,r),o(t,n),o(t,i)},p(e,i){2&i&&s!==(s=e[4].name+"")&&g(n,s),2&i&&r!==(r=e[4])&&(t.__value=r,t.value=t.__value)},d(e){e&&c(t)}}}function fe(t){let n,s,a,o=t[1],d=[];for(let e=0;e<o.length;e+=1)d[e]=de(ue(t,o,e));return{c(){n=u("select");for(let e=0;e<d.length;e+=1)d[e].c();m(n,"class","svelte-1svztgs"),void 0===t[0]&&R((()=>t[3].call(n)))},m(e,i){l(e,n,i);for(let e=0;e<d.length;e+=1)d[e]&&d[e].m(n,null);y(n,t[0],!0),s||(a=[p(n,"change",t[3]),p(n,"change",(function(){r(t[2])&&t[2].apply(this,arguments)}))],s=!0)},p(e,[i]){if(t=e,2&i){let e;for(o=t[1],e=0;e<o.length;e+=1){const r=ue(t,o,e);d[e]?d[e].p(r,i):(d[e]=de(r),d[e].c(),d[e].m(n,null))}for(;e<d.length;e+=1)d[e].d(1);d.length=o.length}3&i&&y(n,t[0])},i:e,o:e,d(e){e&&c(n),h(d,e),s=!1,i(a)}}}function pe(e,t,n){let{selectedSpice:i}=t,{spices:r}=t,{onChange:s}=t;return e.$$set=e=>{"selectedSpice"in e&&n(0,i=e.selectedSpice),"spices"in e&&n(1,r=e.spices),"onChange"in e&&n(2,s=e.onChange)},[i,r,s,function(){i=function(e){const t=e.querySelector(":checked");return t&&t.__value}(this),n(0,i),n(1,r)}]}class me extends W{constructor(e){super(),Z(this,e,pe,fe,s,{selectedSpice:0,spices:1,onChange:2})}}function ge(t){let n,i,r,s,a,h,d,p,g,y,E,b,N,L,S,A,k,w,O,_,R,C,P,T,I,x,M,D,H,G,F,K,B,z,Y,U,$,Z,W,V,j,q,X,J,Q,ee,te,ie,se,ae,oe,le,ce,he,ue,de,fe,pe,me,ge;return{c(){n=u("div"),i=u("div"),r=u("div"),s=f(),a=u("div"),a.textContent=`${ne.Süß_wärmende_Phenole}`,h=f(),d=u("div"),p=u("div"),g=f(),y=u("div"),y.textContent=`${ne.Wärmende_Terpene}`,E=f(),b=u("div"),N=u("div"),L=f(),S=u("div"),S.textContent=`${ne.Duftende_Terpene}`,A=f(),k=u("div"),w=u("div"),O=f(),_=u("div"),_.textContent=`${ne.Erdige_Terpene}`,R=f(),C=u("div"),P=u("div"),T=f(),I=u("div"),I.textContent=`${ne.Durchdringende_Terpene}`,x=f(),M=u("div"),D=u("div"),H=f(),G=u("div"),G.textContent=`${ne.Zitrustönige_Terpene}`,F=f(),K=u("div"),B=u("div"),z=f(),Y=u("div"),Y.textContent=`${ne.Süßsaure_Säuren}`,U=f(),$=u("div"),Z=u("div"),W=f(),V=u("div"),V.textContent=`${ne.Fruchtige_Aldehyde}`,j=f(),q=u("div"),X=u("div"),J=f(),Q=u("div"),Q.textContent=`${ne.Röstige_Pysazine}`,ee=f(),te=u("div"),ie=u("div"),se=f(),ae=u("div"),ae.textContent=`${ne.Schwefelverbindungen}`,oe=f(),le=u("div"),ce=u("div"),he=f(),ue=u("div"),ue.textContent=`${ne.Stechende_Verbindungen}`,de=f(),fe=u("div"),pe=u("div"),me=f(),ge=u("div"),ge.textContent=`${ne.Einzigartige_Stoffe}`,m(r,"class","colorBlob svelte-lrqis3"),v(r,"background",re.Süß_wärmende_Phenole),m(i,"class","horizontalGrid svelte-lrqis3"),m(p,"class","colorBlob svelte-lrqis3"),v(p,"background",re.Wärmende_Terpene),m(d,"class","horizontalGrid svelte-lrqis3"),m(N,"class","colorBlob svelte-lrqis3"),v(N,"background",re.Duftende_Terpene),m(b,"class","horizontalGrid svelte-lrqis3"),m(w,"class","colorBlob svelte-lrqis3"),v(w,"background",re.Erdige_Terpene),m(k,"class","horizontalGrid svelte-lrqis3"),m(P,"class","colorBlob svelte-lrqis3"),v(P,"background",re.Durchdringende_Terpene),m(C,"class","horizontalGrid svelte-lrqis3"),m(D,"class","colorBlob svelte-lrqis3"),v(D,"background",re.Zitrustönige_Terpene),m(M,"class","horizontalGrid svelte-lrqis3"),m(B,"class","colorBlob svelte-lrqis3"),v(B,"background",re.Süßsaure_Säuren),m(K,"class","horizontalGrid svelte-lrqis3"),m(Z,"class","colorBlob svelte-lrqis3"),v(Z,"background",re.Fruchtige_Aldehyde),m($,"class","horizontalGrid svelte-lrqis3"),m(X,"class","colorBlob svelte-lrqis3"),v(X,"background",re.Röstige_Pysazine),m(q,"class","horizontalGrid svelte-lrqis3"),m(ie,"class","colorBlob svelte-lrqis3"),v(ie,"background",re.Schwefelverbindungen),m(te,"class","horizontalGrid svelte-lrqis3"),m(ce,"class","colorBlob svelte-lrqis3"),v(ce,"background",re.Stechende_Verbindungen),m(le,"class","horizontalGrid svelte-lrqis3"),m(pe,"class","colorBlob svelte-lrqis3"),v(pe,"background",re.Einzigartige_Stoffe),m(fe,"class","horizontalGrid svelte-lrqis3"),m(n,"class","verticalGrid svelte-lrqis3")},m(e,t){l(e,n,t),o(n,i),o(i,r),o(i,s),o(i,a),o(n,h),o(n,d),o(d,p),o(d,g),o(d,y),o(n,E),o(n,b),o(b,N),o(b,L),o(b,S),o(n,A),o(n,k),o(k,w),o(k,O),o(k,_),o(n,R),o(n,C),o(C,P),o(C,T),o(C,I),o(n,x),o(n,M),o(M,D),o(M,H),o(M,G),o(n,F),o(n,K),o(K,B),o(K,z),o(K,Y),o(n,U),o(n,$),o($,Z),o($,W),o($,V),o(n,j),o(n,q),o(q,X),o(q,J),o(q,Q),o(n,ee),o(n,te),o(te,ie),o(te,se),o(te,ae),o(n,oe),o(n,le),o(le,ce),o(le,he),o(le,ue),o(n,de),o(n,fe),o(fe,pe),o(fe,me),o(fe,ge)},p:e,i:e,o:e,d(e){e&&c(n)}}}class ve extends W{constructor(e){super(),Z(this,e,null,ge,s,{})}}!function(e){e.Aromatisch="Aromatisch",e.Erding="Erdig",e.Zitrisch="Zitrisch",e["Süß"]="Süß",e.Pikant="Pikant",e.Scharf="Scharf",e.None=""}(ie||(ie={}));var ye,Ee=ie;class be{constructor(){this.name="Kein Gewürz ausgewählt",this.nameSymbol="No",this.description="Wählen Sie ein Gewürz aus",this.aromaCompounds=[],this.aromaGroup=ne.None,this.color=re.None,this.spice_group=Ee.None,this.goes_well_with=[]}}!function(e){e.ACETOIN="ACETOIN",e.ACETYL_PYRROLIN="2-ACETYL-PYRROLIN",e.ANETHOL="ANETHOL",e.ANISALDEHYD="ANISALDEHYD",e.ANISALKOHOL="ANISALKOHOL",e.AZULEN="AZULEN",e.CADINENE="CADINENE",e.ALPHA_CADINOL="ALPHA-CADINOL",e.CAMPHEN="CAMPHEN",e.KAMPFER="KAMPFER",e.CAPSAICIN="CAPSAICIN",e.CAPSAICINOIDE="CAPSAICINOIDE",e.CAREN="CAREN",e.CARVACROL="CARVACROL",e.CARVEOL="CARVEOL",e.D_CARVON="D-CARVON",e.S_CARVON="S-CARVON",e.CARYOPHYLLENE="CARYOPHYLLENE",e.CEMBREN="CEMBREN",e.CINEOL="CINEOL",e.ZIMTALDEHYD="ZIMTALDEHYD",e.CITRAL="CITRAL",e["ZITRONENSÄURE"]="ZITRONENSÄURE",e.CITRONELLAL="CITRONELLAL",e.CITRONELLOL="CITRONELLOL",e.ALPHA_COPAEN="ALPHA_COPAEN",e.COUMARIN="COUMARIN",e.CUMINALDEHYD="CUMINALDEHYD",e.CURCUMIN="CURCUMIN",e.CYCLOCITRAL="CYCLOCITRAL",e.CYMOL="CYMOL",e.CUBEBIN="CUBEBIN",e.DIALLYDISULFID="DIALLYDISULFID",e.DIALLYLTRISULFID="DIALLYLTRISULFID",e.DIMETHOXYPHENOL="DIMETHOXYPHENOL",e.DIMETHYLPYRAZIN="DIMETHYLPYRAZIN",e.DIOXOLAN="DIOXOLAN",e.ELEMAN="ELEMAN",e.ELEMICIN="ELEMICIN",e.ESTERVERBINDUNGEN="ESTERVERBINDUNGEN",e.ESTRAGOL="ESTRAGOL",e.ESSIGESTER="ESSIGESTER",e.EUDESMOL="EUDESMOL",e.EUGENOL="EUGENOL",e.FARNESENE="FARNESENE",e.FENCHON="FENCHON",e.ALPHA_FENCHOL="ALPHA_FENCHOL",e["FERULASÄURE"]="FERULASÄURE",e.FURFURYLTHIOL="FURFURYLTHIOL",e.FURANEOL="FURANEOL",e.FURFURAL="FURFURAL",e.FURFURYLTHIOL_2="2-FURFURYLTHIOL",e.GALANGALACETAT="GALANGALACETAT",e.GERANIOL="GERANIOL",e.GERMACREN="GERMACREN",e.GINGEROL="GINGEROL",e.GYLKOSID_VERBINDUNGEN="GYLKOSID-VERBINDUNGEN",e.GLYCYRRHIZIN="GLYCYRRHIZIN",e.HEPTANON="HEPTANON",e.HEXANAL="HEXANAL",e["CAPRONSÄURE"]="CAPRONSÄURE",e.HUMULEN="HUMULEN",e.HUMULON="HUMULON",e.HYDROXYBENZALDEHYD="4-HYDROXYBENZALDEHYD",e.ISOTHIOCYANATE="ISOTHIOCYANATE",e.ISOVALERALDEHYD="ISOVALERALDEHYD",e.LANIERON="LANIERON",e.LIMONEN="LIMONEN",e.LINALOOL="LINALOOL",e["ÄPFELSÄURE"]="ÄPFELSÄURE",e.METHOXYCOUMARIN="METHOXYCOUMARIN",e.METHOXYETHYLCINNAMAT="METHOXYETHYLCINNAMAT",e.METHYLBUTANAL="3-METHYLBUTANAL",e["ZIMTSÄUREMETHYLESTER"]="ZIMTSÄUREMETHYLESTER",e.METHYLHEPTENON="METHYLHEPTENON",e["SALICYLSÄUREMETHYLESTER"]="SALICYLSÄUREMETHYLESTER",e.MYRCEN="MYRCEN",e.MYRISTICIN="MYRISTICIN",e.NEROL="NEROL",e.NONANAL="NONANAL",e.OCIMENE="OCIMENE",e.PARADOL="PARADOL",e["VALERIANSÄURE"]="VALERIANSÄURE",e.PENTANOL="PENTANOL",e.PENTYLFURAN="2-PENTYLFURAN",e.PHELLANDREN="PHELLANDREN",e.PHENOLVERBINDUNGEN="PHENOLVERBINDUNGEN",e.PHENYLACETALDEHYD="PHENYLACETALDEHYD",e.PHENYLACETALDEHYD_2="2-PHENYLACETALDEHYD",e.PHENYLETHANTHIOL="1-PHENYLETHANTHIOL",e.PICROCROCIN="PICROCROCIN",e.PINENE="PINENE",e.PIPERIN="PIPERIN",e.PIPERONAL="PIPERONAL",e.PYRAZINVERBINDUNGEN="PYRAZINVERBINDUNGEN",e.ROSEN_KETONE="ROSEN_KETONE",e.ROTUNDONE="ROTUNDONE",e.SABINEN="SABINEN",e.SAFRANAL="SAFRANAL",e.SAFROL="SAFROL",e.SANSHOOL="SANSHOOL",e.SEDANOLID="SEDANOLID",e.SELINENE="SELINENE",e.SESAMOL="SESAMOL",e.SHOGAOL="SHOGAOL",e.SOTOLON="SOTOLON",e.SULCATON="SULCATON",e.SULFIDVERBINDUNGEN="SULFIDVERBINDUNGEN",e.TANNINVERBINDUNGEN="TANNINVERBINDUNGEN",e["WEINSÄURE"]="WEINSÄURE",e.TERPINENE="TERPINENE",e.TERPINEOL="TERPINEOL",e.TERPINYLACETAT="TERPINYLACETAT",e.THYMOL="THYMOL",e.THYMOCHINON="THYMOCHINON",e.AR_TURMERON="AR-TURMERON",e.VANILLIN="VANILLIN",e.VINYLAMYLKETON="VINYLAMYLKETON",e.ZINGIBEREN="ZINGIBEREN"}(ye||(ye={}));var Ne,Le=ye;!function(e){e.None="",e["Gemüse"]="Gemüse",e.Pilze="Pilze",e.Reis="Reis",e["Hülsenfrüchte"]="Hülsenfrüchte",e.Linsen="Linsen",e.Milchprodukte="Milchprodukte",e["Hühnchen"]="Hühnchen",e.Tomaten="Tomaten",e["Steinfrüchte"]="Steinfrüchte",e["Äpfel"]="Äpfel",e.Feigen="Feigen",e.Dunkle_Schokolade="Dunkle Schokolade",e["Brühe"]="Brühe",e.Zwiebelsuppe="Zwiebelsuppe",e.Fischpastete="Fischpastete",e.Ragu="Ragù",e.Pfirsiche="Pfirsiche",e.Pflaumen="Pflaumen",e.Zitronenschale="Zitronenschale",e.Eier="Eier",e.Butter="Butter",e.Lamm="Lamm",e.Fisch="Fisch",e["Meeresfrüchte"]="Meeresfrüchte",e["Zitrusfrüchte"]="Zitrusfrüchte",e.Fladenbrot="Fladenbrot",e.Curry="Curry",e["Rührei"]="Rührei",e["Grüne_Papaya"]="Grüne Papaya",e.Pomelo="Pomelo",e["Kürbis"]="Kürbis",e.Kartoffeln="Kartoffeln",e.Rote_Beete="Rote Beete",e.Kohl="Kohl",e.Artischocken="Artischocken",e["Wurzelgemüse"]="Wurzelgemüse",e.Ingwer="Ingwer",e.Oliven="Oliven",e.Salbei="Salbei",e["Käse"]="Käse",e.Wildfleisch="Wildfleisch",e.Ente="Ente",e.Hase="Hase",e.Gans="Gans",e.Wachteln="Wachteln",e.Schwarze_Johannisbeeren="Schwarze Johannisbeeren",e["Getrocknete_Früchte"]="Getrocknete Früchte",e.Lachs="Lachs",e.Kaninchen="Kaninchen",e.Makrele="Makrele",e.Tiramisu="Tiramisu",e.Bambussprossen="Bambussprossen",e.Lotuswurzel="Lotuswurzel",e.Nudeln="Nudeln",e.Schwein="Schwein",e.Rind="Rind",e.Kokosnuss="Kokosnuss",e["Tropische_Früchte"]="Tropische Früchte",e.Muscheln="Muscheln",e.Schalotten="Schalotten",e.Knoblauch="Knoblauch",e.Chili="Chili",e.Galgant="Galgant",e.Kokosnusscreme="Kokosnusscreme",e.Thai_Basilikum="Thai-Basilikum",e.Garnelen="Garnelen",e.Kebab="Kebab",e.Koriander="Koriander",e.Karotten="Karotten",e.Paprika="Paprika",e.Gurke="Gurke",e.Melone="Melone",e.Beeren="Beeren",e.Mandeln="Mandeln",e.Kaffee="Kaffee",e.Pistazien="Pistazien",e.Rettich="Rettich",e.Himbeeren="Himbeeren",e.Whiskey="Whiskey",e.Zimt="Zimt",e.Limette="Limette",e.Honig="Honig",e["Kümmel"]="Kümmel",e.Couscous="Couscous",e.Datteln="Datteln",e.Ochsenschwanz="Ochsenschwanz",e.Rhabarbar="Rhabarbar",e.Birne="Birne",e.Pho="Pho",e["Fünf_Gewürz_Pulver"]="Fünf_Gewürz_Pulver",e.Biryani="Biryani",e.Garam_Masala="Garam Masala",e["Schwarzerkümmel"]="Schwarzerkümmel",e.Bohnensprossen="Bohnensprossen",e.Schweinebauch="Schweinebauch",e.Sesam="Sesam",e.Vanille="Vanille",e.Blumenkohl="Blumenkohl",e.Aubergine="Aubergine",e.Okra="Okra",e.Schalentiere="Schalentiere",e.Pakoras="Pakoras",e.Samosas="Samosas",e.Mango="Mango",e.Koriandersamen="Koriandersamen",e["Curryblätter"]="Curryblätter",e.Senf="Senf",e.Zitronengras="Zitronengras",e.Brokkoli="Brokkoli",e.Spinat="Spinat",e.Kichererbsen="Kichererbsen",e.Avocado="Avocado",e["Walnüsse"]="Walnüsse",e["Kreuzkümmel"]="Kreuzkümmel",e.Granatapfel="Granatapfel",e.Orange="Orange",e["Blattgemüse"]="Blattgemüse",e.Staudensellerie="Staudensellerie",e.Fenchel="Fenchel",e["Grüne_Bohnen"]="Grüne Bohnen",e.Lavendel="Lavendel",e.Blutwurst="Blutwurst",e.Thunfisch="Thunfisch",e["Glühwein"]="Glühwein",e.Gin="Gin",e.Dal="Dal",e.Jalapenos="Jalapeños",e.Minze="Minze",e.Oktopus="Oktopus",e.Tintenfisch="Tintenfisch",e.Rose="Rose",e["Nüsse"]="Nüsse",e.Dill="Dill",e.Cayennepfeffer="Cayennepfeffer",e.Safran="Safran",e["Weiße_Bohnen"]="Weiße Bohnen",e["Erdnüsse"]="Erdnüsse",e.Tofu="Tofu",e.Fleisch="Fleisch",e.Dan_Dan_Nudeln="Dan-Dan-Nudeln",e.Gin_Tonic="Gin & Tonic",e["Süßkartoffeln"]="Süßkartoffeln",e.Pak_Choi="Pak Choi",e.Litschi="Litschi",e["Orangenblüten"]="Orangenblüten",e.Gnocchi="Gnocchi",e.Chinakohl="Chinakohl",e.Joghurt="Joghurt",e.Feta="Feta",e.Rotweinessig="Rotweinessig",e.Mais="Mais",e.Tahini="Tahini",e.Ananas="Ananas",e.Bulgur="Bulgar",e.Zwiebeln="Zwiebeln",e["Kohlgemüse"]="Kohlgemüse",e.Erbsen="Erbsen",e.Speck="Speck",e.Karamell="Karamell",e.Thymian="Thymian",e.Sahne="Sahne",e.Bananen="Bananen",e.Erdbeeren="Erdbeeren",e["Ziegenkäse"]="Ziegenkäse",e.Kirschen="Kirschen",e["Weißkohl"]="Weißkohl",e["Weichkäse"]="Weichkäse",e.Shortbread="Shortbread",e.Sauerkraut="Sauerkraut",e.Harissa="Harissa",e["Haselnüsse"]="Haselnüsse",e.Krautsalat="Krautsalat",e.Zucchini="Zucchini",e.Aprikosen="Aprikosen",e.Falafel="Falafel",e.Spargel="Spargel",e["Hüttenkäse"]="Hüttenkäse",e["Weißweinessig"]="Weißweinessig",e.Zitrone="Zitrone",e.Kalb="Kalb",e.Gratins="Gratins",e.Parmesan="Parmesan",e.Ricotta="Ricotta",e.Schokolade="Schokolade",e.Lauch="Lauch",e["Weiße_Schokolade"]="Weiße Schokolade",e.Sardinen="Sardinen",e.Pinienkerne="Pinienkerne",e.Rosinen="Rosinen",e.Sojasauce="Sojasauce",e.Reisessig="Reisessig",e["Weißwein"]="Weißwein",e.Rotwein="Rotwein",e.Bockshornklee="Bockshornklee",e.Petersilie="Petersilie",e.Estragon="Estragon",e.Haferflocken="Haferflocken",e.Mangold="Mangold",e["Cashewnüsse"]="Cashewnüsse",e["Rosenblätter"]="Rosenblätter",e.Rosenkohl="Rosenkohl",e.Rosmarin="Rosmarin",e.Passionsfrucht="Passionsfrucht",e["Grüner_Kardamom"]="Grüner Kardamom",e.Innereien="Innereien",e.Maniok="Maniok",e["Frischkäse"]="Frischkäse",e.Kimchi="Kimchi",e["Liebstöckel"]="Liebstöckel",e.Trauben="Trauben",e.Schwarzer_Pfeffer="Schwarzer Pfeffer",e.Langer_Pfeffer="Langer Pfeffer",e.Grapefruit="Grapefruit",e.Nelken="Nelken",e.Paella="Paella",e.Gulasch="Gulasch",e.Lorbeer="Lorbeer",e.Zuckererbsen="Zuckererbsen",e.Buchweizen="Buchweizen",e["Trüffel"]="Trüffel",e["Bärlauch"]="Bärlauch",e.Tonkabohnen="Tonkabohnen",e.Mozzarella="Mozzarella",e.Kurkuma="Kurkuma",e.Chicoree="Chicoree",e.Risotto="Risotto",e.Knollensellerie="Knollensellerie",e.Rotkohl="Rotkohl",e.Rum="Rum",e.Schinken="Schinken",e.Pastinaken="Pastinaken",e.Rucola="Rucola",e.Tamarinde="Tamarinde",e.Papadam="Papadam",e.Bohnen="Bohnen",e.Basilikum="Basilikum",e.Papaya="Papaya",e["Gebäck"]="Gebäck",e.Muskatnuss="Muskatnuss",e.Piment="Piment",e.Pfeffer="Pfeffer",e.Kakao="Kakao"}(Ne||(Ne={}));var Se=Ne;class Ae{constructor(){this.name="Zimt",this.nameSymbol="Zi",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.ZIMTALDEHYD,Le.ZIMTALDEHYD,Le.ZIMTALDEHYD,Le.EUGENOL,Le.LINALOOL,Le.MYRCEN],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Blattgemüse,Se.Wurzelgemüse,Se.Ingwer,Se.Tamarinde,Se.Haferflocken,Se.Reis,Se.Hülsenfrüchte,Se.Couscous,Se.Eier,Se.Milchprodukte,Se.Schalentiere,Se.Fleisch,Se.Tomaten,Se.Aubergine,Se.Äpfel,Se.Tropische_Früchte,Se.Steinfrüchte,Se.Beeren,Se.Orange,Se.Kaffee,Se.Mangold,Se.Spinat,Se.Pinienkerne,Se.Rosinen,Se.Feigen,Se.Datteln,Se.Granatapfel,Se.Joghurt,Se.Kokosnuss,Se.Cashewnüsse,Se.Rosenblätter,Se.Schwarzerkümmel,Se.Garam_Masala]}}class ke{constructor(){this.name="Cassia-Zimt",this.nameSymbol="Ca",this.description="",this.aromaCompounds=[Le.KAMPFER,Le.CINEOL,Le.ZIMTALDEHYD,Le.ZIMTALDEHYD,Le.COUMARIN,Le.HEPTANON,Le.TANNINVERBINDUNGEN],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Blattgemüse,Se.Wurzelgemüse,Se.Ingwer,Se.Tamarinde,Se.Haferflocken,Se.Reis,Se.Hülsenfrüchte,Se.Couscous,Se.Eier,Se.Milchprodukte,Se.Schalentiere,Se.Fleisch,Se.Tomaten,Se.Aubergine,Se.Äpfel,Se.Tropische_Früchte,Se.Steinfrüchte,Se.Beeren,Se.Orange,Se.Kaffee,Se.Mangold,Se.Spinat,Se.Pinienkerne,Se.Rosinen,Se.Feigen,Se.Datteln,Se.Granatapfel,Se.Joghurt,Se.Kokosnuss,Se.Cashewnüsse,Se.Rosenblätter,Se.Schwarzerkümmel,Se.Garam_Masala]}}class we{constructor(){this.name="Gewürznelke",this.nameSymbol="Gn",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.EUGENOL,Le.EUGENOL,Le.LINALOOL,Le.SALICYLSÄUREMETHYLESTER,Le.TERPINEOL],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[]}}class Oe{constructor(){this.name="Piment",this.nameSymbol="Pi",this.description="",this.aromaCompounds=[Le.CINEOL,Le.EUGENOL,Le.EUGENOL,Le.LINALOOL,Le.MYRCEN,Le.PHELLANDREN,Le.PINENE],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Wurzelgemüse,Se.Aubergine,Se.Fleisch,Se.Hühnchen,Se.Fisch,Se.Tomaten,Se.Kokosnuss,Se.Steinfrüchte,Se.Zitrusfrüchte,Se.Tropische_Früchte,Se.Curry,Se.Reis,Se.Erbsen,Se.Blumenkohl,Se.Zwiebeln,Se.Rosinen,Se.Haselnüsse,Se.Minze,Se.Dill,Se.Petersilie,Se.Chili,Se.Avocado,Se.Käse,Se.Lamm,Se.Rote_Beete,Se.Schwarzerkümmel,Se.Orange,Se.Mango]}}class _e{constructor(){this.name="Anis",this.nameSymbol="An",this.description="",this.aromaCompounds=[Le.ANETHOL,Le.ANETHOL,Le.ANISALDEHYD,Le.ANISALKOHOL,Le.ANISALKOHOL,Le.ESTRAGOL,Le.LIMONEN,Le.MYRCEN,Le.PINENE],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Wurzelgemüse,Se.Kartoffeln,Se.Lauch,Se.Fenchel,Se.Basilikum,Se.Ingwer,Se.Sahne,Se.Rind,Se.Schwein,Se.Hühnchen,Se.Ochsenschwanz,Se.Fisch,Se.Schalentiere,Se.Steinfrüchte,Se.Tropische_Früchte,Se.Zitrusfrüchte,Se.Äpfel,Se.Rhabarbar,Se.Feigen,Se.Mandeln,Se.Schokolade,Se.Karotten,Se.Orange,Se.Estragon,Se.Tintenfisch,Se.Speck,Se.Grüne_Bohnen,Se.Gurke]}}class Re{constructor(){this.name="Sternanis",this.nameSymbol="St",this.description="",this.aromaCompounds=[Le.ANETHOL,Le.ANETHOL,Le.CINEOL,Le.LINALOOL,Le.PHELLANDREN,Le.SAFROL],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Gemüse,Se.Nudeln,Se.Reis,Se.Milchprodukte,Se.Eier,Se.Meeresfrüchte,Se.Fisch,Se.Hühnchen,Se.Rind,Se.Schwein,Se.Schweinebauch,Se.Ente,Se.Ochsenschwanz,Se.Rhabarbar,Se.Steinfrüchte,Se.Tropische_Früchte,Se.Zitrusfrüchte,Se.Birne,Se.Dunkle_Schokolade,Se.Pho,Se.Fünf_Gewürz_Pulver,Se.Biryani,Se.Kaninchen,Se.Ingwer,Se.Garam_Masala,Se.Schwarzerkümmel,Se.Zimt,Se.Ente,Se.Pilze,Se.Bohnensprossen,Se.Kokosnuss,Se.Curry,Se.Knoblauch,Se.Vanille,Se.Sesam]}}class Ce{constructor(){this.name="Fenchelsamen",this.nameSymbol="Fs",this.description="",this.aromaCompounds=[Le.ANETHOL,Le.ANETHOL,Le.ESTRAGOL,Le.FENCHON,Le.LIMONEN,Le.PINENE],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Rote_Beete,Se.Karotten,Se.Fenchel,Se.Kohl,Se.Rosenkohl,Se.Schwein,Se.Rind,Se.Kaninchen,Se.Fisch,Se.Avocado,Se.Steinfrüchte,Se.Zitrusfrüchte,Se.Curry,Se.Mandeln,Se.Käse,Se.Tomaten,Se.Rosmarin,Se.Honig,Se.Chili,Se.Blattgemüse,Se.Knoblauch,Se.Weißwein,Se.Orange,Se.Senf,Se.Oliven]}}class Pe{constructor(){this.name="Süßholz",this.nameSymbol="Sü",this.description="",this.aromaCompounds=[Le.ANETHOL,Le.CINEOL,Le.ESTRAGOL,Le.EUGENOL,Le.GLYCYRRHIZIN,Le.GLYCYRRHIZIN,Le.LINALOOL,Le.PHENOLVERBINDUNGEN],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Spargel,Se.Fenchel,Se.Rhabarbar,Se.Minze,Se.Fleisch,Se.Wildfleisch,Se.Fisch,Se.Schalentiere,Se.Beeren,Se.Äpfel,Se.Birne,Se.Steinfrüchte,Se.Bananen,Se.Zitrusfrüchte,Se.Mandeln,Se.Schokolade,Se.Vanille,Se.Pflaumen,Se.Kirschen]}}class Te{constructor(){this.name="Mahlab",this.nameSymbol="Ma",this.description="",this.aromaCompounds=[Le.AZULEN,Le.COUMARIN,Le.COUMARIN,Le.DIOXOLAN,Le.METHOXYETHYLCINNAMAT,Le.PENTANOL],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Fleisch,Se.Tonkabohnen,Se.Steinfrüchte,Se.Aprikosen,Se.Pistazien,Se.Kirschen,Se.Mandeln,Se.Rose]}}class Ie{constructor(){this.name="Vanille",this.nameSymbol="Va",this.description="",this.aromaCompounds=[Le.ANISALDEHYD,Le.HYDROXYBENZALDEHYD,Le.PIPERONAL,Le.VANILLIN,Le.VANILLIN],this.aromaGroup=ne.Süß_wärmende_Phenole,this.color=re.Süß_wärmende_Phenole,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Kürbis,Se.Süßkartoffeln,Se.Spinat,Se.Ingwer,Se.Rhabarbar,Se.Kokosnusscreme,Se.Eier,Se.Hühnchen,Se.Lamm,Se.Schalentiere,Se.Tomaten,Se.Bananen,Se.Steinfrüchte,Se.Beeren,Se.Ananas,Se.Zitrusfrüchte,Se.Kaffee,Se.Nüsse,Se.Kirschen,Se.Muscheln,Se.Pfirsiche,Se.Rotwein]}}class xe{constructor(){this.name="Muskatnuss",this.nameSymbol="Mu",this.description="",this.aromaCompounds=[Le.CINEOL,Le.EUGENOL,Le.GERANIOL,Le.MYRISTICIN,Le.MYRISTICIN,Le.PINENE,Le.SABINEN,Le.SAFROL],this.aromaGroup=ne.Wärmende_Terpene,this.color=re.Wärmende_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Blattgemüse,Se.Wurzelgemüse,Se.Kohl,Se.Pilze,Se.Weichkäse,Se.Käse,Se.Avocado,Se.Tomaten,Se.Fisch,Se.Schalentiere,Se.Hühnchen,Se.Schwein,Se.Lamm,Se.Kalb,Se.Bananen,Se.Pflaumen,Se.Zitrusfrüchte,Se.Äpfel,Se.Pfirsiche,Se.Pistazien,Se.Walnüsse,Se.Kartoffeln,Se.Vanille,Se.Gratins,Se.Spinat,Se.Parmesan,Se.Zitronenschale,Se.Gnocchi,Se.Kürbis,Se.Ricotta,Se.Salbei,Se.Chili]}}class Me{constructor(){this.name="Muskatblüte",this.nameSymbol="Mb",this.description="",this.aromaCompounds=[Le.ELEMICIN,Le.EUGENOL,Le.MYRISTICIN,Le.MYRISTICIN,Le.PINENE,Le.SABINEN,Le.SAFROL,Le.TERPINENE,Le.TERPINEOL],this.aromaGroup=ne.Wärmende_Terpene,this.color=re.Wärmende_Terpene,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Kartoffeln,Se.Süßkartoffeln,Se.Karotten,Se.Kohl,Se.Kürbis,Se.Blumenkohl,Se.Käse,Se.Milchprodukte,Se.Eier,Se.Fisch,Se.Schalentiere,Se.Lamm,Se.Kalb,Se.Schwein,Se.Äpfel,Se.Mango,Se.Curry,Se.Rhabarbar,Se.Vanille,Se.Pfirsiche,Se.Birne,Se.Zimt]}}class De{constructor(){this.name="Kümmel",this.nameSymbol="Kü",this.description="",this.aromaCompounds=[Le.CARVEOL,Le.S_CARVON,Le.S_CARVON,Le.LIMONEN,Le.PINENE,Le.SABINEN],this.aromaGroup=ne.Wärmende_Terpene,this.color=re.Wärmende_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Wurzelgemüse,Se.Weißkohl,Se.Zwiebeln,Se.Pilze,Se.Weichkäse,Se.Hühnchen,Se.Ente,Se.Gans,Se.Schwein,Se.Tomaten,Se.Äpfel,Se.Zitrusfrüchte,Se.Walnüsse,Se.Shortbread,Se.Kohl,Se.Sauerkraut,Se.Gurke,Se.Harissa,Se.Haselnüsse,Se.Krautsalat,Se.Käse,Se.Joghurt]}}class He{constructor(){this.name="Dill",this.nameSymbol="Di",this.description="",this.aromaCompounds=[Le.CARVEOL,Le.D_CARVON,Le.D_CARVON,Le.FENCHON,Le.LIMONEN,Le.PHELLANDREN,Le.TERPINENE],this.aromaGroup=ne.Wärmende_Terpene,this.color=re.Wärmende_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Wurzelgemüse,Se.Pilze,Se.Grüne_Bohnen,Se.Erbsen,Se.Reis,Se.Hülsenfrüchte,Se.Spargel,Se.Hüttenkäse,Se.Joghurt,Se.Eier,Se.Lamm,Se.Rind,Se.Schwein,Se.Fisch,Se.Schalentiere,Se.Zucchini,Se.Aubergine,Se.Avocado,Se.Äpfel,Se.Gurke,Se.Karotten,Se.Weißweinessig,Se.Senf,Se.Kakao,Se.Zitrone,Se.Feta,Se.Knoblauch,Se.Zitronenschale,Se.Käse]}}class Ge{constructor(){this.name="Annatto",this.nameSymbol="Ao",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.ALPHA_COPAEN,Le.ELEMAN,Le.GERMACREN,Le.GERMACREN],this.aromaGroup=ne.Wärmende_Terpene,this.color=re.Wärmende_Terpene,this.spice_group=Ee.Pikant,this.goes_well_with=[]}}class Fe{constructor(){this.name="Mastix",this.nameSymbol="Mx",this.description="",this.aromaCompounds=[Le.CAMPHEN,Le.CARYOPHYLLENE,Le.LINALOOL,Le.MYRCEN,Le.PINENE,Le.PINENE],this.aromaGroup=ne.Duftende_Terpene,this.color=re.Duftende_Terpene,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Reis,Se.Käse,Se.Sahne,Se.Fleisch,Se.Hühnchen,Se.Äpfel,Se.Feigen,Se.Pistazien,Se.Mandeln,Se.Grüner_Kardamom,Se.Piment,Se.Granatapfel,Se.Spinat,Se.Muskatnuss,Se.Basilikum,Se.Zitronenschale,Se.Feta,Se.Rote_Beete,Se.Pinienkerne,Se.Rettich,Se.Pistazien,Se.Ziegenkäse,Se.Himbeeren,Se.Weiße_Schokolade,Se.Rosmarin]}}class Ke{constructor(){this.name="Wacholder",this.nameSymbol="Wa",this.description="",this.aromaCompounds=[Le.GERANIOL,Le.LIMONEN,Le.MYRCEN,Le.PINENE,Le.PINENE,Le.TERPINEOL],this.aromaGroup=ne.Duftende_Terpene,this.color=re.Duftende_Terpene,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Kartoffeln,Se.Rote_Beete,Se.Kohl,Se.Artischocken,Se.Wurzelgemüse,Se.Ingwer,Se.Oliven,Se.Salbei,Se.Reis,Se.Käse,Se.Wildfleisch,Se.Ente,Se.Hase,Se.Gans,Se.Wachteln,Se.Fisch,Se.Äpfel,Se.Zitrusfrüchte,Se.Schwarze_Johannisbeeren,Se.Getrocknete_Früchte,Se.Dunkle_Schokolade,Se.Lachs,Se.Kaninchen,Se.Makrele,Se.Tiramisu]}}class Be{constructor(){this.name="Rose",this.nameSymbol="Ro",this.description="",this.aromaCompounds=[Le.CITRONELLOL,Le.EUGENOL,Le.GERANIOL,Le.GERANIOL,Le.LINALOOL,Le.NEROL,Le.ROSEN_KETONE],this.aromaGroup=ne.Duftende_Terpene,this.color=re.Duftende_Terpene,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Paprika,Se.Gurke,Se.Milchprodukte,Se.Käse,Se.Eier,Se.Lamm,Se.Hühnchen,Se.Fisch,Se.Melone,Se.Zitrusfrüchte,Se.Beeren,Se.Himbeeren,Se.Steinfrüchte,Se.Äpfel,Se.Mandeln,Se.Dunkle_Schokolade,Se.Kaffee,Se.Whiskey,Se.Pistazien,Se.Rettich,Se.Feigen,Se.Datteln,Se.Zimt,Se.Limette,Se.Honig,Se.Kümmel,Se.Couscous]}}class ze{constructor(){this.name="Koriander",this.nameSymbol="Ko",this.description="",this.aromaCompounds=[Le.CYMOL,Le.LIMONEN,Le.LINALOOL,Le.LINALOOL,Le.PINENE,Le.TERPINENE],this.aromaGroup=ne.Duftende_Terpene,this.color=re.Duftende_Terpene,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Rote_Beete,Se.Kartoffeln,Se.Pilze,Se.Blattgemüse,Se.Staudensellerie,Se.Fenchel,Se.Kohl,Se.Artischocken,Se.Blumenkohl,Se.Grüne_Bohnen,Se.Knoblauch,Se.Lavendel,Se.Hühnchen,Se.Schwein,Se.Ente,Se.Wildfleisch,Se.Blutwurst,Se.Schalentiere,Se.Fisch,Se.Thunfisch,Se.Oliven,Se.Tomaten,Se.Beeren,Se.Zitrusfrüchte,Se.Steinfrüchte,Se.Äpfel,Se.Kaffee,Se.Glühwein,Se.Gin,Se.Dal,Se.Curry,Se.Eier,Se.Schalotten,Se.Jalapenos,Se.Minze,Se.Limette,Se.Orange,Se.Oktopus,Se.Tintenfisch,Se.Honig,Se.Rose,Se.Kreuzkümmel,Se.Couscous]}}class Ye{constructor(){this.name="Kreuzkümmel",this.nameSymbol="Kk",this.description="",this.aromaCompounds=[Le.CUMINALDEHYD,Le.CUMINALDEHYD,Le.CYMOL,Le.MYRCEN,Le.PINENE,Le.TERPINENE],this.aromaGroup=ne.Erdige_Terpene,this.color=re.Erdige_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Wurzelgemüse,Se.Rote_Beete,Se.Kohl,Se.Blumenkohl,Se.Dill,Se.Koriander,Se.Couscous,Se.Hülsenfrüchte,Se.Joghurt,Se.Eier,Se.Feta,Se.Fisch,Se.Lamm,Se.Hühnchen,Se.Rind,Se.Avocado,Se.Oliven,Se.Zucchini,Se.Aubergine,Se.Tomaten,Se.Zitrusfrüchte,Se.Aprikosen,Se.Sesam,Se.Walnüsse,Se.Falafel,Se.Zitronenschale,Se.Minze,Se.Karotten,Se.Granatapfel,Se.Feigen]}}class Ue{constructor(){this.name="Schwarzkümmel",this.nameSymbol="Sk",this.description="",this.aromaCompounds=[Le.CARVACROL,Le.D_CARVON,Le.CYMOL,Le.LIMONEN,Le.PINENE,Le.THYMOCHINON],this.aromaGroup=ne.Erdige_Terpene,this.color=re.Erdige_Terpene,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Wurzelgemüse,Se.Rote_Beete,Se.Hülsenfrüchte,Se.Eier,Se.Ziegenkäse,Se.Lamm,Se.Rind,Se.Hühnchen,Se.Tomaten,Se.Mozzarella,Se.Basilikum,Se.Rührei,Se.Feta,Se.Granatapfel,Se.Minze,Se.Kichererbsen,Se.Zitronenschale]}}class $e{constructor(){this.name="Mohrenpfeffer",this.nameSymbol="Mp",this.description="",this.aromaCompounds=[Le.CINEOL,Le.FENCHON,Le.FENCHON,Le.GERANIOL,Le.GERMACREN,Le.LINALOOL,Le.PINENE,Le.VANILLIN],this.aromaGroup=ne.Durchdringende_Terpene,this.color=re.Durchdringende_Terpene,this.spice_group=Ee.Pikant,this.goes_well_with=[]}}class Ze{constructor(){this.name="Schwarzer Kardamom",this.nameSymbol="Ska",this.description="",this.aromaCompounds=[Le.CINEOL,Le.CINEOL,Le.DIMETHOXYPHENOL,Le.EUGENOL,Le.LIMONEN,Le.PINENE,Le.SABINEN,Le.TERPINYLACETAT],this.aromaGroup=ne.Durchdringende_Terpene,this.color=re.Durchdringende_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Blattgemüse,Se.Karotten,Se.Kartoffeln,Se.Erbsen,Se.Blumenkohl,Se.Kokosnuss,Se.Ingwer,Se.Reis,Se.Linsen,Se.Hühnchen,Se.Ente,Se.Speck,Se.Rind,Se.Lamm,Se.Limette,Se.Dunkle_Schokolade,Se.Pho,Se.Muscheln,Se.Mais,Se.Tomaten,Se.Curryblätter,Se.Chili,Se.Rührei,Se.Karamell,Se.Käse,Se.Thymian,Se.Honig]}}class We{constructor(){this.name="Grüner Kardamom",this.nameSymbol="Gka",this.description="",this.aromaCompounds=[Le.CINEOL,Le.CINEOL,Le.ALPHA_FENCHOL,Le.LIMONEN,Le.LINALOOL],this.aromaGroup=ne.Durchdringende_Terpene,this.color=re.Durchdringende_Terpene,this.spice_group=Ee.Süß,this.goes_well_with=[Se.Kohl,Se.Karotten,Se.Safran,Se.Reis,Se.Eier,Se.Sahne,Se.Milchprodukte,Se.Lamm,Se.Ente,Se.Hühnchen,Se.Birne,Se.Aprikosen,Se.Bananen,Se.Mango,Se.Schokolade,Se.Kaffee,Se.Mandeln,Se.Aprikosen,Se.Vanille,Se.Zitronenschale,Se.Limette,Se.Koriander,Se.Rosenblätter,Se.Passionsfrucht]}}class Ve{constructor(){this.name="Lorbeer",this.nameSymbol="Lb",this.description="",this.aromaCompounds=[Le.CINEOL,Le.CINEOL,Le.EUGENOL,Le.GERANIOL,Le.LINALOOL,Le.PHELLANDREN,Le.PINENE,Le.TERPINEOL],this.aromaGroup=ne.Durchdringende_Terpene,this.color=re.Durchdringende_Terpene,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Gemüse,Se.Pilze,Se.Reis,Se.Hülsenfrüchte,Se.Linsen,Se.Milchprodukte,Se.Hühnchen,Se.Tomaten,Se.Steinfrüchte,Se.Äpfel,Se.Feigen,Se.Dunkle_Schokolade,Se.Brühe,Se.Zwiebelsuppe,Se.Fischpastete,Se.Ragu,Se.Pfirsiche,Se.Pflaumen,Se.Zitronenschale]}}class je{constructor(){this.name="Galgant",this.nameSymbol="Ga",this.description="",this.aromaCompounds=[Le.KAMPFER,Le.CINEOL,Le.CINEOL,Le.ALPHA_FENCHOL,Le.GALANGALACETAT,Le.ZIMTSÄUREMETHYLESTER],this.aromaGroup=ne.Durchdringende_Terpene,this.color=re.Durchdringende_Terpene,this.spice_group=Ee.Pikant,this.goes_well_with=[Se.Karotten,Se.Fenchel,Se.Pilze,Se.Chili,Se.Knoblauch,Se.Liebstöckel,Se.Koriander,Se.Reis,Se.Nudeln,Se.Fisch,Se.Schalentiere,Se.Rind,Se.Hühnchen,Se.Kokosnuss,Se.Zitrusfrüchte,Se.Trauben,Se.Birne,Se.Curry,Se.Grüne_Bohnen,Se.Zitronengras,Se.Limette,Se.Pak_Choi,Se.Gans,Se.Gans]}}class qe{constructor(){this.name="Loomi",this.nameSymbol="Lo",this.description="",this.aromaCompounds=[Le.CITRAL,Le.CITRAL,Le.FENCHON,Le.HUMULEN,Le.LIMONEN,Le.LINALOOL,Le.METHOXYCOUMARIN],this.aromaGroup=ne.Zitrustönige_Terpene,this.color=re.Zitrustönige_Terpene,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Hülsenfrüchte,Se.Fisch,Se.Schalentiere,Se.Lamm,Se.Hühnchen,Se.Schwein,Se.Rind,Se.Tomaten,Se.Gurke,Se.Nüsse,Se.Weiße_Bohnen,Se.Ingwer,Se.Avocado,Se.Dill,Se.Cayennepfeffer,Se.Chili,Se.Granatapfel,Se.Minze,Se.Safran,Se.Couscous,Se.Linsen]}}class Xe{constructor(){this.name="Zitronenmyrte",this.nameSymbol="Zm",this.description="",this.aromaCompounds=[Le.CITRAL,Le.CITRAL,Le.CITRONELLAL,Le.CYCLOCITRAL,Le.HEPTANON,Le.LINALOOL,Le.MYRCEN,Le.PINENE,Le.SULCATON],this.aromaGroup=ne.Zitrustönige_Terpene,this.color=re.Zitrustönige_Terpene,this.spice_group=Ee.Zitrisch,this.goes_well_with=[]}}class Je{constructor(){this.name="Zitronengras",this.nameSymbol="Zg",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.CITRAL,Le.CITRAL,Le.GERANIOL,Le.LINALOOL,Le.MYRCEN,Le.NEROL],this.aromaGroup=ne.Zitrustönige_Terpene,this.color=re.Zitrustönige_Terpene,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Pilze,Se.Bambussprossen,Se.Lotuswurzel,Se.Wurzelgemüse,Se.Karotten,Se.Nudeln,Se.Fisch,Se.Schwein,Se.Rind,Se.Hühnchen,Se.Tomaten,Se.Kokosnuss,Se.Kokosnusscreme,Se.Zitrusfrüchte,Se.Fisch,Se.Curry,Se.Muscheln,Se.Schalotten,Se.Knoblauch,Se.Ingwer,Se.Chili,Se.Galgant,Se.Thai_Basilikum,Se.Garnelen,Se.Kebab,Se.Koriander]}}class Qe{constructor(){this.name="Amchur",this.nameSymbol="Am",this.description="",this.aromaCompounds=[Le.CADINENE,Le.ZITRONENSÄURE,Le.CUBEBIN,Le.LIMONEN,Le.OCIMENE,Le.OCIMENE,Le.SELINENE],this.aromaGroup=ne.Süßsaure_Säuren,this.color=re.Süßsaure_Säuren,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Blumenkohl,Se.Kartoffeln,Se.Aubergine,Se.Okra,Se.Hülsenfrüchte,Se.Fisch,Se.Schalentiere,Se.Garnelen,Se.Hühnchen,Se.Lamm,Se.Tropische_Früchte,Se.Pakoras,Se.Samosas,Se.Mango,Se.Sesam,Se.Koriander,Se.Koriandersamen,Se.Limette,Se.Butter,Se.Senf,Se.Zitronengras,Se.Curryblätter]}}class et{constructor(){this.name="Anardana",this.nameSymbol="Ad",this.description="",this.aromaCompounds=[Le.CAREN,Le.ZITRONENSÄURE,Le.ZITRONENSÄURE,Le.HEXANAL,Le.LIMONEN,Le.ÄPFELSÄURE,Le.ÄPFELSÄURE,Le.MYRCEN,Le.TANNINVERBINDUNGEN],this.aromaGroup=ne.Süßsaure_Säuren,this.color=re.Süßsaure_Säuren,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Wurzelgemüse,Se.Brokkoli,Se.Blumenkohl,Se.Spinat,Se.Kichererbsen,Se.Reis,Se.Hühnchen,Se.Gurke,Se.Avocado,Se.Tropische_Früchte,Se.Walnüsse,Se.Butter,Se.Dunkle_Schokolade,Se.Kreuzkümmel,Se.Granatapfel,Se.Sesam,Se.Mango,Se.Limette,Se.Ente,Se.Orange]}}class tt{constructor(){this.name="Sumach",this.nameSymbol="Su",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.CEMBREN,Le.ZITRONENSÄURE,Le.ÄPFELSÄURE,Le.ÄPFELSÄURE,Le.NONANAL,Le.PINENE,Le.TANNINVERBINDUNGEN,Le.WEINSÄURE],this.aromaGroup=ne.Süßsaure_Säuren,this.color=re.Süßsaure_Säuren,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Wurzelgemüse,Se.Spinat,Se.Minze,Se.Kichererbsen,Se.Linsen,Se.Reis,Se.Linsen,Se.Reis,Se.Joghurt,Se.Käse,Se.Fisch,Se.Hühnchen,Se.Lamm,Se.Tomaten,Se.Gurke,Se.Zitrusfrüchte,Se.Aubergine,Se.Walnüsse,Se.Fenchel,Se.Rettich,Se.Granatapfel,Se.Ananas,Se.Feta,Se.Rotweinessig,Se.Feigen,Se.Mais,Se.Datteln,Se.Tahini]}}class nt{constructor(){this.name="Tamarinde",this.nameSymbol="Ta",this.description="",this.aromaCompounds=[Le.FURFURAL,Le.FURFURAL,Le.GERANIOL,Le.LIMONEN,Le.PHENYLACETALDEHYD_2,Le.PHENYLACETALDEHYD_2,Le.WEINSÄURE],this.aromaGroup=ne.Süßsaure_Säuren,this.color=re.Süßsaure_Säuren,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Wurzelgemüse,Se.Blumenkohl,Se.Pilze,Se.Nudeln,Se.Bulgur,Se.Reis,Se.Linsen,Se.Joghurt,Se.Fisch,Se.Fleisch,Se.Okra,Se.Aubergine,Se.Kokosnuss,Se.Datteln,Se.Erdnüsse,Se.Karotten,Se.Zimt,Se.Kreuzkümmel,Se.Chili,Se.Muscheln,Se.Lamm,Se.Curry]}}class it{constructor(){this.name="Johannisbrotschote",this.nameSymbol="Jo",this.description="",this.aromaCompounds=[Le.ZIMTALDEHYD,Le.FARNESENE,Le.FURANEOL,Le.CAPRONSÄURE,Le.CAPRONSÄURE,Le.VALERIANSÄURE,Le.VALERIANSÄURE,Le.PYRAZINVERBINDUNGEN],this.aromaGroup=ne.Süßsaure_Säuren,this.color=re.Süßsaure_Säuren,this.spice_group=Ee.Erding,this.goes_well_with=[]}}class rt{constructor(){this.name="Berberitze",this.nameSymbol="Be",this.description="",this.aromaCompounds=[Le.ANISALDEHYD,Le.ZITRONENSÄURE,Le.HEXANAL,Le.HEXANAL,Le.LINALOOL,Le.ÄPFELSÄURE,Le.NONANAL,Le.WEINSÄURE],this.aromaGroup=ne.Fruchtige_Aldehyde,this.color=re.Fruchtige_Aldehyde,this.spice_group=Ee.Zitrisch,this.goes_well_with=[]}}class st{constructor(){this.name="Kakao",this.nameSymbol="Ka",this.description="",this.aromaCompounds=[Le.DIMETHYLPYRAZIN,Le.ESTERVERBINDUNGEN,Le.FURANEOL,Le.ISOVALERALDEHYD,Le.ISOVALERALDEHYD,Le.PHENOLVERBINDUNGEN,Le.PHENYLACETALDEHYD],this.aromaGroup=ne.Fruchtige_Aldehyde,this.color=re.Fruchtige_Aldehyde,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Rote_Beete,Se.Blumenkohl,Se.Sahne,Se.Speck,Se.Fleisch,Se.Tomaten,Se.Avocado,Se.Kokosnuss,Se.Bananen,Se.Zitrusfrüchte,Se.Steinfrüchte,Se.Beeren,Se.Nüsse,Se.Kaffee,Se.Chili,Se.Pilze,Se.Rose,Se.Erdbeeren,Se.Ziegenkäse,Se.Kirschen]}}class at{constructor(){this.name="Paprika",this.nameSymbol="Pa",this.description="",this.aromaCompounds=[Le.ACETOIN,Le.CAPSAICIN,Le.ZITRONENSÄURE,Le.ESSIGESTER,Le.ISOVALERALDEHYD,Le.ÄPFELSÄURE,Le.PYRAZINVERBINDUNGEN,Le.PYRAZINVERBINDUNGEN],this.aromaGroup=ne.Röstige_Pysazine,this.color=re.Röstige_Pysazine,this.spice_group=Ee.Pikant,this.goes_well_with=[Se.Kohl,Se.Kartoffeln,Se.Pilze,Se.Reis,Se.Hülsenfrüchte,Se.Couscous,Se.Eier,Se.Milchprodukte,Se.Fisch,Se.Meeresfrüchte,Se.Fleisch,Se.Artischocken,Se.Gurke,Se.Pflaumen,Se.Paella,Se.Gulasch,Se.Oktopus,Se.Tomaten,Se.Petersilie,Se.Knoblauch,Se.Lorbeer,Se.Kokosnuss,Se.Limette,Se.Chili,Se.Käse]}}class ot{constructor(){this.name="Akazie",this.nameSymbol="Ak",this.description="",this.aromaCompounds=[Le.CITRAL,Le.PHENOLVERBINDUNGEN,Le.PYRAZINVERBINDUNGEN,Le.PYRAZINVERBINDUNGEN],this.aromaGroup=ne.Röstige_Pysazine,this.color=re.Röstige_Pysazine,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Kartoffeln,Se.Süßkartoffeln,Se.Pilze,Se.Reis,Se.Eier,Se.Fisch,Se.Rind,Se.Hühnchen,Se.Lamm,Se.Nüsse,Se.Schokolade,Se.Kaffee,Se.Sahne,Se.Schokolade,Se.Pflaumen,Se.Ingwer,Se.Cashewnüsse,Se.Rotwein,Se.Bananen,Se.Kokosnuss]}}class lt{constructor(){this.name="Sesam",this.nameSymbol="Sm",this.description="",this.aromaCompounds=[Le.FURFURYLTHIOL_2,Le.HEXANAL,Le.PYRAZINVERBINDUNGEN,Le.PYRAZINVERBINDUNGEN,Le.SESAMOL],this.aromaGroup=ne.Röstige_Pysazine,this.color=re.Röstige_Pysazine,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Karotten,Se.Rote_Beete,Se.Kohl,Se.Bohnen,Se.Tofu,Se.Nudeln,Se.Käse,Se.Meeresfrüchte,Se.Hühnchen,Se.Aubergine,Se.Bananen,Se.Äpfel,Se.Zitrusfrüchte,Se.Steinfrüchte,Se.Tropische_Früchte,Se.Honig,Se.Sojasauce,Se.Reisessig,Se.Fisch,Se.Knoblauch,Se.Chili,Se.Zitronenschale,Se.Parmesan,Se.Tahini,Se.Aubergine,Se.Granatapfel]}}class ct{constructor(){this.name="Knoblauch",this.nameSymbol="Kn",this.description="",this.aromaCompounds=[Le.CAREN,Le.DIALLYLTRISULFID,Le.DIALLYLTRISULFID,Le.DIALLYDISULFID,Le.DIALLYDISULFID,Le.LIMONEN,Le.SABINEN],this.aromaGroup=ne.Schwefelverbindungen,this.color=re.Schwefelverbindungen,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Gemüse,Se.Trüffel,Se.Reis,Se.Hülsenfrüchte,Se.Ziegenkäse,Se.Butter,Se.Fleisch,Se.Fisch,Se.Meeresfrüchte,Se.Nüsse,Se.Curry,Se.Weißwein,Se.Ricotta,Se.Melone,Se.Käse,Se.Chili,Se.Bärlauch,Se.Grüne_Bohnen]}}class ht{constructor(){this.name="Asant",this.nameSymbol="As",this.description="",this.aromaCompounds=[Le.EUDESMOL,Le.FERULASÄURE,Le.OCIMENE,Le.PHELLANDREN,Le.PINENE,Le.SULFIDVERBINDUNGEN,Le.SULFIDVERBINDUNGEN],this.aromaGroup=ne.Schwefelverbindungen,this.color=re.Schwefelverbindungen,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Kohl,Se.Blumenkohl,Se.Okra,Se.Pilze,Se.Kartoffeln,Se.Karotten,Se.Spinat,Se.Koriander,Se.Minze,Se.Reis,Se.Hülsenfrüchte,Se.Lamm,Se.Hühnchen,Se.Fisch,Se.Dal,Se.Mango,Se.Chili,Se.Kreuzkümmel,Se.Grüner_Kardamom,Se.Limette,Se.Knoblauch,Se.Zwiebeln,Se.Petersilie,Se.Käse,Se.Lauch,Se.Senf,Se.Ingwer,Se.Zimt]}}class ut{constructor(){this.name="Curryblätter",this.nameSymbol="Cu",this.description="",this.aromaCompounds=[Le.CINEOL,Le.HEXANAL,Le.LIMONEN,Le.LINALOOL,Le.MYRCEN,Le.PHENYLETHANTHIOL,Le.PHENYLETHANTHIOL,Le.PINENE],this.aromaGroup=ne.Schwefelverbindungen,this.color=re.Schwefelverbindungen,this.spice_group=Ee.Aromatisch,this.goes_well_with=[Se.Gemüse,Se.Reis,Se.Hülsenfrüchte,Se.Eier,Se.Butter,Se.Hühnchen,Se.Lamm,Se.Fisch,Se.Meeresfrüchte,Se.Zitrusfrüchte,Se.Fladenbrot,Se.Curry,Se.Rührei,Se.Grüne_Papaya,Se.Pomelo,Se.Kürbis]}}class dt{constructor(){this.name="Senf",this.nameSymbol="Se",this.description="",this.aromaCompounds=[Le.ACETYL_PYRROLIN,Le.FURFURYLTHIOL,Le.ISOTHIOCYANATE,Le.ISOTHIOCYANATE,Le.ISOVALERALDEHYD,Le.METHYLBUTANAL,Le.PINENE],this.aromaGroup=ne.Schwefelverbindungen,this.color=re.Schwefelverbindungen,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Kohl,Se.Wurzelgemüse,Se.Spinat,Se.Eier,Se.Käse,Se.Hühnchen,Se.Schwein,Se.Rind,Se.Fisch,Se.Schalentiere,Se.Kaninchen,Se.Tomaten,Se.Curry,Se.Dal,Se.Limette,Se.Rote_Beete,Se.Blumenkohl,Se.Grüne_Bohnen,Se.Orange,Se.Haselnüsse,Se.Karotten,Se.Zitronenschale,Se.Dill,Se.Minze,Se.Papaya]}}class ft{constructor(){this.name="Paradieskörner",this.nameSymbol="Pk",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.GINGEROL,Le.HUMULON,Le.PARADOL,Le.PARADOL],this.aromaGroup=ne.Stechende_Verbindungen,this.color=re.Stechende_Verbindungen,this.spice_group=Ee.Pikant,this.goes_well_with=[Se.Schwarzer_Pfeffer,Se.Langer_Pfeffer,Se.Wurzelgemüse,Se.Kürbis,Se.Reis,Se.Bohnen,Se.Haferflocken,Se.Käse,Se.Sahne,Se.Fisch,Se.Fleisch,Se.Aubergine,Se.Tomaten,Se.Orange,Se.Pomelo,Se.Grapefruit,Se.Äpfel,Se.Erdnüsse,Se.Nelken,Se.Safran,Se.Ingwer,Se.Grüner_Kardamom,Se.Haselnüsse,Se.Knoblauch]}}class pt{constructor(){this.name="Schwarzer Pfeffer",this.nameSymbol="Pf",this.description="",this.aromaCompounds=[Le.LIMONEN,Le.LINALOOL,Le.MYRCEN,Le.PHELLANDREN,Le.PINENE,Le.PIPERIN,Le.PIPERIN,Le.ROTUNDONE],this.aromaGroup=ne.Stechende_Verbindungen,this.color=re.Stechende_Verbindungen,this.spice_group=Ee.Pikant,this.goes_well_with=[Se.Kartoffeln,Se.Fenchel,Se.Tofu,Se.Eier,Se.Käse,Se.Meeresfrüchte,Se.Fisch,Se.Hühnchen,Se.Lamm,Se.Innereien,Se.Tomaten,Se.Zitrusfrüchte,Se.Tropische_Früchte,Se.Steinfrüchte,Se.Erdbeeren,Se.Tintenfisch,Se.Zitrone,Se.Ananas,Se.Zitronengras,Se.Rotwein,Se.Rotweinessig,Se.Curry,Se.Ingwer,Se.Erbsen]}}class mt{constructor(){this.name="Szechuan Pfeffer",this.nameSymbol="Sz",this.description="",this.aromaCompounds=[Le.CINEOL,Le.GERANIOL,Le.LIMONEN,Le.LINALOOL,Le.MYRCEN,Le.SANSHOOL,Le.SANSHOOL,Le.TERPINEOL],this.aromaGroup=ne.Stechende_Verbindungen,this.color=re.Stechende_Verbindungen,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Kartoffeln,Se.Pilze,Se.Blattgemüse,Se.Tofu,Se.Nudeln,Se.Dan_Dan_Nudeln,Se.Eier,Se.Fleisch,Se.Fisch,Se.Schalentiere,Se.Gin_Tonic,Se.Zimt,Se.Pflaumen,Se.Süßkartoffeln,Se.Ente,Se.Pak_Choi,Se.Litschi,Se.Orangenblüten,Se.Gnocchi,Se.Chinakohl]}}class gt{constructor(){this.name="Ingwer",this.nameSymbol="In",this.description="",this.aromaCompounds=[Le.CINEOL,Le.CITRAL,Le.CURCUMIN,Le.GERANIOL,Le.GINGEROL,Le.GINGEROL,Le.LINALOOL,Le.SHOGAOL,Le.SHOGAOL,Le.ZINGIBEREN,Le.ZINGIBEREN],this.aromaGroup=ne.Stechende_Verbindungen,this.color=re.Stechende_Verbindungen,this.spice_group=Ee.Erding,this.goes_well_with=[Se.Kürbis,Se.Kohl,Se.Gemüse,Se.Rhabarbar,Se.Eier,Se.Milchprodukte,Se.Fisch,Se.Meeresfrüchte,Se.Schwein,Se.Tomaten,Se.Birne,Se.Tropische_Früchte,Se.Erdnüsse,Se.Sesam,Se.Dunkle_Schokolade,Se.Honig]}}class vt{constructor(){this.name="Chili",this.nameSymbol="Ch",this.description="",this.aromaCompounds=[Le.CAPSAICIN,Le.CAPSAICIN,Le.CAPSAICINOIDE,Le.ESTERVERBINDUNGEN,Le.FURFURAL,Le.HEXANAL,Le.LIMONEN,Le.PYRAZINVERBINDUNGEN],this.aromaGroup=ne.Stechende_Verbindungen,this.color=re.Stechende_Verbindungen,this.spice_group=Ee.Pikant,this.goes_well_with=[Se.Mais,Se.Süßkartoffeln,Se.Maniok,Se.Frischkäse,Se.Bananen,Se.Tomaten,Se.Avocado,Se.Gurke,Se.Fisch,Se.Tropische_Früchte,Se.Zitrusfrüchte,Se.Cashewnüsse,Se.Schokolade,Se.Kimchi,Se.Melone,Se.Feta,Se.Minze,Se.Kürbis,Se.Lotuswurzel,Se.Linsen,Se.Paprika]}}class yt{constructor(){this.name="Safran",this.nameSymbol="Sa",this.description="",this.aromaCompounds=[Le.CINEOL,Le.LANIERON,Le.PICROCROCIN,Le.PICROCROCIN,Le.PINENE,Le.SAFRANAL],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Lauch,Se.Pilze,Se.Spinat,Se.Kürbis,Se.Kartoffeln,Se.Karotten,Se.Fenchel,Se.Rhabarbar,Se.Reis,Se.Milchprodukte,Se.Fisch,Se.Schalentiere,Se.Kaninchen,Se.Hühnchen,Se.Tomaten,Se.Orange,Se.Mandeln,Se.Honig,Se.Weiße_Schokolade,Se.Sardinen,Se.Blumenkohl,Se.Pinienkerne,Se.Rosinen,Se.Fenchel,Se.Chili,Se.Zitronenschale,Se.Parmesan,Se.Sahne,Se.Schalotten,Se.Limette,Se.Papaya,Se.Käse]}}class Et{constructor(){this.name="Mohn",this.nameSymbol="Mo",this.description="",this.aromaCompounds=[Le.KAMPFER,Le.EUGENOL,Le.GYLKOSID_VERBINDUNGEN,Le.HEXANAL,Le.LIMONEN,Le.PENTYLFURAN,Le.PENTYLFURAN,Le.PHENOLVERBINDUNGEN,Le.PYRAZINVERBINDUNGEN,Le.VINYLAMYLKETON],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Wurzelgemüse,Se.Fenchel,Se.Käse,Se.Sahne,Se.Eier,Se.Fisch,Se.Hühnchen,Se.Zucchini,Se.Gurke,Se.Zitrusfrüchte,Se.Birne,Se.Mandeln,Se.Schokolade,Se.Gebäck,Se.Zitrone,Se.Karotten,Se.Knoblauch,Se.Walnüsse,Se.Gurke,Se.Pistazien,Se.Vanille,Se.Dunkle_Schokolade]}}class bt{constructor(){this.name="Ajowan",this.nameSymbol="Aj",this.description="",this.aromaCompounds=[Le.CYMOL,Le.MYRCEN,Le.PINENE,Le.TERPINENE,Le.THYMOL,Le.THYMOL],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Kartoffeln,Se.Blumenkohl,Se.Karotten,Se.Grüne_Bohnen,Se.Koriander,Se.Koriandersamen,Se.Spinat,Se.Reis,Se.Hühnchen,Se.Hülsenfrüchte,Se.Kichererbsen,Se.Eier,Se.Fisch,Se.Tomaten,Se.Linsen,Se.Zitronenschale,Se.Curryblätter,Se.Chili,Se.Mango,Se.Mais,Se.Feta,Se.Zuckererbsen,Se.Nüsse,Se.Buchweizen]}}class Nt{constructor(){this.name="Selleriesamen",this.nameSymbol="Si",this.description="",this.aromaCompounds=[Le.HUMULEN,Le.LIMONEN,Le.SEDANOLID,Le.SEDANOLID,Le.SELINENE],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Kartoffeln,Se.Käse,Se.Eier,Se.Fisch,Se.Rind,Se.Schwein,Se.Hühnchen,Se.Fisch,Se.Zucchini,Se.Curry,Se.Mangold,Se.Tahini,Se.Joghurt]}}class Lt{constructor(){this.name="Kurkuma",this.nameSymbol="Ku",this.description="",this.aromaCompounds=[Le.CINEOL,Le.CITRAL,Le.AR_TURMERON,Le.AR_TURMERON,Le.ZINGIBEREN],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Zitrisch,this.goes_well_with=[Se.Wurzelgemüse,Se.Aubergine,Se.Blattgemüse,Se.Spinat,Se.Ingwer,Se.Reis,Se.Hülsenfrüchte,Se.Eier,Se.Milchprodukte,Se.Fisch,Se.Lamm,Se.Schwein,Se.Tomaten,Se.Zitrusfrüchte,Se.Weiße_Schokolade,Se.Kartoffeln,Se.Pfeffer,Se.Tamarinde,Se.Datteln,Se.Muscheln,Se.Curryblätter,Se.Schalotten,Se.Knoblauch,Se.Weißwein,Se.Zitronenschale,Se.Chili,Se.Joghurt,Se.Honig,Se.Mandeln,Se.Pilze,Se.Äpfel,Se.Kokosnuss,Se.Kokosnusscreme,Se.Limette,Se.Kohl,Se.Bockshornklee,Se.Mais,Se.Curry]}}class St{constructor(){this.name="Bockshornklee",this.nameSymbol="Bo",this.description="",this.aromaCompounds=[Le.CARYOPHYLLENE,Le.EUGENOL,Le.SOTOLON,Le.VINYLAMYLKETON],this.aromaGroup=ne.Einzigartige_Stoffe,this.color=re.Einzigartige_Stoffe,this.spice_group=Ee.Scharf,this.goes_well_with=[Se.Süßkartoffeln,Se.Kartoffeln,Se.Kürbis,Se.Kohl,Se.Grüne_Bohnen,Se.Hülsenfrüchte,Se.Sahne,Se.Käse,Se.Joghurt,Se.Fisch,Se.Lamm,Se.Rind,Se.Tomaten,Se.Zitrusfrüchte,Se.Walnüsse,Se.Fladenbrot,Se.Rosinen,Se.Zimt,Se.Kreuzkümmel,Se.Fenchel,Se.Koriander,Se.Curry,Se.Schwarzer_Pfeffer,Se.Senf]}}function At(e,t,n){const i=e.slice();return i[15]=t[n],i}function kt(e,t,n){const i=e.slice();return i[18]=t[n],i}function wt(e){let t,n,i;function r(t){e[9](t)}let s={spices:e[5],onChange:e[6]};return void 0!==e[1]&&(s.selectedSpice=e[1]),t=new me({props:s}),A.push((()=>B(t,"selectedSpice",r))),{c(){z(t.$$.fragment)},m(e,n){Y(t,e,n),i=!0},p(e,i){const r={};!n&&2&i&&(n=!0,r.selectedSpice=e[1],C((()=>n=!1))),t.$set(r)},i(e){i||(F(t.$$.fragment,e),i=!0)},o(e){K(t.$$.fragment,e),i=!1},d(e){U(t,e)}}}function Ot(e){let t,n,i;function r(t){e[10](t)}let s={spices:e[5],onChange:e[6]};return void 0!==e[2]&&(s.selectedSpice=e[2]),t=new me({props:s}),A.push((()=>B(t,"selectedSpice",r))),{c(){z(t.$$.fragment)},m(e,n){Y(t,e,n),i=!0},p(e,i){const r={};!n&&4&i&&(n=!0,r.selectedSpice=e[2],C((()=>n=!1))),t.$set(r)},i(e){i||(F(t.$$.fragment,e),i=!0)},o(e){K(t.$$.fragment,e),i=!1},d(e){U(t,e)}}}function _t(e){let t;return{c(){t=u("div"),t.textContent="Deine Gewürzmischung:",m(t,"class","largerText svelte-1k7tcdv")},m(e,n){l(e,t,n)},d(e){e&&c(t)}}}function Rt(e){let t,n;return t=new he({props:{shape:Math.random(),spice:e[18],onClick:e[8]}}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},p(e,n){const i={};16&n&&(i.spice=e[18]),t.$set(i)},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Ct(e){let t;return{c(){t=u("div"),t.textContent="Versuch doch mal...",m(t,"class","largerText svelte-1k7tcdv")},m(e,n){l(e,t,n)},d(e){e&&c(t)}}}function Pt(e){let t,n;return t=new he({props:{shape:Math.random(),spice:e[15],onClick:e[7]}}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},p(e,n){const i={};8&n&&(i.spice=e[15]),t.$set(i)},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Tt(e){let t,n,i,r,s,a,d,p,g,v,y,E,b,N,L,S,A,k,w,O,_,R;s=new ve({}),d=new oe({props:{shape:Math.random(),spice:e[1],$$slots:{default:[wt]},$$scope:{ctx:e}}}),g=new oe({props:{shape:Math.random(),spice:e[2],$$slots:{default:[Ot]},$$scope:{ctx:e}}}),b=new ee({props:{data:e[0],colors:[re.Süß_wärmende_Phenole,re.Wärmende_Terpene,re.Duftende_Terpene,re.Erdige_Terpene,re.Durchdringende_Terpene,re.Zitrustönige_Terpene,re.Süßsaure_Säuren,re.Fruchtige_Aldehyde,re.Röstige_Pysazine,re.Schwefelverbindungen,re.Stechende_Verbindungen,re.Einzigartige_Stoffe],type:"donut",maxSlices:"20",height:260,animate:!0,truncateLegends:!1,valuesOverPoints:!0,axisOptions:{xAxisMode:"tick",yAxisMode:"tick",xIsSeries:!1}}});let C=0!==e[4].length&&_t(),P=e[4],T=[];for(let t=0;t<P.length;t+=1)T[t]=Rt(kt(e,P,t));const I=e=>K(T[e],1,1,(()=>{T[e]=null}));let x=0!==e[3].length&&Ct(),M=e[3],D=[];for(let t=0;t<M.length;t+=1)D[t]=Pt(At(e,M,t));const B=e=>K(D[e],1,1,(()=>{D[e]=null}));return{c(){t=u("div"),n=u("div"),i=u("div"),r=u("div"),z(s.$$.fragment),a=f(),z(d.$$.fragment),p=f(),z(g.$$.fragment),v=f(),y=u("div"),E=u("div"),z(b.$$.fragment),N=f(),L=u("div"),C&&C.c(),S=f(),A=u("div");for(let e=0;e<T.length;e+=1)T[e].c();k=f(),w=u("div"),x&&x.c(),O=f(),_=u("div");for(let e=0;e<D.length;e+=1)D[e].c();m(r,"class","hideOnMobile svelte-1k7tcdv"),m(E,"class","chartBox svelte-1k7tcdv"),m(y,"class","hideOnMobile svelte-1k7tcdv"),m(i,"class","flex svelte-1k7tcdv"),m(n,"class","scrollableContainer svelte-1k7tcdv"),m(A,"class","flex svelte-1k7tcdv"),m(L,"class","scrollableContainer svelte-1k7tcdv"),m(_,"class","flex svelte-1k7tcdv"),m(w,"class","scrollableContainer svelte-1k7tcdv"),m(t,"class","verticalGrid svelte-1k7tcdv")},m(e,c){l(e,t,c),o(t,n),o(n,i),o(i,r),Y(s,r,null),o(i,a),Y(d,i,null),o(i,p),Y(g,i,null),o(i,v),o(i,y),o(y,E),Y(b,E,null),o(t,N),o(t,L),C&&C.m(L,null),o(L,S),o(L,A);for(let e=0;e<T.length;e+=1)T[e]&&T[e].m(A,null);o(t,k),o(t,w),x&&x.m(w,null),o(w,O),o(w,_);for(let e=0;e<D.length;e+=1)D[e]&&D[e].m(_,null);R=!0},p(e,[t]){const n={};2&t&&(n.spice=e[1]),2097154&t&&(n.$$scope={dirty:t,ctx:e}),d.$set(n);const i={};4&t&&(i.spice=e[2]),2097156&t&&(i.$$scope={dirty:t,ctx:e}),g.$set(i);const r={};if(1&t&&(r.data=e[0]),b.$set(r),0!==e[4].length?C||(C=_t(),C.c(),C.m(L,S)):C&&(C.d(1),C=null),272&t){let n;for(P=e[4],n=0;n<P.length;n+=1){const i=kt(e,P,n);T[n]?(T[n].p(i,t),F(T[n],1)):(T[n]=Rt(i),T[n].c(),F(T[n],1),T[n].m(A,null))}for(H(),n=P.length;n<T.length;n+=1)I(n);G()}if(0!==e[3].length?x||(x=Ct(),x.c(),x.m(w,O)):x&&(x.d(1),x=null),136&t){let n;for(M=e[3],n=0;n<M.length;n+=1){const i=At(e,M,n);D[n]?(D[n].p(i,t),F(D[n],1)):(D[n]=Pt(i),D[n].c(),F(D[n],1),D[n].m(_,null))}for(H(),n=M.length;n<D.length;n+=1)B(n);G()}},i(e){if(!R){F(s.$$.fragment,e),F(d.$$.fragment,e),F(g.$$.fragment,e),F(b.$$.fragment,e);for(let e=0;e<P.length;e+=1)F(T[e]);for(let e=0;e<M.length;e+=1)F(D[e]);R=!0}},o(e){K(s.$$.fragment,e),K(d.$$.fragment,e),K(g.$$.fragment,e),K(b.$$.fragment,e),T=T.filter(Boolean);for(let e=0;e<T.length;e+=1)K(T[e]);D=D.filter(Boolean);for(let e=0;e<D.length;e+=1)K(D[e]);R=!1},d(e){e&&c(t),U(s),U(d),U(g),U(b),C&&C.d(),h(T,e),x&&x.d(),h(D,e)}}}function It(e,t,n){let i=[new bt,new ot,new Qe,new et,new _e,new Ge,new ht,new rt,new St,new ke,new vt,new ut,new He,new Ce,new je,new we,new We,new gt,new it,new st,new ct,new ze,new Ye,new De,new Lt,new Te,new Fe,new Et,new qe,new Ve,new $e,new Me,new xe,new at,new ft,new Oe,new Be,new yt,new Ze,new pt,new Ue,new Nt,new dt,new lt,new Pe,new tt,new Re,new mt,new nt,new Ie,new Ke,new Ae,new Je,new Xe],r={labels:[],datasets:[{values:[]}]},s=[],a=new be,o=new be,l=[],c=[];function h(e){if(c.forEach((t=>{if(t.name===e.name)return!0})),a.name===e.name||o.name===e.name)return!0}function u(){n(3,l=[]);let e=[];c.forEach((t=>{e.push({spice:t,compounds:[...t.aromaCompounds]})}));let t=[];i.forEach((n=>{let i=0,r=0;n.aromaCompounds.forEach((t=>{a.aromaCompounds.forEach((e=>{t===e&&i++})),o.aromaCompounds.forEach((e=>{t===e&&i++})),e.forEach((e=>{e.compounds.forEach((e=>{t===e&&r++}))}))})),t.push({baseMatches:i,selectedMatches:r})}));let r=[];for(let n=0;n<i.length;n++){let s=i[n],a=s.aromaCompounds.length-t[n].baseMatches;console.log(t[n]),t[n].baseMatches<2||h(s)?r.push({spice:s,potential:-100}):(s.aromaCompounds.forEach((t=>{e.forEach((e=>{e.spice.aromaCompounds.forEach((e=>{t===e&&a--}))}))})),r.push({spice:s,potential:a,matches:t[n].selectedMatches+t[n].baseMatches}))}r.sort((function(e,t){return t.potential-e.potential}));let s=0;for(let e=0;e<r.length;e++)if(-100===r[e].potential){s=e;break}n(3,l=r.slice(0,s));for(let e=0;e<l.length;e++){n(3,l[e]=r[e].spice,l);let t=r[e].potential,i=r[e].matches;n(3,l[e].description=t+" Ergänzend | "+i+" Verstärkend",l)}}function d(){let e=[...s,...c],t=[0,0,0,0,0,0,0,0,0,0,0,0];return e.forEach((e=>{e.aromaGroup===ne.Süß_wärmende_Phenole&&(t[0]+=1),e.aromaGroup===ne.Wärmende_Terpene&&(t[1]+=1),e.aromaGroup===ne.Duftende_Terpene&&(t[2]+=1),e.aromaGroup===ne.Erdige_Terpene&&(t[3]+=1),e.aromaGroup===ne.Durchdringende_Terpene&&(t[4]+=1),e.aromaGroup===ne.Zitrustönige_Terpene&&(t[5]+=1),e.aromaGroup===ne.Süßsaure_Säuren&&(t[6]+=1),e.aromaGroup===ne.Fruchtige_Aldehyde&&(t[7]+=1),e.aromaGroup===ne.Röstige_Pysazine&&(t[8]+=1),e.aromaGroup===ne.Schwefelverbindungen&&(t[9]+=1),e.aromaGroup===ne.Stechende_Verbindungen&&(t[10]+=1),e.aromaGroup===ne.Einzigartige_Stoffe&&(t[11]+=1)})),{labels:[ne.Süß_wärmende_Phenole,ne.Wärmende_Terpene,ne.Duftende_Terpene,ne.Erdige_Terpene,ne.Durchdringende_Terpene,ne.Zitrustönige_Terpene,ne.Süßsaure_Säuren,ne.Fruchtige_Aldehyde,ne.Röstige_Pysazine,ne.Schwefelverbindungen,ne.Stechende_Verbindungen,ne.Einzigartige_Stoffe],datasets:[{values:t}]}}return[r,a,o,l,c,i,function(){n(4,c=[]),s[0]=a,s[1]=o,u(),n(0,r=d())},function(e){n(4,c=c.concat([e])),u(),n(0,r=d())},function(e){var t;n(4,(t=e,c=c.filter((function(e){return e!=t})))),u(),n(0,r=d())},function(e){a=e,n(1,a)},function(e){o=e,n(2,o)}]}class xt extends W{constructor(e){super(),Z(this,e,It,Tt,s,{})}}function Mt(t){let n,i,r,s,a;return{c(){n=u("button"),i=u("dev"),r=d(t[0]),m(i,"class","text svelte-1qhx1ep"),m(n,"class","background-container svelte-1qhx1ep"),v(n,"background-color",t[3]),v(n,"border-color",t[2])},m(e,c){l(e,n,c),o(n,i),o(i,r),s||(a=p(n,"click",t[6]),s=!0)},p(e,[t]){1&t&&g(r,e[0]),8&t&&v(n,"background-color",e[3]),4&t&&v(n,"border-color",e[2])},i:e,o:e,d(e){e&&c(n),s=!1,a()}}}function Dt(e,t,n){let{name:i}=t,{color:r}=t,{onClick:s}=t,a=r,o="";function l(){""==a?(n(2,a=r),n(3,o="")):(n(3,o=a),n(2,a=""))}return e.$$set=e=>{"name"in e&&n(0,i=e.name),"color"in e&&n(5,r=e.color),"onClick"in e&&n(1,s=e.onClick)},[i,s,a,o,l,r,()=>{s(i),l()}]}class Ht extends W{constructor(e){super(),Z(this,e,Dt,Mt,s,{name:0,color:5,onClick:1})}}class Gt{constructor(){this.synonyms={"Gemüse":[],Pilze:[],Reis:[],"Hülsenfrüchte":[],Linsen:[],Milchprodukte:[Se.Käse,Se.Weichkäse,Se.Frischkäse,Se.Hüttenkäse,Se.Ziegenkäse,Se.Joghurt,Se.Sahne,Se.Butter,Se.Parmesan,Se.Ricotta],"Hühnchen":[],Tomaten:[],"Steinfrüchte":[Se.Kirschen,Se.Pflaumen,Se.Pfirsiche,Se.Aprikosen],"Äpfel":[],Feigen:[],"Dunkle Schokolade":[Se.Schokolade],"Brühe":[],Zwiebelsuppe:[Se.Zwiebeln],Fischpastete:[],"Ragù":[],Pfirsiche:[],Pflaumen:[],Zitronenschale:[Se.Zitrone],Eier:[],Butter:[],Lamm:[],Fisch:[Se.Lachs,Se.Schalentiere,Se.Thunfisch,Se.Muscheln,Se.Tintenfisch,Se.Fischpastete,Se.Garnelen,Se.Oktopus],"Meeresfrüchte":[],"Zitrusfrüchte":[],Fladenbrot:[],Curry:[],"Rührei":[],"Grüne Papaya":[],Pomelo:[],"Kürbis":[],Kartoffeln:[],"Rote Beete":[],Kohl:[Se.Rotkohl,Se.Weißkohl,Se.Chinakohl,Se.Rosenkohl,Se.Kohlgemüse],Artischocken:[],"Wurzelgemüse":[Se.Karotten,"Möhren"],Ingwer:[],Oliven:[],Salbei:[],"Käse":[],Wildfleisch:[],Ente:[],Hase:[],Gans:[],Wachteln:[],"Schwarze Johannisbeeren":[],"Getrocknete Früchte":[],Lachs:[],Kaninchen:[],Makrele:[],Tiramisu:[],Bambussprossen:[],Lotuswurzel:[],Nudeln:[Se.Dan_Dan_Nudeln],Schwein:[],Rind:[],Kokosnuss:[Se.Kokosnusscreme],"Tropische Früchte":[],Muscheln:[],Schalotten:[],Knoblauch:[],Chili:[],Galgant:[],Kokosnusscreme:[Se.Kokosnuss],"Thai-Basilikum":[],Garnelen:[],Kebab:[],Koriander:[],Karotten:["Möhren"],Paprika:[],Gurke:[],Melone:[],Beeren:[],Mandeln:[],Kaffee:[],Pistazien:[],Rettich:[],Himbeeren:[],Whiskey:[],Zimt:[],Limette:[],Honig:[],"Kümmel":[],Couscous:[],Datteln:[],Ochsenschwanz:[],Rhabarbar:[],Birne:[],Pho:[],"Fünf_Gewürz_Pulver":[],Biryani:[],"Garam Masala":[],"Schwarzerkümmel":[],Bohnensprossen:[],Schweinebauch:[],Sesam:[],Vanille:[],Blumenkohl:[],Aubergine:[],Okra:[],Schalentiere:[],Pakoras:[],Samosas:[],Mango:[],Koriandersamen:[],"Curryblätter":[],Senf:[],Zitronengras:[],Brokkoli:[],Spinat:[],Kichererbsen:[],Avocado:[],"Walnüsse":[],"Kreuzkümmel":[],Granatapfel:[],Orange:[Se.Orangenblüten],"Blattgemüse":[],Staudensellerie:[Se.Knollensellerie],Fenchel:[],"Grüne Bohnen":[],Lavendel:[],Blutwurst:[],Thunfisch:[],"Glühwein":[],Gin:[Se.Gin_Tonic],Dal:[Se.Linsen],"Jalapeños":[Se.Chili],Minze:[],Oktopus:[],Tintenfisch:[],Rose:[],"Nüsse":[],Dill:[],Cayennepfeffer:[],Safran:[],"Weiße Bohnen":[],"Erdnüsse":[],Tofu:[],Fleisch:[Se.Wildfleisch,Se.Schwein,Se.Schweinebauch,Se.Rind,Se.Hühnchen,Se.Ochsenschwanz,Se.Wachteln,Se.Kaninchen,Se.Blutwurst,Se.Kalb,Se.Lamm,Se.Kebab],"Dan-Dan-Nudeln":[],"Gin & Tonic":[Se.Gin],"Süßkartoffeln":[],"Pak Choi":[],Litschi:[],"Orangenblüten":[Se.Orange],Gnocchi:[],Chinakohl:[],Joghurt:[],Feta:[],Rotweinessig:[],Mais:[],Tahini:[],Ananas:[],Bulgar:[],Zwiebeln:[],"Kohlgemüse":[Se.Kohl,Se.Rotkohl,Se.Weißkohl,Se.Chinakohl,Se.Rosenkohl],Erbsen:[],Speck:[],Karamell:[],Thymian:[],Sahne:[],Bananen:[],Erdbeeren:[],"Ziegenkäse":[],Kirschen:[],"Weißkohl":[],"Weichkäse":[],Shortbread:[],Sauerkraut:[],Harissa:[],"Haselnüsse":[],Krautsalat:[],Zucchini:[],Aprikosen:[],Falafel:[],Spargel:[],"Hüttenkäse":[],"Weißweinessig":[],Zitrone:[Se.Zitronenschale],Kalb:[],Gratins:[],Parmesan:[],Ricotta:[],Schokolade:[Se.Weiße_Schokolade,Se.Dunkle_Schokolade,Se.Kakao],Lauch:[],"Weiße Schokolade":[Se.Schokolade],Sardinen:[],Pinienkerne:[],Rosinen:[],Sojasauce:[],Reisessig:[],"Weißwein":[],Rotwein:[],Bockshornklee:[],Petersilie:[],Estragon:[],Haferflocken:[],Mangold:[],"Cashewnüsse":[],"Rosenblätter":[],Rosenkohl:[],Rosmarin:[],Passionsfrucht:[],"Grüner Kardamom":[],Innereien:[],Maniok:[],"Frischkäse":[],Kimchi:[],"Liebstöckel":[],Trauben:[],"Schwarzer Pfeffer":[],"Langer Pfeffer":[],Grapefruit:[],Nelken:[],Paella:[],Gulasch:[],Lorbeer:[],Zuckererbsen:[],Buchweizen:[],"Trüffel":[],"Bärlauch":[],Tonkabohnen:[],Mozzarella:[],Kurkuma:[],Chicoree:[],Risotto:[],Knollensellerie:[Se.Staudensellerie],Rotkohl:[],Rum:[],Schinken:[],Pastinaken:[],Rucola:[],Tamarinde:[],Papadam:[],Bohnen:["Kidneybohnen",Se.Weiße_Bohnen,Se.Grüne_Bohnen],Basilikum:[],Papaya:[],"Gebäck":[],Muskatnuss:[],Piment:[],Pfeffer:[Se.Langer_Pfeffer,Se.Schwarzer_Pfeffer,Se.Cayennepfeffer],Kakao:[Se.Weiße_Schokolade,Se.Dunkle_Schokolade,Se.Kakao]}}}function Ft(e,t,n){const i=e.slice();return i[12]=t[n],i}function Kt(e,t,n){const i=e.slice();return i[15]=t[n],i}function Bt(e,t,n){const i=e.slice();return i[15]=t[n],i}function zt(e){let t,n;return t=new Ht({props:{name:Se[e[15]],color:"",onClick:e[4]}}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},p(e,n){const i={};4&n&&(i.name=Se[e[15]]),t.$set(i)},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Yt(e){let t,n;return t=new Ht({props:{name:e[15],color:"",onClick:e[3]}}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},p(e,n){const i={};2&n&&(i.name=e[15]),t.$set(i)},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Ut(e){let t,n;return t=new Ht({props:{name:e[12].name,color:e[12].color,onClick:Wt}}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},p(e,n){const i={};1&n&&(i.name=e[12].name),1&n&&(i.color=e[12].color),t.$set(i)},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function $t(e){let t,n,i,r,s,a,d,g,v,y,E,b,N,L,S,A,k,w,O,_=e[2],R=[];for(let t=0;t<_.length;t+=1)R[t]=zt(Bt(e,_,t));const C=e=>K(R[e],1,1,(()=>{R[e]=null}));let P=e[1],T=[];for(let t=0;t<P.length;t+=1)T[t]=Yt(Kt(e,P,t));const I=e=>K(T[e],1,1,(()=>{T[e]=null}));let x=e[0],M=[];for(let t=0;t<x.length;t+=1)M[t]=Ut(Ft(e,x,t));const D=e=>K(M[e],1,1,(()=>{M[e]=null}));return{c(){t=u("div"),n=u("div"),i=u("input"),r=f(),s=u("div"),a=u("dev");for(let e=0;e<R.length;e+=1)R[e].c();d=f(),g=u("div"),v=u("dev"),v.textContent="Das kochst du:",y=f(),E=u("dev");for(let e=0;e<T.length;e+=1)T[e].c();b=f(),N=u("div"),L=u("dev"),L.textContent="Probier diese Gewürze:",S=f(),A=u("dev");for(let e=0;e<M.length;e+=1)M[e].c();m(i,"type","text"),m(i,"placeholder","Mit was kochst du?"),m(i,"class","svelte-irfurk"),m(a,"class","flex svelte-irfurk"),m(s,"class","scrollableContainer svelte-irfurk"),m(v,"class","section-text svelte-irfurk"),m(E,"class","flex svelte-irfurk"),m(g,"class","scrollableContainer svelte-irfurk"),m(L,"class","section-text svelte-irfurk"),m(A,"class","flex svelte-irfurk"),m(N,"class","scrollableContainer svelte-irfurk"),m(t,"class","vertical-grid svelte-irfurk")},m(c,h){l(c,t,h),o(t,n),o(n,i),o(n,r),o(n,s),o(s,a);for(let e=0;e<R.length;e+=1)R[e]&&R[e].m(a,null);o(t,d),o(t,g),o(g,v),o(g,y),o(g,E);for(let e=0;e<T.length;e+=1)T[e]&&T[e].m(E,null);o(t,b),o(t,N),o(N,L),o(N,S),o(N,A);for(let e=0;e<M.length;e+=1)M[e]&&M[e].m(A,null);k=!0,w||(O=p(i,"input",e[5]),w=!0)},p(e,[t]){if(20&t){let n;for(_=e[2],n=0;n<_.length;n+=1){const i=Bt(e,_,n);R[n]?(R[n].p(i,t),F(R[n],1)):(R[n]=zt(i),R[n].c(),F(R[n],1),R[n].m(a,null))}for(H(),n=_.length;n<R.length;n+=1)C(n);G()}if(10&t){let n;for(P=e[1],n=0;n<P.length;n+=1){const i=Kt(e,P,n);T[n]?(T[n].p(i,t),F(T[n],1)):(T[n]=Yt(i),T[n].c(),F(T[n],1),T[n].m(E,null))}for(H(),n=P.length;n<T.length;n+=1)I(n);G()}if(1&t){let n;for(x=e[0],n=0;n<x.length;n+=1){const i=Ft(e,x,n);M[n]?(M[n].p(i,t),F(M[n],1)):(M[n]=Ut(i),M[n].c(),F(M[n],1),M[n].m(A,null))}for(H(),n=x.length;n<M.length;n+=1)D(n);G()}},i(e){if(!k){for(let e=0;e<_.length;e+=1)F(R[e]);for(let e=0;e<P.length;e+=1)F(T[e]);for(let e=0;e<x.length;e+=1)F(M[e]);k=!0}},o(e){R=R.filter(Boolean);for(let e=0;e<R.length;e+=1)K(R[e]);T=T.filter(Boolean);for(let e=0;e<T.length;e+=1)K(T[e]);M=M.filter(Boolean);for(let e=0;e<M.length;e+=1)K(M[e]);k=!1},d(e){e&&c(t),h(R,e),h(T,e),h(M,e),w=!1,O()}}}function Zt(e,t){for(let n=0;n<t.length;n++)if(e==t[n])return!0;return!1}const Wt=()=>{};function Vt(e,t,n){let i=[new bt,new ot,new Qe,new et,new _e,new Ge,new ht,new rt,new St,new ke,new vt,new ut,new He,new Ce,new je,new we,new We,new gt,new it,new st,new ct,new ze,new Ye,new De,new Lt,new Te,new Fe,new Et,new qe,new Ve,new $e,new Me,new xe,new at,new ft,new Oe,new Be,new yt,new Ze,new pt,new Ue,new Nt,new dt,new lt,new Pe,new tt,new Re,new mt,new nt,new Ie,new Ke,new Ae,new Je,new Xe];function r(e,t){return t=(t=t.filter((function(t){return Se[t]!==e}))).filter((function(t){return t!==e}))}function s(){n(0,l=i.filter((function(e){let t,n=c.length,i=0;for(let n=0;n<e.goes_well_with.length;n++)t=e.goes_well_with[n],Zt(t,c)&&(i+=1);return i/n>.3})))}let a=Object.keys(Se);a=r(Se.None,a);let o=new Gt,l=i,c=[],h=a;return[l,c,h,function(e){n(1,c=r(e,c)),a.push(e),s()},function(e){c.push(e),a=r(e,a),n(2,h=r(e,h)),n(1,c),s()},function(e){let t=e.srcElement.value;n(2,h=a.filter((function(e){return function(e,t){if(t.toLowerCase().includes(e.toLowerCase()))return!0;let n=o.synonyms[t];if(!n)return!1;for(let t=0;t<n.length;t++)if(n[t].toLowerCase().includes(e.toLowerCase()))return!0;return!1}(t,Se[e])}))),n(2,h=h.sort()),""==t&&n(2,h=[])}]}class jt extends W{constructor(e){super(),Z(this,e,Vt,$t,s,{})}}function qt(e){let t,n;return t=new xt({}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Xt(e){let t,n;return t=new jt({}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Jt(e){let t,n;return t=new xt({}),{c(){z(t.$$.fragment)},m(e,i){Y(t,e,i),n=!0},i(e){n||(F(t.$$.fragment,e),n=!0)},o(e){K(t.$$.fragment,e),n=!1},d(e){U(t,e)}}}function Qt(e){let t,n,r,s,a,h,g,y,E,b,N,L,S,A,k;const w=[Jt,Xt,qt],O=[];function _(e,t){return"Blends"===e[0]?0:"SpiceMyPlate"===e[0]?1:2}return s=_(e),a=O[s]=w[s](e),{c(){t=u("div"),n=u("div"),r=u("div"),a.c(),h=f(),g=u("div"),y=u("button"),E=d("Blends"),b=f(),N=u("button"),L=d("Spice Up"),m(r,"class","container svelte-nlgd7x"),m(y,"class","button svelte-nlgd7x"),v(y,"background-color",re.Einzigartige_Stoffe),m(N,"class","button svelte-nlgd7x"),v(N,"background-color",re.Durchdringende_Terpene),m(g,"class","horizontal-grid svelte-nlgd7x"),m(n,"class","vertical-grid svelte-nlgd7x"),m(t,"class","page-sized svelte-nlgd7x")},m(i,a){l(i,t,a),o(t,n),o(n,r),O[s].m(r,null),o(n,h),o(n,g),o(g,y),o(y,E),o(g,b),o(g,N),o(N,L),S=!0,A||(k=[p(y,"click",e[1]),p(N,"click",e[2])],A=!0)},p(e,[t]){let n=s;s=_(e),s!==n&&(H(),K(O[n],1,1,(()=>{O[n]=null})),G(),a=O[s],a||(a=O[s]=w[s](e),a.c()),F(a,1),a.m(r,null))},i(e){S||(F(a),S=!0)},o(e){K(a),S=!1},d(e){e&&c(t),O[s].d(),A=!1,i(k)}}}function en(e,t,n){let i="SpiceMyPlate";return[i,function(){n(0,i="Blends")},function(){n(0,i="SpiceMyPlate")}]}return new class extends W{constructor(e){super(),Z(this,e,en,Qt,s,{})}}({target:document.body})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+var app = (function () {
+	'use strict';
+
+	/** @returns {void} */
+	function noop() {}
+
+	/**
+	 * @template T
+	 * @template S
+	 * @param {T} tar
+	 * @param {S} src
+	 * @returns {T & S}
+	 */
+	function assign(tar, src) {
+		// @ts-ignore
+		for (const k in src) tar[k] = src[k];
+		return /** @type {T & S} */ (tar);
+	}
+
+	/** @returns {void} */
+	function add_location(element, file, line, column, char) {
+		element.__svelte_meta = {
+			loc: { file, line, column, char }
+		};
+	}
+
+	function run(fn) {
+		return fn();
+	}
+
+	function blank_object() {
+		return Object.create(null);
+	}
+
+	/**
+	 * @param {Function[]} fns
+	 * @returns {void}
+	 */
+	function run_all(fns) {
+		fns.forEach(run);
+	}
+
+	/**
+	 * @param {any} thing
+	 * @returns {thing is Function}
+	 */
+	function is_function(thing) {
+		return typeof thing === 'function';
+	}
+
+	/** @returns {boolean} */
+	function safe_not_equal(a, b) {
+		return a != a ? b == b : a !== b || (a && typeof a === 'object') || typeof a === 'function';
+	}
+
+	/** @returns {boolean} */
+	function is_empty(obj) {
+		return Object.keys(obj).length === 0;
+	}
+
+	function create_slot(definition, ctx, $$scope, fn) {
+		if (definition) {
+			const slot_ctx = get_slot_context(definition, ctx, $$scope, fn);
+			return definition[0](slot_ctx);
+		}
+	}
+
+	function get_slot_context(definition, ctx, $$scope, fn) {
+		return definition[1] && fn ? assign($$scope.ctx.slice(), definition[1](fn(ctx))) : $$scope.ctx;
+	}
+
+	function get_slot_changes(definition, $$scope, dirty, fn) {
+		if (definition[2] && fn) {
+			const lets = definition[2](fn(dirty));
+			if ($$scope.dirty === undefined) {
+				return lets;
+			}
+			if (typeof lets === 'object') {
+				const merged = [];
+				const len = Math.max($$scope.dirty.length, lets.length);
+				for (let i = 0; i < len; i += 1) {
+					merged[i] = $$scope.dirty[i] | lets[i];
+				}
+				return merged;
+			}
+			return $$scope.dirty | lets;
+		}
+		return $$scope.dirty;
+	}
+
+	/** @returns {void} */
+	function update_slot_base(
+		slot,
+		slot_definition,
+		ctx,
+		$$scope,
+		slot_changes,
+		get_slot_context_fn
+	) {
+		if (slot_changes) {
+			const slot_context = get_slot_context(slot_definition, ctx, $$scope, get_slot_context_fn);
+			slot.p(slot_context, slot_changes);
+		}
+	}
+
+	/** @returns {any[] | -1} */
+	function get_all_dirty_from_scope($$scope) {
+		if ($$scope.ctx.length > 32) {
+			const dirty = [];
+			const length = $$scope.ctx.length / 32;
+			for (let i = 0; i < length; i++) {
+				dirty[i] = -1;
+			}
+			return dirty;
+		}
+		return -1;
+	}
+
+	/** @type {typeof globalThis} */
+	const globals =
+		typeof window !== 'undefined'
+			? window
+			: typeof globalThis !== 'undefined'
+			? globalThis
+			: // @ts-ignore Node typings have this
+			  global;
+
+	/**
+	 * @param {Node} target
+	 * @param {Node} node
+	 * @returns {void}
+	 */
+	function append(target, node) {
+		target.appendChild(node);
+	}
+
+	/**
+	 * @param {Node} target
+	 * @param {Node} node
+	 * @param {Node} [anchor]
+	 * @returns {void}
+	 */
+	function insert(target, node, anchor) {
+		target.insertBefore(node, anchor || null);
+	}
+
+	/**
+	 * @param {Node} node
+	 * @returns {void}
+	 */
+	function detach(node) {
+		if (node.parentNode) {
+			node.parentNode.removeChild(node);
+		}
+	}
+
+	/**
+	 * @returns {void} */
+	function destroy_each(iterations, detaching) {
+		for (let i = 0; i < iterations.length; i += 1) {
+			if (iterations[i]) iterations[i].d(detaching);
+		}
+	}
+
+	/**
+	 * @template {keyof HTMLElementTagNameMap} K
+	 * @param {K} name
+	 * @returns {HTMLElementTagNameMap[K]}
+	 */
+	function element(name) {
+		return document.createElement(name);
+	}
+
+	/**
+	 * @param {string} data
+	 * @returns {Text}
+	 */
+	function text(data) {
+		return document.createTextNode(data);
+	}
+
+	/**
+	 * @returns {Text} */
+	function space() {
+		return text(' ');
+	}
+
+	/**
+	 * @param {EventTarget} node
+	 * @param {string} event
+	 * @param {EventListenerOrEventListenerObject} handler
+	 * @param {boolean | AddEventListenerOptions | EventListenerOptions} [options]
+	 * @returns {() => void}
+	 */
+	function listen(node, event, handler, options) {
+		node.addEventListener(event, handler, options);
+		return () => node.removeEventListener(event, handler, options);
+	}
+
+	/**
+	 * @param {Element} node
+	 * @param {string} attribute
+	 * @param {string} [value]
+	 * @returns {void}
+	 */
+	function attr(node, attribute, value) {
+		if (value == null) node.removeAttribute(attribute);
+		else if (node.getAttribute(attribute) !== value) node.setAttribute(attribute, value);
+	}
+
+	/**
+	 * @param {Element} element
+	 * @returns {ChildNode[]}
+	 */
+	function children(element) {
+		return Array.from(element.childNodes);
+	}
+
+	/**
+	 * @returns {void} */
+	function set_input_value(input, value) {
+		input.value = value == null ? '' : value;
+	}
+
+	/**
+	 * @returns {void} */
+	function set_style(node, key, value, important) {
+		if (value == null) {
+			node.style.removeProperty(key);
+		} else {
+			node.style.setProperty(key, value, important ? 'important' : '');
+		}
+	}
+
+	/**
+	 * @returns {void} */
+	function select_option(select, value, mounting) {
+		for (let i = 0; i < select.options.length; i += 1) {
+			const option = select.options[i];
+			if (option.__value === value) {
+				option.selected = true;
+				return;
+			}
+		}
+		if (!mounting || value !== undefined) {
+			select.selectedIndex = -1; // no option should be selected
+		}
+	}
+
+	function select_value(select) {
+		const selected_option = select.querySelector(':checked');
+		return selected_option && selected_option.__value;
+	}
+
+	/**
+	 * @template T
+	 * @param {string} type
+	 * @param {T} [detail]
+	 * @param {{ bubbles?: boolean, cancelable?: boolean }} [options]
+	 * @returns {CustomEvent<T>}
+	 */
+	function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+		return new CustomEvent(type, { detail, bubbles, cancelable });
+	}
+
+	/**
+	 * @typedef {Node & {
+	 * 	claim_order?: number;
+	 * 	hydrate_init?: true;
+	 * 	actual_end_child?: NodeEx;
+	 * 	childNodes: NodeListOf<NodeEx>;
+	 * }} NodeEx
+	 */
+
+	/** @typedef {ChildNode & NodeEx} ChildNodeEx */
+
+	/** @typedef {NodeEx & { claim_order: number }} NodeEx2 */
+
+	/**
+	 * @typedef {ChildNodeEx[] & {
+	 * 	claim_info?: {
+	 * 		last_index: number;
+	 * 		total_claimed: number;
+	 * 	};
+	 * }} ChildNodeArray
+	 */
+
+	let current_component;
+
+	/** @returns {void} */
+	function set_current_component(component) {
+		current_component = component;
+	}
+
+	function get_current_component() {
+		if (!current_component) throw new Error('Function called outside component initialization');
+		return current_component;
+	}
+
+	/**
+	 * Schedules a callback to run immediately before the component is unmounted.
+	 *
+	 * Out of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the
+	 * only one that runs inside a server-side component.
+	 *
+	 * https://svelte.dev/docs/svelte#ondestroy
+	 * @param {() => any} fn
+	 * @returns {void}
+	 */
+	function onDestroy(fn) {
+		get_current_component().$$.on_destroy.push(fn);
+	}
+
+	// TODO figure out if we still want to support
+	// shorthand events, or if we want to implement
+	// a real bubbling mechanism
+	/**
+	 * @param component
+	 * @param event
+	 * @returns {void}
+	 */
+	function bubble(component, event) {
+		const callbacks = component.$$.callbacks[event.type];
+		if (callbacks) {
+			// @ts-ignore
+			callbacks.slice().forEach((fn) => fn.call(this, event));
+		}
+	}
+
+	const dirty_components = [];
+	const binding_callbacks = [];
+
+	let render_callbacks = [];
+
+	const flush_callbacks = [];
+
+	const resolved_promise = /* @__PURE__ */ Promise.resolve();
+
+	let update_scheduled = false;
+
+	/** @returns {void} */
+	function schedule_update() {
+		if (!update_scheduled) {
+			update_scheduled = true;
+			resolved_promise.then(flush);
+		}
+	}
+
+	/** @returns {void} */
+	function add_render_callback(fn) {
+		render_callbacks.push(fn);
+	}
+
+	/** @returns {void} */
+	function add_flush_callback(fn) {
+		flush_callbacks.push(fn);
+	}
+
+	// flush() calls callbacks in this order:
+	// 1. All beforeUpdate callbacks, in order: parents before children
+	// 2. All bind:this callbacks, in reverse order: children before parents.
+	// 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+	//    for afterUpdates called during the initial onMount, which are called in
+	//    reverse order: children before parents.
+	// Since callbacks might update component values, which could trigger another
+	// call to flush(), the following steps guard against this:
+	// 1. During beforeUpdate, any updated components will be added to the
+	//    dirty_components array and will cause a reentrant call to flush(). Because
+	//    the flush index is kept outside the function, the reentrant call will pick
+	//    up where the earlier call left off and go through all dirty components. The
+	//    current_component value is saved and restored so that the reentrant call will
+	//    not interfere with the "parent" flush() call.
+	// 2. bind:this callbacks cannot trigger new flush() calls.
+	// 3. During afterUpdate, any updated components will NOT have their afterUpdate
+	//    callback called a second time; the seen_callbacks set, outside the flush()
+	//    function, guarantees this behavior.
+	const seen_callbacks = new Set();
+
+	let flushidx = 0; // Do *not* move this inside the flush() function
+
+	/** @returns {void} */
+	function flush() {
+		// Do not reenter flush while dirty components are updated, as this can
+		// result in an infinite loop. Instead, let the inner flush handle it.
+		// Reentrancy is ok afterwards for bindings etc.
+		if (flushidx !== 0) {
+			return;
+		}
+		const saved_component = current_component;
+		do {
+			// first, call beforeUpdate functions
+			// and update components
+			try {
+				while (flushidx < dirty_components.length) {
+					const component = dirty_components[flushidx];
+					flushidx++;
+					set_current_component(component);
+					update(component.$$);
+				}
+			} catch (e) {
+				// reset dirty state to not end up in a deadlocked state and then rethrow
+				dirty_components.length = 0;
+				flushidx = 0;
+				throw e;
+			}
+			set_current_component(null);
+			dirty_components.length = 0;
+			flushidx = 0;
+			while (binding_callbacks.length) binding_callbacks.pop()();
+			// then, once components are updated, call
+			// afterUpdate functions. This may cause
+			// subsequent updates...
+			for (let i = 0; i < render_callbacks.length; i += 1) {
+				const callback = render_callbacks[i];
+				if (!seen_callbacks.has(callback)) {
+					// ...so guard against infinite loops
+					seen_callbacks.add(callback);
+					callback();
+				}
+			}
+			render_callbacks.length = 0;
+		} while (dirty_components.length);
+		while (flush_callbacks.length) {
+			flush_callbacks.pop()();
+		}
+		update_scheduled = false;
+		seen_callbacks.clear();
+		set_current_component(saved_component);
+	}
+
+	/** @returns {void} */
+	function update($$) {
+		if ($$.fragment !== null) {
+			$$.update();
+			run_all($$.before_update);
+			const dirty = $$.dirty;
+			$$.dirty = [-1];
+			$$.fragment && $$.fragment.p($$.ctx, dirty);
+			$$.after_update.forEach(add_render_callback);
+		}
+	}
+
+	/**
+	 * Useful for example to execute remaining `afterUpdate` callbacks before executing `destroy`.
+	 * @param {Function[]} fns
+	 * @returns {void}
+	 */
+	function flush_render_callbacks(fns) {
+		const filtered = [];
+		const targets = [];
+		render_callbacks.forEach((c) => (fns.indexOf(c) === -1 ? filtered.push(c) : targets.push(c)));
+		targets.forEach((c) => c());
+		render_callbacks = filtered;
+	}
+
+	const outroing = new Set();
+
+	/**
+	 * @type {Outro}
+	 */
+	let outros;
+
+	/**
+	 * @returns {void} */
+	function group_outros() {
+		outros = {
+			r: 0,
+			c: [],
+			p: outros // parent group
+		};
+	}
+
+	/**
+	 * @returns {void} */
+	function check_outros() {
+		if (!outros.r) {
+			run_all(outros.c);
+		}
+		outros = outros.p;
+	}
+
+	/**
+	 * @param {import('./private.js').Fragment} block
+	 * @param {0 | 1} [local]
+	 * @returns {void}
+	 */
+	function transition_in(block, local) {
+		if (block && block.i) {
+			outroing.delete(block);
+			block.i(local);
+		}
+	}
+
+	/**
+	 * @param {import('./private.js').Fragment} block
+	 * @param {0 | 1} local
+	 * @param {0 | 1} [detach]
+	 * @param {() => void} [callback]
+	 * @returns {void}
+	 */
+	function transition_out(block, local, detach, callback) {
+		if (block && block.o) {
+			if (outroing.has(block)) return;
+			outroing.add(block);
+			outros.c.push(() => {
+				outroing.delete(block);
+				if (callback) {
+					if (detach) block.d(1);
+					callback();
+				}
+			});
+			block.o(local);
+		} else if (callback) {
+			callback();
+		}
+	}
+
+	/** @typedef {1} INTRO */
+	/** @typedef {0} OUTRO */
+	/** @typedef {{ direction: 'in' | 'out' | 'both' }} TransitionOptions */
+	/** @typedef {(node: Element, params: any, options: TransitionOptions) => import('../transition/public.js').TransitionConfig} TransitionFn */
+
+	/**
+	 * @typedef {Object} Outro
+	 * @property {number} r
+	 * @property {Function[]} c
+	 * @property {Object} p
+	 */
+
+	/**
+	 * @typedef {Object} PendingProgram
+	 * @property {number} start
+	 * @property {INTRO|OUTRO} b
+	 * @property {Outro} [group]
+	 */
+
+	/**
+	 * @typedef {Object} Program
+	 * @property {number} a
+	 * @property {INTRO|OUTRO} b
+	 * @property {1|-1} d
+	 * @property {number} duration
+	 * @property {number} start
+	 * @property {number} end
+	 * @property {Outro} [group]
+	 */
+
+	// general each functions:
+
+	function ensure_array_like(array_like_or_iterator) {
+		return array_like_or_iterator?.length !== undefined
+			? array_like_or_iterator
+			: Array.from(array_like_or_iterator);
+	}
+
+	/** @returns {void} */
+	function bind(component, name, callback) {
+		const index = component.$$.props[name];
+		if (index !== undefined) {
+			component.$$.bound[index] = callback;
+			callback(component.$$.ctx[index]);
+		}
+	}
+
+	/** @returns {void} */
+	function create_component(block) {
+		block && block.c();
+	}
+
+	/** @returns {void} */
+	function mount_component(component, target, anchor) {
+		const { fragment, after_update } = component.$$;
+		fragment && fragment.m(target, anchor);
+		// onMount happens before the initial afterUpdate
+		add_render_callback(() => {
+			const new_on_destroy = component.$$.on_mount.map(run).filter(is_function);
+			// if the component was destroyed immediately
+			// it will update the `$$.on_destroy` reference to `null`.
+			// the destructured on_destroy may still reference to the old array
+			if (component.$$.on_destroy) {
+				component.$$.on_destroy.push(...new_on_destroy);
+			} else {
+				// Edge case - component was destroyed immediately,
+				// most likely as a result of a binding initialising
+				run_all(new_on_destroy);
+			}
+			component.$$.on_mount = [];
+		});
+		after_update.forEach(add_render_callback);
+	}
+
+	/** @returns {void} */
+	function destroy_component(component, detaching) {
+		const $$ = component.$$;
+		if ($$.fragment !== null) {
+			flush_render_callbacks($$.after_update);
+			run_all($$.on_destroy);
+			$$.fragment && $$.fragment.d(detaching);
+			// TODO null out other refs, including component.$$ (but need to
+			// preserve final state?)
+			$$.on_destroy = $$.fragment = null;
+			$$.ctx = [];
+		}
+	}
+
+	/** @returns {void} */
+	function make_dirty(component, i) {
+		if (component.$$.dirty[0] === -1) {
+			dirty_components.push(component);
+			schedule_update();
+			component.$$.dirty.fill(0);
+		}
+		component.$$.dirty[(i / 31) | 0] |= 1 << i % 31;
+	}
+
+	// TODO: Document the other params
+	/**
+	 * @param {SvelteComponent} component
+	 * @param {import('./public.js').ComponentConstructorOptions} options
+	 *
+	 * @param {import('./utils.js')['not_equal']} not_equal Used to compare props and state values.
+	 * @param {(target: Element | ShadowRoot) => void} [append_styles] Function that appends styles to the DOM when the component is first initialised.
+	 * This will be the `add_css` function from the compiled component.
+	 *
+	 * @returns {void}
+	 */
+	function init(
+		component,
+		options,
+		instance,
+		create_fragment,
+		not_equal,
+		props,
+		append_styles = null,
+		dirty = [-1]
+	) {
+		const parent_component = current_component;
+		set_current_component(component);
+		/** @type {import('./private.js').T$$} */
+		const $$ = (component.$$ = {
+			fragment: null,
+			ctx: [],
+			// state
+			props,
+			update: noop,
+			not_equal,
+			bound: blank_object(),
+			// lifecycle
+			on_mount: [],
+			on_destroy: [],
+			on_disconnect: [],
+			before_update: [],
+			after_update: [],
+			context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+			// everything else
+			callbacks: blank_object(),
+			dirty,
+			skip_bound: false,
+			root: options.target || parent_component.$$.root
+		});
+		append_styles && append_styles($$.root);
+		let ready = false;
+		$$.ctx = instance
+			? instance(component, options.props || {}, (i, ret, ...rest) => {
+					const value = rest.length ? rest[0] : ret;
+					if ($$.ctx && not_equal($$.ctx[i], ($$.ctx[i] = value))) {
+						if (!$$.skip_bound && $$.bound[i]) $$.bound[i](value);
+						if (ready) make_dirty(component, i);
+					}
+					return ret;
+			  })
+			: [];
+		$$.update();
+		ready = true;
+		run_all($$.before_update);
+		// `false` as a special case of no DOM component
+		$$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+		if (options.target) {
+			if (options.hydrate) {
+				// TODO: what is the correct type here?
+				// @ts-expect-error
+				const nodes = children(options.target);
+				$$.fragment && $$.fragment.l(nodes);
+				nodes.forEach(detach);
+			} else {
+				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+				$$.fragment && $$.fragment.c();
+			}
+			if (options.intro) transition_in(component.$$.fragment);
+			mount_component(component, options.target, options.anchor);
+			flush();
+		}
+		set_current_component(parent_component);
+	}
+
+	/**
+	 * Base class for Svelte components. Used when dev=false.
+	 *
+	 * @template {Record<string, any>} [Props=any]
+	 * @template {Record<string, any>} [Events=any]
+	 */
+	class SvelteComponent {
+		/**
+		 * ### PRIVATE API
+		 *
+		 * Do not use, may change at any time
+		 *
+		 * @type {any}
+		 */
+		$$ = undefined;
+		/**
+		 * ### PRIVATE API
+		 *
+		 * Do not use, may change at any time
+		 *
+		 * @type {any}
+		 */
+		$$set = undefined;
+
+		/** @returns {void} */
+		$destroy() {
+			destroy_component(this, 1);
+			this.$destroy = noop;
+		}
+
+		/**
+		 * @template {Extract<keyof Events, string>} K
+		 * @param {K} type
+		 * @param {((e: Events[K]) => void) | null | undefined} callback
+		 * @returns {() => void}
+		 */
+		$on(type, callback) {
+			if (!is_function(callback)) {
+				return noop;
+			}
+			const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
+			callbacks.push(callback);
+			return () => {
+				const index = callbacks.indexOf(callback);
+				if (index !== -1) callbacks.splice(index, 1);
+			};
+		}
+
+		/**
+		 * @param {Partial<Props>} props
+		 * @returns {void}
+		 */
+		$set(props) {
+			if (this.$$set && !is_empty(props)) {
+				this.$$.skip_bound = true;
+				this.$$set(props);
+				this.$$.skip_bound = false;
+			}
+		}
+	}
+
+	/**
+	 * @typedef {Object} CustomElementPropDefinition
+	 * @property {string} [attribute]
+	 * @property {boolean} [reflect]
+	 * @property {'String'|'Boolean'|'Number'|'Array'|'Object'} [type]
+	 */
+
+	// generated during release, do not modify
+
+	/**
+	 * The current version, as set in package.json.
+	 *
+	 * https://svelte.dev/docs/svelte-compiler#svelte-version
+	 * @type {string}
+	 */
+	const VERSION = '4.2.18';
+	const PUBLIC_VERSION = '4';
+
+	/**
+	 * @template T
+	 * @param {string} type
+	 * @param {T} [detail]
+	 * @returns {void}
+	 */
+	function dispatch_dev(type, detail) {
+		document.dispatchEvent(custom_event(type, { version: VERSION, ...detail }, { bubbles: true }));
+	}
+
+	/**
+	 * @param {Node} target
+	 * @param {Node} node
+	 * @returns {void}
+	 */
+	function append_dev(target, node) {
+		dispatch_dev('SvelteDOMInsert', { target, node });
+		append(target, node);
+	}
+
+	/**
+	 * @param {Node} target
+	 * @param {Node} node
+	 * @param {Node} [anchor]
+	 * @returns {void}
+	 */
+	function insert_dev(target, node, anchor) {
+		dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+		insert(target, node, anchor);
+	}
+
+	/**
+	 * @param {Node} node
+	 * @returns {void}
+	 */
+	function detach_dev(node) {
+		dispatch_dev('SvelteDOMRemove', { node });
+		detach(node);
+	}
+
+	/**
+	 * @param {Node} node
+	 * @param {string} event
+	 * @param {EventListenerOrEventListenerObject} handler
+	 * @param {boolean | AddEventListenerOptions | EventListenerOptions} [options]
+	 * @param {boolean} [has_prevent_default]
+	 * @param {boolean} [has_stop_propagation]
+	 * @param {boolean} [has_stop_immediate_propagation]
+	 * @returns {() => void}
+	 */
+	function listen_dev(
+		node,
+		event,
+		handler,
+		options,
+		has_prevent_default,
+		has_stop_propagation,
+		has_stop_immediate_propagation
+	) {
+		const modifiers =
+			options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+		if (has_prevent_default) modifiers.push('preventDefault');
+		if (has_stop_propagation) modifiers.push('stopPropagation');
+		if (has_stop_immediate_propagation) modifiers.push('stopImmediatePropagation');
+		dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+		const dispose = listen(node, event, handler, options);
+		return () => {
+			dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+			dispose();
+		};
+	}
+
+	/**
+	 * @param {Element} node
+	 * @param {string} attribute
+	 * @param {string} [value]
+	 * @returns {void}
+	 */
+	function attr_dev(node, attribute, value) {
+		attr(node, attribute, value);
+		if (value == null) dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+		else dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+	}
+
+	/**
+	 * @param {Element} node
+	 * @param {string} property
+	 * @param {any} [value]
+	 * @returns {void}
+	 */
+	function prop_dev(node, property, value) {
+		node[property] = value;
+		dispatch_dev('SvelteDOMSetProperty', { node, property, value });
+	}
+
+	/**
+	 * @param {Text} text
+	 * @param {unknown} data
+	 * @returns {void}
+	 */
+	function set_data_dev(text, data) {
+		data = '' + data;
+		if (text.data === data) return;
+		dispatch_dev('SvelteDOMSetData', { node: text, data });
+		text.data = /** @type {string} */ (data);
+	}
+
+	function ensure_array_like_dev(arg) {
+		if (
+			typeof arg !== 'string' &&
+			!(arg && typeof arg === 'object' && 'length' in arg) &&
+			!(typeof Symbol === 'function' && arg && Symbol.iterator in arg)
+		) {
+			throw new Error('{#each} only works with iterable values.');
+		}
+		return ensure_array_like(arg);
+	}
+
+	/**
+	 * @returns {void} */
+	function validate_slots(name, slot, keys) {
+		for (const slot_key of Object.keys(slot)) {
+			if (!~keys.indexOf(slot_key)) {
+				console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+			}
+		}
+	}
+
+	/**
+	 * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+	 *
+	 * Can be used to create strongly typed Svelte components.
+	 *
+	 * #### Example:
+	 *
+	 * You have component library on npm called `component-library`, from which
+	 * you export a component called `MyComponent`. For Svelte+TypeScript users,
+	 * you want to provide typings. Therefore you create a `index.d.ts`:
+	 * ```ts
+	 * import { SvelteComponent } from "svelte";
+	 * export class MyComponent extends SvelteComponent<{foo: string}> {}
+	 * ```
+	 * Typing this makes it possible for IDEs like VS Code with the Svelte extension
+	 * to provide intellisense and to use the component like this in a Svelte file
+	 * with TypeScript:
+	 * ```svelte
+	 * <script lang="ts">
+	 * 	import { MyComponent } from "component-library";
+	 * </script>
+	 * <MyComponent foo={'bar'} />
+	 * ```
+	 * @template {Record<string, any>} [Props=any]
+	 * @template {Record<string, any>} [Events=any]
+	 * @template {Record<string, any>} [Slots=any]
+	 * @extends {SvelteComponent<Props, Events>}
+	 */
+	class SvelteComponentDev extends SvelteComponent {
+		/**
+		 * For type checking capabilities only.
+		 * Does not exist at runtime.
+		 * ### DO NOT USE!
+		 *
+		 * @type {Props}
+		 */
+		$$prop_def;
+		/**
+		 * For type checking capabilities only.
+		 * Does not exist at runtime.
+		 * ### DO NOT USE!
+		 *
+		 * @type {Events}
+		 */
+		$$events_def;
+		/**
+		 * For type checking capabilities only.
+		 * Does not exist at runtime.
+		 * ### DO NOT USE!
+		 *
+		 * @type {Slots}
+		 */
+		$$slot_def;
+
+		/** @param {import('./public.js').ComponentConstructorOptions<Props>} options */
+		constructor(options) {
+			if (!options || (!options.target && !options.$$inline)) {
+				throw new Error("'target' is a required option");
+			}
+			super();
+		}
+
+		/** @returns {void} */
+		$destroy() {
+			super.$destroy();
+			this.$destroy = () => {
+				console.warn('Component was already destroyed'); // eslint-disable-line no-console
+			};
+		}
+
+		/** @returns {void} */
+		$capture_state() {}
+
+		/** @returns {void} */
+		$inject_state() {}
+	}
+
+	if (typeof window !== 'undefined')
+		// @ts-ignore
+		(window.__svelte || (window.__svelte = { v: new Set() })).v.add(PUBLIC_VERSION);
+
+	/** @returns {void} */
+	function onMount() {}
+
+	function createCommonjsModule(fn) {
+	  var module = { exports: {} };
+		return fn(module, module.exports), module.exports;
+	}
+
+	var frappeCharts_min_cjs = createCommonjsModule(function (module, exports) {
+	function styleInject(t,e){void 0===e&&(e={});var n=e.insertAt;if(t&&"undefined"!=typeof document){var i=document.head||document.getElementsByTagName("head")[0],a=document.createElement("style");a.type="text/css","top"===n&&i.firstChild?i.insertBefore(a,i.firstChild):i.appendChild(a),a.styleSheet?a.styleSheet.cssText=t:a.appendChild(document.createTextNode(t));}}function $(t,e){return "string"==typeof t?(e||document).querySelector(t):t||null}function getOffset(t){var e=t.getBoundingClientRect();return {top:e.top+(document.documentElement.scrollTop||document.body.scrollTop),left:e.left+(document.documentElement.scrollLeft||document.body.scrollLeft)}}function isHidden(t){return null===t.offsetParent}function isElementInViewport(t){var e=t.getBoundingClientRect();return e.top>=0&&e.left>=0&&e.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&e.right<=(window.innerWidth||document.documentElement.clientWidth)}function getElementContentWidth(t){var e=window.getComputedStyle(t),n=parseFloat(e.paddingLeft)+parseFloat(e.paddingRight);return t.clientWidth-n}function fire(t,e,n){var i=document.createEvent("HTMLEvents");i.initEvent(e,!0,!0);for(var a in n)i[a]=n[a];return t.dispatchEvent(i)}function getTopOffset(t){return t.titleHeight+t.margins.top+t.paddings.top}function getLeftOffset(t){return t.margins.left+t.paddings.left}function getExtraHeight(t){return t.margins.top+t.margins.bottom+t.paddings.top+t.paddings.bottom+t.titleHeight+t.legendHeight}function getExtraWidth(t){return t.margins.left+t.margins.right+t.paddings.left+t.paddings.right}function _classCallCheck$4(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function floatTwo(t){return parseFloat(t.toFixed(2))}function fillArray(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]&&arguments[3];n||(n=i?t[0]:t[t.length-1]);var a=new Array(Math.abs(e)).fill(n);return t=i?a.concat(t):t.concat(a)}function getStringWidth(t,e){return (t+"").length*e}function getPositionByAngle(t,e){return {x:Math.sin(t*ANGLE_RATIO)*e,y:Math.cos(t*ANGLE_RATIO)*e}}function isValidNumber(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return !Number.isNaN(t)&&(void 0!==t&&(!!Number.isFinite(t)&&!(e&&t<0)))}function round(t){return Number(Math.round(t+"e4")+"e-4")}function deepClone(t){var e=void 0,n=void 0,i=void 0;if(t instanceof Date)return new Date(t.getTime());if("object"!==(void 0===t?"undefined":_typeof$2(t))||null===t)return t;e=Array.isArray(t)?[]:{};for(i in t)n=t[i],e[i]=deepClone(n);return e}function getBarHeightAndYAttr(t,e){var n=void 0,i=void 0;return t<=e?(n=e-t,i=t):(n=t-e,i=e),[n,i]}function equilizeNoOfElements(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:e.length-t.length;return n>0?t=fillArray(t,n):e=fillArray(e,n),[t,e]}function truncateString(t,e){if(t)return t.length>e?t.slice(0,e-3)+"...":t}function shortenLargeNumber(t){var e=void 0;if("number"==typeof t)e=t;else if("string"==typeof t&&(e=Number(t),Number.isNaN(e)))return t;var n=Math.floor(Math.log10(Math.abs(e)));if(n<=2)return e;var i=Math.floor(n/3),a=Math.pow(10,n-3*i)*+(e/Math.pow(10,n)).toFixed(1);return Math.round(100*a)/100+" "+["","K","M","B","T"][i]}function getSplineCurvePointsStr(t,e){for(var n=[],i=0;i<t.length;i++)n.push([t[i],e[i]]);var a=function(t,e){var n=e[0]-t[0],i=e[1]-t[1];return {length:Math.sqrt(Math.pow(n,2)+Math.pow(i,2)),angle:Math.atan2(i,n)}},r=function(t,e,n,i){var r=a(e||t,n||t),o=r.angle+(i?Math.PI:0),s=.2*r.length;return [t[0]+Math.cos(o)*s,t[1]+Math.sin(o)*s]};return function(t,e){return t.reduce(function(t,n,i,a){return 0===i?n[0]+","+n[1]:t+" "+e(n,i,a)},"")}(n,function(t,e,n){var i=r(n[e-1],n[e-2],t),a=r(t,n[e-1],n[e+1],!0);return "C "+i[0]+","+i[1]+" "+a[0]+","+a[1]+" "+t[0]+","+t[1]})}function limitColor(t){return t>255?255:t<0?0:t}function lightenDarkenColor(t,e){var n=getColor(t),i=!1;"#"==n[0]&&(n=n.slice(1),i=!0);var a=parseInt(n,16),r=limitColor((a>>16)+e),o=limitColor((a>>8&255)+e),s=limitColor((255&a)+e);return (i?"#":"")+(s|o<<8|r<<16).toString(16)}function isValidColor(t){var e=/(^\s*)(rgb|hsl)(a?)[(]\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*,\s*([\d.]+\s*%?)\s*(?:,\s*([\d.]+)\s*)?[)]$/i;return /(^\s*)(#)((?:[A-Fa-f0-9]{3}){1,2})$/i.test(t)||e.test(t)}function $$1(t,e){return "string"==typeof t?(e||document).querySelector(t):t||null}function createSVG(t,e){var n=document.createElementNS("http://www.w3.org/2000/svg",t);for(var i in e){var a=e[i];if("inside"===i)$$1(a).appendChild(n);else if("around"===i){var r=$$1(a);r.parentNode.insertBefore(n,r),n.appendChild(r);}else "styles"===i?"object"===(void 0===a?"undefined":_typeof$1(a))&&Object.keys(a).map(function(t){n.style[t]=a[t];}):("className"===i&&(i="class"),"innerHTML"===i?n.textContent=a:n.setAttribute(i,a));}return n}function renderVerticalGradient(t,e){return createSVG("linearGradient",{inside:t,id:e,x1:0,x2:0,y1:0,y2:1})}function setGradientStop(t,e,n,i){return createSVG("stop",{inside:t,style:"stop-color: "+n,offset:e,"stop-opacity":i})}function makeSVGContainer(t,e,n,i){return createSVG("svg",{className:e,inside:t,width:n,height:i})}function makeSVGDefs(t){return createSVG("defs",{inside:t})}function makeSVGGroup(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:void 0,i={className:t,transform:e};return n&&(i.inside=n),createSVG("g",i)}function makePath(t){return createSVG("path",{className:arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",d:t,styles:{stroke:arguments.length>2&&void 0!==arguments[2]?arguments[2]:"none",fill:arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none","stroke-width":arguments.length>4&&void 0!==arguments[4]?arguments[4]:2}})}function makeArcPathStr(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=n.x+t.x,s=n.y+t.y,l=n.x+e.x,u=n.y+e.y;return "M"+n.x+" "+n.y+"\n\t\tL"+o+" "+s+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+u+" z"}function makeCircleStr(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=n.x+t.x,s=n.y+t.y,l=n.x+e.x,u=2*n.y,c=n.y+e.y;return "M"+n.x+" "+n.y+"\n\t\tL"+o+" "+s+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+u+" z\n\t\tL"+o+" "+u+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+c+" z"}function makeArcStrokePathStr(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=n.x+t.x,s=n.y+t.y,l=n.x+e.x,u=n.y+e.y;return "M"+o+" "+s+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+u}function makeStrokeCircleStr(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:1,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=n.x+t.x,s=n.y+t.y,l=n.x+e.x,u=2*i+s,c=n.y+t.y;return "M"+o+" "+s+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+u+"\n\t\tM"+o+" "+u+"\n\t\tA "+i+" "+i+" 0 "+r+" "+(a?1:0)+"\n\t\t"+l+" "+c}function makeGradient(t,e){var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i="path-fill-gradient-"+e+"-"+(n?"lighter":"default"),a=renderVerticalGradient(t,i),r=[1,.6,.2];return n&&(r=[.4,.2,0]),setGradientStop(a,"0%",e,r[0]),setGradientStop(a,"50%",e,r[1]),setGradientStop(a,"100%",e,r[2]),i}function percentageBar(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:PERCENTAGE_BAR_DEFAULT_DEPTH,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none";return createSVG("rect",{className:"percentage-bar",x:t,y:e,width:n,height:i,fill:r,styles:{stroke:lightenDarkenColor(r,-25),"stroke-dasharray":"0, "+(i+n)+", "+n+", "+i,"stroke-width":a}})}function heatSquare(t,e,n,i,a){var r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:"none",o=arguments.length>6&&void 0!==arguments[6]?arguments[6]:{},s={className:t,x:e,y:n,width:i,height:i,rx:a,fill:r};return Object.keys(o).map(function(t){s[t]=o[t];}),createSVG("rect",s)}function legendBar(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",a=arguments[4];a=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?truncateString(a,LABEL_MAX_CHARS):a;var r={className:"legend-bar",x:0,y:0,width:n,height:"2px",fill:i},o=createSVG("text",{className:"legend-dataset-text",x:0,y:0,dy:2*FONT_SIZE+"px","font-size":1.2*FONT_SIZE+"px","text-anchor":"start",fill:FONT_FILL,innerHTML:a}),s=createSVG("g",{transform:"translate("+t+", "+e+")"});return s.appendChild(createSVG("rect",r)),s.appendChild(o),s}function legendDot(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"none",a=arguments[4];a=arguments.length>5&&void 0!==arguments[5]&&arguments[5]?truncateString(a,LABEL_MAX_CHARS):a;var r={className:"legend-dot",cx:0,cy:0,r:n,fill:i},o=createSVG("text",{className:"legend-dataset-text",x:0,y:0,dx:FONT_SIZE+"px",dy:FONT_SIZE/3+"px","font-size":1.2*FONT_SIZE+"px","text-anchor":"start",fill:FONT_FILL,innerHTML:a}),s=createSVG("g",{transform:"translate("+t+", "+e+")"});return s.appendChild(createSVG("circle",r)),s.appendChild(o),s}function makeText(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},r=a.fontSize||FONT_SIZE;return createSVG("text",{className:t,x:e,y:n,dy:(void 0!==a.dy?a.dy:r/2)+"px","font-size":r+"px",fill:a.fill||FONT_FILL,"text-anchor":a.textAnchor||"start",innerHTML:i})}function makeVertLine(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};a.stroke||(a.stroke=BASE_LINE_COLOR);var r=createSVG("line",{className:"line-vertical "+a.className,x1:0,x2:0,y1:n,y2:i,styles:{stroke:a.stroke}}),o=createSVG("text",{x:0,y:n>i?n+LABEL_MARGIN:n-LABEL_MARGIN-FONT_SIZE,dy:FONT_SIZE+"px","font-size":FONT_SIZE+"px","text-anchor":"middle",innerHTML:e+""}),s=createSVG("g",{transform:"translate("+t+", 0)"});return s.appendChild(r),s.appendChild(o),s}function makeHoriLine(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};a.stroke||(a.stroke=BASE_LINE_COLOR),a.lineType||(a.lineType=""),a.shortenNumbers&&(e=shortenLargeNumber(e));var r=createSVG("line",{className:"line-horizontal "+a.className+("dashed"===a.lineType?"dashed":""),x1:n,x2:i,y1:0,y2:0,styles:{stroke:a.stroke}}),o=createSVG("text",{x:n<i?n-LABEL_MARGIN:n+LABEL_MARGIN,y:0,dy:FONT_SIZE/2-2+"px","font-size":FONT_SIZE+"px","text-anchor":n<i?"end":"start",innerHTML:e+""}),s=createSVG("g",{transform:"translate(0, "+t+")","stroke-opacity":1});return 0!==o&&"0"!==o||(s.style.stroke="rgba(27, 31, 35, 0.6)"),s.appendChild(r),s.appendChild(o),s}function yLine(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};isValidNumber(t)||(t=0),i.pos||(i.pos="left"),i.offset||(i.offset=0),i.mode||(i.mode="span"),i.stroke||(i.stroke=BASE_LINE_COLOR),i.className||(i.className="");var a=-1*AXIS_TICK_LENGTH,r="span"===i.mode?n+AXIS_TICK_LENGTH:0;return "tick"===i.mode&&"right"===i.pos&&(a=n+AXIS_TICK_LENGTH,r=n),a+=i.offset,r+=i.offset,makeHoriLine(t,e,a,r,{stroke:i.stroke,className:i.className,lineType:i.lineType,shortenNumbers:i.shortenNumbers})}function xLine(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};isValidNumber(t)||(t=0),i.pos||(i.pos="bottom"),i.offset||(i.offset=0),i.mode||(i.mode="span"),i.stroke||(i.stroke=BASE_LINE_COLOR),i.className||(i.className="");var a=n+AXIS_TICK_LENGTH,r="span"===i.mode?-1*AXIS_TICK_LENGTH:n;return "tick"===i.mode&&"top"===i.pos&&(a=-1*AXIS_TICK_LENGTH,r=0),makeVertLine(t,e,a,r,{stroke:i.stroke,className:i.className,lineType:i.lineType})}function yMarker(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};i.labelPos||(i.labelPos="right");var a=createSVG("text",{className:"chart-label",x:"left"===i.labelPos?LABEL_MARGIN:n-getStringWidth(e,5)-LABEL_MARGIN,y:0,dy:FONT_SIZE/-2+"px","font-size":FONT_SIZE+"px","text-anchor":"start",innerHTML:e+""}),r=makeHoriLine(t,"",0,n,{stroke:i.stroke||BASE_LINE_COLOR,className:i.className||"",lineType:i.lineType});return r.appendChild(a),r}function yRegion(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},r=t-e,o=createSVG("rect",{className:"bar mini",styles:{fill:"rgba(228, 234, 239, 0.49)",stroke:BASE_LINE_COLOR,"stroke-dasharray":n+", "+r},x:0,y:0,width:n,height:r});a.labelPos||(a.labelPos="right");var s=createSVG("text",{className:"chart-label",x:"left"===a.labelPos?LABEL_MARGIN:n-getStringWidth(i+"",4.5)-LABEL_MARGIN,y:0,dy:FONT_SIZE/-2+"px","font-size":FONT_SIZE+"px","text-anchor":"start",innerHTML:i+""}),l=createSVG("g",{transform:"translate(0, "+e+")"});return l.appendChild(o),l.appendChild(s),l}function datasetBar(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=arguments.length>6&&void 0!==arguments[6]?arguments[6]:0,s=arguments.length>7&&void 0!==arguments[7]?arguments[7]:{},l=getBarHeightAndYAttr(e,s.zeroLine),u=_slicedToArray(l,2),c=u[0],h=u[1];h-=o,0===c&&(c=s.minHeight,h-=s.minHeight),isValidNumber(t)||(t=0),isValidNumber(h)||(h=0),isValidNumber(c,!0)||(c=0),isValidNumber(n,!0)||(n=0);var d=createSVG("rect",{className:"bar mini",style:"fill: "+i,"data-point-index":r,x:t,y:h,width:n,height:c});if((a+="")||a.length){d.setAttribute("y",0),d.setAttribute("x",0);var f=createSVG("text",{className:"data-point-value",x:n/2,y:0,dy:FONT_SIZE/2*-1+"px","font-size":FONT_SIZE+"px","text-anchor":"middle",innerHTML:a}),p=createSVG("g",{"data-point-index":r,transform:"translate("+t+", "+h+")"});return p.appendChild(d),p.appendChild(f),p}return d}function datasetDot(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:"",r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:0,o=createSVG("circle",{style:"fill: "+i,"data-point-index":r,cx:t,cy:e,r:n});if((a+="")||a.length){o.setAttribute("cy",0),o.setAttribute("cx",0);var s=createSVG("text",{className:"data-point-value",x:0,y:0,dy:FONT_SIZE/2*-1-n+"px","font-size":FONT_SIZE+"px","text-anchor":"middle",innerHTML:a}),l=createSVG("g",{"data-point-index":r,transform:"translate("+t+", "+e+")"});return l.appendChild(o),l.appendChild(s),l}return o}function getPaths(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},r=e.map(function(e,n){return t[n]+","+e}).join("L");i.spline&&(r=getSplineCurvePointsStr(t,e));var o=makePath("M"+r,"line-graph-path",n);if(i.heatline){var s=makeGradient(a.svgDefs,n);o.style.stroke="url(#"+s+")";}var l={path:o};if(i.regionFill){var u=makeGradient(a.svgDefs,n,!0),c="M"+t[0]+","+a.zeroLine+"L"+r+"L"+t.slice(-1)[0]+","+a.zeroLine;l.region=makePath(c,"region-fill","none","url(#"+u+")");}return l}function translate(t,e,n,i){var a="string"==typeof e?e:e.join(", ");return [t,{transform:n.join(", ")},i,STD_EASING,"translate",{transform:a}]}function translateVertLine(t,e,n){return translate(t,[n,0],[e,0],MARKER_LINE_ANIM_DUR)}function translateHoriLine(t,e,n){return translate(t,[0,n],[0,e],MARKER_LINE_ANIM_DUR)}function animateRegion(t,e,n,i){var a=e-n,r=t.childNodes[0];return [[r,{height:a,"stroke-dasharray":r.getAttribute("width")+", "+a},MARKER_LINE_ANIM_DUR,STD_EASING],translate(t,[0,i],[0,n],MARKER_LINE_ANIM_DUR)]}function animateBar(t,e,n,i){var a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:0,r=getBarHeightAndYAttr(n,(arguments.length>5&&void 0!==arguments[5]?arguments[5]:{}).zeroLine),o=_slicedToArray$2(r,2),s=o[0],l=o[1];return l-=a,"rect"!==t.nodeName?[[t.childNodes[0],{width:i,height:s},UNIT_ANIM_DUR,STD_EASING],translate(t,t.getAttribute("transform").split("(")[1].slice(0,-1),[e,l],MARKER_LINE_ANIM_DUR)]:[[t,{width:i,height:s,x:e,y:l},UNIT_ANIM_DUR,STD_EASING]]}function animateDot(t,e,n){return "circle"!==t.nodeName?[translate(t,t.getAttribute("transform").split("(")[1].slice(0,-1),[e,n],MARKER_LINE_ANIM_DUR)]:[[t,{cx:e,cy:n},UNIT_ANIM_DUR,STD_EASING]]}function animatePath(t,e,n,i,a){var r=[],o=n.map(function(t,n){return e[n]+","+t}).join("L");a&&(o=getSplineCurvePointsStr(e,n));var s=[t.path,{d:"M"+o},PATH_ANIM_DUR,STD_EASING];if(r.push(s),t.region){var l=e[0]+","+i+"L",u="L"+e.slice(-1)[0]+", "+i,c=[t.region,{d:"M"+l+o+u},PATH_ANIM_DUR,STD_EASING];r.push(c);}return r}function animatePathStr(t,e){return [t,{d:e},UNIT_ANIM_DUR,STD_EASING]}function _toConsumableArray$1(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function animateSVGElement(t,e,n){var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"linear",a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:void 0,r=arguments.length>5&&void 0!==arguments[5]?arguments[5]:{},o=t.cloneNode(!0),s=t.cloneNode(!0);for(var l in e){var u=void 0;u="transform"===l?document.createElementNS("http://www.w3.org/2000/svg","animateTransform"):document.createElementNS("http://www.w3.org/2000/svg","animate");var c=r[l]||t.getAttribute(l),h=e[l],d={attributeName:l,from:c,to:h,begin:"0s",dur:n/1e3+"s",values:c+";"+h,keySplines:EASING[i],keyTimes:"0;1",calcMode:"spline",fill:"freeze"};a&&(d.type=a);for(var f in d)u.setAttribute(f,d[f]);o.appendChild(u),a?s.setAttribute(l,"translate("+h+")"):s.setAttribute(l,h);}return [o,s]}function transform(t,e){t.style.transform=e,t.style.webkitTransform=e,t.style.msTransform=e,t.style.mozTransform=e,t.style.oTransform=e;}function animateSVG(t,e){var n=[],i=[];e.map(function(t){var e=t[0],a=e.parentNode,r=void 0,o=void 0;t[0]=e;var s=animateSVGElement.apply(void 0,_toConsumableArray$1(t)),l=_slicedToArray$1(s,2);r=l[0],o=l[1],n.push(o),i.push([r,a]),a&&a.replaceChild(r,e);});var a=t.cloneNode(!0);return i.map(function(t,i){t[1]&&(t[1].replaceChild(n[i],t[0]),e[i][0]=n[i]);}),a}function runSMILAnimation(t,e,n){if(0!==n.length){var i=animateSVG(e,n);e.parentNode==t&&(t.removeChild(e),t.appendChild(i)),setTimeout(function(){i.parentNode==t&&(t.removeChild(i),t.appendChild(e));},REPLACE_ALL_NEW_DUR);}}function downloadFile(t,e){var n=document.createElement("a");n.style="display: none";var i=new Blob(e,{type:"image/svg+xml; charset=utf-8"}),a=window.URL.createObjectURL(i);n.href=a,n.download=t,document.body.appendChild(n),n.click(),setTimeout(function(){document.body.removeChild(n),window.URL.revokeObjectURL(a);},300);}function prepareForExport(t){var e=t.cloneNode(!0);e.classList.add("chart-container"),e.setAttribute("xmlns","http://www.w3.org/2000/svg"),e.setAttribute("xmlns:xlink","http://www.w3.org/1999/xlink");var n=$.create("style",{innerHTML:CSSTEXT});e.insertBefore(n,e.firstChild);var i=$.create("div");return i.appendChild(e),i.innerHTML}function _classCallCheck$3(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _classCallCheck$2(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn$1(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits$1(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function treatAsUtc(t){var e=new Date(t);return e.setMinutes(e.getMinutes()-e.getTimezoneOffset()),e}function getYyyyMmDd(t){var e=t.getDate(),n=t.getMonth()+1;return [t.getFullYear(),(n>9?"":"0")+n,(e>9?"":"0")+e].join("-")}function clone(t){return new Date(t.getTime())}function getWeeksBetween(t,e){var n=setDayToSunday(t);return Math.ceil(getDaysBetween(n,e)/NO_OF_DAYS_IN_WEEK)}function getDaysBetween(t,e){var n=SEC_IN_DAY*NO_OF_MILLIS;return (treatAsUtc(e)-treatAsUtc(t))/n}function areInSameMonth(t,e){return t.getMonth()===e.getMonth()&&t.getFullYear()===e.getFullYear()}function getMonthName(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=MONTH_NAMES[t];return e?n.slice(0,3):n}function getLastDateInMonth(t,e){return new Date(e,t+1,0)}function setDayToSunday(t){var e=clone(t),n=e.getDay();return 0!==n&&addDays(e,-1*n),e}function addDays(t,e){t.setDate(t.getDate()+e);}function _classCallCheck$5(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function getComponent(t,e,n){var i=Object.keys(componentConfigs).filter(function(e){return t.includes(e)}),a=componentConfigs[i[0]];return Object.assign(a,{constants:e,getData:n}),new ChartComponent(a)}function _toConsumableArray(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function _classCallCheck$1(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function _toConsumableArray$2(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function _classCallCheck$6(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn$2(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits$2(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function _toConsumableArray$4(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function normalize(t){if(0===t)return [0,0];if(isNaN(t))return {mantissa:-6755399441055744,exponent:972};var e=t>0?1:-1;if(!isFinite(t))return {mantissa:4503599627370496*e,exponent:972};t=Math.abs(t);var n=Math.floor(Math.log10(t));return [e*(t/Math.pow(10,n)),n]}function getChartRangeIntervals(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,n=Math.ceil(t),i=Math.floor(e),a=n-i,r=a,o=1;a>5&&(a%2!=0&&(a=++n-i),r=a/2,o=2),a<=2&&(o=a/(r=4)),0===a&&(r=5,o=1);for(var s=[],l=0;l<=r;l++)s.push(i+o*l);return s}function getChartIntervals(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,n=normalize(t),i=_slicedToArray$4(n,2),a=i[0],r=i[1],o=e?e/Math.pow(10,r):0,s=getChartRangeIntervals(a=a.toFixed(6),o);return s=s.map(function(t){return t*Math.pow(10,r)})}function calcChartIntervals(t){function e(t,e){for(var n=getChartIntervals(t),i=n[1]-n[0],a=0,r=1;a<e;r++)a+=i,n.unshift(-1*a);return n}var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=Math.max.apply(Math,_toConsumableArray$4(t)),a=Math.min.apply(Math,_toConsumableArray$4(t)),r=[];if(i>=0&&a>=0)normalize(i)[1],r=n?getChartIntervals(i,a):getChartIntervals(i);else if(i>0&&a<0){var o=Math.abs(a);i>=o?(normalize(i)[1],r=e(i,o)):(normalize(o)[1],r=e(o,i).reverse().map(function(t){return -1*t}));}else if(i<=0&&a<=0){var s=Math.abs(a),l=Math.abs(i);normalize(s)[1],r=(r=n?getChartIntervals(s,l):getChartIntervals(s)).reverse().map(function(t){return -1*t});}return r}function getZeroIndex(t){var e=getIntervalSize(t);return t.indexOf(0)>=0?t.indexOf(0):t[0]>0?-1*t[0]/e:-1*t[t.length-1]/e+(t.length-1)}function getIntervalSize(t){return t[1]-t[0]}function getValueRange(t){return t[t.length-1]-t[0]}function scale(t,e){return floatTwo(e.zeroLine-t*e.scaleMultiplier)}function getClosestInArray(t,e){var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=e.reduce(function(e,n){return Math.abs(n-t)<Math.abs(e-t)?n:e},[]);return n?e.indexOf(i):i}function calcDistribution(t,e){for(var n=Math.max.apply(Math,_toConsumableArray$4(t)),i=1/(e-1),a=[],r=0;r<e;r++){var o=n*(i*r);a.push(o);}return a}function getMaxCheckpoint(t,e){return e.filter(function(e){return e<t}).length}function _toConsumableArray$3(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function _classCallCheck$7(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn$3(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits$3(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function _toConsumableArray$6(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function dataPrep(t,e){t.labels=t.labels||[];var n=t.labels.length,i=t.datasets,a=new Array(n).fill(0);return i||(i=[{values:a}]),i.map(function(t){if(t.values){var i=t.values;i=(i=i.map(function(t){return isNaN(t)?0:t})).length>n?i.slice(0,n):fillArray(i,n-i.length,0),t.values=i;}else t.values=a;t.chartType||(t.chartType=e);}),t.yRegions&&t.yRegions.map(function(t){if(t.end<t.start){var e=[t.end,t.start];t.start=e[0],t.end=e[1];}}),t}function zeroDataPrep(t){var e=t.labels.length,n=new Array(e).fill(0),i={labels:t.labels.slice(0,-1),datasets:t.datasets.map(function(t){return {name:"",values:n.slice(0,-1),chartType:t.chartType}})};return t.yMarkers&&(i.yMarkers=[{value:0,label:""}]),t.yRegions&&(i.yRegions=[{start:0,end:0,label:""}]),i}function getShortenedLabels(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2],i=t/e.length;i<=0&&(i=1);var a=i/DEFAULT_CHAR_WIDTH,r=void 0;if(n){var o=Math.max.apply(Math,_toConsumableArray$6(e.map(function(t){return t.length})));r=Math.ceil(o/a);}return e.map(function(t,e){return (t+="").length>a&&(n?e%r!=0&&(t=""):t=a-3>0?t.slice(0,a-3)+" ...":t.slice(0,a)+".."),t})}function _toConsumableArray$5(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function _classCallCheck$8(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn$4(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits$4(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function _toConsumableArray$7(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}function _classCallCheck$9(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn$5(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits$5(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e);}function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function getChartByType(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"line",e=arguments[1],n=arguments[2];return "axis-mixed"===t?(n.type="line",new AxisChart(e,n)):chartTypes[t]?new chartTypes[t](e,n):void console.error("Undefined chart type: "+t)}Object.defineProperty(exports,"__esModule",{value:!0});var css_248z='.chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ol,.graph-svg-tip ul{padding-left:0;display:-webkit-box;display:-ms-flexbox;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;-webkit-box-flex:1;-ms-flex:1;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:" ";border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}';styleInject(css_248z);var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};$.create=function(t,e){var n=document.createElement(t);for(var i in e){var a=e[i];if("inside"===i)$(a).appendChild(n);else if("around"===i){var r=$(a);r.parentNode.insertBefore(n,r),n.appendChild(r);}else "styles"===i?"object"===(void 0===a?"undefined":_typeof(a))&&Object.keys(a).map(function(t){n.style[t]=a[t];}):i in n?n[i]=a:n.setAttribute(i,a);}return n};var BASE_MEASURES={margins:{top:10,bottom:10,left:20,right:20},paddings:{top:20,bottom:40,left:30,right:10},baseHeight:240,titleHeight:20,legendHeight:30,titleFontSize:12},INIT_CHART_UPDATE_TIMEOUT=700,CHART_POST_ANIMATE_TIMEOUT=400,AXIS_LEGEND_BAR_SIZE=100,BAR_CHART_SPACE_RATIO=.5,MIN_BAR_PERCENT_HEIGHT=0,LINE_CHART_DOT_SIZE=4,DOT_OVERLAY_SIZE_INCR=4,PERCENTAGE_BAR_DEFAULT_HEIGHT=20,PERCENTAGE_BAR_DEFAULT_DEPTH=2,HEATMAP_DISTRIBUTION_SIZE=5,HEATMAP_SQUARE_SIZE=10,HEATMAP_GUTTER_SIZE=2,DEFAULT_CHAR_WIDTH=7,TOOLTIP_POINTER_TRIANGLE_HEIGHT=5,DEFAULT_CHART_COLORS=["light-blue","blue","violet","red","orange","yellow","green","light-green","purple","magenta","light-grey","dark-grey"],HEATMAP_COLORS_GREEN=["#ebedf0","#c6e48b","#7bc96f","#239a3b","#196127"],DEFAULT_COLORS={bar:DEFAULT_CHART_COLORS,line:DEFAULT_CHART_COLORS,pie:DEFAULT_CHART_COLORS,percentage:DEFAULT_CHART_COLORS,heatmap:HEATMAP_COLORS_GREEN,donut:DEFAULT_CHART_COLORS},ANGLE_RATIO=Math.PI/180,FULL_ANGLE=360,_createClass$3=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),SvgTip=function(){function t(e){var n=e.parent,i=void 0===n?null:n,a=e.colors,r=void 0===a?[]:a;_classCallCheck$4(this,t),this.parent=i,this.colors=r,this.titleName="",this.titleValue="",this.listValues=[],this.titleValueFirst=0,this.x=0,this.y=0,this.top=0,this.left=0,this.setup();}return _createClass$3(t,[{key:"setup",value:function(){this.makeTooltip();}},{key:"refresh",value:function(){this.fill(),this.calcPosition();}},{key:"makeTooltip",value:function(){var t=this;this.container=$.create("div",{inside:this.parent,className:"graph-svg-tip comparison",innerHTML:'<span class="title"></span>\n\t\t\t\t<ul class="data-point-list"></ul>\n\t\t\t\t<div class="svg-pointer"></div>'}),this.hideTip(),this.title=this.container.querySelector(".title"),this.dataPointList=this.container.querySelector(".data-point-list"),this.parent.addEventListener("mouseleave",function(){t.hideTip();});}},{key:"fill",value:function(){var t=this,e=void 0;this.index&&this.container.setAttribute("data-point-index",this.index),e=this.titleValueFirst?"<strong>"+this.titleValue+"</strong>"+this.titleName:this.titleName+"<strong>"+this.titleValue+"</strong>",this.title.innerHTML=e,this.dataPointList.innerHTML="",this.listValues.map(function(e,n){var i=t.colors[n]||"black",a=0===e.formatted||e.formatted?e.formatted:e.value,r=$.create("li",{styles:{"border-top":"3px solid "+i},innerHTML:'<strong style="display: block;">'+(0===a||a?a:"")+"</strong>\n\t\t\t\t\t"+(e.title?e.title:"")});t.dataPointList.appendChild(r);});}},{key:"calcPosition",value:function(){var t=this.container.offsetWidth;this.top=this.y-this.container.offsetHeight-TOOLTIP_POINTER_TRIANGLE_HEIGHT,this.left=this.x-t/2;var e=this.parent.offsetWidth-t,n=this.container.querySelector(".svg-pointer");if(this.left<0)n.style.left="calc(50% - "+-1*this.left+"px)",this.left=0;else if(this.left>e){var i="calc(50% + "+(this.left-e)+"px)";n.style.left=i,this.left=e;}else n.style.left="50%";}},{key:"setValues",value:function(t,e){var n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:[],a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:-1;this.titleName=n.name,this.titleValue=n.value,this.listValues=i,this.x=t,this.y=e,this.titleValueFirst=n.valueFirst||0,this.index=a,this.refresh();}},{key:"hideTip",value:function(){this.container.style.top="0px",this.container.style.left="0px",this.container.style.opacity="0";}},{key:"showTip",value:function(){this.container.style.top=this.top+"px",this.container.style.left=this.left+"px",this.container.style.opacity="1";}}]),t}(),_typeof$2="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},PRESET_COLOR_MAP={"light-blue":"#7cd6fd",blue:"#5e64ff",violet:"#743ee2",red:"#ff5858",orange:"#ffa00a",yellow:"#feef72",green:"#28a745","light-green":"#98d85b",purple:"#b554ff",magenta:"#ffa3ef",black:"#36114C",grey:"#bdd3e6","light-grey":"#f0f4f7","dark-grey":"#b8c2cc"},getColor=function(t){return /rgb[a]{0,1}\([\d, ]+\)/gim.test(t)?/\D+(\d*)\D+(\d*)\D+(\d*)/gim.exec(t).map(function(t,e){return 0!==e?Number(t).toString(16):"#"}).reduce(function(t,e){return ""+t+e}):PRESET_COLOR_MAP[t]||t},_slicedToArray=function(){function t(t,e){var n=[],i=!0,a=!1,r=void 0;try{for(var o,s=t[Symbol.iterator]();!(i=(o=s.next()).done)&&(n.push(o.value),!e||n.length!==e);i=!0);}catch(t){a=!0,r=t;}finally{try{!i&&s.return&&s.return();}finally{if(a)throw r}}return n}return function(e,n){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof$1="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},AXIS_TICK_LENGTH=6,LABEL_MARGIN=4,LABEL_MAX_CHARS=15,FONT_SIZE=10,BASE_LINE_COLOR="#dadada",FONT_FILL="#555b51",makeOverlay={bar:function(t){var e=void 0;"rect"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var n=t.cloneNode();return n.style.fill="#000000",n.style.opacity="0.4",e&&n.setAttribute("transform",e),n},dot:function(t){var e=void 0;"circle"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var n=t.cloneNode(),i=t.getAttribute("r"),a=t.getAttribute("fill");return n.setAttribute("r",parseInt(i)+DOT_OVERLAY_SIZE_INCR),n.setAttribute("fill",a),n.style.opacity="0.6",e&&n.setAttribute("transform",e),n},heat_square:function(t){var e=void 0;"circle"!==t.nodeName&&(e=t.getAttribute("transform"),t=t.childNodes[0]);var n=t.cloneNode(),i=t.getAttribute("r"),a=t.getAttribute("fill");return n.setAttribute("r",parseInt(i)+DOT_OVERLAY_SIZE_INCR),n.setAttribute("fill",a),n.style.opacity="0.6",e&&n.setAttribute("transform",e),n}},updateOverlay={bar:function(t,e){var n=void 0;"rect"!==t.nodeName&&(n=t.getAttribute("transform"),t=t.childNodes[0]);var i=["x","y","width","height"];Object.values(t.attributes).filter(function(t){return i.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),n&&e.setAttribute("transform",n);},dot:function(t,e){var n=void 0;"circle"!==t.nodeName&&(n=t.getAttribute("transform"),t=t.childNodes[0]);var i=["cx","cy"];Object.values(t.attributes).filter(function(t){return i.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),n&&e.setAttribute("transform",n);},heat_square:function(t,e){var n=void 0;"circle"!==t.nodeName&&(n=t.getAttribute("transform"),t=t.childNodes[0]);var i=["cx","cy"];Object.values(t.attributes).filter(function(t){return i.includes(t.name)&&t.specified}).map(function(t){e.setAttribute(t.name,t.nodeValue);}),n&&e.setAttribute("transform",n);}},_slicedToArray$2=function(){function t(t,e){var n=[],i=!0,a=!1,r=void 0;try{for(var o,s=t[Symbol.iterator]();!(i=(o=s.next()).done)&&(n.push(o.value),!e||n.length!==e);i=!0);}catch(t){a=!0,r=t;}finally{try{!i&&s.return&&s.return();}finally{if(a)throw r}}return n}return function(e,n){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),UNIT_ANIM_DUR=350,PATH_ANIM_DUR=350,MARKER_LINE_ANIM_DUR=UNIT_ANIM_DUR,REPLACE_ALL_NEW_DUR=250,STD_EASING="easein",_slicedToArray$1=function(){function t(t,e){var n=[],i=!0,a=!1,r=void 0;try{for(var o,s=t[Symbol.iterator]();!(i=(o=s.next()).done)&&(n.push(o.value),!e||n.length!==e);i=!0);}catch(t){a=!0,r=t;}finally{try{!i&&s.return&&s.return();}finally{if(a)throw r}}return n}return function(e,n){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),EASING={ease:"0.25 0.1 0.25 1",linear:"0 0 1 1",easein:"0.1 0.8 0.2 1",easeout:"0 0 0.58 1",easeinout:"0.42 0 0.58 1"},CSSTEXT=".chart-container{position:relative;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif}.chart-container .axis,.chart-container .chart-label{fill:#555b51}.chart-container .axis line,.chart-container .chart-label line{stroke:#dadada}.chart-container .dataset-units circle{stroke:#fff;stroke-width:2}.chart-container .dataset-units path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container .dataset-path{stroke-width:2px}.chart-container .path-group path{fill:none;stroke-opacity:1;stroke-width:2px}.chart-container line.dashed{stroke-dasharray:5,3}.chart-container .axis-line .specific-value{text-anchor:start}.chart-container .axis-line .y-line{text-anchor:end}.chart-container .axis-line .x-line{text-anchor:middle}.chart-container .legend-dataset-text{fill:#6c7680;font-weight:600}.graph-svg-tip{position:absolute;z-index:99999;padding:10px;font-size:12px;color:#959da5;text-align:center;background:rgba(0,0,0,.8);border-radius:3px}.graph-svg-tip ul{padding-left:0;display:flex}.graph-svg-tip ol{padding-left:0;display:flex}.graph-svg-tip ul.data-point-list li{min-width:90px;flex:1;font-weight:600}.graph-svg-tip strong{color:#dfe2e5;font-weight:600}.graph-svg-tip .svg-pointer{position:absolute;height:5px;margin:0 0 0 -5px;content:' ';border:5px solid transparent;border-top-color:rgba(0,0,0,.8)}.graph-svg-tip.comparison{padding:0;text-align:left;pointer-events:none}.graph-svg-tip.comparison .title{display:block;padding:10px;margin:0;font-weight:600;line-height:1;pointer-events:none}.graph-svg-tip.comparison ul{margin:0;white-space:nowrap;list-style:none}.graph-svg-tip.comparison li{display:inline-block;padding:5px 10px}",_createClass$2=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),BaseChart=function(){function t(e,n){if(_classCallCheck$3(this,t),n=deepClone(n),this.parent="string"==typeof e?document.querySelector(e):e,!(this.parent instanceof HTMLElement))throw new Error("No `parent` element to render on was provided.");this.rawChartArgs=n,this.title=n.title||"",this.type=n.type||"",this.realData=this.prepareData(n.data),this.data=this.prepareFirstData(this.realData),this.colors=this.validateColors(n.colors,this.type),this.config={showTooltip:1,showLegend:1,isNavigable:n.isNavigable||0,animate:void 0!==n.animate?n.animate:1,truncateLegends:n.truncateLegends||1},this.measures=JSON.parse(JSON.stringify(BASE_MEASURES));var i=this.measures;this.setMeasures(n),this.title.length||(i.titleHeight=0),this.config.showLegend||(i.legendHeight=0),this.argHeight=n.height||i.baseHeight,this.state={},this.options={},this.initTimeout=INIT_CHART_UPDATE_TIMEOUT,this.config.isNavigable&&(this.overlays=[]),this.configure(n);}return _createClass$2(t,[{key:"prepareData",value:function(t){return t}},{key:"prepareFirstData",value:function(t){return t}},{key:"validateColors",value:function(t,e){var n=[];return (t=(t||[]).concat(DEFAULT_COLORS[e])).forEach(function(t){var e=getColor(t);isValidColor(e)?n.push(e):console.warn('"'+t+'" is not a valid color.');}),n}},{key:"setMeasures",value:function(){}},{key:"configure",value:function(){var t=this,e=this.argHeight;this.baseHeight=e,this.height=e-getExtraHeight(this.measures),this.boundDrawFn=function(){return t.draw(!0)},ResizeObserver&&(this.resizeObserver=new ResizeObserver(this.boundDrawFn),this.resizeObserver.observe(this.parent)),window.addEventListener("resize",this.boundDrawFn),window.addEventListener("orientationchange",this.boundDrawFn);}},{key:"destroy",value:function(){this.resizeObserver&&this.resizeObserver.disconnect(),window.removeEventListener("resize",this.boundDrawFn),window.removeEventListener("orientationchange",this.boundDrawFn);}},{key:"setup",value:function(){this.makeContainer(),this.updateWidth(),this.makeTooltip(),this.draw(!1,!0);}},{key:"makeContainer",value:function(){this.parent.innerHTML="";var t={inside:this.parent,className:"chart-container"};this.independentWidth&&(t.styles={width:this.independentWidth+"px"}),this.container=$.create("div",t);}},{key:"makeTooltip",value:function(){this.tip=new SvgTip({parent:this.container,colors:this.colors}),this.bindTooltip();}},{key:"bindTooltip",value:function(){}},{key:"draw",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];e&&isHidden(this.parent)||(this.updateWidth(),this.calc(e),this.makeChartArea(),this.setupComponents(),this.components.forEach(function(e){return e.setup(t.drawArea)}),this.render(this.components,!1),n&&(this.data=this.realData,setTimeout(function(){t.update(t.data);},this.initTimeout)),this.renderLegend(),this.setupNavigation(n));}},{key:"calc",value:function(){}},{key:"updateWidth",value:function(){this.baseWidth=getElementContentWidth(this.parent),this.width=this.baseWidth-getExtraWidth(this.measures);}},{key:"makeChartArea",value:function(){this.svg&&this.container.removeChild(this.svg);var t=this.measures;this.svg=makeSVGContainer(this.container,"frappe-chart chart",this.baseWidth,this.baseHeight),this.svgDefs=makeSVGDefs(this.svg),this.title.length&&(this.titleEL=makeText("title",t.margins.left,t.margins.top,this.title,{fontSize:t.titleFontSize,fill:"#666666",dy:t.titleFontSize}));var e=getTopOffset(t);this.drawArea=makeSVGGroup(this.type+"-chart chart-draw-area","translate("+getLeftOffset(t)+", "+e+")"),this.config.showLegend&&(e+=this.height+t.paddings.bottom,this.legendArea=makeSVGGroup("chart-legend","translate("+getLeftOffset(t)+", "+e+")")),this.title.length&&this.svg.appendChild(this.titleEL),this.svg.appendChild(this.drawArea),this.config.showLegend&&this.svg.appendChild(this.legendArea),this.updateTipOffset(getLeftOffset(t),getTopOffset(t));}},{key:"updateTipOffset",value:function(t,e){this.tip.offset={x:t,y:e};}},{key:"setupComponents",value:function(){this.components=new Map;}},{key:"update",value:function(t){t||console.error("No data to update."),this.data=this.prepareData(t),this.calc(),this.render(this.components,this.config.animate),this.renderLegend();}},{key:"render",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.components,n=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];this.config.isNavigable&&this.overlays.map(function(t){return t.parentNode.removeChild(t)});var i=[];e.forEach(function(t){i=i.concat(t.update(n));}),i.length>0?(runSMILAnimation(this.container,this.svg,i),setTimeout(function(){e.forEach(function(t){return t.make()}),t.updateNav();},CHART_POST_ANIMATE_TIMEOUT)):(e.forEach(function(t){return t.make()}),this.updateNav());}},{key:"updateNav",value:function(){this.config.isNavigable&&(this.makeOverlay(),this.bindUnits());}},{key:"renderLegend",value:function(){}},{key:"setupNavigation",value:function(){var t=this,e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.config.isNavigable&&e&&(this.bindOverlay(),this.keyActions={13:this.onEnterKey.bind(this),37:this.onLeftArrow.bind(this),38:this.onUpArrow.bind(this),39:this.onRightArrow.bind(this),40:this.onDownArrow.bind(this)},document.addEventListener("keydown",function(e){isElementInViewport(t.container)&&(e=e||window.event,t.keyActions[e.keyCode]&&t.keyActions[e.keyCode]());}));}},{key:"makeOverlay",value:function(){}},{key:"updateOverlay",value:function(){}},{key:"bindOverlay",value:function(){}},{key:"bindUnits",value:function(){}},{key:"onLeftArrow",value:function(){}},{key:"onRightArrow",value:function(){}},{key:"onUpArrow",value:function(){}},{key:"onDownArrow",value:function(){}},{key:"onEnterKey",value:function(){}},{key:"addDataPoint",value:function(){}},{key:"removeDataPoint",value:function(){}},{key:"getDataPoint",value:function(){}},{key:"setCurrentDataPoint",value:function(){}},{key:"updateDataset",value:function(){}},{key:"export",value:function(){var t=prepareForExport(this.svg);downloadFile(this.title||"Chart",[t]);}}]),t}(),_createClass$1=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),_get$1=function t(e,n,i){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,n);if(void 0===a){var r=Object.getPrototypeOf(e);return null===r?void 0:t(r,n,i)}if("value"in a)return a.value;var o=a.get;if(void 0!==o)return o.call(i)},AggregationChart=function(t){function e(t,n){return _classCallCheck$2(this,e),_possibleConstructorReturn$1(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n))}return _inherits$1(e,t),_createClass$1(e,[{key:"configure",value:function(t){_get$1(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"configure",this).call(this,t),this.config.formatTooltipY=(t.tooltipOptions||{}).formatTooltipY,this.config.maxSlices=t.maxSlices||20,this.config.maxLegendPoints=t.maxLegendPoints||20;}},{key:"calc",value:function(){var t=this,e=this.state,n=this.config.maxSlices;e.sliceTotals=[];var i=this.data.labels.map(function(e,n){var i=0;return t.data.datasets.map(function(t){i+=t.values[n];}),[i,e]}).filter(function(t){return t[0]>=0}),a=i;if(i.length>n){i.sort(function(t,e){return e[0]-t[0]}),a=i.slice(0,n-1);var r=0;i.slice(n-1).map(function(t){r+=t[0];}),a.push([r,"Rest"]),this.colors[n-1]="grey";}e.labels=[],a.map(function(t){e.sliceTotals.push(round(t[0])),e.labels.push(t[1]);}),e.grandTotal=e.sliceTotals.reduce(function(t,e){return t+e},0),this.center={x:this.width/2,y:this.height/2};}},{key:"renderLegend",value:function(){var t=this,e=this.state;this.legendArea.textContent="",this.legendTotals=e.sliceTotals.slice(0,this.config.maxLegendPoints);var n=0,i=0;this.legendTotals.map(function(a,r){var o=150,s=Math.floor((t.width-getExtraWidth(t.measures))/o);t.legendTotals.length<s&&(o=t.width/t.legendTotals.length),n>s&&(n=0,i+=20);var l=o*n+5,u=t.config.truncateLegends?truncateString(e.labels[r],o/10):e.labels[r],c=t.config.formatTooltipY?t.config.formatTooltipY(a):a,h=legendDot(l,i,5,t.colors[r],u+": "+c,!1);t.legendArea.appendChild(h),n++;});}}]),e}(BaseChart),NO_OF_YEAR_MONTHS=12,NO_OF_DAYS_IN_WEEK=7,NO_OF_MILLIS=1e3,SEC_IN_DAY=86400,MONTH_NAMES=["January","February","March","April","May","June","July","August","September","October","November","December"],DAY_NAMES_SHORT=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],_slicedToArray$3=function(){function t(t,e){var n=[],i=!0,a=!1,r=void 0;try{for(var o,s=t[Symbol.iterator]();!(i=(o=s.next()).done)&&(n.push(o.value),!e||n.length!==e);i=!0);}catch(t){a=!0,r=t;}finally{try{!i&&s.return&&s.return();}finally{if(a)throw r}}return n}return function(e,n){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_createClass$4=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),ChartComponent=function(){function t(e){var n=e.layerClass,i=void 0===n?"":n,a=e.layerTransform,r=void 0===a?"":a,o=e.constants,s=e.getData,l=e.makeElements,u=e.animateElements;_classCallCheck$5(this,t),this.layerTransform=r,this.constants=o,this.makeElements=l,this.getData=s,this.animateElements=u,this.store=[],this.labels=[],this.layerClass=i,this.layerClass="function"==typeof this.layerClass?this.layerClass():this.layerClass,this.refresh();}return _createClass$4(t,[{key:"refresh",value:function(t){this.data=t||this.getData();}},{key:"setup",value:function(t){this.layer=makeSVGGroup(this.layerClass,this.layerTransform,t);}},{key:"make",value:function(){this.render(this.data),this.oldData=this.data;}},{key:"render",value:function(t){var e=this;this.store=this.makeElements(t),this.layer.textContent="",this.store.forEach(function(t){e.layer.appendChild(t);}),this.labels.forEach(function(t){e.layer.appendChild(t);});}},{key:"update",value:function(){var t=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];this.refresh();var e=[];return t&&(e=this.animateElements(this.data)||[]),e}}]),t}(),componentConfigs={donutSlices:{layerClass:"donut-slices",makeElements:function(t){return t.sliceStrings.map(function(e,n){var i=makePath(e,"donut-path",t.colors[n],"none",t.strokeWidth);return i.style.transition="transform .3s;",i})},animateElements:function(t){return this.store.map(function(e,n){return animatePathStr(e,t.sliceStrings[n])})}},pieSlices:{layerClass:"pie-slices",makeElements:function(t){return t.sliceStrings.map(function(e,n){var i=makePath(e,"pie-path","none",t.colors[n]);return i.style.transition="transform .3s;",i})},animateElements:function(t){return this.store.map(function(e,n){return animatePathStr(e,t.sliceStrings[n])})}},percentageBars:{layerClass:"percentage-bars",makeElements:function(t){var e=this;return t.xPositions.map(function(n,i){return percentageBar(n,0,t.widths[i],e.constants.barHeight,e.constants.barDepth,t.colors[i])})},animateElements:function(t){if(t)return []}},yAxis:{layerClass:"y axis",makeElements:function(t){var e=this;return t.positions.map(function(n,i){return yLine(n,t.labels[i],e.constants.width,{mode:e.constants.mode,pos:e.constants.pos,shortenNumbers:e.constants.shortenNumbers})})},animateElements:function(t){var e=t.positions,n=t.labels,i=this.oldData.positions,a=this.oldData.labels,r=equilizeNoOfElements(i,e),o=_slicedToArray$3(r,2);i=o[0],e=o[1];var s=equilizeNoOfElements(a,n),l=_slicedToArray$3(s,2);return a=l[0],n=l[1],this.render({positions:i,labels:n}),this.store.map(function(t,n){return translateHoriLine(t,e[n],i[n])})}},xAxis:{layerClass:"x axis",makeElements:function(t){var e=this;return t.positions.map(function(n,i){return xLine(n,t.calcLabels[i],e.constants.height,{mode:e.constants.mode,pos:e.constants.pos})})},animateElements:function(t){var e=t.positions,n=t.calcLabels,i=this.oldData.positions,a=this.oldData.calcLabels,r=equilizeNoOfElements(i,e),o=_slicedToArray$3(r,2);i=o[0],e=o[1];var s=equilizeNoOfElements(a,n),l=_slicedToArray$3(s,2);return a=l[0],n=l[1],this.render({positions:i,calcLabels:n}),this.store.map(function(t,n){return translateVertLine(t,e[n],i[n])})}},yMarkers:{layerClass:"y-markers",makeElements:function(t){var e=this;return t.map(function(t){return yMarker(t.position,t.label,e.constants.width,{labelPos:t.options.labelPos,mode:"span",lineType:"dashed"})})},animateElements:function(t){var e=equilizeNoOfElements(this.oldData,t),n=_slicedToArray$3(e,2);this.oldData=n[0];var i=(t=n[1]).map(function(t){return t.position}),a=t.map(function(t){return t.label}),r=t.map(function(t){return t.options}),o=this.oldData.map(function(t){return t.position});return this.render(o.map(function(t,e){return {position:o[e],label:a[e],options:r[e]}})),this.store.map(function(t,e){return translateHoriLine(t,i[e],o[e])})}},yRegions:{layerClass:"y-regions",makeElements:function(t){var e=this;return t.map(function(t){return yRegion(t.startPos,t.endPos,e.constants.width,t.label,{labelPos:t.options.labelPos})})},animateElements:function(t){var e=equilizeNoOfElements(this.oldData,t),n=_slicedToArray$3(e,2);this.oldData=n[0];var i=(t=n[1]).map(function(t){return t.endPos}),a=t.map(function(t){return t.label}),r=t.map(function(t){return t.startPos}),o=t.map(function(t){return t.options}),s=this.oldData.map(function(t){return t.endPos}),l=this.oldData.map(function(t){return t.startPos});this.render(s.map(function(t,e){return {startPos:l[e],endPos:s[e],label:a[e],options:o[e]}}));var u=[];return this.store.map(function(t,e){u=u.concat(animateRegion(t,r[e],i[e],s[e]));}),u}},heatDomain:{layerClass:function(){return "heat-domain domain-"+this.constants.index},makeElements:function(t){var e=this,n=this.constants,i=n.index,a=n.colWidth,r=n.rowHeight,o=n.squareSize,s=n.radius,l=n.xTranslate,u=0;return this.serializedSubDomains=[],t.cols.map(function(t,n){1===n&&e.labels.push(makeText("domain-name",l,-12,getMonthName(i,!0).toUpperCase(),{fontSize:9})),t.map(function(t,n){if(t.fill){var i={"data-date":t.yyyyMmDd,"data-value":t.dataValue,"data-day":n},a=heatSquare("day",l,u,o,s,t.fill,i);e.serializedSubDomains.push(a);}u+=r;}),u=0,l+=a;}),this.serializedSubDomains},animateElements:function(t){if(t)return []}},barGraph:{layerClass:function(){return "dataset-units dataset-bars dataset-"+this.constants.index},makeElements:function(t){var e=this.constants;return this.unitType="bar",this.units=t.yPositions.map(function(n,i){return datasetBar(t.xPositions[i],n,t.barWidth,e.color,t.labels[i],i,t.offsets[i],{zeroLine:t.zeroLine,barsWidth:t.barsWidth,minHeight:e.minHeight})}),this.units},animateElements:function(t){var e=t.xPositions,n=t.yPositions,i=t.offsets,a=t.labels,r=this.oldData.xPositions,o=this.oldData.yPositions,s=this.oldData.offsets,l=this.oldData.labels,u=equilizeNoOfElements(r,e),c=_slicedToArray$3(u,2);r=c[0],e=c[1];var h=equilizeNoOfElements(o,n),d=_slicedToArray$3(h,2);o=d[0],n=d[1];var f=equilizeNoOfElements(s,i),p=_slicedToArray$3(f,2);s=p[0],i=p[1];var v=equilizeNoOfElements(l,a),g=_slicedToArray$3(v,2);l=g[0],a=g[1],this.render({xPositions:r,yPositions:o,offsets:s,labels:a,zeroLine:this.oldData.zeroLine,barsWidth:this.oldData.barsWidth,barWidth:this.oldData.barWidth});var y=[];return this.store.map(function(a,r){y=y.concat(animateBar(a,e[r],n[r],t.barWidth,i[r],{zeroLine:t.zeroLine}));}),y}},lineGraph:{layerClass:function(){return "dataset-units dataset-line dataset-"+this.constants.index},makeElements:function(t){var e=this.constants;return this.unitType="dot",this.paths={},e.hideLine||(this.paths=getPaths(t.xPositions,t.yPositions,e.color,{heatline:e.heatline,regionFill:e.regionFill,spline:e.spline},{svgDefs:e.svgDefs,zeroLine:t.zeroLine})),this.units=[],e.hideDots||(this.units=t.yPositions.map(function(n,i){return datasetDot(t.xPositions[i],n,t.radius,e.color,e.valuesOverPoints?t.values[i]:"",i)})),Object.values(this.paths).concat(this.units)},animateElements:function(t){var e=t.xPositions,n=t.yPositions,i=t.values,a=this.oldData.xPositions,r=this.oldData.yPositions,o=this.oldData.values,s=equilizeNoOfElements(a,e),l=_slicedToArray$3(s,2);a=l[0],e=l[1];var u=equilizeNoOfElements(r,n),c=_slicedToArray$3(u,2);r=c[0],n=c[1];var h=equilizeNoOfElements(o,i),d=_slicedToArray$3(h,2);o=d[0],i=d[1],this.render({xPositions:a,yPositions:r,values:i,zeroLine:this.oldData.zeroLine,radius:this.oldData.radius});var f=[];return Object.keys(this.paths).length&&(f=f.concat(animatePath(this.paths,e,n,t.zeroLine,this.constants.spline))),this.units.length&&this.units.map(function(t,i){f=f.concat(animateDot(t,e[i],n[i]));}),f}}},_createClass=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),_get=function t(e,n,i){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,n);if(void 0===a){var r=Object.getPrototypeOf(e);return null===r?void 0:t(r,n,i)}if("value"in a)return a.value;var o=a.get;if(void 0!==o)return o.call(i)},PercentageChart=function(t){function e(t,n){_classCallCheck$1(this,e);var i=_possibleConstructorReturn(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return i.type="percentage",i.setup(),i}return _inherits(e,t),_createClass(e,[{key:"setMeasures",value:function(t){var e=this.measures;this.barOptions=t.barOptions||{};var n=this.barOptions;n.height=n.height||PERCENTAGE_BAR_DEFAULT_HEIGHT,n.depth=n.depth||PERCENTAGE_BAR_DEFAULT_DEPTH,e.paddings.right=30,e.legendHeight=60,e.baseHeight=8*(n.height+.5*n.depth);}},{key:"setupComponents",value:function(){var t=this.state,e=[["percentageBars",{barHeight:this.barOptions.height,barDepth:this.barOptions.depth},function(){return {xPositions:t.xPositions,widths:t.widths,colors:this.colors}}.bind(this)]];this.components=new Map(e.map(function(t){var e=getComponent.apply(void 0,_toConsumableArray(t));return [t[0],e]}));}},{key:"calc",value:function(){var t=this;_get(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"calc",this).call(this);var n=this.state;n.xPositions=[],n.widths=[];var i=0;n.sliceTotals.map(function(e){var a=t.width*e/n.grandTotal;n.widths.push(a),n.xPositions.push(i),i+=a;});}},{key:"makeDataByIndex",value:function(){}},{key:"bindTooltip",value:function(){var t=this,e=this.state;this.container.addEventListener("mousemove",function(n){var i=t.components.get("percentageBars").store,a=n.target;if(i.includes(a)){var r=i.indexOf(a),o=getOffset(t.container),s=getOffset(a),l=s.left-o.left+parseInt(a.getAttribute("width"))/2,u=s.top-o.top,c=(t.formattedLabels&&t.formattedLabels.length>0?t.formattedLabels[r]:t.state.labels[r])+": ",h=e.sliceTotals[r]/e.grandTotal;t.tip.setValues(l,u,{name:c,value:(100*h).toFixed(1)+"%"}),t.tip.showTip();}});}}]),e}(AggregationChart),_createClass$5=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),_get$2=function t(e,n,i){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,n);if(void 0===a){var r=Object.getPrototypeOf(e);return null===r?void 0:t(r,n,i)}if("value"in a)return a.value;var o=a.get;if(void 0!==o)return o.call(i)},PieChart=function(t){function e(t,n){_classCallCheck$6(this,e);var i=_possibleConstructorReturn$2(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return i.type="pie",i.initTimeout=0,i.init=1,i.setup(),i}return _inherits$2(e,t),_createClass$5(e,[{key:"configure",value:function(t){_get$2(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"configure",this).call(this,t),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=t.hoverRadio||.1,this.config.startAngle=t.startAngle||0,this.clockWise=t.clockWise||!1;}},{key:"calc",value:function(){var t=this;_get$2(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"calc",this).call(this);var n=this.state;this.radius=this.height>this.width?this.center.x:this.center.y;var i=this.radius,a=this.clockWise,r=n.slicesProperties||[];n.sliceStrings=[],n.slicesProperties=[];var o=180-this.config.startAngle;n.sliceTotals.map(function(e,s){var l=o,u=e/n.grandTotal*FULL_ANGLE,c=u>180?1:0,h=a?-u:u,d=o+=h,f=getPositionByAngle(l,i),p=getPositionByAngle(d,i),v=t.init&&r[s],g=void 0,y=void 0;t.init?(g=v?v.startPosition:f,y=v?v.endPosition:f):(g=f,y=p);var m=360===u?makeCircleStr(g,y,t.center,t.radius,a,c):makeArcPathStr(g,y,t.center,t.radius,a,c);n.sliceStrings.push(m),n.slicesProperties.push({startPosition:f,endPosition:p,value:e,total:n.grandTotal,startAngle:l,endAngle:d,angle:h});}),this.init=0;}},{key:"setupComponents",value:function(){var t=this.state,e=[["pieSlices",{},function(){return {sliceStrings:t.sliceStrings,colors:this.colors}}.bind(this)]];this.components=new Map(e.map(function(t){var e=getComponent.apply(void 0,_toConsumableArray$2(t));return [t[0],e]}));}},{key:"calTranslateByAngle",value:function(t){var e=this.radius,n=this.hoverRadio,i=getPositionByAngle(t.startAngle+t.angle/2,e);return "translate3d("+i.x*n+"px,"+i.y*n+"px,0)"}},{key:"hoverSlice",value:function(t,e,n,i){if(t){var a=this.colors[e];if(n){transform(t,this.calTranslateByAngle(this.state.slicesProperties[e])),t.style.fill=lightenDarkenColor(a,50);var r=getOffset(this.svg),o=i.pageX-r.left+10,s=i.pageY-r.top-10,l=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[e]:this.state.labels[e])+": ",u=(100*this.state.sliceTotals[e]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,s,{name:l,value:u+"%"}),this.tip.showTip();}else transform(t,"translate3d(0,0,0)"),this.tip.hideTip(),t.style.fill=a;}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave);}},{key:"mouseMove",value:function(t){var e=t.target,n=this.components.get("pieSlices").store,i=this.curActiveSliceIndex,a=this.curActiveSlice;if(n.includes(e)){var r=n.indexOf(e);this.hoverSlice(a,i,!1),this.curActiveSlice=e,this.curActiveSliceIndex=r,this.hoverSlice(e,r,!0,t);}else this.mouseLeave();}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1);}}]),e}(AggregationChart),_slicedToArray$4=function(){function t(t,e){var n=[],i=!0,a=!1,r=void 0;try{for(var o,s=t[Symbol.iterator]();!(i=(o=s.next()).done)&&(n.push(o.value),!e||n.length!==e);i=!0);}catch(t){a=!0,r=t;}finally{try{!i&&s.return&&s.return();}finally{if(a)throw r}}return n}return function(e,n){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return t(e,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_createClass$6=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),COL_WIDTH=HEATMAP_SQUARE_SIZE+HEATMAP_GUTTER_SIZE,ROW_HEIGHT=COL_WIDTH,Heatmap=function(t){function e(t,n){_classCallCheck$7(this,e);var i=_possibleConstructorReturn$3(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));i.type="heatmap",i.countLabel=n.countLabel||"";var a=["Sunday","Monday"],r=a.includes(n.startSubDomain)?n.startSubDomain:"Sunday";return i.startSubDomainIndex=a.indexOf(r),i.setup(),i}return _inherits$3(e,t),_createClass$6(e,[{key:"setMeasures",value:function(t){var e=this.measures;this.discreteDomains=0===t.discreteDomains?0:1,e.paddings.top=3*ROW_HEIGHT,e.paddings.bottom=0,e.legendHeight=2*ROW_HEIGHT,e.baseHeight=ROW_HEIGHT*NO_OF_DAYS_IN_WEEK+getExtraHeight(e);var n=this.data,i=this.discreteDomains?NO_OF_YEAR_MONTHS:0;this.independentWidth=(getWeeksBetween(n.start,n.end)+i)*COL_WIDTH+getExtraWidth(e);}},{key:"updateWidth",value:function(){var t=this.discreteDomains?NO_OF_YEAR_MONTHS:0,e=this.state.noOfWeeks?this.state.noOfWeeks:52;this.baseWidth=(e+t)*COL_WIDTH+getExtraWidth(this.measures);}},{key:"prepareData",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data;if(t.start&&t.end&&t.start>t.end)throw new Error("Start date cannot be greater than end date.");if(t.start||(t.start=new Date,t.start.setFullYear(t.start.getFullYear()-1)),t.end||(t.end=new Date),t.dataPoints=t.dataPoints||{},parseInt(Object.keys(t.dataPoints)[0])>1e5){var e={};Object.keys(t.dataPoints).forEach(function(n){var i=new Date(n*NO_OF_MILLIS);e[getYyyyMmDd(i)]=t.dataPoints[n];}),t.dataPoints=e;}return t}},{key:"calc",value:function(){var t=this.state;t.start=clone(this.data.start),t.end=clone(this.data.end),t.firstWeekStart=clone(t.start),t.noOfWeeks=getWeeksBetween(t.start,t.end),t.distribution=calcDistribution(Object.values(this.data.dataPoints),HEATMAP_DISTRIBUTION_SIZE),t.domainConfigs=this.getDomains();}},{key:"setupComponents",value:function(){var t=this,e=this.state,n=this.discreteDomains?0:1,i=e.domainConfigs.map(function(i,a){return ["heatDomain",{index:i.index,colWidth:COL_WIDTH,rowHeight:ROW_HEIGHT,squareSize:HEATMAP_SQUARE_SIZE,radius:t.rawChartArgs.radius||0,xTranslate:e.domainConfigs.filter(function(t,e){return e<a}).map(function(t){return t.cols.length-n}).reduce(function(t,e){return t+e},0)*COL_WIDTH},function(){return e.domainConfigs[a]}.bind(t)]});this.components=new Map(i.map(function(t,e){var n=getComponent.apply(void 0,_toConsumableArray$3(t));return [t[0]+"-"+e,n]}));var a=0;DAY_NAMES_SHORT.forEach(function(e,n){if([1,3,5].includes(n)){var i=makeText("subdomain-name",-COL_WIDTH/2,a,e,{fontSize:HEATMAP_SQUARE_SIZE,dy:8,textAnchor:"end"});t.drawArea.appendChild(i);}a+=ROW_HEIGHT;});}},{key:"update",value:function(t){t||console.error("No data to update."),this.data=this.prepareData(t),this.draw(),this.bindTooltip();}},{key:"bindTooltip",value:function(){var t=this;this.container.addEventListener("mousemove",function(e){t.components.forEach(function(n){var i=n.store,a=e.target;if(i.includes(a)){var r=a.getAttribute("data-value"),o=a.getAttribute("data-date").split("-"),s=getMonthName(parseInt(o[1])-1,!0),l=t.container.getBoundingClientRect(),u=a.getBoundingClientRect(),c=parseInt(e.target.getAttribute("width")),h=u.left-l.left+c/2,d=u.top-l.top,f=r+" "+t.countLabel,p=" on "+s+" "+o[0]+", "+o[2];t.tip.setValues(h,d,{name:p,value:f,valueFirst:1},[]),t.tip.showTip();}});});}},{key:"renderLegend",value:function(){var t=this;this.legendArea.textContent="";var e=0,n=ROW_HEIGHT,i=this.rawChartArgs.radius||0,a=makeText("subdomain-name",e,n,"Less",{fontSize:HEATMAP_SQUARE_SIZE+1,dy:9});e=2*COL_WIDTH+COL_WIDTH/2,this.legendArea.appendChild(a),this.colors.slice(0,HEATMAP_DISTRIBUTION_SIZE).map(function(a,r){var o=heatSquare("heatmap-legend-unit",e+(COL_WIDTH+3)*r,n,HEATMAP_SQUARE_SIZE,i,a);t.legendArea.appendChild(o);});var r=makeText("subdomain-name",e+HEATMAP_DISTRIBUTION_SIZE*(COL_WIDTH+3)+COL_WIDTH/4,n,"More",{fontSize:HEATMAP_SQUARE_SIZE+1,dy:9});this.legendArea.appendChild(r);}},{key:"getDomains",value:function(){for(var t=this.state,e=[t.start.getMonth(),t.start.getFullYear()],n=e[0],i=e[1],a=[t.end.getMonth(),t.end.getFullYear()],r=a[0]-n+1+12*(a[1]-i),o=[],s=clone(t.start),l=0;l<r;l++){var u=t.end;if(!areInSameMonth(s,t.end)){var c=[s.getMonth(),s.getFullYear()];u=getLastDateInMonth(c[0],c[1]);}o.push(this.getDomainConfig(s,u)),addDays(u,1),s=u;}return o}},{key:"getDomainConfig",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n=[t.getMonth(),t.getFullYear()],i=n[0],a=n[1],r=setDayToSunday(t),o={index:i,cols:[]};addDays(e=clone(e)||getLastDateInMonth(i,a),1);for(var s=getWeeksBetween(r,e),l=[],u=void 0,c=0;c<s;c++)u=this.getCol(r,i),l.push(u),addDays(r=new Date(u[NO_OF_DAYS_IN_WEEK-1].yyyyMmDd),1);return void 0!==u[NO_OF_DAYS_IN_WEEK-1].dataValue&&(addDays(r,1),l.push(this.getCol(r,i,!0))),o.cols=l,o}},{key:"getCol",value:function(t,e){for(var n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=this.state,a=clone(t),r=[],o=0;o<NO_OF_DAYS_IN_WEEK;o++,addDays(a,1)){var s={},l=a>=i.start&&a<=i.end;n||a.getMonth()!==e||!l?s.yyyyMmDd=getYyyyMmDd(a):s=this.getSubDomainConfig(a),r.push(s);}return r}},{key:"getSubDomainConfig",value:function(t){var e=getYyyyMmDd(t),n=this.data.dataPoints[e];return {yyyyMmDd:e,dataValue:n||0,fill:this.colors[getMaxCheckpoint(n,this.state.distribution)]}}}]),e}(BaseChart),_createClass$7=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),_get$3=function t(e,n,i){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,n);if(void 0===a){var r=Object.getPrototypeOf(e);return null===r?void 0:t(r,n,i)}if("value"in a)return a.value;var o=a.get;if(void 0!==o)return o.call(i)},AxisChart=function(t){function e(t,n){_classCallCheck$8(this,e);var i=_possibleConstructorReturn$4(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return i.barOptions=n.barOptions||{},i.lineOptions=n.lineOptions||{},i.type=n.type||"line",i.init=1,i.setup(),i}return _inherits$4(e,t),_createClass$7(e,[{key:"setMeasures",value:function(){this.data.datasets.length<=1&&(this.config.showLegend=0,this.measures.paddings.bottom=30);}},{key:"configure",value:function(t){_get$3(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"configure",this).call(this,t),t.axisOptions=t.axisOptions||{},t.tooltipOptions=t.tooltipOptions||{},this.config.xAxisMode=t.axisOptions.xAxisMode||"span",this.config.yAxisMode=t.axisOptions.yAxisMode||"span",this.config.xIsSeries=t.axisOptions.xIsSeries||0,this.config.shortenYAxisNumbers=t.axisOptions.shortenYAxisNumbers||0,this.config.formatTooltipX=t.tooltipOptions.formatTooltipX,this.config.formatTooltipY=t.tooltipOptions.formatTooltipY,this.config.valuesOverPoints=t.valuesOverPoints;}},{key:"prepareData",value:function(){return dataPrep(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data,this.type)}},{key:"prepareFirstData",value:function(){return zeroDataPrep(arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.data)}},{key:"calc",value:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this.calcXPositions(),t||this.calcYAxisParameters(this.getAllYValues(),"line"===this.type),this.makeDataByIndex();}},{key:"calcXPositions",value:function(){var t=this.state,e=this.data.labels;t.datasetLength=e.length,t.unitWidth=this.width/t.datasetLength,t.xOffset=t.unitWidth/2,t.xAxis={labels:e,positions:e.map(function(e,n){return floatTwo(t.xOffset+n*t.unitWidth)})};}},{key:"calcYAxisParameters",value:function(t){var e=calcChartIntervals(t,arguments.length>1&&void 0!==arguments[1]?arguments[1]:"false"),n=this.height/getValueRange(e),i=getIntervalSize(e)*n,a=this.height-getZeroIndex(e)*i;this.state.yAxis={labels:e,positions:e.map(function(t){return a-t*n}),scaleMultiplier:n,zeroLine:a},this.calcDatasetPoints(),this.calcYExtremes(),this.calcYRegions();}},{key:"calcDatasetPoints",value:function(){var t=this.state,e=function(e){return e.map(function(e){return scale(e,t.yAxis)})};t.datasets=this.data.datasets.map(function(t,n){var i=t.values,a=t.cumulativeYs||[];return {name:t.name&&t.name.replace(/<|>|&/g,function(t){return "&"==t?"&amp;":"<"==t?"&lt;":"&gt;"}),index:n,chartType:t.chartType,values:i,yPositions:e(i),cumulativeYs:a,cumulativeYPos:e(a)}});}},{key:"calcYExtremes",value:function(){var t=this.state;if(this.barOptions.stacked)return void(t.yExtremes=t.datasets[t.datasets.length-1].cumulativeYPos);t.yExtremes=new Array(t.datasetLength).fill(9999),t.datasets.map(function(e){e.yPositions.map(function(e,n){e<t.yExtremes[n]&&(t.yExtremes[n]=e);});});}},{key:"calcYRegions",value:function(){var t=this.state;this.data.yMarkers&&(this.state.yMarkers=this.data.yMarkers.map(function(e){return e.position=scale(e.value,t.yAxis),e.options||(e.options={}),e})),this.data.yRegions&&(this.state.yRegions=this.data.yRegions.map(function(e){return e.startPos=scale(e.start,t.yAxis),e.endPos=scale(e.end,t.yAxis),e.options||(e.options={}),e}));}},{key:"getAllYValues",value:function(){var t,e=this,n="values";if(this.barOptions.stacked){n="cumulativeYs";var i=new Array(this.state.datasetLength).fill(0);this.data.datasets.map(function(t,a){var r=e.data.datasets[a].values;t[n]=i=i.map(function(t,e){return t+r[e]});});}var a=this.data.datasets.map(function(t){return t[n]});return this.data.yMarkers&&a.push(this.data.yMarkers.map(function(t){return t.value})),this.data.yRegions&&this.data.yRegions.map(function(t){a.push([t.end,t.start]);}),(t=[]).concat.apply(t,_toConsumableArray$5(a))}},{key:"setupComponents",value:function(){var t=this,e=[["yAxis",{mode:this.config.yAxisMode,width:this.width,shortenNumbers:this.config.shortenYAxisNumbers},function(){return this.state.yAxis}.bind(this)],["xAxis",{mode:this.config.xAxisMode,height:this.height},function(){var t=this.state;return t.xAxis.calcLabels=getShortenedLabels(this.width,t.xAxis.labels,this.config.xIsSeries),t.xAxis}.bind(this)],["yRegions",{width:this.width,pos:"right"},function(){return this.state.yRegions}.bind(this)]],n=this.state.datasets.filter(function(t){return "bar"===t.chartType}),i=this.state.datasets.filter(function(t){return "line"===t.chartType}),a=n.map(function(e){var i=e.index;return ["barGraph-"+e.index,{index:i,color:t.colors[i],stacked:t.barOptions.stacked,valuesOverPoints:t.config.valuesOverPoints,minHeight:t.height*MIN_BAR_PERCENT_HEIGHT},function(){var t=this.state,e=t.datasets[i],a=this.barOptions.stacked,r=this.barOptions.spaceRatio||BAR_CHART_SPACE_RATIO,o=t.unitWidth*(1-r),s=o/(a?1:n.length),l=t.xAxis.positions.map(function(t){return t-o/2});a||(l=l.map(function(t){return t+s*i}));var u=new Array(t.datasetLength).fill("");this.config.valuesOverPoints&&(u=a&&e.index===t.datasets.length-1?e.cumulativeYs:e.values);var c=new Array(t.datasetLength).fill(0);return a&&(c=e.yPositions.map(function(t,n){return t-e.cumulativeYPos[n]})),{xPositions:l,yPositions:e.yPositions,offsets:c,labels:u,zeroLine:t.yAxis.zeroLine,barsWidth:o,barWidth:s}}.bind(t)]}),r=i.map(function(e){var n=e.index;return ["lineGraph-"+e.index,{index:n,color:t.colors[n],svgDefs:t.svgDefs,heatline:t.lineOptions.heatline,regionFill:t.lineOptions.regionFill,spline:t.lineOptions.spline,hideDots:t.lineOptions.hideDots,hideLine:t.lineOptions.hideLine,valuesOverPoints:t.config.valuesOverPoints},function(){var t=this.state,e=t.datasets[n],i=t.yAxis.positions[0]<t.yAxis.zeroLine?t.yAxis.positions[0]:t.yAxis.zeroLine;return {xPositions:t.xAxis.positions,yPositions:e.yPositions,values:e.values,zeroLine:i,radius:this.lineOptions.dotSize||LINE_CHART_DOT_SIZE}}.bind(t)]}),o=[["yMarkers",{width:this.width,pos:"right"},function(){return this.state.yMarkers}.bind(this)]];e=e.concat(a,r,o);var s=["yMarkers","yRegions"];this.dataUnitComponents=[],this.components=new Map(e.filter(function(e){return !s.includes(e[0])||t.state[e[0]]}).map(function(e){var n=getComponent.apply(void 0,_toConsumableArray$5(e));return (e[0].includes("lineGraph")||e[0].includes("barGraph"))&&t.dataUnitComponents.push(n),[e[0],n]}));}},{key:"makeDataByIndex",value:function(){var t=this;this.dataByIndex={};var e=this.state,n=this.config.formatTooltipX,i=this.config.formatTooltipY;e.xAxis.labels.map(function(a,r){var o=t.state.datasets.map(function(e,n){var a=e.values[r];return {title:e.name,value:a,yPos:e.yPositions[r],color:t.colors[n],formatted:i?i(a):a}});t.dataByIndex[r]={label:a,formattedLabel:n?n(a):a,xPos:e.xAxis.positions[r],values:o,yExtreme:e.yExtremes[r]};});}},{key:"bindTooltip",value:function(){var t=this;this.container.addEventListener("mousemove",function(e){var n=t.measures,i=getOffset(t.container),a=e.pageX-i.left-getLeftOffset(n),r=e.pageY-i.top;r<t.height+getTopOffset(n)&&r>getTopOffset(n)?t.mapTooltipXPosition(a):t.tip.hideTip();});}},{key:"mapTooltipXPosition",value:function(t){var e=this.state;if(e.yExtremes){var n=getClosestInArray(t,e.xAxis.positions,!0);if(n>=0){var i=this.dataByIndex[n];this.tip.setValues(i.xPos+this.tip.offset.x,i.yExtreme+this.tip.offset.y,{name:i.formattedLabel,value:""},i.values,n),this.tip.showTip();}}}},{key:"renderLegend",value:function(){var t=this,e=this.data;e.datasets.length>1&&(this.legendArea.textContent="",e.datasets.map(function(e,n){var i=AXIS_LEGEND_BAR_SIZE,a=legendBar(i*n,"0",i,t.colors[n],e.name,t.config.truncateLegends);t.legendArea.appendChild(a);}));}},{key:"makeOverlay",value:function(){var t=this;if(this.init)return void(this.init=0);this.overlayGuides&&this.overlayGuides.forEach(function(t){var e=t.overlay;e.parentNode.removeChild(e);}),this.overlayGuides=this.dataUnitComponents.map(function(t){return {type:t.unitType,overlay:void 0,units:t.units}}),void 0===this.state.currentIndex&&(this.state.currentIndex=this.state.datasetLength-1),this.overlayGuides.map(function(e){var n=e.units[t.state.currentIndex];e.overlay=makeOverlay[e.type](n),t.drawArea.appendChild(e.overlay);});}},{key:"updateOverlayGuides",value:function(){this.overlayGuides&&this.overlayGuides.forEach(function(t){var e=t.overlay;e.parentNode.removeChild(e);});}},{key:"bindOverlay",value:function(){var t=this;this.parent.addEventListener("data-select",function(){t.updateOverlay();});}},{key:"bindUnits",value:function(){var t=this;this.dataUnitComponents.map(function(e){e.units.map(function(e){e.addEventListener("click",function(){var n=e.getAttribute("data-point-index");t.setCurrentDataPoint(n);});});}),this.tip.container.addEventListener("click",function(){var e=t.tip.container.getAttribute("data-point-index");t.setCurrentDataPoint(e);});}},{key:"updateOverlay",value:function(){var t=this;this.overlayGuides.map(function(e){var n=e.units[t.state.currentIndex];updateOverlay[e.type](n,e.overlay);});}},{key:"onLeftArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex-1);}},{key:"onRightArrow",value:function(){this.setCurrentDataPoint(this.state.currentIndex+1);}},{key:"getDataPoint",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.currentIndex,e=this.state;return {index:t,label:e.xAxis.labels[t],values:e.datasets.map(function(e){return e.values[t]})}}},{key:"setCurrentDataPoint",value:function(t){var e=this.state;(t=parseInt(t))<0&&(t=0),t>=e.xAxis.labels.length&&(t=e.xAxis.labels.length-1),t!==e.currentIndex&&(e.currentIndex=t,fire(this.parent,"data-select",this.getDataPoint()));}},{key:"addDataPoint",value:function(t,n){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:this.state.datasetLength;_get$3(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"addDataPoint",this).call(this,t,n,i),this.data.labels.splice(i,0,t),this.data.datasets.map(function(t,e){t.values.splice(i,0,n[e]);}),this.update(this.data);}},{key:"removeDataPoint",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.state.datasetLength-1;this.data.labels.length<=1||(_get$3(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"removeDataPoint",this).call(this,t),this.data.labels.splice(t,1),this.data.datasets.map(function(e){e.values.splice(t,1);}),this.update(this.data));}},{key:"updateDataset",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;this.data.datasets[e].values=t,this.update(this.data);}},{key:"updateDatasets",value:function(t){this.data.datasets.map(function(e,n){t[n]&&(e.values=t[n]);}),this.update(this.data);}}]),e}(BaseChart),_createClass$8=function(){function t(t,e){for(var n=0;n<e.length;n++){var i=e[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i);}}return function(e,n,i){return n&&t(e.prototype,n),i&&t(e,i),e}}(),_get$4=function t(e,n,i){null===e&&(e=Function.prototype);var a=Object.getOwnPropertyDescriptor(e,n);if(void 0===a){var r=Object.getPrototypeOf(e);return null===r?void 0:t(r,n,i)}if("value"in a)return a.value;var o=a.get;if(void 0!==o)return o.call(i)},DonutChart=function(t){function e(t,n){_classCallCheck$9(this,e);var i=_possibleConstructorReturn$5(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t,n));return i.type="donut",i.initTimeout=0,i.init=1,i.setup(),i}return _inherits$5(e,t),_createClass$8(e,[{key:"configure",value:function(t){_get$4(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"configure",this).call(this,t),this.mouseMove=this.mouseMove.bind(this),this.mouseLeave=this.mouseLeave.bind(this),this.hoverRadio=t.hoverRadio||.1,this.config.startAngle=t.startAngle||0,this.clockWise=t.clockWise||!1,this.strokeWidth=t.strokeWidth||30;}},{key:"calc",value:function(){var t=this;_get$4(e.prototype.__proto__||Object.getPrototypeOf(e.prototype),"calc",this).call(this);var n=this.state;this.radius=this.height>this.width?this.center.x-this.strokeWidth/2:this.center.y-this.strokeWidth/2;var i=this.radius,a=this.clockWise,r=n.slicesProperties||[];n.sliceStrings=[],n.slicesProperties=[];var o=180-this.config.startAngle;n.sliceTotals.map(function(e,s){var l=o,u=e/n.grandTotal*FULL_ANGLE,c=u>180?1:0,h=a?-u:u,d=o+=h,f=getPositionByAngle(l,i),p=getPositionByAngle(d,i),v=t.init&&r[s],g=void 0,y=void 0;t.init?(g=v?v.startPosition:f,y=v?v.endPosition:f):(g=f,y=p);var m=360===u?makeStrokeCircleStr(g,y,t.center,t.radius,t.clockWise,c):makeArcStrokePathStr(g,y,t.center,t.radius,t.clockWise,c);n.sliceStrings.push(m),n.slicesProperties.push({startPosition:f,endPosition:p,value:e,total:n.grandTotal,startAngle:l,endAngle:d,angle:h});}),this.init=0;}},{key:"setupComponents",value:function(){var t=this.state,e=[["donutSlices",{},function(){return {sliceStrings:t.sliceStrings,colors:this.colors,strokeWidth:this.strokeWidth}}.bind(this)]];this.components=new Map(e.map(function(t){var e=getComponent.apply(void 0,_toConsumableArray$7(t));return [t[0],e]}));}},{key:"calTranslateByAngle",value:function(t){var e=this.radius,n=this.hoverRadio,i=getPositionByAngle(t.startAngle+t.angle/2,e);return "translate3d("+i.x*n+"px,"+i.y*n+"px,0)"}},{key:"hoverSlice",value:function(t,e,n,i){if(t){var a=this.colors[e];if(n){transform(t,this.calTranslateByAngle(this.state.slicesProperties[e])),t.style.stroke=lightenDarkenColor(a,50);var r=getOffset(this.svg),o=i.pageX-r.left+10,s=i.pageY-r.top-10,l=(this.formatted_labels&&this.formatted_labels.length>0?this.formatted_labels[e]:this.state.labels[e])+": ",u=(100*this.state.sliceTotals[e]/this.state.grandTotal).toFixed(1);this.tip.setValues(o,s,{name:l,value:u+"%"}),this.tip.showTip();}else transform(t,"translate3d(0,0,0)"),this.tip.hideTip(),t.style.stroke=a;}}},{key:"bindTooltip",value:function(){this.container.addEventListener("mousemove",this.mouseMove),this.container.addEventListener("mouseleave",this.mouseLeave);}},{key:"mouseMove",value:function(t){var e=t.target,n=this.components.get("donutSlices").store,i=this.curActiveSliceIndex,a=this.curActiveSlice;if(n.includes(e)){var r=n.indexOf(e);this.hoverSlice(a,i,!1),this.curActiveSlice=e,this.curActiveSliceIndex=r,this.hoverSlice(e,r,!0,t);}else this.mouseLeave();}},{key:"mouseLeave",value:function(){this.hoverSlice(this.curActiveSlice,this.curActiveSliceIndex,!1);}}]),e}(AggregationChart),chartTypes={bar:AxisChart,line:AxisChart,percentage:PercentageChart,heatmap:Heatmap,pie:PieChart,donut:DonutChart},Chart=function t(e,n){return _classCallCheck(this,t),getChartByType(n.type,e,n)};exports.Chart=Chart,exports.PercentageChart=PercentageChart,exports.PieChart=PieChart,exports.Heatmap=Heatmap,exports.AxisChart=AxisChart;
+
+	});
+
+	/* node_modules\svelte-frappe-charts\src\components\base.svelte generated by Svelte v4.2.18 */
+	const file$8 = "node_modules\\svelte-frappe-charts\\src\\components\\base.svelte";
+
+	function create_fragment$8(ctx) {
+		let div;
+		let mounted;
+		let dispose;
+
+		const block = {
+			c: function create() {
+				div = element("div");
+				add_location(div, file$8, 89, 0, 2072);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div, anchor);
+				/*div_binding*/ ctx[18](div);
+
+				if (!mounted) {
+					dispose = listen_dev(div, "data-select", /*data_select_handler*/ ctx[17], false, false, false, false);
+					mounted = true;
+				}
+			},
+			p: noop,
+			i: noop,
+			o: noop,
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div);
+				}
+
+				/*div_binding*/ ctx[18](null);
+				mounted = false;
+				dispose();
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$8.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$8($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('Base', slots, []);
+
+		let { data = {
+			labels: [],
+			datasets: [{ values: [] }],
+			yMarkers: {},
+			yRegions: []
+		} } = $$props;
+
+		let { title = '' } = $$props;
+		let { type = 'line' } = $$props;
+		let { height = 300 } = $$props;
+		let { animate = true } = $$props;
+		let { axisOptions = {} } = $$props;
+		let { barOptions = {} } = $$props;
+		let { lineOptions = {} } = $$props;
+		let { tooltipOptions = {} } = $$props;
+		let { colors = [] } = $$props;
+		let { valuesOverPoints = 0 } = $$props;
+		let { isNavigable = false } = $$props;
+		let { maxSlices = 3 } = $$props;
+
+		/**
+	 *  COMPONENT
+	 */
+		//  The Chart returned from frappe
+		let chart = null;
+
+		//  DOM node for frappe to latch onto
+		let chartRef;
+
+		//  Helper HOF for calling a fn only if chart exists
+		function ifChartThen(fn) {
+			return function ifChart(...args) {
+				if (chart) {
+					return fn(...args);
+				}
+			};
+		}
+
+		const addDataPoint = ifChartThen((label, valueFromEachDataset, index) => chart.addDataPoint(label, valueFromEachDataset, index));
+		const removeDataPoint = ifChartThen(index => chart.removeDataPoint(index));
+		const exportChart = ifChartThen(() => chart.export());
+
+		//  Update the chart when incoming data changes
+		const updateChart = ifChartThen(newData => chart.update(newData));
+
+		//  Mark Chart references for garbage collection when component is unmounted
+		onDestroy(() => {
+			chart = null;
+		});
+
+		const writable_props = [
+			'data',
+			'title',
+			'type',
+			'height',
+			'animate',
+			'axisOptions',
+			'barOptions',
+			'lineOptions',
+			'tooltipOptions',
+			'colors',
+			'valuesOverPoints',
+			'isNavigable',
+			'maxSlices'
+		];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Base> was created with unknown prop '${key}'`);
+		});
+
+		function data_select_handler(event) {
+			bubble.call(this, $$self, event);
+		}
+
+		function div_binding($$value) {
+			binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+				chartRef = $$value;
+				$$invalidate(0, chartRef);
+			});
+		}
+
+		$$self.$$set = $$props => {
+			if ('data' in $$props) $$invalidate(1, data = $$props.data);
+			if ('title' in $$props) $$invalidate(2, title = $$props.title);
+			if ('type' in $$props) $$invalidate(3, type = $$props.type);
+			if ('height' in $$props) $$invalidate(4, height = $$props.height);
+			if ('animate' in $$props) $$invalidate(5, animate = $$props.animate);
+			if ('axisOptions' in $$props) $$invalidate(6, axisOptions = $$props.axisOptions);
+			if ('barOptions' in $$props) $$invalidate(7, barOptions = $$props.barOptions);
+			if ('lineOptions' in $$props) $$invalidate(8, lineOptions = $$props.lineOptions);
+			if ('tooltipOptions' in $$props) $$invalidate(9, tooltipOptions = $$props.tooltipOptions);
+			if ('colors' in $$props) $$invalidate(10, colors = $$props.colors);
+			if ('valuesOverPoints' in $$props) $$invalidate(11, valuesOverPoints = $$props.valuesOverPoints);
+			if ('isNavigable' in $$props) $$invalidate(12, isNavigable = $$props.isNavigable);
+			if ('maxSlices' in $$props) $$invalidate(13, maxSlices = $$props.maxSlices);
+		};
+
+		$$self.$capture_state = () => ({
+			onMount,
+			onDestroy,
+			Chart: frappeCharts_min_cjs.Chart,
+			data,
+			title,
+			type,
+			height,
+			animate,
+			axisOptions,
+			barOptions,
+			lineOptions,
+			tooltipOptions,
+			colors,
+			valuesOverPoints,
+			isNavigable,
+			maxSlices,
+			chart,
+			chartRef,
+			ifChartThen,
+			addDataPoint,
+			removeDataPoint,
+			exportChart,
+			updateChart
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('data' in $$props) $$invalidate(1, data = $$props.data);
+			if ('title' in $$props) $$invalidate(2, title = $$props.title);
+			if ('type' in $$props) $$invalidate(3, type = $$props.type);
+			if ('height' in $$props) $$invalidate(4, height = $$props.height);
+			if ('animate' in $$props) $$invalidate(5, animate = $$props.animate);
+			if ('axisOptions' in $$props) $$invalidate(6, axisOptions = $$props.axisOptions);
+			if ('barOptions' in $$props) $$invalidate(7, barOptions = $$props.barOptions);
+			if ('lineOptions' in $$props) $$invalidate(8, lineOptions = $$props.lineOptions);
+			if ('tooltipOptions' in $$props) $$invalidate(9, tooltipOptions = $$props.tooltipOptions);
+			if ('colors' in $$props) $$invalidate(10, colors = $$props.colors);
+			if ('valuesOverPoints' in $$props) $$invalidate(11, valuesOverPoints = $$props.valuesOverPoints);
+			if ('isNavigable' in $$props) $$invalidate(12, isNavigable = $$props.isNavigable);
+			if ('maxSlices' in $$props) $$invalidate(13, maxSlices = $$props.maxSlices);
+			if ('chart' in $$props) chart = $$props.chart;
+			if ('chartRef' in $$props) $$invalidate(0, chartRef = $$props.chartRef);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		$$self.$$.update = () => {
+			if ($$self.$$.dirty & /*data*/ 2) {
+				updateChart(data);
+			}
+		};
+
+		return [
+			chartRef,
+			data,
+			title,
+			type,
+			height,
+			animate,
+			axisOptions,
+			barOptions,
+			lineOptions,
+			tooltipOptions,
+			colors,
+			valuesOverPoints,
+			isNavigable,
+			maxSlices,
+			addDataPoint,
+			removeDataPoint,
+			exportChart,
+			data_select_handler,
+			div_binding
+		];
+	}
+
+	class Base extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+
+			init(this, options, instance$8, create_fragment$8, safe_not_equal, {
+				data: 1,
+				title: 2,
+				type: 3,
+				height: 4,
+				animate: 5,
+				axisOptions: 6,
+				barOptions: 7,
+				lineOptions: 8,
+				tooltipOptions: 9,
+				colors: 10,
+				valuesOverPoints: 11,
+				isNavigable: 12,
+				maxSlices: 13,
+				addDataPoint: 14,
+				removeDataPoint: 15,
+				exportChart: 16
+			});
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "Base",
+				options,
+				id: create_fragment$8.name
+			});
+		}
+
+		get data() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set data(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get title() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set title(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get type() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set type(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get height() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set height(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get animate() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set animate(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get axisOptions() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set axisOptions(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get barOptions() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set barOptions(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get lineOptions() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set lineOptions(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get tooltipOptions() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set tooltipOptions(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get colors() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set colors(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get valuesOverPoints() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set valuesOverPoints(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get isNavigable() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set isNavigable(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get maxSlices() {
+			throw new Error("<Base>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set maxSlices(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get addDataPoint() {
+			return this.$$.ctx[14];
+		}
+
+		set addDataPoint(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get removeDataPoint() {
+			return this.$$.ctx[15];
+		}
+
+		set removeDataPoint(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get exportChart() {
+			return this.$$.ctx[16];
+		}
+
+		set exportChart(value) {
+			throw new Error("<Base>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+	}
+
+	var Base$1 = Base;
+
+	var AromaGroups;
+	(function (AromaGroups) {
+	    AromaGroups["None"] = "";
+	    AromaGroups["S\u00FC\u00DF_w\u00E4rmende_Phenole"] = "S\u00FC\u00DF w\u00E4rmende Phenole";
+	    AromaGroups["W\u00E4rmende_Terpene"] = "W\u00E4rmende Terpene";
+	    AromaGroups["Duftende_Terpene"] = "Duftende Terpene";
+	    AromaGroups["Erdige_Terpene"] = "Erdige_Terpene";
+	    AromaGroups["Durchdringende_Terpene"] = "Durchdringende Terpene";
+	    AromaGroups["Zitrust\u00F6nige_Terpene"] = "Zitrust\u00F6nige Terpene";
+	    AromaGroups["S\u00FC\u00DFsaure_S\u00E4uren"] = "S\u00FC\u00DFsaure S\u00E4uren";
+	    AromaGroups["Fruchtige_Aldehyde"] = "Fruchtige Aldehyde";
+	    AromaGroups["R\u00F6stige_Pysazine"] = "R\u00F6stige Pysazine";
+	    AromaGroups["Schwefelverbindungen"] = "Schwefelverbindungen";
+	    AromaGroups["Stechende_Verbindungen"] = "Stechende Verbindungen";
+	    AromaGroups["Einzigartige_Stoffe"] = "Einzigartige Stoffe";
+	})(AromaGroups || (AromaGroups = {}));
+	var AromaGroups$1 = AromaGroups;
+
+	var AromaGroupsColors;
+	(function (AromaGroupsColors) {
+	    AromaGroupsColors["None"] = "#EADEDE";
+	    AromaGroupsColors["S\u00FC\u00DF_w\u00E4rmende_Phenole"] = "#F6AE99";
+	    AromaGroupsColors["W\u00E4rmende_Terpene"] = "#9D9D9D";
+	    AromaGroupsColors["Duftende_Terpene"] = "#BFA2DB";
+	    AromaGroupsColors["Erdige_Terpene"] = "#7F7C82";
+	    AromaGroupsColors["Durchdringende_Terpene"] = "#87A7B3";
+	    AromaGroupsColors["Zitrust\u00F6nige_Terpene"] = "#A2B29F";
+	    AromaGroupsColors["S\u00FC\u00DFsaure_S\u00E4uren"] = "#EEC373";
+	    AromaGroupsColors["Fruchtige_Aldehyde"] = "#A68DAD";
+	    AromaGroupsColors["R\u00F6stige_Pysazine"] = "#876445";
+	    AromaGroupsColors["Schwefelverbindungen"] = "#8E806A";
+	    AromaGroupsColors["Stechende_Verbindungen"] = "#F29191";
+	    AromaGroupsColors["Einzigartige_Stoffe"] = "#A2B29F";
+	})(AromaGroupsColors || (AromaGroupsColors = {}));
+	var AromaGroupsColors$1 = AromaGroupsColors;
+
+	/* src\components\SpiceContainer.svelte generated by Svelte v4.2.18 */
+	const file$7 = "src\\components\\SpiceContainer.svelte";
+
+	function create_fragment$7(ctx) {
+		let div1;
+		let div0;
+		let h1;
+		let t0;
+		let t1_value = /*spice*/ ctx[0].nameSymbol + "";
+		let t1;
+		let t2;
+		let t3;
+		let h3;
+		let t4_value = /*spice*/ ctx[0].name + "";
+		let t4;
+		let t5;
+		let current;
+		const default_slot_template = /*#slots*/ ctx[4].default;
+		const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
+
+		const block = {
+			c: function create() {
+				div1 = element("div");
+				div0 = element("div");
+				h1 = element("h1");
+				t0 = text("[");
+				t1 = text(t1_value);
+				t2 = text("]");
+				t3 = space();
+				h3 = element("h3");
+				t4 = text(t4_value);
+				t5 = space();
+				if (default_slot) default_slot.c();
+				set_style(h1, "font-weight", "400");
+				set_style(h1, "padding-top", "2.7rem");
+				set_style(h1, "color", "#444444");
+				add_location(h1, file$7, 28, 4, 794);
+				attr_dev(div0, "class", "spiceBlob svelte-fcbxbh");
+				set_style(div0, "border-radius", /*shapeCss*/ ctx[1]);
+				set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
+				add_location(div0, file$7, 24, 2, 625);
+				set_style(h3, "color", "#444444");
+				add_location(h3, file$7, 32, 2, 912);
+				attr_dev(div1, "class", "spiceContainer svelte-fcbxbh");
+				add_location(div1, file$7, 23, 0, 593);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div1, anchor);
+				append_dev(div1, div0);
+				append_dev(div0, h1);
+				append_dev(h1, t0);
+				append_dev(h1, t1);
+				append_dev(h1, t2);
+				append_dev(div1, t3);
+				append_dev(div1, h3);
+				append_dev(h3, t4);
+				append_dev(div1, t5);
+
+				if (default_slot) {
+					default_slot.m(div1, null);
+				}
+
+				current = true;
+			},
+			p: function update(ctx, [dirty]) {
+				if ((!current || dirty & /*spice*/ 1) && t1_value !== (t1_value = /*spice*/ ctx[0].nameSymbol + "")) set_data_dev(t1, t1_value);
+
+				if (!current || dirty & /*spice*/ 1) {
+					set_style(div0, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
+				}
+
+				if ((!current || dirty & /*spice*/ 1) && t4_value !== (t4_value = /*spice*/ ctx[0].name + "")) set_data_dev(t4, t4_value);
+
+				if (default_slot) {
+					if (default_slot.p && (!current || dirty & /*$$scope*/ 8)) {
+						update_slot_base(
+							default_slot,
+							default_slot_template,
+							ctx,
+							/*$$scope*/ ctx[3],
+							!current
+							? get_all_dirty_from_scope(/*$$scope*/ ctx[3])
+							: get_slot_changes(default_slot_template, /*$$scope*/ ctx[3], dirty, null),
+							null
+						);
+					}
+				}
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(default_slot, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(default_slot, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div1);
+				}
+
+				if (default_slot) default_slot.d(detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$7.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$7($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('SpiceContainer', slots, ['default']);
+		let { shape } = $$props;
+		let { spice } = $$props;
+
+		let blobShapes = [
+			"47% 53% 42% 58% / 54% 34% 66% 46% ",
+			"30% 70% 42% 58% / 54% 34% 66% 46% ",
+			"30% 70% 58% 42% / 54% 43% 57% 46% ",
+			"60% 40% 58% 42% / 54% 43% 57% 46% ",
+			"60% 40% 58% 42% / 37% 43% 57% 63% ",
+			"60% 40% 58% 42% / 37% 62% 38% 63% ",
+			"60% 40% 58% 42% / 59% 62% 38% 41% ",
+			"58% 42% 39% 61% / 55% 62% 38% 45% "
+		];
+
+		let index = Math.round(shape * blobShapes.length);
+
+		if (index == blobShapes.length) {
+			index -= 1;
+		}
+
+		let shapeCss = blobShapes[index];
+
+		$$self.$$.on_mount.push(function () {
+			if (shape === undefined && !('shape' in $$props || $$self.$$.bound[$$self.$$.props['shape']])) {
+				console.warn("<SpiceContainer> was created without expected prop 'shape'");
+			}
+
+			if (spice === undefined && !('spice' in $$props || $$self.$$.bound[$$self.$$.props['spice']])) {
+				console.warn("<SpiceContainer> was created without expected prop 'spice'");
+			}
+		});
+
+		const writable_props = ['shape', 'spice'];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<SpiceContainer> was created with unknown prop '${key}'`);
+		});
+
+		$$self.$$set = $$props => {
+			if ('shape' in $$props) $$invalidate(2, shape = $$props.shape);
+			if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
+			if ('$$scope' in $$props) $$invalidate(3, $$scope = $$props.$$scope);
+		};
+
+		$$self.$capture_state = () => ({
+			shape,
+			spice,
+			blobShapes,
+			index,
+			shapeCss
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('shape' in $$props) $$invalidate(2, shape = $$props.shape);
+			if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
+			if ('blobShapes' in $$props) blobShapes = $$props.blobShapes;
+			if ('index' in $$props) index = $$props.index;
+			if ('shapeCss' in $$props) $$invalidate(1, shapeCss = $$props.shapeCss);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [spice, shapeCss, shape, $$scope, slots];
+	}
+
+	class SpiceContainer extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$7, create_fragment$7, safe_not_equal, { shape: 2, spice: 0 });
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "SpiceContainer",
+				options,
+				id: create_fragment$7.name
+			});
+		}
+
+		get shape() {
+			throw new Error("<SpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set shape(value) {
+			throw new Error("<SpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get spice() {
+			throw new Error("<SpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set spice(value) {
+			throw new Error("<SpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+	}
+
+	/* src\components\SmallSpiceContainer.svelte generated by Svelte v4.2.18 */
+	const file$6 = "src\\components\\SmallSpiceContainer.svelte";
+
+	function create_fragment$6(ctx) {
+		let button;
+		let div;
+		let h1;
+		let t0;
+		let t1_value = /*spice*/ ctx[0].nameSymbol + "";
+		let t1;
+		let t2;
+		let t3;
+		let p;
+		let t4_value = /*spice*/ ctx[0].description + "";
+		let t4;
+		let t5;
+		let h3;
+		let t6_value = /*spice*/ ctx[0].name + "";
+		let t6;
+		let mounted;
+		let dispose;
+
+		const block = {
+			c: function create() {
+				button = element("button");
+				div = element("div");
+				h1 = element("h1");
+				t0 = text("[");
+				t1 = text(t1_value);
+				t2 = text("]");
+				t3 = space();
+				p = element("p");
+				t4 = text(t4_value);
+				t5 = space();
+				h3 = element("h3");
+				t6 = text(t6_value);
+				attr_dev(h1, "class", "nameSymbol svelte-1c8dsma");
+				add_location(h1, file$6, 29, 4, 823);
+				attr_dev(div, "class", "spiceBlob svelte-1c8dsma");
+				set_style(div, "border-radius", /*shapeCss*/ ctx[2]);
+				set_style(div, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
+				add_location(div, file$6, 25, 2, 654);
+				attr_dev(p, "class", "svelte-1c8dsma");
+				add_location(p, file$6, 33, 2, 899);
+				attr_dev(h3, "class", "svelte-1c8dsma");
+				add_location(h3, file$6, 36, 2, 939);
+				attr_dev(button, "class", "svelte-1c8dsma");
+				add_location(button, file$6, 24, 0, 616);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, button, anchor);
+				append_dev(button, div);
+				append_dev(div, h1);
+				append_dev(h1, t0);
+				append_dev(h1, t1);
+				append_dev(h1, t2);
+				append_dev(button, t3);
+				append_dev(button, p);
+				append_dev(p, t4);
+				append_dev(button, t5);
+				append_dev(button, h3);
+				append_dev(h3, t6);
+
+				if (!mounted) {
+					dispose = listen_dev(
+						button,
+						"click",
+						function () {
+							if (is_function(/*onClick*/ ctx[1](/*spice*/ ctx[0]))) /*onClick*/ ctx[1](/*spice*/ ctx[0]).apply(this, arguments);
+						},
+						false,
+						false,
+						false,
+						false
+					);
+
+					mounted = true;
+				}
+			},
+			p: function update(new_ctx, [dirty]) {
+				ctx = new_ctx;
+				if (dirty & /*spice*/ 1 && t1_value !== (t1_value = /*spice*/ ctx[0].nameSymbol + "")) set_data_dev(t1, t1_value);
+
+				if (dirty & /*spice*/ 1) {
+					set_style(div, "background", "radial-gradient(ellipse at top left, " + /*spice*/ ctx[0].color + "A0 0%," + /*spice*/ ctx[0].color + "FF 50%)");
+				}
+
+				if (dirty & /*spice*/ 1 && t4_value !== (t4_value = /*spice*/ ctx[0].description + "")) set_data_dev(t4, t4_value);
+				if (dirty & /*spice*/ 1 && t6_value !== (t6_value = /*spice*/ ctx[0].name + "")) set_data_dev(t6, t6_value);
+			},
+			i: noop,
+			o: noop,
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(button);
+				}
+
+				mounted = false;
+				dispose();
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$6.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$6($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('SmallSpiceContainer', slots, []);
+		let { shape } = $$props;
+		let { spice } = $$props;
+		let { onClick } = $$props;
+
+		let blobShapes = [
+			"47% 53% 42% 58% / 54% 34% 66% 46% ",
+			"30% 70% 42% 58% / 54% 34% 66% 46% ",
+			"30% 70% 58% 42% / 54% 43% 57% 46% ",
+			"60% 40% 58% 42% / 54% 43% 57% 46% ",
+			"60% 40% 58% 42% / 37% 43% 57% 63% ",
+			"60% 40% 58% 42% / 37% 62% 38% 63% ",
+			"60% 40% 58% 42% / 59% 62% 38% 41% ",
+			"58% 42% 39% 61% / 55% 62% 38% 45% "
+		];
+
+		let index = Math.round(shape * blobShapes.length);
+
+		if (index == blobShapes.length) {
+			index -= 1;
+		}
+
+		let shapeCss = blobShapes[index];
+
+		$$self.$$.on_mount.push(function () {
+			if (shape === undefined && !('shape' in $$props || $$self.$$.bound[$$self.$$.props['shape']])) {
+				console.warn("<SmallSpiceContainer> was created without expected prop 'shape'");
+			}
+
+			if (spice === undefined && !('spice' in $$props || $$self.$$.bound[$$self.$$.props['spice']])) {
+				console.warn("<SmallSpiceContainer> was created without expected prop 'spice'");
+			}
+
+			if (onClick === undefined && !('onClick' in $$props || $$self.$$.bound[$$self.$$.props['onClick']])) {
+				console.warn("<SmallSpiceContainer> was created without expected prop 'onClick'");
+			}
+		});
+
+		const writable_props = ['shape', 'spice', 'onClick'];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<SmallSpiceContainer> was created with unknown prop '${key}'`);
+		});
+
+		$$self.$$set = $$props => {
+			if ('shape' in $$props) $$invalidate(3, shape = $$props.shape);
+			if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
+			if ('onClick' in $$props) $$invalidate(1, onClick = $$props.onClick);
+		};
+
+		$$self.$capture_state = () => ({
+			shape,
+			spice,
+			onClick,
+			blobShapes,
+			index,
+			shapeCss
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('shape' in $$props) $$invalidate(3, shape = $$props.shape);
+			if ('spice' in $$props) $$invalidate(0, spice = $$props.spice);
+			if ('onClick' in $$props) $$invalidate(1, onClick = $$props.onClick);
+			if ('blobShapes' in $$props) blobShapes = $$props.blobShapes;
+			if ('index' in $$props) index = $$props.index;
+			if ('shapeCss' in $$props) $$invalidate(2, shapeCss = $$props.shapeCss);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [spice, onClick, shapeCss, shape];
+	}
+
+	class SmallSpiceContainer extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$6, create_fragment$6, safe_not_equal, { shape: 3, spice: 0, onClick: 1 });
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "SmallSpiceContainer",
+				options,
+				id: create_fragment$6.name
+			});
+		}
+
+		get shape() {
+			throw new Error("<SmallSpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set shape(value) {
+			throw new Error("<SmallSpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get spice() {
+			throw new Error("<SmallSpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set spice(value) {
+			throw new Error("<SmallSpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get onClick() {
+			throw new Error("<SmallSpiceContainer>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set onClick(value) {
+			throw new Error("<SmallSpiceContainer>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+	}
+
+	/* src\components\SpiceDropdown.svelte generated by Svelte v4.2.18 */
+	const file$5 = "src\\components\\SpiceDropdown.svelte";
+
+	function get_each_context$2(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[4] = list[i];
+		return child_ctx;
+	}
+
+	// (9:2) {#each spices as spice}
+	function create_each_block$2(ctx) {
+		let option;
+		let t0_value = /*spice*/ ctx[4].name + "";
+		let t0;
+		let t1;
+		let option_value_value;
+
+		const block = {
+			c: function create() {
+				option = element("option");
+				t0 = text(t0_value);
+				t1 = space();
+				option.__value = option_value_value = /*spice*/ ctx[4];
+				set_input_value(option, option.__value);
+				add_location(option, file$5, 9, 4, 189);
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, option, anchor);
+				append_dev(option, t0);
+				append_dev(option, t1);
+			},
+			p: function update(ctx, dirty) {
+				if (dirty & /*spices*/ 2 && t0_value !== (t0_value = /*spice*/ ctx[4].name + "")) set_data_dev(t0, t0_value);
+
+				if (dirty & /*spices*/ 2 && option_value_value !== (option_value_value = /*spice*/ ctx[4])) {
+					prop_dev(option, "__value", option_value_value);
+					set_input_value(option, option.__value);
+				}
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(option);
+				}
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block$2.name,
+			type: "each",
+			source: "(9:2) {#each spices as spice}",
+			ctx
+		});
+
+		return block;
+	}
+
+	function create_fragment$5(ctx) {
+		let select;
+		let mounted;
+		let dispose;
+		let each_value = ensure_array_like_dev(/*spices*/ ctx[1]);
+		let each_blocks = [];
+
+		for (let i = 0; i < each_value.length; i += 1) {
+			each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+		}
+
+		const block = {
+			c: function create() {
+				select = element("select");
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					each_blocks[i].c();
+				}
+
+				attr_dev(select, "class", "svelte-1svztgs");
+				if (/*selectedSpice*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[3].call(select));
+				add_location(select, file$5, 7, 0, 100);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, select, anchor);
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					if (each_blocks[i]) {
+						each_blocks[i].m(select, null);
+					}
+				}
+
+				select_option(select, /*selectedSpice*/ ctx[0], true);
+
+				if (!mounted) {
+					dispose = [
+						listen_dev(select, "change", /*select_change_handler*/ ctx[3]),
+						listen_dev(
+							select,
+							"change",
+							function () {
+								if (is_function(/*onChange*/ ctx[2])) /*onChange*/ ctx[2].apply(this, arguments);
+							},
+							false,
+							false,
+							false,
+							false
+						)
+					];
+
+					mounted = true;
+				}
+			},
+			p: function update(new_ctx, [dirty]) {
+				ctx = new_ctx;
+
+				if (dirty & /*spices*/ 2) {
+					each_value = ensure_array_like_dev(/*spices*/ ctx[1]);
+					let i;
+
+					for (i = 0; i < each_value.length; i += 1) {
+						const child_ctx = get_each_context$2(ctx, each_value, i);
+
+						if (each_blocks[i]) {
+							each_blocks[i].p(child_ctx, dirty);
+						} else {
+							each_blocks[i] = create_each_block$2(child_ctx);
+							each_blocks[i].c();
+							each_blocks[i].m(select, null);
+						}
+					}
+
+					for (; i < each_blocks.length; i += 1) {
+						each_blocks[i].d(1);
+					}
+
+					each_blocks.length = each_value.length;
+				}
+
+				if (dirty & /*selectedSpice, spices*/ 3) {
+					select_option(select, /*selectedSpice*/ ctx[0]);
+				}
+			},
+			i: noop,
+			o: noop,
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(select);
+				}
+
+				destroy_each(each_blocks, detaching);
+				mounted = false;
+				run_all(dispose);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$5.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$5($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('SpiceDropdown', slots, []);
+		let { selectedSpice } = $$props;
+		let { spices } = $$props;
+		let { onChange } = $$props;
+
+		$$self.$$.on_mount.push(function () {
+			if (selectedSpice === undefined && !('selectedSpice' in $$props || $$self.$$.bound[$$self.$$.props['selectedSpice']])) {
+				console.warn("<SpiceDropdown> was created without expected prop 'selectedSpice'");
+			}
+
+			if (spices === undefined && !('spices' in $$props || $$self.$$.bound[$$self.$$.props['spices']])) {
+				console.warn("<SpiceDropdown> was created without expected prop 'spices'");
+			}
+
+			if (onChange === undefined && !('onChange' in $$props || $$self.$$.bound[$$self.$$.props['onChange']])) {
+				console.warn("<SpiceDropdown> was created without expected prop 'onChange'");
+			}
+		});
+
+		const writable_props = ['selectedSpice', 'spices', 'onChange'];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<SpiceDropdown> was created with unknown prop '${key}'`);
+		});
+
+		function select_change_handler() {
+			selectedSpice = select_value(this);
+			$$invalidate(0, selectedSpice);
+			$$invalidate(1, spices);
+		}
+
+		$$self.$$set = $$props => {
+			if ('selectedSpice' in $$props) $$invalidate(0, selectedSpice = $$props.selectedSpice);
+			if ('spices' in $$props) $$invalidate(1, spices = $$props.spices);
+			if ('onChange' in $$props) $$invalidate(2, onChange = $$props.onChange);
+		};
+
+		$$self.$capture_state = () => ({ selectedSpice, spices, onChange });
+
+		$$self.$inject_state = $$props => {
+			if ('selectedSpice' in $$props) $$invalidate(0, selectedSpice = $$props.selectedSpice);
+			if ('spices' in $$props) $$invalidate(1, spices = $$props.spices);
+			if ('onChange' in $$props) $$invalidate(2, onChange = $$props.onChange);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [selectedSpice, spices, onChange, select_change_handler];
+	}
+
+	class SpiceDropdown extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$5, create_fragment$5, safe_not_equal, { selectedSpice: 0, spices: 1, onChange: 2 });
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "SpiceDropdown",
+				options,
+				id: create_fragment$5.name
+			});
+		}
+
+		get selectedSpice() {
+			throw new Error("<SpiceDropdown>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set selectedSpice(value) {
+			throw new Error("<SpiceDropdown>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get spices() {
+			throw new Error("<SpiceDropdown>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set spices(value) {
+			throw new Error("<SpiceDropdown>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get onChange() {
+			throw new Error("<SpiceDropdown>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set onChange(value) {
+			throw new Error("<SpiceDropdown>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+	}
+
+	/* src\components\AromaGroupLegend.svelte generated by Svelte v4.2.18 */
+	const file$4 = "src\\components\\AromaGroupLegend.svelte";
+
+	function create_fragment$4(ctx) {
+		let div36;
+		let div2;
+		let div0;
+		let t0;
+		let div1;
+		let t2;
+		let div5;
+		let div3;
+		let t3;
+		let div4;
+		let t5;
+		let div8;
+		let div6;
+		let t6;
+		let div7;
+		let t8;
+		let div11;
+		let div9;
+		let t9;
+		let div10;
+		let t11;
+		let div14;
+		let div12;
+		let t12;
+		let div13;
+		let t14;
+		let div17;
+		let div15;
+		let t15;
+		let div16;
+		let t17;
+		let div20;
+		let div18;
+		let t18;
+		let div19;
+		let t20;
+		let div23;
+		let div21;
+		let t21;
+		let div22;
+		let t23;
+		let div26;
+		let div24;
+		let t24;
+		let div25;
+		let t26;
+		let div29;
+		let div27;
+		let t27;
+		let div28;
+		let t29;
+		let div32;
+		let div30;
+		let t30;
+		let div31;
+		let t32;
+		let div35;
+		let div33;
+		let t33;
+		let div34;
+
+		const block = {
+			c: function create() {
+				div36 = element("div");
+				div2 = element("div");
+				div0 = element("div");
+				t0 = space();
+				div1 = element("div");
+				div1.textContent = `${AromaGroups$1.Süß_wärmende_Phenole}`;
+				t2 = space();
+				div5 = element("div");
+				div3 = element("div");
+				t3 = space();
+				div4 = element("div");
+				div4.textContent = `${AromaGroups$1.Wärmende_Terpene}`;
+				t5 = space();
+				div8 = element("div");
+				div6 = element("div");
+				t6 = space();
+				div7 = element("div");
+				div7.textContent = `${AromaGroups$1.Duftende_Terpene}`;
+				t8 = space();
+				div11 = element("div");
+				div9 = element("div");
+				t9 = space();
+				div10 = element("div");
+				div10.textContent = `${AromaGroups$1.Erdige_Terpene}`;
+				t11 = space();
+				div14 = element("div");
+				div12 = element("div");
+				t12 = space();
+				div13 = element("div");
+				div13.textContent = `${AromaGroups$1.Durchdringende_Terpene}`;
+				t14 = space();
+				div17 = element("div");
+				div15 = element("div");
+				t15 = space();
+				div16 = element("div");
+				div16.textContent = `${AromaGroups$1.Zitrustönige_Terpene}`;
+				t17 = space();
+				div20 = element("div");
+				div18 = element("div");
+				t18 = space();
+				div19 = element("div");
+				div19.textContent = `${AromaGroups$1.Süßsaure_Säuren}`;
+				t20 = space();
+				div23 = element("div");
+				div21 = element("div");
+				t21 = space();
+				div22 = element("div");
+				div22.textContent = `${AromaGroups$1.Fruchtige_Aldehyde}`;
+				t23 = space();
+				div26 = element("div");
+				div24 = element("div");
+				t24 = space();
+				div25 = element("div");
+				div25.textContent = `${AromaGroups$1.Röstige_Pysazine}`;
+				t26 = space();
+				div29 = element("div");
+				div27 = element("div");
+				t27 = space();
+				div28 = element("div");
+				div28.textContent = `${AromaGroups$1.Schwefelverbindungen}`;
+				t29 = space();
+				div32 = element("div");
+				div30 = element("div");
+				t30 = space();
+				div31 = element("div");
+				div31.textContent = `${AromaGroups$1.Stechende_Verbindungen}`;
+				t32 = space();
+				div35 = element("div");
+				div33 = element("div");
+				t33 = space();
+				div34 = element("div");
+				div34.textContent = `${AromaGroups$1.Einzigartige_Stoffe}`;
+				attr_dev(div0, "class", "colorBlob svelte-lrqis3");
+				set_style(div0, "background", AromaGroupsColors$1.Süß_wärmende_Phenole);
+				add_location(div0, file$4, 7, 4, 203);
+				add_location(div1, file$4, 11, 4, 314);
+				attr_dev(div2, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div2, file$4, 6, 2, 169);
+				attr_dev(div3, "class", "colorBlob svelte-lrqis3");
+				set_style(div3, "background", AromaGroupsColors$1.Wärmende_Terpene);
+				add_location(div3, file$4, 17, 4, 423);
+				add_location(div4, file$4, 21, 4, 530);
+				attr_dev(div5, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div5, file$4, 16, 2, 389);
+				attr_dev(div6, "class", "colorBlob svelte-lrqis3");
+				set_style(div6, "background", AromaGroupsColors$1.Duftende_Terpene);
+				add_location(div6, file$4, 27, 4, 635);
+				add_location(div7, file$4, 31, 4, 742);
+				attr_dev(div8, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div8, file$4, 26, 2, 601);
+				attr_dev(div9, "class", "colorBlob svelte-lrqis3");
+				set_style(div9, "background", AromaGroupsColors$1.Erdige_Terpene);
+				add_location(div9, file$4, 37, 4, 847);
+				add_location(div10, file$4, 41, 4, 952);
+				attr_dev(div11, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div11, file$4, 36, 2, 813);
+				attr_dev(div12, "class", "colorBlob svelte-lrqis3");
+				set_style(div12, "background", AromaGroupsColors$1.Durchdringende_Terpene);
+				add_location(div12, file$4, 47, 4, 1055);
+				add_location(div13, file$4, 51, 4, 1168);
+				attr_dev(div14, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div14, file$4, 46, 2, 1021);
+				attr_dev(div15, "class", "colorBlob svelte-lrqis3");
+				set_style(div15, "background", AromaGroupsColors$1.Zitrustönige_Terpene);
+				add_location(div15, file$4, 57, 4, 1279);
+				add_location(div16, file$4, 61, 4, 1390);
+				attr_dev(div17, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div17, file$4, 56, 2, 1245);
+				attr_dev(div18, "class", "colorBlob svelte-lrqis3");
+				set_style(div18, "background", AromaGroupsColors$1.Süßsaure_Säuren);
+				add_location(div18, file$4, 67, 4, 1499);
+				add_location(div19, file$4, 71, 4, 1605);
+				attr_dev(div20, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div20, file$4, 66, 2, 1465);
+				attr_dev(div21, "class", "colorBlob svelte-lrqis3");
+				set_style(div21, "background", AromaGroupsColors$1.Fruchtige_Aldehyde);
+				add_location(div21, file$4, 77, 4, 1709);
+				add_location(div22, file$4, 81, 4, 1818);
+				attr_dev(div23, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div23, file$4, 76, 2, 1675);
+				attr_dev(div24, "class", "colorBlob svelte-lrqis3");
+				set_style(div24, "background", AromaGroupsColors$1.Röstige_Pysazine);
+				add_location(div24, file$4, 87, 4, 1925);
+				add_location(div25, file$4, 91, 4, 2032);
+				attr_dev(div26, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div26, file$4, 86, 2, 1891);
+				attr_dev(div27, "class", "colorBlob svelte-lrqis3");
+				set_style(div27, "background", AromaGroupsColors$1.Schwefelverbindungen);
+				add_location(div27, file$4, 97, 4, 2137);
+				add_location(div28, file$4, 101, 4, 2248);
+				attr_dev(div29, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div29, file$4, 96, 2, 2103);
+				attr_dev(div30, "class", "colorBlob svelte-lrqis3");
+				set_style(div30, "background", AromaGroupsColors$1.Stechende_Verbindungen);
+				add_location(div30, file$4, 107, 4, 2357);
+				add_location(div31, file$4, 111, 4, 2470);
+				attr_dev(div32, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div32, file$4, 106, 2, 2323);
+				attr_dev(div33, "class", "colorBlob svelte-lrqis3");
+				set_style(div33, "background", AromaGroupsColors$1.Einzigartige_Stoffe);
+				add_location(div33, file$4, 117, 4, 2581);
+				add_location(div34, file$4, 121, 4, 2691);
+				attr_dev(div35, "class", "horizontalGrid svelte-lrqis3");
+				add_location(div35, file$4, 116, 2, 2547);
+				attr_dev(div36, "class", "verticalGrid svelte-lrqis3");
+				add_location(div36, file$4, 5, 0, 139);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div36, anchor);
+				append_dev(div36, div2);
+				append_dev(div2, div0);
+				append_dev(div2, t0);
+				append_dev(div2, div1);
+				append_dev(div36, t2);
+				append_dev(div36, div5);
+				append_dev(div5, div3);
+				append_dev(div5, t3);
+				append_dev(div5, div4);
+				append_dev(div36, t5);
+				append_dev(div36, div8);
+				append_dev(div8, div6);
+				append_dev(div8, t6);
+				append_dev(div8, div7);
+				append_dev(div36, t8);
+				append_dev(div36, div11);
+				append_dev(div11, div9);
+				append_dev(div11, t9);
+				append_dev(div11, div10);
+				append_dev(div36, t11);
+				append_dev(div36, div14);
+				append_dev(div14, div12);
+				append_dev(div14, t12);
+				append_dev(div14, div13);
+				append_dev(div36, t14);
+				append_dev(div36, div17);
+				append_dev(div17, div15);
+				append_dev(div17, t15);
+				append_dev(div17, div16);
+				append_dev(div36, t17);
+				append_dev(div36, div20);
+				append_dev(div20, div18);
+				append_dev(div20, t18);
+				append_dev(div20, div19);
+				append_dev(div36, t20);
+				append_dev(div36, div23);
+				append_dev(div23, div21);
+				append_dev(div23, t21);
+				append_dev(div23, div22);
+				append_dev(div36, t23);
+				append_dev(div36, div26);
+				append_dev(div26, div24);
+				append_dev(div26, t24);
+				append_dev(div26, div25);
+				append_dev(div36, t26);
+				append_dev(div36, div29);
+				append_dev(div29, div27);
+				append_dev(div29, t27);
+				append_dev(div29, div28);
+				append_dev(div36, t29);
+				append_dev(div36, div32);
+				append_dev(div32, div30);
+				append_dev(div32, t30);
+				append_dev(div32, div31);
+				append_dev(div36, t32);
+				append_dev(div36, div35);
+				append_dev(div35, div33);
+				append_dev(div35, t33);
+				append_dev(div35, div34);
+			},
+			p: noop,
+			i: noop,
+			o: noop,
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div36);
+				}
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$4.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$4($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('AromaGroupLegend', slots, []);
+		const writable_props = [];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<AromaGroupLegend> was created with unknown prop '${key}'`);
+		});
+
+		$$self.$capture_state = () => ({ AromaGroups: AromaGroups$1, AromaGroupsColors: AromaGroupsColors$1 });
+		return [];
+	}
+
+	class AromaGroupLegend extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "AromaGroupLegend",
+				options,
+				id: create_fragment$4.name
+			});
+		}
+	}
+
+	var SpiceGroup;
+	(function (SpiceGroup) {
+	    SpiceGroup["Aromatisch"] = "Aromatisch";
+	    SpiceGroup["Erding"] = "Erdig";
+	    SpiceGroup["Zitrisch"] = "Zitrisch";
+	    SpiceGroup["S\u00FC\u00DF"] = "S\u00FC\u00DF";
+	    SpiceGroup["Pikant"] = "Pikant";
+	    SpiceGroup["Scharf"] = "Scharf";
+	    SpiceGroup["None"] = "";
+	})(SpiceGroup || (SpiceGroup = {}));
+	var SpiceGroup$1 = SpiceGroup;
+
+	class NoSpice {
+	    constructor() {
+	        this.name = "Kein Gewürz ausgewählt";
+	        this.nameSymbol = "No";
+	        this.description = "Wählen Sie ein Gewürz aus";
+	        this.aromaCompounds = [];
+	        this.aromaGroup = AromaGroups$1.None;
+	        this.color = AromaGroupsColors$1.None;
+	        this.spice_group = SpiceGroup$1.None;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	var AromaCompounds;
+	(function (AromaCompounds) {
+	    AromaCompounds["ACETOIN"] = "ACETOIN";
+	    AromaCompounds["ACETYL_PYRROLIN"] = "2-ACETYL-PYRROLIN";
+	    AromaCompounds["ANETHOL"] = "ANETHOL";
+	    AromaCompounds["ANISALDEHYD"] = "ANISALDEHYD";
+	    AromaCompounds["ANISALKOHOL"] = "ANISALKOHOL";
+	    AromaCompounds["AZULEN"] = "AZULEN";
+	    AromaCompounds["CADINENE"] = "CADINENE";
+	    AromaCompounds["ALPHA_CADINOL"] = "ALPHA-CADINOL";
+	    AromaCompounds["CAMPHEN"] = "CAMPHEN";
+	    AromaCompounds["KAMPFER"] = "KAMPFER";
+	    AromaCompounds["CAPSAICIN"] = "CAPSAICIN";
+	    AromaCompounds["CAPSAICINOIDE"] = "CAPSAICINOIDE";
+	    AromaCompounds["CAREN"] = "CAREN";
+	    AromaCompounds["CARVACROL"] = "CARVACROL";
+	    AromaCompounds["CARVEOL"] = "CARVEOL";
+	    AromaCompounds["D_CARVON"] = "D-CARVON";
+	    AromaCompounds["S_CARVON"] = "S-CARVON";
+	    AromaCompounds["CARYOPHYLLENE"] = "CARYOPHYLLENE";
+	    AromaCompounds["CEMBREN"] = "CEMBREN";
+	    AromaCompounds["CINEOL"] = "CINEOL";
+	    AromaCompounds["ZIMTALDEHYD"] = "ZIMTALDEHYD";
+	    AromaCompounds["CITRAL"] = "CITRAL";
+	    AromaCompounds["ZITRONENS\u00C4URE"] = "ZITRONENS\u00C4URE";
+	    AromaCompounds["CITRONELLAL"] = "CITRONELLAL";
+	    AromaCompounds["CITRONELLOL"] = "CITRONELLOL";
+	    AromaCompounds["ALPHA_COPAEN"] = "ALPHA_COPAEN";
+	    AromaCompounds["COUMARIN"] = "COUMARIN";
+	    AromaCompounds["CUMINALDEHYD"] = "CUMINALDEHYD";
+	    AromaCompounds["CURCUMIN"] = "CURCUMIN";
+	    AromaCompounds["CYCLOCITRAL"] = "CYCLOCITRAL";
+	    AromaCompounds["CYMOL"] = "CYMOL";
+	    AromaCompounds["CUBEBIN"] = "CUBEBIN";
+	    AromaCompounds["DIALLYDISULFID"] = "DIALLYDISULFID";
+	    AromaCompounds["DIALLYLTRISULFID"] = "DIALLYLTRISULFID";
+	    AromaCompounds["DIMETHOXYPHENOL"] = "DIMETHOXYPHENOL";
+	    AromaCompounds["DIMETHYLPYRAZIN"] = "DIMETHYLPYRAZIN";
+	    AromaCompounds["DIOXOLAN"] = "DIOXOLAN";
+	    AromaCompounds["ELEMAN"] = "ELEMAN";
+	    AromaCompounds["ELEMICIN"] = "ELEMICIN";
+	    AromaCompounds["ESTERVERBINDUNGEN"] = "ESTERVERBINDUNGEN";
+	    AromaCompounds["ESTRAGOL"] = "ESTRAGOL";
+	    AromaCompounds["ESSIGESTER"] = "ESSIGESTER";
+	    AromaCompounds["EUDESMOL"] = "EUDESMOL";
+	    AromaCompounds["EUGENOL"] = "EUGENOL";
+	    AromaCompounds["FARNESENE"] = "FARNESENE";
+	    AromaCompounds["FENCHON"] = "FENCHON";
+	    AromaCompounds["ALPHA_FENCHOL"] = "ALPHA_FENCHOL";
+	    AromaCompounds["FERULAS\u00C4URE"] = "FERULAS\u00C4URE";
+	    AromaCompounds["FURFURYLTHIOL"] = "FURFURYLTHIOL";
+	    AromaCompounds["FURANEOL"] = "FURANEOL";
+	    AromaCompounds["FURFURAL"] = "FURFURAL";
+	    AromaCompounds["FURFURYLTHIOL_2"] = "2-FURFURYLTHIOL";
+	    AromaCompounds["GALANGALACETAT"] = "GALANGALACETAT";
+	    AromaCompounds["GERANIOL"] = "GERANIOL";
+	    AromaCompounds["GERMACREN"] = "GERMACREN";
+	    AromaCompounds["GINGEROL"] = "GINGEROL";
+	    AromaCompounds["GYLKOSID_VERBINDUNGEN"] = "GYLKOSID-VERBINDUNGEN";
+	    AromaCompounds["GLYCYRRHIZIN"] = "GLYCYRRHIZIN";
+	    AromaCompounds["HEPTANON"] = "HEPTANON";
+	    AromaCompounds["HEXANAL"] = "HEXANAL";
+	    AromaCompounds["CAPRONS\u00C4URE"] = "CAPRONS\u00C4URE";
+	    AromaCompounds["HUMULEN"] = "HUMULEN";
+	    AromaCompounds["HUMULON"] = "HUMULON";
+	    AromaCompounds["HYDROXYBENZALDEHYD"] = "4-HYDROXYBENZALDEHYD";
+	    AromaCompounds["ISOTHIOCYANATE"] = "ISOTHIOCYANATE";
+	    AromaCompounds["ISOVALERALDEHYD"] = "ISOVALERALDEHYD";
+	    AromaCompounds["LANIERON"] = "LANIERON";
+	    AromaCompounds["LIMONEN"] = "LIMONEN";
+	    AromaCompounds["LINALOOL"] = "LINALOOL";
+	    AromaCompounds["\u00C4PFELS\u00C4URE"] = "\u00C4PFELS\u00C4URE";
+	    AromaCompounds["METHOXYCOUMARIN"] = "METHOXYCOUMARIN";
+	    AromaCompounds["METHOXYETHYLCINNAMAT"] = "METHOXYETHYLCINNAMAT";
+	    AromaCompounds["METHYLBUTANAL"] = "3-METHYLBUTANAL";
+	    AromaCompounds["ZIMTS\u00C4UREMETHYLESTER"] = "ZIMTS\u00C4UREMETHYLESTER";
+	    AromaCompounds["METHYLHEPTENON"] = "METHYLHEPTENON";
+	    AromaCompounds["SALICYLS\u00C4UREMETHYLESTER"] = "SALICYLS\u00C4UREMETHYLESTER";
+	    AromaCompounds["MYRCEN"] = "MYRCEN";
+	    AromaCompounds["MYRISTICIN"] = "MYRISTICIN";
+	    AromaCompounds["NEROL"] = "NEROL";
+	    AromaCompounds["NONANAL"] = "NONANAL";
+	    AromaCompounds["OCIMENE"] = "OCIMENE";
+	    AromaCompounds["PARADOL"] = "PARADOL";
+	    AromaCompounds["VALERIANS\u00C4URE"] = "VALERIANS\u00C4URE";
+	    AromaCompounds["PENTANOL"] = "PENTANOL";
+	    AromaCompounds["PENTYLFURAN"] = "2-PENTYLFURAN";
+	    AromaCompounds["PHELLANDREN"] = "PHELLANDREN";
+	    AromaCompounds["PHENOLVERBINDUNGEN"] = "PHENOLVERBINDUNGEN";
+	    AromaCompounds["PHENYLACETALDEHYD"] = "PHENYLACETALDEHYD";
+	    AromaCompounds["PHENYLACETALDEHYD_2"] = "2-PHENYLACETALDEHYD";
+	    AromaCompounds["PHENYLETHANTHIOL"] = "1-PHENYLETHANTHIOL";
+	    AromaCompounds["PICROCROCIN"] = "PICROCROCIN";
+	    AromaCompounds["PINENE"] = "PINENE";
+	    AromaCompounds["PIPERIN"] = "PIPERIN";
+	    AromaCompounds["PIPERONAL"] = "PIPERONAL";
+	    AromaCompounds["PYRAZINVERBINDUNGEN"] = "PYRAZINVERBINDUNGEN";
+	    AromaCompounds["ROSEN_KETONE"] = "ROSEN_KETONE";
+	    AromaCompounds["ROTUNDONE"] = "ROTUNDONE";
+	    AromaCompounds["SABINEN"] = "SABINEN";
+	    AromaCompounds["SAFRANAL"] = "SAFRANAL";
+	    AromaCompounds["SAFROL"] = "SAFROL";
+	    AromaCompounds["SANSHOOL"] = "SANSHOOL";
+	    AromaCompounds["SEDANOLID"] = "SEDANOLID";
+	    AromaCompounds["SELINENE"] = "SELINENE";
+	    AromaCompounds["SESAMOL"] = "SESAMOL";
+	    AromaCompounds["SHOGAOL"] = "SHOGAOL";
+	    AromaCompounds["SOTOLON"] = "SOTOLON";
+	    AromaCompounds["SULCATON"] = "SULCATON";
+	    AromaCompounds["SULFIDVERBINDUNGEN"] = "SULFIDVERBINDUNGEN";
+	    AromaCompounds["TANNINVERBINDUNGEN"] = "TANNINVERBINDUNGEN";
+	    AromaCompounds["WEINS\u00C4URE"] = "WEINS\u00C4URE";
+	    AromaCompounds["TERPINENE"] = "TERPINENE";
+	    AromaCompounds["TERPINEOL"] = "TERPINEOL";
+	    AromaCompounds["TERPINYLACETAT"] = "TERPINYLACETAT";
+	    AromaCompounds["THYMOL"] = "THYMOL";
+	    AromaCompounds["THYMOCHINON"] = "THYMOCHINON";
+	    AromaCompounds["AR_TURMERON"] = "AR-TURMERON";
+	    AromaCompounds["VANILLIN"] = "VANILLIN";
+	    AromaCompounds["VINYLAMYLKETON"] = "VINYLAMYLKETON";
+	    AromaCompounds["ZINGIBEREN"] = "ZINGIBEREN";
+	})(AromaCompounds || (AromaCompounds = {}));
+	var AromaCompounds$1 = AromaCompounds;
+
+	var PairingTag;
+	(function (PairingTag) {
+	    PairingTag["None"] = "";
+	    PairingTag["Gem\u00FCse"] = "Gem\u00FCse";
+	    PairingTag["Pilze"] = "Pilze";
+	    PairingTag["Reis"] = "Reis";
+	    PairingTag["H\u00FClsenfr\u00FCchte"] = "H\u00FClsenfr\u00FCchte";
+	    PairingTag["Linsen"] = "Linsen";
+	    PairingTag["Milchprodukte"] = "Milchprodukte";
+	    PairingTag["H\u00FChnchen"] = "H\u00FChnchen";
+	    PairingTag["Tomaten"] = "Tomaten";
+	    PairingTag["Steinfr\u00FCchte"] = "Steinfr\u00FCchte";
+	    PairingTag["\u00C4pfel"] = "\u00C4pfel";
+	    PairingTag["Feigen"] = "Feigen";
+	    PairingTag["Dunkle_Schokolade"] = "Dunkle Schokolade";
+	    PairingTag["Br\u00FChe"] = "Br\u00FChe";
+	    PairingTag["Zwiebelsuppe"] = "Zwiebelsuppe";
+	    PairingTag["Fischpastete"] = "Fischpastete";
+	    PairingTag["Ragu"] = "Rag\u00F9";
+	    PairingTag["Pfirsiche"] = "Pfirsiche";
+	    PairingTag["Pflaumen"] = "Pflaumen";
+	    PairingTag["Zitronenschale"] = "Zitronenschale";
+	    PairingTag["Eier"] = "Eier";
+	    PairingTag["Butter"] = "Butter";
+	    PairingTag["Lamm"] = "Lamm";
+	    PairingTag["Fisch"] = "Fisch";
+	    PairingTag["Meeresfr\u00FCchte"] = "Meeresfr\u00FCchte";
+	    PairingTag["Zitrusfr\u00FCchte"] = "Zitrusfr\u00FCchte";
+	    PairingTag["Fladenbrot"] = "Fladenbrot";
+	    PairingTag["Curry"] = "Curry";
+	    PairingTag["R\u00FChrei"] = "R\u00FChrei";
+	    PairingTag["Gr\u00FCne_Papaya"] = "Gr\u00FCne Papaya";
+	    PairingTag["Pomelo"] = "Pomelo";
+	    PairingTag["K\u00FCrbis"] = "K\u00FCrbis";
+	    PairingTag["Kartoffeln"] = "Kartoffeln";
+	    PairingTag["Rote_Beete"] = "Rote Beete";
+	    PairingTag["Kohl"] = "Kohl";
+	    PairingTag["Artischocken"] = "Artischocken";
+	    PairingTag["Wurzelgem\u00FCse"] = "Wurzelgem\u00FCse";
+	    PairingTag["Ingwer"] = "Ingwer";
+	    PairingTag["Oliven"] = "Oliven";
+	    PairingTag["Salbei"] = "Salbei";
+	    PairingTag["K\u00E4se"] = "K\u00E4se";
+	    PairingTag["Wildfleisch"] = "Wildfleisch";
+	    PairingTag["Ente"] = "Ente";
+	    PairingTag["Hase"] = "Hase";
+	    PairingTag["Gans"] = "Gans";
+	    PairingTag["Wachteln"] = "Wachteln";
+	    PairingTag["Schwarze_Johannisbeeren"] = "Schwarze Johannisbeeren";
+	    PairingTag["Getrocknete_Fr\u00FCchte"] = "Getrocknete Fr\u00FCchte";
+	    PairingTag["Lachs"] = "Lachs";
+	    PairingTag["Kaninchen"] = "Kaninchen";
+	    PairingTag["Makrele"] = "Makrele";
+	    PairingTag["Tiramisu"] = "Tiramisu";
+	    PairingTag["Bambussprossen"] = "Bambussprossen";
+	    PairingTag["Lotuswurzel"] = "Lotuswurzel";
+	    PairingTag["Nudeln"] = "Nudeln";
+	    PairingTag["Schwein"] = "Schwein";
+	    PairingTag["Rind"] = "Rind";
+	    PairingTag["Kokosnuss"] = "Kokosnuss";
+	    PairingTag["Tropische_Fr\u00FCchte"] = "Tropische Fr\u00FCchte";
+	    PairingTag["Muscheln"] = "Muscheln";
+	    PairingTag["Schalotten"] = "Schalotten";
+	    PairingTag["Knoblauch"] = "Knoblauch";
+	    PairingTag["Chili"] = "Chili";
+	    PairingTag["Galgant"] = "Galgant";
+	    PairingTag["Kokosnusscreme"] = "Kokosnusscreme";
+	    PairingTag["Thai_Basilikum"] = "Thai-Basilikum";
+	    PairingTag["Garnelen"] = "Garnelen";
+	    PairingTag["Kebab"] = "Kebab";
+	    PairingTag["Koriander"] = "Koriander";
+	    PairingTag["Karotten"] = "Karotten";
+	    PairingTag["Paprika"] = "Paprika";
+	    PairingTag["Gurke"] = "Gurke";
+	    PairingTag["Melone"] = "Melone";
+	    PairingTag["Beeren"] = "Beeren";
+	    PairingTag["Mandeln"] = "Mandeln";
+	    PairingTag["Kaffee"] = "Kaffee";
+	    PairingTag["Pistazien"] = "Pistazien";
+	    PairingTag["Rettich"] = "Rettich";
+	    PairingTag["Himbeeren"] = "Himbeeren";
+	    PairingTag["Whiskey"] = "Whiskey";
+	    PairingTag["Zimt"] = "Zimt";
+	    PairingTag["Limette"] = "Limette";
+	    PairingTag["Honig"] = "Honig";
+	    PairingTag["K\u00FCmmel"] = "K\u00FCmmel";
+	    PairingTag["Couscous"] = "Couscous";
+	    PairingTag["Datteln"] = "Datteln";
+	    PairingTag["Ochsenschwanz"] = "Ochsenschwanz";
+	    PairingTag["Rhabarbar"] = "Rhabarbar";
+	    PairingTag["Birne"] = "Birne";
+	    PairingTag["Pho"] = "Pho";
+	    PairingTag["F\u00FCnf_Gew\u00FCrz_Pulver"] = "F\u00FCnf_Gew\u00FCrz_Pulver";
+	    PairingTag["Biryani"] = "Biryani";
+	    PairingTag["Garam_Masala"] = "Garam Masala";
+	    PairingTag["Schwarzerk\u00FCmmel"] = "Schwarzerk\u00FCmmel";
+	    PairingTag["Bohnensprossen"] = "Bohnensprossen";
+	    PairingTag["Schweinebauch"] = "Schweinebauch";
+	    PairingTag["Sesam"] = "Sesam";
+	    PairingTag["Vanille"] = "Vanille";
+	    PairingTag["Blumenkohl"] = "Blumenkohl";
+	    PairingTag["Aubergine"] = "Aubergine";
+	    PairingTag["Okra"] = "Okra";
+	    PairingTag["Schalentiere"] = "Schalentiere";
+	    PairingTag["Pakoras"] = "Pakoras";
+	    PairingTag["Samosas"] = "Samosas";
+	    PairingTag["Mango"] = "Mango";
+	    PairingTag["Koriandersamen"] = "Koriandersamen";
+	    PairingTag["Currybl\u00E4tter"] = "Currybl\u00E4tter";
+	    PairingTag["Senf"] = "Senf";
+	    PairingTag["Zitronengras"] = "Zitronengras";
+	    PairingTag["Brokkoli"] = "Brokkoli";
+	    PairingTag["Spinat"] = "Spinat";
+	    PairingTag["Kichererbsen"] = "Kichererbsen";
+	    PairingTag["Avocado"] = "Avocado";
+	    PairingTag["Waln\u00FCsse"] = "Waln\u00FCsse";
+	    PairingTag["Kreuzk\u00FCmmel"] = "Kreuzk\u00FCmmel";
+	    PairingTag["Granatapfel"] = "Granatapfel";
+	    PairingTag["Orange"] = "Orange";
+	    PairingTag["Blattgem\u00FCse"] = "Blattgem\u00FCse";
+	    PairingTag["Staudensellerie"] = "Staudensellerie";
+	    PairingTag["Fenchel"] = "Fenchel";
+	    PairingTag["Gr\u00FCne_Bohnen"] = "Gr\u00FCne Bohnen";
+	    PairingTag["Lavendel"] = "Lavendel";
+	    PairingTag["Blutwurst"] = "Blutwurst";
+	    PairingTag["Thunfisch"] = "Thunfisch";
+	    PairingTag["Gl\u00FChwein"] = "Gl\u00FChwein";
+	    PairingTag["Gin"] = "Gin";
+	    PairingTag["Dal"] = "Dal";
+	    PairingTag["Jalapenos"] = "Jalape\u00F1os";
+	    PairingTag["Minze"] = "Minze";
+	    PairingTag["Oktopus"] = "Oktopus";
+	    PairingTag["Tintenfisch"] = "Tintenfisch";
+	    PairingTag["Rose"] = "Rose";
+	    PairingTag["N\u00FCsse"] = "N\u00FCsse";
+	    PairingTag["Dill"] = "Dill";
+	    PairingTag["Cayennepfeffer"] = "Cayennepfeffer";
+	    PairingTag["Safran"] = "Safran";
+	    PairingTag["Wei\u00DFe_Bohnen"] = "Wei\u00DFe Bohnen";
+	    PairingTag["Erdn\u00FCsse"] = "Erdn\u00FCsse";
+	    PairingTag["Tofu"] = "Tofu";
+	    PairingTag["Fleisch"] = "Fleisch";
+	    PairingTag["Dan_Dan_Nudeln"] = "Dan-Dan-Nudeln";
+	    PairingTag["Gin_Tonic"] = "Gin & Tonic";
+	    PairingTag["S\u00FC\u00DFkartoffeln"] = "S\u00FC\u00DFkartoffeln";
+	    PairingTag["Pak_Choi"] = "Pak Choi";
+	    PairingTag["Litschi"] = "Litschi";
+	    PairingTag["Orangenbl\u00FCten"] = "Orangenbl\u00FCten";
+	    PairingTag["Gnocchi"] = "Gnocchi";
+	    PairingTag["Chinakohl"] = "Chinakohl";
+	    PairingTag["Joghurt"] = "Joghurt";
+	    PairingTag["Feta"] = "Feta";
+	    PairingTag["Rotweinessig"] = "Rotweinessig";
+	    PairingTag["Mais"] = "Mais";
+	    PairingTag["Tahini"] = "Tahini";
+	    PairingTag["Ananas"] = "Ananas";
+	    PairingTag["Bulgur"] = "Bulgar";
+	    PairingTag["Zwiebeln"] = "Zwiebeln";
+	    PairingTag["Kohlgem\u00FCse"] = "Kohlgem\u00FCse";
+	    PairingTag["Erbsen"] = "Erbsen";
+	    PairingTag["Speck"] = "Speck";
+	    PairingTag["Karamell"] = "Karamell";
+	    PairingTag["Thymian"] = "Thymian";
+	    PairingTag["Sahne"] = "Sahne";
+	    PairingTag["Bananen"] = "Bananen";
+	    PairingTag["Erdbeeren"] = "Erdbeeren";
+	    PairingTag["Ziegenk\u00E4se"] = "Ziegenk\u00E4se";
+	    PairingTag["Kirschen"] = "Kirschen";
+	    PairingTag["Wei\u00DFkohl"] = "Wei\u00DFkohl";
+	    PairingTag["Weichk\u00E4se"] = "Weichk\u00E4se";
+	    PairingTag["Shortbread"] = "Shortbread";
+	    PairingTag["Sauerkraut"] = "Sauerkraut";
+	    PairingTag["Harissa"] = "Harissa";
+	    PairingTag["Haseln\u00FCsse"] = "Haseln\u00FCsse";
+	    PairingTag["Krautsalat"] = "Krautsalat";
+	    PairingTag["Zucchini"] = "Zucchini";
+	    PairingTag["Aprikosen"] = "Aprikosen";
+	    PairingTag["Falafel"] = "Falafel";
+	    PairingTag["Spargel"] = "Spargel";
+	    PairingTag["H\u00FCttenk\u00E4se"] = "H\u00FCttenk\u00E4se";
+	    PairingTag["Wei\u00DFweinessig"] = "Wei\u00DFweinessig";
+	    PairingTag["Zitrone"] = "Zitrone";
+	    PairingTag["Kalb"] = "Kalb";
+	    PairingTag["Gratins"] = "Gratins";
+	    PairingTag["Parmesan"] = "Parmesan";
+	    PairingTag["Ricotta"] = "Ricotta";
+	    PairingTag["Schokolade"] = "Schokolade";
+	    PairingTag["Lauch"] = "Lauch";
+	    PairingTag["Wei\u00DFe_Schokolade"] = "Wei\u00DFe Schokolade";
+	    PairingTag["Sardinen"] = "Sardinen";
+	    PairingTag["Pinienkerne"] = "Pinienkerne";
+	    PairingTag["Rosinen"] = "Rosinen";
+	    PairingTag["Sojasauce"] = "Sojasauce";
+	    PairingTag["Reisessig"] = "Reisessig";
+	    PairingTag["Wei\u00DFwein"] = "Wei\u00DFwein";
+	    PairingTag["Rotwein"] = "Rotwein";
+	    PairingTag["Bockshornklee"] = "Bockshornklee";
+	    PairingTag["Petersilie"] = "Petersilie";
+	    PairingTag["Estragon"] = "Estragon";
+	    PairingTag["Haferflocken"] = "Haferflocken";
+	    PairingTag["Mangold"] = "Mangold";
+	    PairingTag["Cashewn\u00FCsse"] = "Cashewn\u00FCsse";
+	    PairingTag["Rosenbl\u00E4tter"] = "Rosenbl\u00E4tter";
+	    PairingTag["Rosenkohl"] = "Rosenkohl";
+	    PairingTag["Rosmarin"] = "Rosmarin";
+	    PairingTag["Passionsfrucht"] = "Passionsfrucht";
+	    PairingTag["Gr\u00FCner_Kardamom"] = "Gr\u00FCner Kardamom";
+	    PairingTag["Innereien"] = "Innereien";
+	    PairingTag["Maniok"] = "Maniok";
+	    PairingTag["Frischk\u00E4se"] = "Frischk\u00E4se";
+	    PairingTag["Kimchi"] = "Kimchi";
+	    PairingTag["Liebst\u00F6ckel"] = "Liebst\u00F6ckel";
+	    PairingTag["Trauben"] = "Trauben";
+	    PairingTag["Schwarzer_Pfeffer"] = "Schwarzer Pfeffer";
+	    PairingTag["Langer_Pfeffer"] = "Langer Pfeffer";
+	    PairingTag["Grapefruit"] = "Grapefruit";
+	    PairingTag["Nelken"] = "Nelken";
+	    PairingTag["Paella"] = "Paella";
+	    PairingTag["Gulasch"] = "Gulasch";
+	    PairingTag["Lorbeer"] = "Lorbeer";
+	    PairingTag["Zuckererbsen"] = "Zuckererbsen";
+	    PairingTag["Buchweizen"] = "Buchweizen";
+	    PairingTag["Tr\u00FCffel"] = "Tr\u00FCffel";
+	    PairingTag["B\u00E4rlauch"] = "B\u00E4rlauch";
+	    PairingTag["Tonkabohnen"] = "Tonkabohnen";
+	    PairingTag["Mozzarella"] = "Mozzarella";
+	    PairingTag["Kurkuma"] = "Kurkuma";
+	    PairingTag["Chicoree"] = "Chicoree";
+	    PairingTag["Risotto"] = "Risotto";
+	    PairingTag["Knollensellerie"] = "Knollensellerie";
+	    PairingTag["Rotkohl"] = "Rotkohl";
+	    PairingTag["Rum"] = "Rum";
+	    PairingTag["Schinken"] = "Schinken";
+	    PairingTag["Pastinaken"] = "Pastinaken";
+	    PairingTag["Rucola"] = "Rucola";
+	    PairingTag["Tamarinde"] = "Tamarinde";
+	    PairingTag["Papadam"] = "Papadam";
+	    PairingTag["Bohnen"] = "Bohnen";
+	    PairingTag["Basilikum"] = "Basilikum";
+	    PairingTag["Papaya"] = "Papaya";
+	    PairingTag["Geb\u00E4ck"] = "Geb\u00E4ck";
+	    PairingTag["Muskatnuss"] = "Muskatnuss";
+	    PairingTag["Piment"] = "Piment";
+	    PairingTag["Pfeffer"] = "Pfeffer";
+	    PairingTag["Kakao"] = "Kakao";
+	})(PairingTag || (PairingTag = {}));
+	var PairingTag$1 = PairingTag;
+
+	class Zimt {
+	    constructor() {
+	        this.name = "Zimt";
+	        this.nameSymbol = "Zi";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Tamarinde,
+	            PairingTag$1.Haferflocken,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Couscous,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Mangold,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Pinienkerne,
+	            PairingTag$1.Rosinen,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Cashewnüsse,
+	            PairingTag$1.Rosenblätter,
+	            PairingTag$1.Schwarzerkümmel,
+	            PairingTag$1.Garam_Masala,
+	        ];
+	    }
+	}
+
+	class Cassia_Zimt {
+	    constructor() {
+	        this.name = "Cassia-Zimt";
+	        this.nameSymbol = "Ca";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.KAMPFER,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.COUMARIN,
+	            AromaCompounds$1.HEPTANON,
+	            AromaCompounds$1.TANNINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Tamarinde,
+	            PairingTag$1.Haferflocken,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Couscous,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Mangold,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Pinienkerne,
+	            PairingTag$1.Rosinen,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Cashewnüsse,
+	            PairingTag$1.Rosenblätter,
+	            PairingTag$1.Schwarzerkümmel,
+	            PairingTag$1.Garam_Masala,
+	        ];
+	    }
+	}
+
+	class Gewuerznelke {
+	    constructor() {
+	        this.name = "Gewürznelke";
+	        this.nameSymbol = "Gn";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.SALICYLSÄUREMETHYLESTER,
+	            AromaCompounds$1.TERPINEOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class Piment {
+	    constructor() {
+	        this.name = "Piment";
+	        this.nameSymbol = "Pi";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Erbsen,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Zwiebeln,
+	            PairingTag$1.Rosinen,
+	            PairingTag$1.Haselnüsse,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Dill,
+	            PairingTag$1.Petersilie,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Schwarzerkümmel,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Mango,
+	        ];
+	    }
+	}
+
+	class Anis {
+	    constructor() {
+	        this.name = "Anis";
+	        this.nameSymbol = "An";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.ANISALDEHYD,
+	            AromaCompounds$1.ANISALKOHOL,
+	            AromaCompounds$1.ANISALKOHOL,
+	            AromaCompounds$1.ESTRAGOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Lauch,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Basilikum,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Ochsenschwanz,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Estragon,
+	            PairingTag$1.Tintenfisch,
+	            PairingTag$1.Speck,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Gurke,
+	        ];
+	    }
+	}
+
+	class Sternanis {
+	    constructor() {
+	        this.name = "Sternanis";
+	        this.nameSymbol = "St";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.SAFROL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Gemüse,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Schweinebauch,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Ochsenschwanz,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Pho,
+	            PairingTag$1.Fünf_Gewürz_Pulver,
+	            PairingTag$1.Biryani,
+	            PairingTag$1.Kaninchen,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Garam_Masala,
+	            PairingTag$1.Schwarzerkümmel,
+	            PairingTag$1.Zimt,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Bohnensprossen,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Sesam,
+	        ];
+	    }
+	}
+
+	class Fenchel {
+	    constructor() {
+	        this.name = "Fenchelsamen";
+	        this.nameSymbol = "Fs";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.ESTRAGOL,
+	            AromaCompounds$1.FENCHON,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Rosenkohl,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Kaninchen,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Rosmarin,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Weißwein,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Senf,
+	            PairingTag$1.Oliven,
+	        ];
+	    }
+	}
+
+	class Sueßholz {
+	    constructor() {
+	        this.name = "Süßholz";
+	        this.nameSymbol = "Sü";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANETHOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.ESTRAGOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.GLYCYRRHIZIN,
+	            AromaCompounds$1.GLYCYRRHIZIN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.PHENOLVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Spargel,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Wildfleisch,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Kirschen,
+	        ];
+	    }
+	}
+
+	class Mahlab {
+	    constructor() {
+	        this.name = "Mahlab";
+	        this.nameSymbol = "Ma";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.AZULEN,
+	            AromaCompounds$1.COUMARIN,
+	            AromaCompounds$1.COUMARIN,
+	            AromaCompounds$1.DIOXOLAN,
+	            AromaCompounds$1.METHOXYETHYLCINNAMAT,
+	            AromaCompounds$1.PENTANOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Tonkabohnen,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Aprikosen,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Kirschen,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Rose,
+	        ];
+	    }
+	}
+
+	class Vanille {
+	    constructor() {
+	        this.name = "Vanille";
+	        this.nameSymbol = "Va";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANISALDEHYD,
+	            AromaCompounds$1.HYDROXYBENZALDEHYD,
+	            AromaCompounds$1.PIPERONAL,
+	            AromaCompounds$1.VANILLIN,
+	            AromaCompounds$1.VANILLIN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süß_wärmende_Phenole;
+	        this.color = AromaGroupsColors$1.Süß_wärmende_Phenole;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Kokosnusscreme,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Ananas,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Kirschen,
+	            PairingTag$1.Muscheln,
+	            PairingTag$1.Pfirsiche,
+	            PairingTag$1.Rotwein,
+	        ];
+	    }
+	}
+
+	class Muskatnuss {
+	    constructor() {
+	        this.name = "Muskatnuss";
+	        this.nameSymbol = "Mu";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.MYRISTICIN,
+	            AromaCompounds$1.MYRISTICIN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SABINEN,
+	            AromaCompounds$1.SAFROL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+	        this.color = AromaGroupsColors$1.Wärmende_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Weichkäse,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Kalb,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Pfirsiche,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Gratins,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Parmesan,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Gnocchi,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Ricotta,
+	            PairingTag$1.Salbei,
+	            PairingTag$1.Chili,
+	        ];
+	    }
+	}
+
+	class Muskatbluete {
+	    constructor() {
+	        this.name = "Muskatblüte";
+	        this.nameSymbol = "Mb";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ELEMICIN,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.MYRISTICIN,
+	            AromaCompounds$1.MYRISTICIN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SABINEN,
+	            AromaCompounds$1.SAFROL,
+	            AromaCompounds$1.TERPINENE,
+	            AromaCompounds$1.TERPINEOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+	        this.color = AromaGroupsColors$1.Wärmende_Terpene;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Kalb,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Pfirsiche,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Zimt,
+	        ];
+	    }
+	}
+
+	class Kuemmel {
+	    constructor() {
+	        this.name = "Kümmel";
+	        this.nameSymbol = "Kü";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARVEOL,
+	            AromaCompounds$1.S_CARVON,
+	            AromaCompounds$1.S_CARVON,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SABINEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+	        this.color = AromaGroupsColors$1.Wärmende_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Weißkohl,
+	            PairingTag$1.Zwiebeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Weichkäse,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Gans,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Shortbread,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Sauerkraut,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Harissa,
+	            PairingTag$1.Haselnüsse,
+	            PairingTag$1.Krautsalat,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Joghurt,
+	        ];
+	    }
+	}
+
+	class Dill {
+	    constructor() {
+	        this.name = "Dill";
+	        this.nameSymbol = "Di";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARVEOL,
+	            AromaCompounds$1.D_CARVON,
+	            AromaCompounds$1.D_CARVON,
+	            AromaCompounds$1.FENCHON,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.TERPINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+	        this.color = AromaGroupsColors$1.Wärmende_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Erbsen,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Spargel,
+	            PairingTag$1.Hüttenkäse,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Zucchini,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Weißweinessig,
+	            PairingTag$1.Senf,
+	            PairingTag$1.Kakao,
+	            PairingTag$1.Zitrone,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Käse,
+	        ];
+	    }
+	}
+
+	class Annatto {
+	    constructor() {
+	        this.name = "Annatto";
+	        this.nameSymbol = "Ao";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.ALPHA_COPAEN,
+	            AromaCompounds$1.ELEMAN,
+	            AromaCompounds$1.GERMACREN,
+	            AromaCompounds$1.GERMACREN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Wärmende_Terpene;
+	        this.color = AromaGroupsColors$1.Wärmende_Terpene;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class Mastix {
+	    constructor() {
+	        this.name = "Mastix";
+	        this.nameSymbol = "Mx";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CAMPHEN,
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+	        this.color = AromaGroupsColors$1.Duftende_Terpene;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Reis,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Grüner_Kardamom,
+	            PairingTag$1.Piment,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Muskatnuss,
+	            PairingTag$1.Basilikum,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Pinienkerne,
+	            PairingTag$1.Rettich,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Ziegenkäse,
+	            PairingTag$1.Himbeeren,
+	            PairingTag$1.Weiße_Schokolade,
+	            PairingTag$1.Rosmarin,
+	        ];
+	    }
+	}
+
+	class Wacholder {
+	    constructor() {
+	        this.name = "Wacholder";
+	        this.nameSymbol = "Wa";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TERPINEOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+	        this.color = AromaGroupsColors$1.Duftende_Terpene;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Artischocken,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Oliven,
+	            PairingTag$1.Salbei,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Wildfleisch,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Hase,
+	            PairingTag$1.Gans,
+	            PairingTag$1.Wachteln,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Schwarze_Johannisbeeren,
+	            PairingTag$1.Getrocknete_Früchte,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Lachs,
+	            PairingTag$1.Kaninchen,
+	            PairingTag$1.Makrele,
+	            PairingTag$1.Tiramisu,
+	        ];
+	    }
+	}
+
+	class Rose {
+	    constructor() {
+	        this.name = "Rose";
+	        this.nameSymbol = "Ro";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CITRONELLOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.NEROL,
+	            AromaCompounds$1.ROSEN_KETONE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+	        this.color = AromaGroupsColors$1.Duftende_Terpene;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Paprika,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Melone,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Himbeeren,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Whiskey,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Rettich,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Zimt,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Kümmel,
+	            PairingTag$1.Couscous,
+	        ];
+	    }
+	}
+
+	class Koriander {
+	    constructor() {
+	        this.name = "Koriander";
+	        this.nameSymbol = "Ko";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CYMOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TERPINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Duftende_Terpene;
+	        this.color = AromaGroupsColors$1.Duftende_Terpene;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Staudensellerie,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Artischocken,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Lavendel,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Wildfleisch,
+	            PairingTag$1.Blutwurst,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Thunfisch,
+	            PairingTag$1.Oliven,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Glühwein,
+	            PairingTag$1.Gin,
+	            PairingTag$1.Dal,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Schalotten,
+	            PairingTag$1.Jalapenos,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Oktopus,
+	            PairingTag$1.Tintenfisch,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Rose,
+	            PairingTag$1.Kreuzkümmel,
+	            PairingTag$1.Couscous,
+	        ];
+	    }
+	}
+
+	class Kreuzkuemmel {
+	    constructor() {
+	        this.name = "Kreuzkümmel";
+	        this.nameSymbol = "Kk";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CUMINALDEHYD,
+	            AromaCompounds$1.CUMINALDEHYD,
+	            AromaCompounds$1.CYMOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TERPINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Erdige_Terpene;
+	        this.color = AromaGroupsColors$1.Erdige_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Dill,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Couscous,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Oliven,
+	            PairingTag$1.Zucchini,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Aprikosen,
+	            PairingTag$1.Sesam,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Falafel,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Feigen,
+	        ];
+	    }
+	}
+
+	class Schwarzkuemmel {
+	    constructor() {
+	        this.name = "Schwarzkümmel";
+	        this.nameSymbol = "Sk";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARVACROL,
+	            AromaCompounds$1.D_CARVON,
+	            AromaCompounds$1.CYMOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.THYMOCHINON,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Erdige_Terpene;
+	        this.color = AromaGroupsColors$1.Erdige_Terpene;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Ziegenkäse,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Mozzarella,
+	            PairingTag$1.Basilikum,
+	            PairingTag$1.Rührei,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Kichererbsen,
+	            PairingTag$1.Zitronenschale,
+	        ];
+	    }
+	}
+
+	class Mohrenpfeffer {
+	    constructor() {
+	        this.name = "Mohrenpfeffer";
+	        this.nameSymbol = "Mp";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.FENCHON,
+	            AromaCompounds$1.FENCHON,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.GERMACREN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.VANILLIN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+	        this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class SchwarzerKardamom {
+	    constructor() {
+	        this.name = "Schwarzer Kardamom";
+	        this.nameSymbol = "Ska";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.DIMETHOXYPHENOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SABINEN,
+	            AromaCompounds$1.TERPINYLACETAT,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+	        this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Erbsen,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Speck,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Pho,
+	            PairingTag$1.Muscheln,
+	            PairingTag$1.Mais,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Curryblätter,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Rührei,
+	            PairingTag$1.Karamell,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Thymian,
+	            PairingTag$1.Honig,
+	        ];
+	    }
+	}
+
+	class GruenerKardamom {
+	    constructor() {
+	        this.name = "Grüner Kardamom";
+	        this.nameSymbol = "Gka";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.ALPHA_FENCHOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+	        this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+	        this.spice_group = SpiceGroup$1.Süß;
+	        this.goes_well_with = [
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Safran,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Aprikosen,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Aprikosen,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Rosenblätter,
+	            PairingTag$1.Passionsfrucht,
+	        ];
+	    }
+	}
+
+	class Lorbeer {
+	    constructor() {
+	        this.name = "Lorbeer";
+	        this.nameSymbol = "Lb";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TERPINEOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+	        this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Gemüse,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Brühe,
+	            PairingTag$1.Zwiebelsuppe,
+	            PairingTag$1.Fischpastete,
+	            PairingTag$1.Ragu,
+	            PairingTag$1.Pfirsiche,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Zitronenschale,
+	        ];
+	    }
+	}
+
+	class Galgant {
+	    constructor() {
+	        this.name = "Galgant";
+	        this.nameSymbol = "Ga";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.KAMPFER,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.ALPHA_FENCHOL,
+	            AromaCompounds$1.GALANGALACETAT,
+	            AromaCompounds$1.ZIMTSÄUREMETHYLESTER,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Durchdringende_Terpene;
+	        this.color = AromaGroupsColors$1.Durchdringende_Terpene;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Liebstöckel,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Trauben,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Zitronengras,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Pak_Choi,
+	            PairingTag$1.Gans,
+	            PairingTag$1.Gans,
+	        ];
+	    }
+	}
+
+	class Loomi {
+	    constructor() {
+	        this.name = "Loomi";
+	        this.nameSymbol = "Lo";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.FENCHON,
+	            AromaCompounds$1.HUMULEN,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.METHOXYCOUMARIN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+	        this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Weiße_Bohnen,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Dill,
+	            PairingTag$1.Cayennepfeffer,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Safran,
+	            PairingTag$1.Couscous,
+	            PairingTag$1.Linsen,
+	        ];
+	    }
+	}
+
+	class Zitronenmyrte {
+	    constructor() {
+	        this.name = "Zitronenmyrte";
+	        this.nameSymbol = "Zm";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.CITRONELLAL,
+	            AromaCompounds$1.CYCLOCITRAL,
+	            AromaCompounds$1.HEPTANON,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SULCATON,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+	        this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class Zitronengras {
+	    constructor() {
+	        this.name = "Zitronengras";
+	        this.nameSymbol = "Zg";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.NEROL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Zitrustönige_Terpene;
+	        this.color = AromaGroupsColors$1.Zitrustönige_Terpene;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Bambussprossen,
+	            PairingTag$1.Lotuswurzel,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Kokosnusscreme,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Muscheln,
+	            PairingTag$1.Schalotten,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Galgant,
+	            PairingTag$1.Thai_Basilikum,
+	            PairingTag$1.Garnelen,
+	            PairingTag$1.Kebab,
+	            PairingTag$1.Koriander,
+	        ];
+	    }
+	}
+
+	class Amchur {
+	    constructor() {
+	        this.name = "Amchur";
+	        this.nameSymbol = "Am";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CADINENE,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.CUBEBIN,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.OCIMENE,
+	            AromaCompounds$1.OCIMENE,
+	            AromaCompounds$1.SELINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+	        this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Okra,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Garnelen,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Pakoras,
+	            PairingTag$1.Samosas,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Sesam,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Koriandersamen,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Butter,
+	            PairingTag$1.Senf,
+	            PairingTag$1.Zitronengras,
+	            PairingTag$1.Curryblätter,
+	        ];
+	    }
+	}
+
+	class Anardana {
+	    constructor() {
+	        this.name = "Anardana";
+	        this.nameSymbol = "Ad";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CAREN,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.TANNINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+	        this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Brokkoli,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Kichererbsen,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Butter,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Kreuzkümmel,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Sesam,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Orange,
+	        ];
+	    }
+	}
+
+	class Sumach {
+	    constructor() {
+	        this.name = "Sumach";
+	        this.nameSymbol = "Su";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.CEMBREN,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.NONANAL,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TANNINVERBINDUNGEN,
+	            AromaCompounds$1.WEINSÄURE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+	        this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Kichererbsen,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Rettich,
+	            PairingTag$1.Granatapfel,
+	            PairingTag$1.Ananas,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Rotweinessig,
+	            PairingTag$1.Feigen,
+	            PairingTag$1.Mais,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Tahini,
+	        ];
+	    }
+	}
+
+	class Tamarinde {
+	    constructor() {
+	        this.name = "Tamarinde";
+	        this.nameSymbol = "Ta";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.FURFURAL,
+	            AromaCompounds$1.FURFURAL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PHENYLACETALDEHYD_2,
+	            AromaCompounds$1.PHENYLACETALDEHYD_2,
+	            AromaCompounds$1.WEINSÄURE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+	        this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Bulgur,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Okra,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Erdnüsse,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Zimt,
+	            PairingTag$1.Kreuzkümmel,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Muscheln,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Curry,
+	        ];
+	    }
+	}
+
+	class Johannisbrotschote {
+	    constructor() {
+	        this.name = "Johannisbrotschote";
+	        this.nameSymbol = "Jo";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ZIMTALDEHYD,
+	            AromaCompounds$1.FARNESENE,
+	            AromaCompounds$1.FURANEOL,
+	            AromaCompounds$1.CAPRONSÄURE,
+	            AromaCompounds$1.CAPRONSÄURE,
+	            AromaCompounds$1.VALERIANSÄURE,
+	            AromaCompounds$1.VALERIANSÄURE,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Süßsaure_Säuren;
+	        this.color = AromaGroupsColors$1.Süßsaure_Säuren;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class Berberitze {
+	    constructor() {
+	        this.name = "Berberitze";
+	        this.nameSymbol = "Be";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ANISALDEHYD,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.NONANAL,
+	            AromaCompounds$1.WEINSÄURE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Fruchtige_Aldehyde;
+	        this.color = AromaGroupsColors$1.Fruchtige_Aldehyde;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [];
+	    }
+	}
+
+	class Kakao {
+	    constructor() {
+	        this.name = "Kakao";
+	        this.nameSymbol = "Ka";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.DIMETHYLPYRAZIN,
+	            AromaCompounds$1.ESTERVERBINDUNGEN,
+	            AromaCompounds$1.FURANEOL,
+	            AromaCompounds$1.ISOVALERALDEHYD,
+	            AromaCompounds$1.ISOVALERALDEHYD,
+	            AromaCompounds$1.PHENOLVERBINDUNGEN,
+	            AromaCompounds$1.PHENYLACETALDEHYD,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Fruchtige_Aldehyde;
+	        this.color = AromaGroupsColors$1.Fruchtige_Aldehyde;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Speck,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Beeren,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Rose,
+	            PairingTag$1.Erdbeeren,
+	            PairingTag$1.Ziegenkäse,
+	            PairingTag$1.Kirschen,
+	        ];
+	    }
+	}
+
+	class Paprika {
+	    constructor() {
+	        this.name = "Paprika";
+	        this.nameSymbol = "Pa";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ACETOIN,
+	            AromaCompounds$1.CAPSAICIN,
+	            AromaCompounds$1.ZITRONENSÄURE,
+	            AromaCompounds$1.ESSIGESTER,
+	            AromaCompounds$1.ISOVALERALDEHYD,
+	            AromaCompounds$1.ÄPFELSÄURE,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+	        this.color = AromaGroupsColors$1.Röstige_Pysazine;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Couscous,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Artischocken,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Paella,
+	            PairingTag$1.Gulasch,
+	            PairingTag$1.Oktopus,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Petersilie,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Lorbeer,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Käse,
+	        ];
+	    }
+	}
+
+	class Akazie {
+	    constructor() {
+	        this.name = "Akazie";
+	        this.nameSymbol = "Ak";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.PHENOLVERBINDUNGEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+	        this.color = AromaGroupsColors$1.Röstige_Pysazine;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Kaffee,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Cashewnüsse,
+	            PairingTag$1.Rotwein,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Kokosnuss,
+	        ];
+	    }
+	}
+
+	class Sesam {
+	    constructor() {
+	        this.name = "Sesam";
+	        this.nameSymbol = "Sm";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.FURFURYLTHIOL_2,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	            AromaCompounds$1.SESAMOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Röstige_Pysazine;
+	        this.color = AromaGroupsColors$1.Röstige_Pysazine;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Bohnen,
+	            PairingTag$1.Tofu,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Sojasauce,
+	            PairingTag$1.Reisessig,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Parmesan,
+	            PairingTag$1.Tahini,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Granatapfel,
+	        ];
+	    }
+	}
+
+	class Knoblauch {
+	    constructor() {
+	        this.name = "Knoblauch";
+	        this.nameSymbol = "Kn";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CAREN,
+	            AromaCompounds$1.DIALLYLTRISULFID,
+	            AromaCompounds$1.DIALLYLTRISULFID,
+	            AromaCompounds$1.DIALLYDISULFID,
+	            AromaCompounds$1.DIALLYDISULFID,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.SABINEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+	        this.color = AromaGroupsColors$1.Schwefelverbindungen;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Gemüse,
+	            PairingTag$1.Trüffel,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Ziegenkäse,
+	            PairingTag$1.Butter,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Weißwein,
+	            PairingTag$1.Ricotta,
+	            PairingTag$1.Melone,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Bärlauch,
+	            PairingTag$1.Grüne_Bohnen,
+	        ];
+	    }
+	}
+
+	class Asant {
+	    constructor() {
+	        this.name = "Asant";
+	        this.nameSymbol = "As";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.EUDESMOL,
+	            AromaCompounds$1.FERULASÄURE,
+	            AromaCompounds$1.OCIMENE,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SULFIDVERBINDUNGEN,
+	            AromaCompounds$1.SULFIDVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+	        this.color = AromaGroupsColors$1.Schwefelverbindungen;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Okra,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Dal,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Kreuzkümmel,
+	            PairingTag$1.Grüner_Kardamom,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Zwiebeln,
+	            PairingTag$1.Petersilie,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Lauch,
+	            PairingTag$1.Senf,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Zimt,
+	        ];
+	    }
+	}
+
+	class Curryblaetter {
+	    constructor() {
+	        this.name = "Curryblätter";
+	        this.nameSymbol = "Cu";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PHENYLETHANTHIOL,
+	            AromaCompounds$1.PHENYLETHANTHIOL,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+	        this.color = AromaGroupsColors$1.Schwefelverbindungen;
+	        this.spice_group = SpiceGroup$1.Aromatisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Gemüse,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Butter,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Fladenbrot,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Rührei,
+	            PairingTag$1.Grüne_Papaya,
+	            PairingTag$1.Pomelo,
+	            PairingTag$1.Kürbis,
+	        ];
+	    }
+	}
+
+	class Senf {
+	    constructor() {
+	        this.name = "Senf";
+	        this.nameSymbol = "Se";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.ACETYL_PYRROLIN,
+	            AromaCompounds$1.FURFURYLTHIOL,
+	            AromaCompounds$1.ISOTHIOCYANATE,
+	            AromaCompounds$1.ISOTHIOCYANATE,
+	            AromaCompounds$1.ISOVALERALDEHYD,
+	            AromaCompounds$1.METHYLBUTANAL,
+	            AromaCompounds$1.PINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Schwefelverbindungen;
+	        this.color = AromaGroupsColors$1.Schwefelverbindungen;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Kaninchen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Dal,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Rote_Beete,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Haselnüsse,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Dill,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Papaya,
+	        ];
+	    }
+	}
+
+	class Paradieskoerner {
+	    constructor() {
+	        this.name = "Paradieskörner";
+	        this.nameSymbol = "Pk";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.GINGEROL,
+	            AromaCompounds$1.HUMULON,
+	            AromaCompounds$1.PARADOL,
+	            AromaCompounds$1.PARADOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+	        this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [
+	            PairingTag$1.Schwarzer_Pfeffer,
+	            PairingTag$1.Langer_Pfeffer,
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Bohnen,
+	            PairingTag$1.Haferflocken,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Pomelo,
+	            PairingTag$1.Grapefruit,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Erdnüsse,
+	            PairingTag$1.Nelken,
+	            PairingTag$1.Safran,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Grüner_Kardamom,
+	            PairingTag$1.Haselnüsse,
+	            PairingTag$1.Knoblauch,
+	        ];
+	    }
+	}
+
+	class Schwarzerpfeffer {
+	    constructor() {
+	        this.name = "Schwarzer Pfeffer";
+	        this.nameSymbol = "Pf";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PHELLANDREN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.PIPERIN,
+	            AromaCompounds$1.PIPERIN,
+	            AromaCompounds$1.ROTUNDONE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+	        this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Tofu,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Innereien,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Steinfrüchte,
+	            PairingTag$1.Erdbeeren,
+	            PairingTag$1.Tintenfisch,
+	            PairingTag$1.Zitrone,
+	            PairingTag$1.Ananas,
+	            PairingTag$1.Zitronengras,
+	            PairingTag$1.Rotwein,
+	            PairingTag$1.Rotweinessig,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Erbsen,
+	        ];
+	    }
+	}
+
+	class Szechuanpfeffer {
+	    constructor() {
+	        this.name = "Szechuan Pfeffer";
+	        this.nameSymbol = "Sz";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.SANSHOOL,
+	            AromaCompounds$1.SANSHOOL,
+	            AromaCompounds$1.TERPINEOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+	        this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Tofu,
+	            PairingTag$1.Nudeln,
+	            PairingTag$1.Dan_Dan_Nudeln,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fleisch,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Gin_Tonic,
+	            PairingTag$1.Zimt,
+	            PairingTag$1.Pflaumen,
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Ente,
+	            PairingTag$1.Pak_Choi,
+	            PairingTag$1.Litschi,
+	            PairingTag$1.Orangenblüten,
+	            PairingTag$1.Gnocchi,
+	            PairingTag$1.Chinakohl,
+	        ];
+	    }
+	}
+
+	class Ingwer {
+	    constructor() {
+	        this.name = "Ingwer";
+	        this.nameSymbol = "In";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.CURCUMIN,
+	            AromaCompounds$1.GERANIOL,
+	            AromaCompounds$1.GINGEROL,
+	            AromaCompounds$1.GINGEROL,
+	            AromaCompounds$1.LINALOOL,
+	            AromaCompounds$1.SHOGAOL,
+	            AromaCompounds$1.SHOGAOL,
+	            AromaCompounds$1.ZINGIBEREN,
+	            AromaCompounds$1.ZINGIBEREN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+	        this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+	        this.spice_group = SpiceGroup$1.Erding;
+	        this.goes_well_with = [
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Gemüse,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Meeresfrüchte,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Erdnüsse,
+	            PairingTag$1.Sesam,
+	            PairingTag$1.Dunkle_Schokolade,
+	            PairingTag$1.Honig,
+	        ];
+	    }
+	}
+
+	class Chili {
+	    constructor() {
+	        this.name = "Chili";
+	        this.nameSymbol = "Ch";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CAPSAICIN,
+	            AromaCompounds$1.CAPSAICIN,
+	            AromaCompounds$1.CAPSAICINOIDE,
+	            AromaCompounds$1.ESTERVERBINDUNGEN,
+	            AromaCompounds$1.FURFURAL,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Stechende_Verbindungen;
+	        this.color = AromaGroupsColors$1.Stechende_Verbindungen;
+	        this.spice_group = SpiceGroup$1.Pikant;
+	        this.goes_well_with = [
+	            PairingTag$1.Mais,
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Maniok,
+	            PairingTag$1.Frischkäse,
+	            PairingTag$1.Bananen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Avocado,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Tropische_Früchte,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Cashewnüsse,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Kimchi,
+	            PairingTag$1.Melone,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Minze,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Lotuswurzel,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Paprika,
+	        ];
+	    }
+	}
+
+	class Safran {
+	    constructor() {
+	        this.name = "Safran";
+	        this.nameSymbol = "Sa";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.LANIERON,
+	            AromaCompounds$1.PICROCROCIN,
+	            AromaCompounds$1.PICROCROCIN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.SAFRANAL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Lauch,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Rhabarbar,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Schalentiere,
+	            PairingTag$1.Kaninchen,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Orange,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Weiße_Schokolade,
+	            PairingTag$1.Sardinen,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Pinienkerne,
+	            PairingTag$1.Rosinen,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Parmesan,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Schalotten,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Papaya,
+	            PairingTag$1.Käse,
+	        ];
+	    }
+	}
+
+	class Mohn {
+	    constructor() {
+	        this.name = "Mohn";
+	        this.nameSymbol = "Mo";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.KAMPFER,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.GYLKOSID_VERBINDUNGEN,
+	            AromaCompounds$1.HEXANAL,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.PENTYLFURAN,
+	            AromaCompounds$1.PENTYLFURAN,
+	            AromaCompounds$1.PHENOLVERBINDUNGEN,
+	            AromaCompounds$1.PYRAZINVERBINDUNGEN,
+	            AromaCompounds$1.VINYLAMYLKETON,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Zucchini,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Birne,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Schokolade,
+	            PairingTag$1.Gebäck,
+	            PairingTag$1.Zitrone,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Gurke,
+	            PairingTag$1.Pistazien,
+	            PairingTag$1.Vanille,
+	            PairingTag$1.Dunkle_Schokolade,
+	        ];
+	    }
+	}
+
+	class Ajowan {
+	    constructor() {
+	        this.name = "Ajowan";
+	        this.nameSymbol = "Aj";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CYMOL,
+	            AromaCompounds$1.MYRCEN,
+	            AromaCompounds$1.PINENE,
+	            AromaCompounds$1.TERPINENE,
+	            AromaCompounds$1.THYMOL,
+	            AromaCompounds$1.THYMOL,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Blumenkohl,
+	            PairingTag$1.Karotten,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Koriandersamen,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Kichererbsen,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Linsen,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Curryblätter,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Mango,
+	            PairingTag$1.Mais,
+	            PairingTag$1.Feta,
+	            PairingTag$1.Zuckererbsen,
+	            PairingTag$1.Nüsse,
+	            PairingTag$1.Buchweizen,
+	        ];
+	    }
+	}
+
+	class Selleriesamen {
+	    constructor() {
+	        this.name = "Selleriesamen";
+	        this.nameSymbol = "Si";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.HUMULEN,
+	            AromaCompounds$1.LIMONEN,
+	            AromaCompounds$1.SEDANOLID,
+	            AromaCompounds$1.SEDANOLID,
+	            AromaCompounds$1.SELINENE,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Hühnchen,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Zucchini,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Mangold,
+	            PairingTag$1.Tahini,
+	            PairingTag$1.Joghurt,
+	        ];
+	    }
+	}
+
+	class Kurkuma {
+	    constructor() {
+	        this.name = "Kurkuma";
+	        this.nameSymbol = "Ku";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CINEOL,
+	            AromaCompounds$1.CITRAL,
+	            AromaCompounds$1.AR_TURMERON,
+	            AromaCompounds$1.AR_TURMERON,
+	            AromaCompounds$1.ZINGIBEREN,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Zitrisch;
+	        this.goes_well_with = [
+	            PairingTag$1.Wurzelgemüse,
+	            PairingTag$1.Aubergine,
+	            PairingTag$1.Blattgemüse,
+	            PairingTag$1.Spinat,
+	            PairingTag$1.Ingwer,
+	            PairingTag$1.Reis,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Eier,
+	            PairingTag$1.Milchprodukte,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Schwein,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Weiße_Schokolade,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Pfeffer,
+	            PairingTag$1.Tamarinde,
+	            PairingTag$1.Datteln,
+	            PairingTag$1.Muscheln,
+	            PairingTag$1.Curryblätter,
+	            PairingTag$1.Schalotten,
+	            PairingTag$1.Knoblauch,
+	            PairingTag$1.Weißwein,
+	            PairingTag$1.Zitronenschale,
+	            PairingTag$1.Chili,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Honig,
+	            PairingTag$1.Mandeln,
+	            PairingTag$1.Pilze,
+	            PairingTag$1.Äpfel,
+	            PairingTag$1.Kokosnuss,
+	            PairingTag$1.Kokosnusscreme,
+	            PairingTag$1.Limette,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Bockshornklee,
+	            PairingTag$1.Mais,
+	            PairingTag$1.Curry,
+	        ];
+	    }
+	}
+
+	class Bockshornklee {
+	    constructor() {
+	        this.name = "Bockshornklee";
+	        this.nameSymbol = "Bo";
+	        this.description = "";
+	        this.aromaCompounds = [
+	            AromaCompounds$1.CARYOPHYLLENE,
+	            AromaCompounds$1.EUGENOL,
+	            AromaCompounds$1.SOTOLON,
+	            AromaCompounds$1.VINYLAMYLKETON,
+	        ];
+	        this.aromaGroup = AromaGroups$1.Einzigartige_Stoffe;
+	        this.color = AromaGroupsColors$1.Einzigartige_Stoffe;
+	        this.spice_group = SpiceGroup$1.Scharf;
+	        this.goes_well_with = [
+	            PairingTag$1.Süßkartoffeln,
+	            PairingTag$1.Kartoffeln,
+	            PairingTag$1.Kürbis,
+	            PairingTag$1.Kohl,
+	            PairingTag$1.Grüne_Bohnen,
+	            PairingTag$1.Hülsenfrüchte,
+	            PairingTag$1.Sahne,
+	            PairingTag$1.Käse,
+	            PairingTag$1.Joghurt,
+	            PairingTag$1.Fisch,
+	            PairingTag$1.Lamm,
+	            PairingTag$1.Rind,
+	            PairingTag$1.Tomaten,
+	            PairingTag$1.Zitrusfrüchte,
+	            PairingTag$1.Walnüsse,
+	            PairingTag$1.Fladenbrot,
+	            PairingTag$1.Rosinen,
+	            PairingTag$1.Zimt,
+	            PairingTag$1.Kreuzkümmel,
+	            PairingTag$1.Fenchel,
+	            PairingTag$1.Koriander,
+	            PairingTag$1.Curry,
+	            PairingTag$1.Schwarzer_Pfeffer,
+	            PairingTag$1.Senf,
+	        ];
+	    }
+	}
+
+	/* src\Pages\SpiceBlendsPage.svelte generated by Svelte v4.2.18 */
+
+	const { console: console_1 } = globals;
+	const file$3 = "src\\Pages\\SpiceBlendsPage.svelte";
+
+	function get_each_context$1(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[15] = list[i];
+		return child_ctx;
+	}
+
+	function get_each_context_1$1(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[18] = list[i];
+		return child_ctx;
+	}
+
+	// (369:6) <SpiceContainer shape={Math.random()} spice={baseSpice1}>
+	function create_default_slot_1(ctx) {
+		let spicedropdown;
+		let updating_selectedSpice;
+		let current;
+
+		function spicedropdown_selectedSpice_binding(value) {
+			/*spicedropdown_selectedSpice_binding*/ ctx[9](value);
+		}
+
+		let spicedropdown_props = {
+			spices: /*allSpices*/ ctx[5],
+			onChange: /*newSpiceSelection*/ ctx[6]
+		};
+
+		if (/*baseSpice1*/ ctx[1] !== void 0) {
+			spicedropdown_props.selectedSpice = /*baseSpice1*/ ctx[1];
+		}
+
+		spicedropdown = new SpiceDropdown({
+				props: spicedropdown_props,
+				$$inline: true
+			});
+
+		binding_callbacks.push(() => bind(spicedropdown, 'selectedSpice', spicedropdown_selectedSpice_binding));
+
+		const block = {
+			c: function create() {
+				create_component(spicedropdown.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(spicedropdown, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const spicedropdown_changes = {};
+
+				if (!updating_selectedSpice && dirty & /*baseSpice1*/ 2) {
+					updating_selectedSpice = true;
+					spicedropdown_changes.selectedSpice = /*baseSpice1*/ ctx[1];
+					add_flush_callback(() => updating_selectedSpice = false);
+				}
+
+				spicedropdown.$set(spicedropdown_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(spicedropdown.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(spicedropdown.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(spicedropdown, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_default_slot_1.name,
+			type: "slot",
+			source: "(369:6) <SpiceContainer shape={Math.random()} spice={baseSpice1}>",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (376:6) <SpiceContainer shape={Math.random()} spice={baseSpice2}>
+	function create_default_slot(ctx) {
+		let spicedropdown;
+		let updating_selectedSpice;
+		let current;
+
+		function spicedropdown_selectedSpice_binding_1(value) {
+			/*spicedropdown_selectedSpice_binding_1*/ ctx[10](value);
+		}
+
+		let spicedropdown_props = {
+			spices: /*allSpices*/ ctx[5],
+			onChange: /*newSpiceSelection*/ ctx[6]
+		};
+
+		if (/*baseSpice2*/ ctx[2] !== void 0) {
+			spicedropdown_props.selectedSpice = /*baseSpice2*/ ctx[2];
+		}
+
+		spicedropdown = new SpiceDropdown({
+				props: spicedropdown_props,
+				$$inline: true
+			});
+
+		binding_callbacks.push(() => bind(spicedropdown, 'selectedSpice', spicedropdown_selectedSpice_binding_1));
+
+		const block = {
+			c: function create() {
+				create_component(spicedropdown.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(spicedropdown, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const spicedropdown_changes = {};
+
+				if (!updating_selectedSpice && dirty & /*baseSpice2*/ 4) {
+					updating_selectedSpice = true;
+					spicedropdown_changes.selectedSpice = /*baseSpice2*/ ctx[2];
+					add_flush_callback(() => updating_selectedSpice = false);
+				}
+
+				spicedropdown.$set(spicedropdown_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(spicedropdown.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(spicedropdown.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(spicedropdown, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_default_slot.name,
+			type: "slot",
+			source: "(376:6) <SpiceContainer shape={Math.random()} spice={baseSpice2}>",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (419:4) {#if selectedSuggestions.length !== 0}
+	function create_if_block_1$1(ctx) {
+		let div;
+
+		const block = {
+			c: function create() {
+				div = element("div");
+				div.textContent = "Deine Gewürzmischung:";
+				attr_dev(div, "class", "largerText svelte-1k7tcdv");
+				add_location(div, file$3, 419, 6, 13471);
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div, anchor);
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div);
+				}
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_if_block_1$1.name,
+			type: "if",
+			source: "(419:4) {#if selectedSuggestions.length !== 0}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (423:6) {#each selectedSuggestions as selection}
+	function create_each_block_1$1(ctx) {
+		let smallspicecontainer;
+		let current;
+
+		smallspicecontainer = new SmallSpiceContainer({
+				props: {
+					shape: Math.random(),
+					spice: /*selection*/ ctx[18],
+					onClick: /*removeFromSelection*/ ctx[8]
+				},
+				$$inline: true
+			});
+
+		const block = {
+			c: function create() {
+				create_component(smallspicecontainer.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(smallspicecontainer, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const smallspicecontainer_changes = {};
+				if (dirty & /*selectedSuggestions*/ 16) smallspicecontainer_changes.spice = /*selection*/ ctx[18];
+				smallspicecontainer.$set(smallspicecontainer_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(smallspicecontainer.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(smallspicecontainer.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(smallspicecontainer, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block_1$1.name,
+			type: "each",
+			source: "(423:6) {#each selectedSuggestions as selection}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (434:4) {#if spiceSuggestions.length !== 0}
+	function create_if_block$1(ctx) {
+		let div;
+
+		const block = {
+			c: function create() {
+				div = element("div");
+				div.textContent = "Versuch doch mal...";
+				attr_dev(div, "class", "largerText svelte-1k7tcdv");
+				add_location(div, file$3, 434, 6, 13875);
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div, anchor);
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div);
+				}
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_if_block$1.name,
+			type: "if",
+			source: "(434:4) {#if spiceSuggestions.length !== 0}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (438:6) {#each spiceSuggestions as suggestion}
+	function create_each_block$1(ctx) {
+		let smallspicecontainer;
+		let current;
+
+		smallspicecontainer = new SmallSpiceContainer({
+				props: {
+					shape: Math.random(),
+					spice: /*suggestion*/ ctx[15],
+					onClick: /*addSuggestionToSelection*/ ctx[7]
+				},
+				$$inline: true
+			});
+
+		const block = {
+			c: function create() {
+				create_component(smallspicecontainer.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(smallspicecontainer, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const smallspicecontainer_changes = {};
+				if (dirty & /*spiceSuggestions*/ 8) smallspicecontainer_changes.spice = /*suggestion*/ ctx[15];
+				smallspicecontainer.$set(smallspicecontainer_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(smallspicecontainer.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(smallspicecontainer.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(smallspicecontainer, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block$1.name,
+			type: "each",
+			source: "(438:6) {#each spiceSuggestions as suggestion}",
+			ctx
+		});
+
+		return block;
+	}
+
+	function create_fragment$3(ctx) {
+		let div9;
+		let div4;
+		let div3;
+		let div0;
+		let aromagrouplegend;
+		let t0;
+		let spicecontainer0;
+		let t1;
+		let spicecontainer1;
+		let t2;
+		let div2;
+		let div1;
+		let chart;
+		let t3;
+		let div6;
+		let t4;
+		let div5;
+		let t5;
+		let div8;
+		let t6;
+		let div7;
+		let current;
+		aromagrouplegend = new AromaGroupLegend({ $$inline: true });
+
+		spicecontainer0 = new SpiceContainer({
+				props: {
+					shape: Math.random(),
+					spice: /*baseSpice1*/ ctx[1],
+					$$slots: { default: [create_default_slot_1] },
+					$$scope: { ctx }
+				},
+				$$inline: true
+			});
+
+		spicecontainer1 = new SpiceContainer({
+				props: {
+					shape: Math.random(),
+					spice: /*baseSpice2*/ ctx[2],
+					$$slots: { default: [create_default_slot] },
+					$$scope: { ctx }
+				},
+				$$inline: true
+			});
+
+		chart = new Base$1({
+				props: {
+					data: /*visualizationData*/ ctx[0],
+					colors: [
+						AromaGroupsColors$1.Süß_wärmende_Phenole,
+						AromaGroupsColors$1.Wärmende_Terpene,
+						AromaGroupsColors$1.Duftende_Terpene,
+						AromaGroupsColors$1.Erdige_Terpene,
+						AromaGroupsColors$1.Durchdringende_Terpene,
+						AromaGroupsColors$1.Zitrustönige_Terpene,
+						AromaGroupsColors$1.Süßsaure_Säuren,
+						AromaGroupsColors$1.Fruchtige_Aldehyde,
+						AromaGroupsColors$1.Röstige_Pysazine,
+						AromaGroupsColors$1.Schwefelverbindungen,
+						AromaGroupsColors$1.Stechende_Verbindungen,
+						AromaGroupsColors$1.Einzigartige_Stoffe
+					],
+					type: "donut",
+					maxSlices: "20",
+					height: 260,
+					animate: true,
+					truncateLegends: false,
+					valuesOverPoints: true,
+					axisOptions: {
+						xAxisMode: "tick",
+						yAxisMode: "tick",
+						xIsSeries: false
+					}
+				},
+				$$inline: true
+			});
+
+		let if_block0 = /*selectedSuggestions*/ ctx[4].length !== 0 && create_if_block_1$1(ctx);
+		let each_value_1 = ensure_array_like_dev(/*selectedSuggestions*/ ctx[4]);
+		let each_blocks_1 = [];
+
+		for (let i = 0; i < each_value_1.length; i += 1) {
+			each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+		}
+
+		const out = i => transition_out(each_blocks_1[i], 1, 1, () => {
+			each_blocks_1[i] = null;
+		});
+
+		let if_block1 = /*spiceSuggestions*/ ctx[3].length !== 0 && create_if_block$1(ctx);
+		let each_value = ensure_array_like_dev(/*spiceSuggestions*/ ctx[3]);
+		let each_blocks = [];
+
+		for (let i = 0; i < each_value.length; i += 1) {
+			each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+		}
+
+		const out_1 = i => transition_out(each_blocks[i], 1, 1, () => {
+			each_blocks[i] = null;
+		});
+
+		const block = {
+			c: function create() {
+				div9 = element("div");
+				div4 = element("div");
+				div3 = element("div");
+				div0 = element("div");
+				create_component(aromagrouplegend.$$.fragment);
+				t0 = space();
+				create_component(spicecontainer0.$$.fragment);
+				t1 = space();
+				create_component(spicecontainer1.$$.fragment);
+				t2 = space();
+				div2 = element("div");
+				div1 = element("div");
+				create_component(chart.$$.fragment);
+				t3 = space();
+				div6 = element("div");
+				if (if_block0) if_block0.c();
+				t4 = space();
+				div5 = element("div");
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					each_blocks_1[i].c();
+				}
+
+				t5 = space();
+				div8 = element("div");
+				if (if_block1) if_block1.c();
+				t6 = space();
+				div7 = element("div");
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					each_blocks[i].c();
+				}
+
+				attr_dev(div0, "class", "hideOnMobile svelte-1k7tcdv");
+				add_location(div0, file$3, 365, 6, 11638);
+				attr_dev(div1, "class", "chartBox svelte-1k7tcdv");
+				add_location(div1, file$3, 383, 8, 12230);
+				attr_dev(div2, "class", "hideOnMobile svelte-1k7tcdv");
+				add_location(div2, file$3, 382, 6, 12194);
+				attr_dev(div3, "class", "flex svelte-1k7tcdv");
+				add_location(div3, file$3, 364, 4, 11612);
+				attr_dev(div4, "class", "scrollableContainer svelte-1k7tcdv");
+				add_location(div4, file$3, 363, 2, 11573);
+				attr_dev(div5, "class", "flex svelte-1k7tcdv");
+				add_location(div5, file$3, 421, 4, 13539);
+				attr_dev(div6, "class", "scrollableContainer svelte-1k7tcdv");
+				add_location(div6, file$3, 417, 2, 13386);
+				attr_dev(div7, "class", "flex svelte-1k7tcdv");
+				add_location(div7, file$3, 436, 4, 13941);
+				attr_dev(div8, "class", "scrollableContainer svelte-1k7tcdv");
+				add_location(div8, file$3, 432, 2, 13793);
+				attr_dev(div9, "class", "verticalGrid svelte-1k7tcdv");
+				add_location(div9, file$3, 362, 0, 11543);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div9, anchor);
+				append_dev(div9, div4);
+				append_dev(div4, div3);
+				append_dev(div3, div0);
+				mount_component(aromagrouplegend, div0, null);
+				append_dev(div3, t0);
+				mount_component(spicecontainer0, div3, null);
+				append_dev(div3, t1);
+				mount_component(spicecontainer1, div3, null);
+				append_dev(div3, t2);
+				append_dev(div3, div2);
+				append_dev(div2, div1);
+				mount_component(chart, div1, null);
+				append_dev(div9, t3);
+				append_dev(div9, div6);
+				if (if_block0) if_block0.m(div6, null);
+				append_dev(div6, t4);
+				append_dev(div6, div5);
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					if (each_blocks_1[i]) {
+						each_blocks_1[i].m(div5, null);
+					}
+				}
+
+				append_dev(div9, t5);
+				append_dev(div9, div8);
+				if (if_block1) if_block1.m(div8, null);
+				append_dev(div8, t6);
+				append_dev(div8, div7);
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					if (each_blocks[i]) {
+						each_blocks[i].m(div7, null);
+					}
+				}
+
+				current = true;
+			},
+			p: function update(ctx, [dirty]) {
+				const spicecontainer0_changes = {};
+				if (dirty & /*baseSpice1*/ 2) spicecontainer0_changes.spice = /*baseSpice1*/ ctx[1];
+
+				if (dirty & /*$$scope, baseSpice1*/ 2097154) {
+					spicecontainer0_changes.$$scope = { dirty, ctx };
+				}
+
+				spicecontainer0.$set(spicecontainer0_changes);
+				const spicecontainer1_changes = {};
+				if (dirty & /*baseSpice2*/ 4) spicecontainer1_changes.spice = /*baseSpice2*/ ctx[2];
+
+				if (dirty & /*$$scope, baseSpice2*/ 2097156) {
+					spicecontainer1_changes.$$scope = { dirty, ctx };
+				}
+
+				spicecontainer1.$set(spicecontainer1_changes);
+				const chart_changes = {};
+				if (dirty & /*visualizationData*/ 1) chart_changes.data = /*visualizationData*/ ctx[0];
+				chart.$set(chart_changes);
+
+				if (/*selectedSuggestions*/ ctx[4].length !== 0) {
+					if (if_block0) ; else {
+						if_block0 = create_if_block_1$1(ctx);
+						if_block0.c();
+						if_block0.m(div6, t4);
+					}
+				} else if (if_block0) {
+					if_block0.d(1);
+					if_block0 = null;
+				}
+
+				if (dirty & /*Math, selectedSuggestions, removeFromSelection*/ 272) {
+					each_value_1 = ensure_array_like_dev(/*selectedSuggestions*/ ctx[4]);
+					let i;
+
+					for (i = 0; i < each_value_1.length; i += 1) {
+						const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+						if (each_blocks_1[i]) {
+							each_blocks_1[i].p(child_ctx, dirty);
+							transition_in(each_blocks_1[i], 1);
+						} else {
+							each_blocks_1[i] = create_each_block_1$1(child_ctx);
+							each_blocks_1[i].c();
+							transition_in(each_blocks_1[i], 1);
+							each_blocks_1[i].m(div5, null);
+						}
+					}
+
+					group_outros();
+
+					for (i = each_value_1.length; i < each_blocks_1.length; i += 1) {
+						out(i);
+					}
+
+					check_outros();
+				}
+
+				if (/*spiceSuggestions*/ ctx[3].length !== 0) {
+					if (if_block1) ; else {
+						if_block1 = create_if_block$1(ctx);
+						if_block1.c();
+						if_block1.m(div8, t6);
+					}
+				} else if (if_block1) {
+					if_block1.d(1);
+					if_block1 = null;
+				}
+
+				if (dirty & /*Math, spiceSuggestions, addSuggestionToSelection*/ 136) {
+					each_value = ensure_array_like_dev(/*spiceSuggestions*/ ctx[3]);
+					let i;
+
+					for (i = 0; i < each_value.length; i += 1) {
+						const child_ctx = get_each_context$1(ctx, each_value, i);
+
+						if (each_blocks[i]) {
+							each_blocks[i].p(child_ctx, dirty);
+							transition_in(each_blocks[i], 1);
+						} else {
+							each_blocks[i] = create_each_block$1(child_ctx);
+							each_blocks[i].c();
+							transition_in(each_blocks[i], 1);
+							each_blocks[i].m(div7, null);
+						}
+					}
+
+					group_outros();
+
+					for (i = each_value.length; i < each_blocks.length; i += 1) {
+						out_1(i);
+					}
+
+					check_outros();
+				}
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(aromagrouplegend.$$.fragment, local);
+				transition_in(spicecontainer0.$$.fragment, local);
+				transition_in(spicecontainer1.$$.fragment, local);
+				transition_in(chart.$$.fragment, local);
+
+				for (let i = 0; i < each_value_1.length; i += 1) {
+					transition_in(each_blocks_1[i]);
+				}
+
+				for (let i = 0; i < each_value.length; i += 1) {
+					transition_in(each_blocks[i]);
+				}
+
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(aromagrouplegend.$$.fragment, local);
+				transition_out(spicecontainer0.$$.fragment, local);
+				transition_out(spicecontainer1.$$.fragment, local);
+				transition_out(chart.$$.fragment, local);
+				each_blocks_1 = each_blocks_1.filter(Boolean);
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					transition_out(each_blocks_1[i]);
+				}
+
+				each_blocks = each_blocks.filter(Boolean);
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					transition_out(each_blocks[i]);
+				}
+
+				current = false;
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div9);
+				}
+
+				destroy_component(aromagrouplegend);
+				destroy_component(spicecontainer0);
+				destroy_component(spicecontainer1);
+				destroy_component(chart);
+				if (if_block0) if_block0.d();
+				destroy_each(each_blocks_1, detaching);
+				if (if_block1) if_block1.d();
+				destroy_each(each_blocks, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$3.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function removeFromArray(arr, value) {
+		return arr.filter(function (ele) {
+			return ele != value;
+		});
+	}
+
+	function instance$3($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('SpiceBlendsPage', slots, []);
+
+		let allSpices = [
+			new Ajowan(),
+			new Akazie(),
+			new Amchur(),
+			new Anardana(),
+			new Anis(),
+			new Annatto(),
+			new Asant(),
+			new Berberitze(),
+			new Bockshornklee(),
+			new Cassia_Zimt(),
+			new Chili(),
+			new Curryblaetter(),
+			new Dill(),
+			new Fenchel(),
+			new Galgant(),
+			new Gewuerznelke(),
+			new GruenerKardamom(),
+			new Ingwer(),
+			new Johannisbrotschote(),
+			new Kakao(),
+			new Knoblauch(),
+			new Koriander(),
+			new Kreuzkuemmel(),
+			new Kuemmel(),
+			new Kurkuma(),
+			new Mahlab(),
+			new Mastix(),
+			new Mohn(),
+			new Loomi(),
+			new Lorbeer(),
+			new Mohrenpfeffer(),
+			new Muskatbluete(),
+			new Muskatnuss(),
+			new Paprika(),
+			new Paradieskoerner(),
+			new Piment(),
+			new Rose(),
+			new Safran(),
+			new SchwarzerKardamom(),
+			new Schwarzerpfeffer(),
+			new Schwarzkuemmel(),
+			new Selleriesamen(),
+			new Senf(),
+			new Sesam(),
+			new Sueßholz(),
+			new Sumach(),
+			new Sternanis(),
+			new Szechuanpfeffer(),
+			new Tamarinde(),
+			new Vanille(),
+			new Wacholder(),
+			new Zimt(),
+			new Zitronengras(),
+			new Zitronenmyrte()
+		];
+
+		let visualizationData = { labels: [], datasets: [{ values: [] }] };
+		let selectedSpices = [];
+		let baseSpice1 = new NoSpice();
+		let baseSpice2 = new NoSpice();
+		let spiceSuggestions = [];
+		let selectedSuggestions = [];
+
+		function newSpiceSelection() {
+			$$invalidate(4, selectedSuggestions = []);
+			selectedSpices[0] = baseSpice1;
+			selectedSpices[1] = baseSpice2;
+			makeSpiceSuggestion();
+			$$invalidate(0, visualizationData = updateVisualization());
+		}
+
+		function addSuggestionToSelection(spice) {
+			$$invalidate(4, selectedSuggestions = selectedSuggestions.concat([spice]));
+			makeSpiceSuggestion();
+			$$invalidate(0, visualizationData = updateVisualization());
+		}
+
+		function removeFromSelection(spice) {
+			$$invalidate(4, selectedSuggestions = removeFromArray(selectedSuggestions, spice));
+			makeSpiceSuggestion();
+			$$invalidate(0, visualizationData = updateVisualization());
+		}
+
+		function isSpiceInSelection(spice) {
+			selectedSuggestions.forEach(selected_spices => {
+				if (selected_spices.name === spice.name) {
+					return true;
+				}
+			});
+
+			if (baseSpice1.name === spice.name || baseSpice2.name === spice.name) {
+				return true;
+			}
+		}
+
+		function makeSpiceSuggestion() {
+			// Idea:
+			// Two primary Spices - a suggestion should always share "n" (2?) compounds of each primary spice space
+			// Selections - another suggestion should always maximise the amount of compunds not yet in the total spice space
+			// All compounds of a new selection get added to the total spice space
+			$$invalidate(3, spiceSuggestions = []);
+
+			// Push current selected spice Compounds into array
+			let currentSelections = [];
+
+			selectedSuggestions.forEach(spice => {
+				currentSelections.push({
+					spice,
+					compounds: [...spice.aromaCompounds]
+				});
+			});
+
+			// Calculate matches with the primary and selected spice compounds
+			let matchesWithPrimarySpices = [];
+
+			allSpices.forEach(spice => {
+				let baseCounter = 0;
+				let selectedCounter = 0;
+
+				spice.aromaCompounds.forEach(compound => {
+					baseSpice1.aromaCompounds.forEach(baseCompound1 => {
+						if (compound === baseCompound1) {
+							baseCounter++;
+						}
+					});
+
+					baseSpice2.aromaCompounds.forEach(baseCompound2 => {
+						if (compound === baseCompound2) {
+							baseCounter++;
+						}
+					});
+
+					currentSelections.forEach(selectedSpice => {
+						selectedSpice.compounds.forEach(selectedCompound => {
+							if (compound === selectedCompound) {
+								selectedCounter++;
+							}
+						});
+					});
+				});
+
+				matchesWithPrimarySpices.push({
+					baseMatches: baseCounter,
+					selectedMatches: selectedCounter
+				});
+			});
+
+			// Calculate spice potential
+			let minPrimaryMatches = 2;
+
+			let spicePotentials = [];
+
+			for (let i = 0; i < allSpices.length; i++) {
+				let spice = allSpices[i];
+				let potential = spice.aromaCompounds.length - matchesWithPrimarySpices[i].baseMatches;
+				console.log(matchesWithPrimarySpices[i]);
+
+				if (matchesWithPrimarySpices[i].baseMatches < minPrimaryMatches || isSpiceInSelection(spice)) {
+					spicePotentials.push({ spice, potential: -100 });
+					continue;
+				}
+
+				spice.aromaCompounds.forEach(compound => {
+					currentSelections.forEach(selectedSpice => {
+						selectedSpice.spice.aromaCompounds.forEach(selectedCompound => {
+							if (compound === selectedCompound) {
+								potential--;
+							}
+						});
+					});
+				});
+
+				spicePotentials.push({
+					spice,
+					potential,
+					matches: matchesWithPrimarySpices[i].selectedMatches + matchesWithPrimarySpices[i].baseMatches
+				});
+			}
+
+			// sort spices by potential
+			spicePotentials.sort(function (a, b) {
+				return b.potential - a.potential;
+			});
+
+			// find first spice with -100 potential -> so first one to drop
+			let firstOneToDrop = 0;
+
+			for (let i = 0; i < spicePotentials.length; i++) {
+				if (spicePotentials[i].potential === -100) {
+					firstOneToDrop = i;
+					break;
+				}
+			}
+
+			// move first "n" suggestions to suggestions array
+			$$invalidate(3, spiceSuggestions = spicePotentials.slice(0, firstOneToDrop));
+
+			for (let i = 0; i < spiceSuggestions.length; i++) {
+				$$invalidate(3, spiceSuggestions[i] = spicePotentials[i].spice, spiceSuggestions);
+				let potential = spicePotentials[i].potential;
+				let matches = spicePotentials[i].matches;
+				$$invalidate(3, spiceSuggestions[i].description = "" + potential + " Ergänzend | " + matches + " Verstärkend", spiceSuggestions);
+			}
+		}
+
+		function updateVisualization() {
+			let spices = [...selectedSpices, ...selectedSuggestions];
+			let aromaGroupValues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+			spices.forEach(spice => {
+				if (spice.aromaGroup === AromaGroups$1.Süß_wärmende_Phenole) {
+					aromaGroupValues[0] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Wärmende_Terpene) {
+					aromaGroupValues[1] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Duftende_Terpene) {
+					aromaGroupValues[2] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Erdige_Terpene) {
+					aromaGroupValues[3] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Durchdringende_Terpene) {
+					aromaGroupValues[4] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Zitrustönige_Terpene) {
+					aromaGroupValues[5] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Süßsaure_Säuren) {
+					aromaGroupValues[6] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Fruchtige_Aldehyde) {
+					aromaGroupValues[7] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Röstige_Pysazine) {
+					aromaGroupValues[8] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Schwefelverbindungen) {
+					aromaGroupValues[9] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Stechende_Verbindungen) {
+					aromaGroupValues[10] += 1;
+				}
+
+				if (spice.aromaGroup === AromaGroups$1.Einzigartige_Stoffe) {
+					aromaGroupValues[11] += 1;
+				}
+			});
+
+			let data = {
+				labels: [
+					AromaGroups$1.Süß_wärmende_Phenole,
+					AromaGroups$1.Wärmende_Terpene,
+					AromaGroups$1.Duftende_Terpene,
+					AromaGroups$1.Erdige_Terpene,
+					AromaGroups$1.Durchdringende_Terpene,
+					AromaGroups$1.Zitrustönige_Terpene,
+					AromaGroups$1.Süßsaure_Säuren,
+					AromaGroups$1.Fruchtige_Aldehyde,
+					AromaGroups$1.Röstige_Pysazine,
+					AromaGroups$1.Schwefelverbindungen,
+					AromaGroups$1.Stechende_Verbindungen,
+					AromaGroups$1.Einzigartige_Stoffe
+				],
+				datasets: [{ values: aromaGroupValues }]
+			};
+
+			return data;
+		}
+
+		const writable_props = [];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<SpiceBlendsPage> was created with unknown prop '${key}'`);
+		});
+
+		function spicedropdown_selectedSpice_binding(value) {
+			baseSpice1 = value;
+			$$invalidate(1, baseSpice1);
+		}
+
+		function spicedropdown_selectedSpice_binding_1(value) {
+			baseSpice2 = value;
+			$$invalidate(2, baseSpice2);
+		}
+
+		$$self.$capture_state = () => ({
+			Chart: Base$1,
+			AromaGroups: AromaGroups$1,
+			AromaGroupsColors: AromaGroupsColors$1,
+			SpiceContainer,
+			SmallSpiceContainer,
+			SpiceDropdown,
+			AromaGroupLegend,
+			NoSpice,
+			Zimt,
+			Cassia_Zimt,
+			Gewuerznelke,
+			Piment,
+			Anis,
+			Sternanis,
+			Fenchel,
+			Sueßholz,
+			Mahlab,
+			Vanille,
+			Muskatnuss,
+			Muskatbluete,
+			Kuemmel,
+			Dill,
+			Annatto,
+			Mastix,
+			Wacholder,
+			Rose,
+			Koriander,
+			Kreuzkuemmel,
+			Schwarzkuemmel,
+			Mohrenpfeffer,
+			SchwarzerKardamom,
+			GruenerKardamom,
+			Lorbeer,
+			Galgant,
+			Loomi,
+			Zitronenmyrte,
+			Zitronengras,
+			Amchur,
+			Anardana,
+			Sumach,
+			Tamarinde,
+			Johannisbrotschote,
+			Berberitze,
+			Kakao,
+			Paprika,
+			Akazie,
+			Sesam,
+			Knoblauch,
+			Asant,
+			Curryblaetter,
+			Senf,
+			Paradieskoerner,
+			Schwarzerpfeffer,
+			Szechuanpfeffer,
+			Ingwer,
+			Chili,
+			Safran,
+			Mohn,
+			Ajowan,
+			Selleriesamen,
+			Kurkuma,
+			Bockshornklee,
+			allSpices,
+			visualizationData,
+			selectedSpices,
+			baseSpice1,
+			baseSpice2,
+			spiceSuggestions,
+			selectedSuggestions,
+			newSpiceSelection,
+			addSuggestionToSelection,
+			removeFromSelection,
+			isSpiceInSelection,
+			removeFromArray,
+			makeSpiceSuggestion,
+			updateVisualization
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('allSpices' in $$props) $$invalidate(5, allSpices = $$props.allSpices);
+			if ('visualizationData' in $$props) $$invalidate(0, visualizationData = $$props.visualizationData);
+			if ('selectedSpices' in $$props) selectedSpices = $$props.selectedSpices;
+			if ('baseSpice1' in $$props) $$invalidate(1, baseSpice1 = $$props.baseSpice1);
+			if ('baseSpice2' in $$props) $$invalidate(2, baseSpice2 = $$props.baseSpice2);
+			if ('spiceSuggestions' in $$props) $$invalidate(3, spiceSuggestions = $$props.spiceSuggestions);
+			if ('selectedSuggestions' in $$props) $$invalidate(4, selectedSuggestions = $$props.selectedSuggestions);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [
+			visualizationData,
+			baseSpice1,
+			baseSpice2,
+			spiceSuggestions,
+			selectedSuggestions,
+			allSpices,
+			newSpiceSelection,
+			addSuggestionToSelection,
+			removeFromSelection,
+			spicedropdown_selectedSpice_binding,
+			spicedropdown_selectedSpice_binding_1
+		];
+	}
+
+	class SpiceBlendsPage extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "SpiceBlendsPage",
+				options,
+				id: create_fragment$3.name
+			});
+		}
+	}
+
+	/* src\components\IngredientsTag.svelte generated by Svelte v4.2.18 */
+	const file$2 = "src\\components\\IngredientsTag.svelte";
+
+	function create_fragment$2(ctx) {
+		let button;
+		let dev;
+		let t;
+		let mounted;
+		let dispose;
+
+		const block = {
+			c: function create() {
+				button = element("button");
+				dev = element("dev");
+				t = text(/*name*/ ctx[0]);
+				attr_dev(dev, "class", "text svelte-1qhx1ep");
+				add_location(dev, file$2, 28, 2, 566);
+				attr_dev(button, "class", "background-container svelte-1qhx1ep");
+				set_style(button, "background-color", /*backgroundColor*/ ctx[3]);
+				set_style(button, "border-color", /*borderColor*/ ctx[2]);
+				add_location(button, file$2, 20, 0, 364);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, button, anchor);
+				append_dev(button, dev);
+				append_dev(dev, t);
+
+				if (!mounted) {
+					dispose = listen_dev(button, "click", /*click_handler*/ ctx[6], false, false, false, false);
+					mounted = true;
+				}
+			},
+			p: function update(ctx, [dirty]) {
+				if (dirty & /*name*/ 1) set_data_dev(t, /*name*/ ctx[0]);
+
+				if (dirty & /*backgroundColor*/ 8) {
+					set_style(button, "background-color", /*backgroundColor*/ ctx[3]);
+				}
+
+				if (dirty & /*borderColor*/ 4) {
+					set_style(button, "border-color", /*borderColor*/ ctx[2]);
+				}
+			},
+			i: noop,
+			o: noop,
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(button);
+				}
+
+				mounted = false;
+				dispose();
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$2.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance$2($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('IngredientsTag', slots, []);
+		let { name } = $$props;
+		let { color } = $$props;
+		let { onClick } = $$props;
+		let borderColor = color;
+		let backgroundColor = "";
+
+		function toggleBackgroundAndBorder() {
+			if (borderColor == "") {
+				$$invalidate(2, borderColor = color);
+				$$invalidate(3, backgroundColor = "");
+			} else {
+				$$invalidate(3, backgroundColor = borderColor);
+				$$invalidate(2, borderColor = "");
+			}
+		}
+
+		$$self.$$.on_mount.push(function () {
+			if (name === undefined && !('name' in $$props || $$self.$$.bound[$$self.$$.props['name']])) {
+				console.warn("<IngredientsTag> was created without expected prop 'name'");
+			}
+
+			if (color === undefined && !('color' in $$props || $$self.$$.bound[$$self.$$.props['color']])) {
+				console.warn("<IngredientsTag> was created without expected prop 'color'");
+			}
+
+			if (onClick === undefined && !('onClick' in $$props || $$self.$$.bound[$$self.$$.props['onClick']])) {
+				console.warn("<IngredientsTag> was created without expected prop 'onClick'");
+			}
+		});
+
+		const writable_props = ['name', 'color', 'onClick'];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<IngredientsTag> was created with unknown prop '${key}'`);
+		});
+
+		const click_handler = () => {
+			onClick(name);
+			toggleBackgroundAndBorder();
+		};
+
+		$$self.$$set = $$props => {
+			if ('name' in $$props) $$invalidate(0, name = $$props.name);
+			if ('color' in $$props) $$invalidate(5, color = $$props.color);
+			if ('onClick' in $$props) $$invalidate(1, onClick = $$props.onClick);
+		};
+
+		$$self.$capture_state = () => ({
+			name,
+			color,
+			onClick,
+			borderColor,
+			backgroundColor,
+			toggleBackgroundAndBorder
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('name' in $$props) $$invalidate(0, name = $$props.name);
+			if ('color' in $$props) $$invalidate(5, color = $$props.color);
+			if ('onClick' in $$props) $$invalidate(1, onClick = $$props.onClick);
+			if ('borderColor' in $$props) $$invalidate(2, borderColor = $$props.borderColor);
+			if ('backgroundColor' in $$props) $$invalidate(3, backgroundColor = $$props.backgroundColor);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [
+			name,
+			onClick,
+			borderColor,
+			backgroundColor,
+			toggleBackgroundAndBorder,
+			color,
+			click_handler
+		];
+	}
+
+	class IngredientsTag extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$2, create_fragment$2, safe_not_equal, { name: 0, color: 5, onClick: 1 });
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "IngredientsTag",
+				options,
+				id: create_fragment$2.name
+			});
+		}
+
+		get name() {
+			throw new Error("<IngredientsTag>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set name(value) {
+			throw new Error("<IngredientsTag>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get color() {
+			throw new Error("<IngredientsTag>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set color(value) {
+			throw new Error("<IngredientsTag>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get onClick() {
+			throw new Error("<IngredientsTag>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set onClick(value) {
+			throw new Error("<IngredientsTag>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+	}
+
+	class PairingTagSynonyms {
+	    constructor() {
+	        this.synonyms = {
+	            "Gemüse": [],
+	            "Pilze": [],
+	            "Reis": [],
+	            "Hülsenfrüchte": [],
+	            "Linsen": [],
+	            "Milchprodukte": [PairingTag$1.Käse, PairingTag$1.Weichkäse, PairingTag$1.Frischkäse, PairingTag$1.Hüttenkäse, PairingTag$1.Ziegenkäse, PairingTag$1.Joghurt, PairingTag$1.Sahne, PairingTag$1.Butter, PairingTag$1.Parmesan, PairingTag$1.Ricotta],
+	            "Hühnchen": [],
+	            "Tomaten": [],
+	            "Steinfrüchte": [PairingTag$1.Kirschen, PairingTag$1.Pflaumen, PairingTag$1.Pfirsiche, PairingTag$1.Aprikosen],
+	            "Äpfel": [],
+	            "Feigen": [],
+	            "Dunkle Schokolade": [PairingTag$1.Schokolade],
+	            "Brühe": [],
+	            "Zwiebelsuppe": [PairingTag$1.Zwiebeln],
+	            "Fischpastete": [],
+	            "Ragù": [],
+	            "Pfirsiche": [],
+	            "Pflaumen": [],
+	            "Zitronenschale": [PairingTag$1.Zitrone],
+	            "Eier": [],
+	            "Butter": [],
+	            "Lamm": [],
+	            "Fisch": [PairingTag$1.Lachs, PairingTag$1.Schalentiere, PairingTag$1.Thunfisch, PairingTag$1.Muscheln, PairingTag$1.Tintenfisch, PairingTag$1.Fischpastete, PairingTag$1.Garnelen, PairingTag$1.Oktopus],
+	            "Meeresfrüchte": [],
+	            "Zitrusfrüchte": [],
+	            "Fladenbrot": [],
+	            "Curry": [],
+	            "Rührei": [],
+	            "Grüne Papaya": [],
+	            "Pomelo": [],
+	            "Kürbis": [],
+	            "Kartoffeln": [],
+	            "Rote Beete": [],
+	            "Kohl": [PairingTag$1.Rotkohl, PairingTag$1.Weißkohl, PairingTag$1.Chinakohl, PairingTag$1.Rosenkohl, PairingTag$1.Kohlgemüse],
+	            "Artischocken": [],
+	            "Wurzelgemüse": [PairingTag$1.Karotten, "Möhren"],
+	            "Ingwer": [],
+	            "Oliven": [],
+	            "Salbei": [],
+	            "Käse": [],
+	            "Wildfleisch": [],
+	            "Ente": [],
+	            "Hase": [],
+	            "Gans": [],
+	            "Wachteln": [],
+	            "Schwarze Johannisbeeren": [],
+	            "Getrocknete Früchte": [],
+	            "Lachs": [],
+	            "Kaninchen": [],
+	            "Makrele": [],
+	            "Tiramisu": [],
+	            "Bambussprossen": [],
+	            "Lotuswurzel": [],
+	            "Nudeln": [PairingTag$1.Dan_Dan_Nudeln],
+	            "Schwein": [],
+	            "Rind": [],
+	            "Kokosnuss": [PairingTag$1.Kokosnusscreme],
+	            "Tropische Früchte": [],
+	            "Muscheln": [],
+	            "Schalotten": [],
+	            "Knoblauch": [],
+	            "Chili": [],
+	            "Galgant": [],
+	            "Kokosnusscreme": [PairingTag$1.Kokosnuss],
+	            "Thai-Basilikum": [],
+	            "Garnelen": [],
+	            "Kebab": [],
+	            "Koriander": [],
+	            "Karotten": ["Möhren"],
+	            "Paprika": [],
+	            "Gurke": [],
+	            "Melone": [],
+	            "Beeren": [],
+	            "Mandeln": [],
+	            "Kaffee": [],
+	            "Pistazien": [],
+	            "Rettich": [],
+	            "Himbeeren": [],
+	            "Whiskey": [],
+	            "Zimt": [],
+	            "Limette": [],
+	            "Honig": [],
+	            "Kümmel": [],
+	            "Couscous": [],
+	            "Datteln": [],
+	            "Ochsenschwanz": [],
+	            "Rhabarbar": [],
+	            "Birne": [],
+	            "Pho": [],
+	            "Fünf_Gewürz_Pulver": [],
+	            "Biryani": [],
+	            "Garam Masala": [],
+	            "Schwarzerkümmel": [],
+	            "Bohnensprossen": [],
+	            "Schweinebauch": [],
+	            "Sesam": [],
+	            "Vanille": [],
+	            "Blumenkohl": [],
+	            "Aubergine": [],
+	            "Okra": [],
+	            "Schalentiere": [],
+	            "Pakoras": [],
+	            "Samosas": [],
+	            "Mango": [],
+	            "Koriandersamen": [],
+	            "Curryblätter": [],
+	            "Senf": [],
+	            "Zitronengras": [],
+	            "Brokkoli": [],
+	            "Spinat": [],
+	            "Kichererbsen": [],
+	            "Avocado": [],
+	            "Walnüsse": [],
+	            "Kreuzkümmel": [],
+	            "Granatapfel": [],
+	            "Orange": [PairingTag$1.Orangenblüten],
+	            "Blattgemüse": [],
+	            "Staudensellerie": [PairingTag$1.Knollensellerie],
+	            "Fenchel": [],
+	            "Grüne Bohnen": [],
+	            "Lavendel": [],
+	            "Blutwurst": [],
+	            "Thunfisch": [],
+	            "Glühwein": [],
+	            "Gin": [PairingTag$1.Gin_Tonic],
+	            "Dal": [PairingTag$1.Linsen],
+	            "Jalapeños": [PairingTag$1.Chili],
+	            "Minze": [],
+	            "Oktopus": [],
+	            "Tintenfisch": [],
+	            "Rose": [],
+	            "Nüsse": [],
+	            "Dill": [],
+	            "Cayennepfeffer": [],
+	            "Safran": [],
+	            "Weiße Bohnen": [],
+	            "Erdnüsse": [],
+	            "Tofu": [],
+	            "Fleisch": [PairingTag$1.Wildfleisch, PairingTag$1.Schwein, PairingTag$1.Schweinebauch, PairingTag$1.Rind, PairingTag$1.Hühnchen, PairingTag$1.Ochsenschwanz, PairingTag$1.Wachteln, PairingTag$1.Kaninchen, PairingTag$1.Blutwurst, PairingTag$1.Kalb, PairingTag$1.Lamm, PairingTag$1.Kebab],
+	            "Dan-Dan-Nudeln": [],
+	            "Gin & Tonic": [PairingTag$1.Gin],
+	            "Süßkartoffeln": [],
+	            "Pak Choi": [],
+	            "Litschi": [],
+	            "Orangenblüten": [PairingTag$1.Orange],
+	            "Gnocchi": [],
+	            "Chinakohl": [],
+	            "Joghurt": [],
+	            "Feta": [],
+	            "Rotweinessig": [],
+	            "Mais": [],
+	            "Tahini": [],
+	            "Ananas": [],
+	            "Bulgar": [],
+	            "Zwiebeln": [],
+	            "Kohlgemüse": [PairingTag$1.Kohl, PairingTag$1.Rotkohl, PairingTag$1.Weißkohl, PairingTag$1.Chinakohl, PairingTag$1.Rosenkohl],
+	            "Erbsen": [],
+	            "Speck": [],
+	            "Karamell": [],
+	            "Thymian": [],
+	            "Sahne": [],
+	            "Bananen": [],
+	            "Erdbeeren": [],
+	            "Ziegenkäse": [],
+	            "Kirschen": [],
+	            "Weißkohl": [],
+	            "Weichkäse": [],
+	            "Shortbread": [],
+	            "Sauerkraut": [],
+	            "Harissa": [],
+	            "Haselnüsse": [],
+	            "Krautsalat": [],
+	            "Zucchini": [],
+	            "Aprikosen": [],
+	            "Falafel": [],
+	            "Spargel": [],
+	            "Hüttenkäse": [],
+	            "Weißweinessig": [],
+	            "Zitrone": [PairingTag$1.Zitronenschale],
+	            "Kalb": [],
+	            "Gratins": [],
+	            "Parmesan": [],
+	            "Ricotta": [],
+	            "Schokolade": [PairingTag$1.Weiße_Schokolade, PairingTag$1.Dunkle_Schokolade, PairingTag$1.Kakao],
+	            "Lauch": [],
+	            "Weiße Schokolade": [PairingTag$1.Schokolade],
+	            "Sardinen": [],
+	            "Pinienkerne": [],
+	            "Rosinen": [],
+	            "Sojasauce": [],
+	            "Reisessig": [],
+	            "Weißwein": [],
+	            "Rotwein": [],
+	            "Bockshornklee": [],
+	            "Petersilie": [],
+	            "Estragon": [],
+	            "Haferflocken": [],
+	            "Mangold": [],
+	            "Cashewnüsse": [],
+	            "Rosenblätter": [],
+	            "Rosenkohl": [],
+	            "Rosmarin": [],
+	            "Passionsfrucht": [],
+	            "Grüner Kardamom": [],
+	            "Innereien": [],
+	            "Maniok": [],
+	            "Frischkäse": [],
+	            "Kimchi": [],
+	            "Liebstöckel": [],
+	            "Trauben": [],
+	            "Schwarzer Pfeffer": [],
+	            "Langer Pfeffer": [],
+	            "Grapefruit": [],
+	            "Nelken": [],
+	            "Paella": [],
+	            "Gulasch": [],
+	            "Lorbeer": [],
+	            "Zuckererbsen": [],
+	            "Buchweizen": [],
+	            "Trüffel": [],
+	            "Bärlauch": [],
+	            "Tonkabohnen": [],
+	            "Mozzarella": [],
+	            "Kurkuma": [],
+	            "Chicoree": [],
+	            "Risotto": [],
+	            "Knollensellerie": [PairingTag$1.Staudensellerie],
+	            "Rotkohl": [],
+	            "Rum": [],
+	            "Schinken": [],
+	            "Pastinaken": [],
+	            "Rucola": [],
+	            "Tamarinde": [],
+	            "Papadam": [],
+	            "Bohnen": ["Kidneybohnen", PairingTag$1.Weiße_Bohnen, PairingTag$1.Grüne_Bohnen],
+	            "Basilikum": [],
+	            "Papaya": [],
+	            "Gebäck": [],
+	            "Muskatnuss": [],
+	            "Piment": [],
+	            "Pfeffer": [PairingTag$1.Langer_Pfeffer, PairingTag$1.Schwarzer_Pfeffer, PairingTag$1.Cayennepfeffer],
+	            "Kakao": [PairingTag$1.Weiße_Schokolade, PairingTag$1.Dunkle_Schokolade, PairingTag$1.Kakao],
+	        };
+	    }
+	}
+
+	/* src\Pages\SpiceMyPlatePage.svelte generated by Svelte v4.2.18 */
+
+	const { Object: Object_1 } = globals;
+	const file$1 = "src\\Pages\\SpiceMyPlatePage.svelte";
+
+	function get_each_context(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[12] = list[i];
+		return child_ctx;
+	}
+
+	function get_each_context_1(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[15] = list[i];
+		return child_ctx;
+	}
+
+	function get_each_context_2(ctx, list, i) {
+		const child_ctx = ctx.slice();
+		child_ctx[15] = list[i];
+		return child_ctx;
+	}
+
+	// (234:8) {#each searchedIngredients as ingredient}
+	function create_each_block_2(ctx) {
+		let ingredientstag;
+		let current;
+
+		ingredientstag = new IngredientsTag({
+				props: {
+					name: PairingTag$1[/*ingredient*/ ctx[15]],
+					color: "",
+					onClick: /*addTagToIngredientsList*/ ctx[4]
+				},
+				$$inline: true
+			});
+
+		const block = {
+			c: function create() {
+				create_component(ingredientstag.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(ingredientstag, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const ingredientstag_changes = {};
+				if (dirty & /*searchedIngredients*/ 4) ingredientstag_changes.name = PairingTag$1[/*ingredient*/ ctx[15]];
+				ingredientstag.$set(ingredientstag_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(ingredientstag.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(ingredientstag.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(ingredientstag, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block_2.name,
+			type: "each",
+			source: "(234:8) {#each searchedIngredients as ingredient}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (247:6) {#each cookingIngredients as ingredient}
+	function create_each_block_1(ctx) {
+		let ingredientstag;
+		let current;
+
+		ingredientstag = new IngredientsTag({
+				props: {
+					name: /*ingredient*/ ctx[15],
+					color: "",
+					onClick: /*removeTagFromIngredientsList*/ ctx[3]
+				},
+				$$inline: true
+			});
+
+		const block = {
+			c: function create() {
+				create_component(ingredientstag.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(ingredientstag, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const ingredientstag_changes = {};
+				if (dirty & /*cookingIngredients*/ 2) ingredientstag_changes.name = /*ingredient*/ ctx[15];
+				ingredientstag.$set(ingredientstag_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(ingredientstag.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(ingredientstag.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(ingredientstag, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block_1.name,
+			type: "each",
+			source: "(247:6) {#each cookingIngredients as ingredient}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (259:6) {#each filteredSpices as spice}
+	function create_each_block(ctx) {
+		let ingredientstag;
+		let current;
+
+		ingredientstag = new IngredientsTag({
+				props: {
+					name: /*spice*/ ctx[12].name,
+					color: /*spice*/ ctx[12].color,
+					onClick: func
+				},
+				$$inline: true
+			});
+
+		const block = {
+			c: function create() {
+				create_component(ingredientstag.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(ingredientstag, target, anchor);
+				current = true;
+			},
+			p: function update(ctx, dirty) {
+				const ingredientstag_changes = {};
+				if (dirty & /*filteredSpices*/ 1) ingredientstag_changes.name = /*spice*/ ctx[12].name;
+				if (dirty & /*filteredSpices*/ 1) ingredientstag_changes.color = /*spice*/ ctx[12].color;
+				ingredientstag.$set(ingredientstag_changes);
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(ingredientstag.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(ingredientstag.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(ingredientstag, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_each_block.name,
+			type: "each",
+			source: "(259:6) {#each filteredSpices as spice}",
+			ctx
+		});
+
+		return block;
+	}
+
+	function create_fragment$1(ctx) {
+		let div4;
+		let div1;
+		let input;
+		let t0;
+		let div0;
+		let dev0;
+		let t1;
+		let div2;
+		let dev1;
+		let t3;
+		let dev2;
+		let t4;
+		let div3;
+		let dev3;
+		let t6;
+		let dev4;
+		let current;
+		let mounted;
+		let dispose;
+		let each_value_2 = ensure_array_like_dev(/*searchedIngredients*/ ctx[2]);
+		let each_blocks_2 = [];
+
+		for (let i = 0; i < each_value_2.length; i += 1) {
+			each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+		}
+
+		const out = i => transition_out(each_blocks_2[i], 1, 1, () => {
+			each_blocks_2[i] = null;
+		});
+
+		let each_value_1 = ensure_array_like_dev(/*cookingIngredients*/ ctx[1]);
+		let each_blocks_1 = [];
+
+		for (let i = 0; i < each_value_1.length; i += 1) {
+			each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+		}
+
+		const out_1 = i => transition_out(each_blocks_1[i], 1, 1, () => {
+			each_blocks_1[i] = null;
+		});
+
+		let each_value = ensure_array_like_dev(/*filteredSpices*/ ctx[0]);
+		let each_blocks = [];
+
+		for (let i = 0; i < each_value.length; i += 1) {
+			each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+		}
+
+		const out_2 = i => transition_out(each_blocks[i], 1, 1, () => {
+			each_blocks[i] = null;
+		});
+
+		const block = {
+			c: function create() {
+				div4 = element("div");
+				div1 = element("div");
+				input = element("input");
+				t0 = space();
+				div0 = element("div");
+				dev0 = element("dev");
+
+				for (let i = 0; i < each_blocks_2.length; i += 1) {
+					each_blocks_2[i].c();
+				}
+
+				t1 = space();
+				div2 = element("div");
+				dev1 = element("dev");
+				dev1.textContent = "Das kochst du:";
+				t3 = space();
+				dev2 = element("dev");
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					each_blocks_1[i].c();
+				}
+
+				t4 = space();
+				div3 = element("div");
+				dev3 = element("dev");
+				dev3.textContent = "Probier diese Gewürze:";
+				t6 = space();
+				dev4 = element("dev");
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					each_blocks[i].c();
+				}
+
+				attr_dev(input, "type", "text");
+				attr_dev(input, "placeholder", "Mit was kochst du?");
+				attr_dev(input, "class", "svelte-irfurk");
+				add_location(input, file$1, 226, 4, 7159);
+				attr_dev(dev0, "class", "flex svelte-irfurk");
+				add_location(dev0, file$1, 232, 6, 7320);
+				attr_dev(div0, "class", "scrollableContainer svelte-irfurk");
+				add_location(div0, file$1, 231, 4, 7279);
+				add_location(div1, file$1, 225, 2, 7148);
+				attr_dev(dev1, "class", "section-text svelte-irfurk");
+				add_location(dev1, file$1, 244, 4, 7638);
+				attr_dev(dev2, "class", "flex svelte-irfurk");
+				add_location(dev2, file$1, 245, 4, 7692);
+				attr_dev(div2, "class", "scrollableContainer svelte-irfurk");
+				add_location(div2, file$1, 243, 2, 7599);
+				attr_dev(dev3, "class", "section-text svelte-irfurk");
+				add_location(dev3, file$1, 256, 4, 7974);
+				attr_dev(dev4, "class", "flex svelte-irfurk");
+				add_location(dev4, file$1, 257, 4, 8035);
+				attr_dev(div3, "class", "scrollableContainer svelte-irfurk");
+				add_location(div3, file$1, 255, 2, 7935);
+				attr_dev(div4, "class", "vertical-grid svelte-irfurk");
+				add_location(div4, file$1, 224, 0, 7117);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div4, anchor);
+				append_dev(div4, div1);
+				append_dev(div1, input);
+				append_dev(div1, t0);
+				append_dev(div1, div0);
+				append_dev(div0, dev0);
+
+				for (let i = 0; i < each_blocks_2.length; i += 1) {
+					if (each_blocks_2[i]) {
+						each_blocks_2[i].m(dev0, null);
+					}
+				}
+
+				append_dev(div4, t1);
+				append_dev(div4, div2);
+				append_dev(div2, dev1);
+				append_dev(div2, t3);
+				append_dev(div2, dev2);
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					if (each_blocks_1[i]) {
+						each_blocks_1[i].m(dev2, null);
+					}
+				}
+
+				append_dev(div4, t4);
+				append_dev(div4, div3);
+				append_dev(div3, dev3);
+				append_dev(div3, t6);
+				append_dev(div3, dev4);
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					if (each_blocks[i]) {
+						each_blocks[i].m(dev4, null);
+					}
+				}
+
+				current = true;
+
+				if (!mounted) {
+					dispose = listen_dev(input, "input", /*getSearchedIngredients*/ ctx[5], false, false, false, false);
+					mounted = true;
+				}
+			},
+			p: function update(ctx, [dirty]) {
+				if (dirty & /*searchedIngredients, addTagToIngredientsList*/ 20) {
+					each_value_2 = ensure_array_like_dev(/*searchedIngredients*/ ctx[2]);
+					let i;
+
+					for (i = 0; i < each_value_2.length; i += 1) {
+						const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+						if (each_blocks_2[i]) {
+							each_blocks_2[i].p(child_ctx, dirty);
+							transition_in(each_blocks_2[i], 1);
+						} else {
+							each_blocks_2[i] = create_each_block_2(child_ctx);
+							each_blocks_2[i].c();
+							transition_in(each_blocks_2[i], 1);
+							each_blocks_2[i].m(dev0, null);
+						}
+					}
+
+					group_outros();
+
+					for (i = each_value_2.length; i < each_blocks_2.length; i += 1) {
+						out(i);
+					}
+
+					check_outros();
+				}
+
+				if (dirty & /*cookingIngredients, removeTagFromIngredientsList*/ 10) {
+					each_value_1 = ensure_array_like_dev(/*cookingIngredients*/ ctx[1]);
+					let i;
+
+					for (i = 0; i < each_value_1.length; i += 1) {
+						const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+						if (each_blocks_1[i]) {
+							each_blocks_1[i].p(child_ctx, dirty);
+							transition_in(each_blocks_1[i], 1);
+						} else {
+							each_blocks_1[i] = create_each_block_1(child_ctx);
+							each_blocks_1[i].c();
+							transition_in(each_blocks_1[i], 1);
+							each_blocks_1[i].m(dev2, null);
+						}
+					}
+
+					group_outros();
+
+					for (i = each_value_1.length; i < each_blocks_1.length; i += 1) {
+						out_1(i);
+					}
+
+					check_outros();
+				}
+
+				if (dirty & /*filteredSpices*/ 1) {
+					each_value = ensure_array_like_dev(/*filteredSpices*/ ctx[0]);
+					let i;
+
+					for (i = 0; i < each_value.length; i += 1) {
+						const child_ctx = get_each_context(ctx, each_value, i);
+
+						if (each_blocks[i]) {
+							each_blocks[i].p(child_ctx, dirty);
+							transition_in(each_blocks[i], 1);
+						} else {
+							each_blocks[i] = create_each_block(child_ctx);
+							each_blocks[i].c();
+							transition_in(each_blocks[i], 1);
+							each_blocks[i].m(dev4, null);
+						}
+					}
+
+					group_outros();
+
+					for (i = each_value.length; i < each_blocks.length; i += 1) {
+						out_2(i);
+					}
+
+					check_outros();
+				}
+			},
+			i: function intro(local) {
+				if (current) return;
+
+				for (let i = 0; i < each_value_2.length; i += 1) {
+					transition_in(each_blocks_2[i]);
+				}
+
+				for (let i = 0; i < each_value_1.length; i += 1) {
+					transition_in(each_blocks_1[i]);
+				}
+
+				for (let i = 0; i < each_value.length; i += 1) {
+					transition_in(each_blocks[i]);
+				}
+
+				current = true;
+			},
+			o: function outro(local) {
+				each_blocks_2 = each_blocks_2.filter(Boolean);
+
+				for (let i = 0; i < each_blocks_2.length; i += 1) {
+					transition_out(each_blocks_2[i]);
+				}
+
+				each_blocks_1 = each_blocks_1.filter(Boolean);
+
+				for (let i = 0; i < each_blocks_1.length; i += 1) {
+					transition_out(each_blocks_1[i]);
+				}
+
+				each_blocks = each_blocks.filter(Boolean);
+
+				for (let i = 0; i < each_blocks.length; i += 1) {
+					transition_out(each_blocks[i]);
+				}
+
+				current = false;
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div4);
+				}
+
+				destroy_each(each_blocks_2, detaching);
+				destroy_each(each_blocks_1, detaching);
+				destroy_each(each_blocks, detaching);
+				mounted = false;
+				dispose();
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment$1.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function isNameInList(name, list) {
+		for (let i = 0; i < list.length; i++) {
+			if (name == list[i]) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	const func = () => {
+		
+	};
+
+	function instance$1($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('SpiceMyPlatePage', slots, []);
+
+		let allSpices = [
+			new Ajowan(),
+			new Akazie(),
+			new Amchur(),
+			new Anardana(),
+			new Anis(),
+			new Annatto(),
+			new Asant(),
+			new Berberitze(),
+			new Bockshornklee(),
+			new Cassia_Zimt(),
+			new Chili(),
+			new Curryblaetter(),
+			new Dill(),
+			new Fenchel(),
+			new Galgant(),
+			new Gewuerznelke(),
+			new GruenerKardamom(),
+			new Ingwer(),
+			new Johannisbrotschote(),
+			new Kakao(),
+			new Knoblauch(),
+			new Koriander(),
+			new Kreuzkuemmel(),
+			new Kuemmel(),
+			new Kurkuma(),
+			new Mahlab(),
+			new Mastix(),
+			new Mohn(),
+			new Loomi(),
+			new Lorbeer(),
+			new Mohrenpfeffer(),
+			new Muskatbluete(),
+			new Muskatnuss(),
+			new Paprika(),
+			new Paradieskoerner(),
+			new Piment(),
+			new Rose(),
+			new Safran(),
+			new SchwarzerKardamom(),
+			new Schwarzerpfeffer(),
+			new Schwarzkuemmel(),
+			new Selleriesamen(),
+			new Senf(),
+			new Sesam(),
+			new Sueßholz(),
+			new Sumach(),
+			new Sternanis(),
+			new Szechuanpfeffer(),
+			new Tamarinde(),
+			new Vanille(),
+			new Wacholder(),
+			new Zimt(),
+			new Zitronengras(),
+			new Zitronenmyrte()
+		];
+
+		function removeTagFromList(name, listedItems) {
+			listedItems = listedItems.filter(function (item) {
+				return PairingTag$1[item] !== name;
+			});
+
+			listedItems = listedItems.filter(function (item) {
+				return item !== name;
+			});
+
+			return listedItems;
+		}
+
+		function removeTagFromIngredientsList(name) {
+			// remove Tag
+			$$invalidate(1, cookingIngredients = removeTagFromList(name, cookingIngredients));
+
+			// add back to total list
+			allPairingTags.push(name);
+
+			filterSpicesByCookingIngredients();
+		}
+
+		function addTagToIngredientsList(name) {
+			// add tag
+			cookingIngredients.push(name);
+
+			// remove from total list
+			allPairingTags = removeTagFromList(name, allPairingTags);
+
+			$$invalidate(2, searchedIngredients = removeTagFromList(name, searchedIngredients));
+
+			// To force a rerendering
+			$$invalidate(1, cookingIngredients);
+
+			filterSpicesByCookingIngredients();
+		}
+
+		function isTextPartOfTag(text, tagString) {
+			if (tagString.toLowerCase().includes(text.toLowerCase())) {
+				return true;
+			}
+
+			let synonyms = pairingTagSynonyms.synonyms[tagString];
+
+			if (!synonyms) {
+				return false;
+			}
+
+			for (let i = 0; i < synonyms.length; i++) {
+				if (synonyms[i].toLowerCase().includes(text.toLowerCase())) {
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		function getSearchedIngredients(listenerData) {
+			let currentEnteredText = listenerData["srcElement"]["value"];
+
+			$$invalidate(2, searchedIngredients = allPairingTags.filter(function (item) {
+				return isTextPartOfTag(currentEnteredText, PairingTag$1[item]);
+			}));
+
+			$$invalidate(2, searchedIngredients = searchedIngredients.sort());
+
+			if (currentEnteredText == "") {
+				$$invalidate(2, searchedIngredients = []);
+			}
+		}
+
+		function filterSpicesByCookingIngredients() {
+			$$invalidate(0, filteredSpices = allSpices.filter(function (spice) {
+				let goodSpicePair;
+				let filterPercentage = 0.3;
+				let numOfIngredients = cookingIngredients.length;
+				let matchesCounter = 0;
+
+				for (let i = 0; i < spice.goes_well_with.length; i++) {
+					goodSpicePair = spice.goes_well_with[i];
+
+					if (isNameInList(goodSpicePair, cookingIngredients)) {
+						matchesCounter += 1;
+					}
+				}
+
+				if (matchesCounter / numOfIngredients > filterPercentage) {
+					return true;
+				}
+
+				return false;
+			}));
+		}
+
+		// setup global data structures
+		let allPairingTags = Object.keys(PairingTag$1);
+
+		allPairingTags = removeTagFromList(PairingTag$1.None, allPairingTags);
+		let pairingTagSynonyms = new PairingTagSynonyms();
+
+		// Setup base lists
+		let filteredSpices = allSpices;
+
+		let cookingIngredients = [];
+		let searchedIngredients = allPairingTags;
+		const writable_props = [];
+
+		Object_1.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<SpiceMyPlatePage> was created with unknown prop '${key}'`);
+		});
+
+		$$self.$capture_state = () => ({
+			IngredientsTag,
+			PairingTag: PairingTag$1,
+			PairingTagSynonyms,
+			NoSpice,
+			Zimt,
+			Cassia_Zimt,
+			Gewuerznelke,
+			Piment,
+			Anis,
+			Sternanis,
+			Fenchel,
+			Sueßholz,
+			Mahlab,
+			Vanille,
+			Muskatnuss,
+			Muskatbluete,
+			Kuemmel,
+			Dill,
+			Annatto,
+			Mastix,
+			Wacholder,
+			Rose,
+			Koriander,
+			Kreuzkuemmel,
+			Schwarzkuemmel,
+			Mohrenpfeffer,
+			SchwarzerKardamom,
+			GruenerKardamom,
+			Lorbeer,
+			Galgant,
+			Loomi,
+			Zitronenmyrte,
+			Zitronengras,
+			Amchur,
+			Anardana,
+			Sumach,
+			Tamarinde,
+			Johannisbrotschote,
+			Berberitze,
+			Kakao,
+			Paprika,
+			Akazie,
+			Sesam,
+			Knoblauch,
+			Asant,
+			Curryblaetter,
+			Senf,
+			Paradieskoerner,
+			Schwarzerpfeffer,
+			Szechuanpfeffer,
+			Ingwer,
+			Chili,
+			Safran,
+			Mohn,
+			Ajowan,
+			Selleriesamen,
+			Kurkuma,
+			Bockshornklee,
+			SpiceBlendsPage,
+			allSpices,
+			removeTagFromList,
+			removeTagFromIngredientsList,
+			addTagToIngredientsList,
+			isTextPartOfTag,
+			getSearchedIngredients,
+			isNameInList,
+			filterSpicesByCookingIngredients,
+			allPairingTags,
+			pairingTagSynonyms,
+			filteredSpices,
+			cookingIngredients,
+			searchedIngredients
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('allSpices' in $$props) allSpices = $$props.allSpices;
+			if ('allPairingTags' in $$props) allPairingTags = $$props.allPairingTags;
+			if ('pairingTagSynonyms' in $$props) pairingTagSynonyms = $$props.pairingTagSynonyms;
+			if ('filteredSpices' in $$props) $$invalidate(0, filteredSpices = $$props.filteredSpices);
+			if ('cookingIngredients' in $$props) $$invalidate(1, cookingIngredients = $$props.cookingIngredients);
+			if ('searchedIngredients' in $$props) $$invalidate(2, searchedIngredients = $$props.searchedIngredients);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [
+			filteredSpices,
+			cookingIngredients,
+			searchedIngredients,
+			removeTagFromIngredientsList,
+			addTagToIngredientsList,
+			getSearchedIngredients
+		];
+	}
+
+	class SpiceMyPlatePage extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "SpiceMyPlatePage",
+				options,
+				id: create_fragment$1.name
+			});
+		}
+	}
+
+	/* src\App.svelte generated by Svelte v4.2.18 */
+	const file = "src\\App.svelte";
+
+	// (24:6) {:else}
+	function create_else_block(ctx) {
+		let spiceblendspage;
+		let current;
+		spiceblendspage = new SpiceBlendsPage({ $$inline: true });
+
+		const block = {
+			c: function create() {
+				create_component(spiceblendspage.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(spiceblendspage, target, anchor);
+				current = true;
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(spiceblendspage.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(spiceblendspage.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(spiceblendspage, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_else_block.name,
+			type: "else",
+			source: "(24:6) {:else}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (22:46) 
+	function create_if_block_1(ctx) {
+		let spicemyplatepage;
+		let current;
+		spicemyplatepage = new SpiceMyPlatePage({ $$inline: true });
+
+		const block = {
+			c: function create() {
+				create_component(spicemyplatepage.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(spicemyplatepage, target, anchor);
+				current = true;
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(spicemyplatepage.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(spicemyplatepage.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(spicemyplatepage, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_if_block_1.name,
+			type: "if",
+			source: "(22:46) ",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (20:6) {#if pageToShow === "Blends"}
+	function create_if_block(ctx) {
+		let spiceblendspage;
+		let current;
+		spiceblendspage = new SpiceBlendsPage({ $$inline: true });
+
+		const block = {
+			c: function create() {
+				create_component(spiceblendspage.$$.fragment);
+			},
+			m: function mount(target, anchor) {
+				mount_component(spiceblendspage, target, anchor);
+				current = true;
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(spiceblendspage.$$.fragment, local);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(spiceblendspage.$$.fragment, local);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				destroy_component(spiceblendspage, detaching);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_if_block.name,
+			type: "if",
+			source: "(20:6) {#if pageToShow === \\\"Blends\\\"}",
+			ctx
+		});
+
+		return block;
+	}
+
+	function create_fragment(ctx) {
+		let div3;
+		let div2;
+		let div0;
+		let current_block_type_index;
+		let if_block;
+		let t0;
+		let div1;
+		let button0;
+		let t2;
+		let button1;
+		let current;
+		let mounted;
+		let dispose;
+		const if_block_creators = [create_if_block, create_if_block_1, create_else_block];
+		const if_blocks = [];
+
+		function select_block_type(ctx, dirty) {
+			if (/*pageToShow*/ ctx[0] === "Blends") return 0;
+			if (/*pageToShow*/ ctx[0] === "SpiceMyPlate") return 1;
+			return 2;
+		}
+
+		current_block_type_index = select_block_type(ctx);
+		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+		const block = {
+			c: function create() {
+				div3 = element("div");
+				div2 = element("div");
+				div0 = element("div");
+				if_block.c();
+				t0 = space();
+				div1 = element("div");
+				button0 = element("button");
+				button0.textContent = "Blends";
+				t2 = space();
+				button1 = element("button");
+				button1.textContent = "Spice Up";
+				attr_dev(div0, "class", "container svelte-nlgd7x");
+				add_location(div0, file, 18, 4, 484);
+				attr_dev(button0, "class", "button svelte-nlgd7x");
+				set_style(button0, "background-color", AromaGroupsColors$1.Einzigartige_Stoffe);
+				add_location(button0, file, 29, 6, 765);
+				attr_dev(button1, "class", "button svelte-nlgd7x");
+				set_style(button1, "background-color", AromaGroupsColors$1.Durchdringende_Terpene);
+				add_location(button1, file, 30, 6, 900);
+				attr_dev(div1, "class", "horizontal-grid svelte-nlgd7x");
+				add_location(div1, file, 28, 4, 728);
+				attr_dev(div2, "class", "vertical-grid svelte-nlgd7x");
+				add_location(div2, file, 17, 2, 451);
+				attr_dev(div3, "class", "page-sized svelte-nlgd7x");
+				add_location(div3, file, 16, 0, 423);
+			},
+			l: function claim(nodes) {
+				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, div3, anchor);
+				append_dev(div3, div2);
+				append_dev(div2, div0);
+				if_blocks[current_block_type_index].m(div0, null);
+				append_dev(div2, t0);
+				append_dev(div2, div1);
+				append_dev(div1, button0);
+				append_dev(div1, t2);
+				append_dev(div1, button1);
+				current = true;
+
+				if (!mounted) {
+					dispose = [
+						listen_dev(button0, "click", /*showBlends*/ ctx[1], false, false, false, false),
+						listen_dev(button1, "click", /*showSpiceMyPlate*/ ctx[2], false, false, false, false)
+					];
+
+					mounted = true;
+				}
+			},
+			p: function update(ctx, [dirty]) {
+				let previous_block_index = current_block_type_index;
+				current_block_type_index = select_block_type(ctx);
+
+				if (current_block_type_index !== previous_block_index) {
+					group_outros();
+
+					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+						if_blocks[previous_block_index] = null;
+					});
+
+					check_outros();
+					if_block = if_blocks[current_block_type_index];
+
+					if (!if_block) {
+						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+						if_block.c();
+					}
+
+					transition_in(if_block, 1);
+					if_block.m(div0, null);
+				}
+			},
+			i: function intro(local) {
+				if (current) return;
+				transition_in(if_block);
+				current = true;
+			},
+			o: function outro(local) {
+				transition_out(if_block);
+				current = false;
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(div3);
+				}
+
+				if_blocks[current_block_type_index].d();
+				mounted = false;
+				run_all(dispose);
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_fragment.name,
+			type: "component",
+			source: "",
+			ctx
+		});
+
+		return block;
+	}
+
+	function instance($$self, $$props, $$invalidate) {
+		let { $$slots: slots = {}, $$scope } = $$props;
+		validate_slots('App', slots, []);
+		let pageToShow = "SpiceMyPlate";
+
+		function showBlends() {
+			$$invalidate(0, pageToShow = "Blends");
+		}
+
+		function showSpiceMyPlate() {
+			$$invalidate(0, pageToShow = "SpiceMyPlate");
+		}
+
+		const writable_props = [];
+
+		Object.keys($$props).forEach(key => {
+			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
+		});
+
+		$$self.$capture_state = () => ({
+			SpiceBlendsPage,
+			SpiceMyPlatePage,
+			AromaGroupsColors: AromaGroupsColors$1,
+			pageToShow,
+			showBlends,
+			showSpiceMyPlate
+		});
+
+		$$self.$inject_state = $$props => {
+			if ('pageToShow' in $$props) $$invalidate(0, pageToShow = $$props.pageToShow);
+		};
+
+		if ($$props && "$$inject" in $$props) {
+			$$self.$inject_state($$props.$$inject);
+		}
+
+		return [pageToShow, showBlends, showSpiceMyPlate];
+	}
+
+	class App extends SvelteComponentDev {
+		constructor(options) {
+			super(options);
+			init(this, options, instance, create_fragment, safe_not_equal, {});
+
+			dispatch_dev("SvelteRegisterComponent", {
+				component: this,
+				tagName: "App",
+				options,
+				id: create_fragment.name
+			});
+		}
+	}
+
+	var app = new App({
+		target: document.body
+	});
+
+	return app;
+
+})();
 //# sourceMappingURL=bundle.js.map
